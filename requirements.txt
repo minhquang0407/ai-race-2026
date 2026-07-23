@@ -2,7 +2,7 @@ torch
 transformers
 bitsandbytes
 accelerate
-outlines
+lm-format-enforcer
 pydantic
 networkx
 rank_bm25

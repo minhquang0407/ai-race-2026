@@ -42,28 +42,50 @@ $$J = \frac{\vert{}GT \cap Pred\vert{}}{\vert{}GT \cup Pred\vert{}}$$
 
 ---
 
-### PHẦN II: HƯỚNG NÂNG CẤP - PRAGMATIC GRAPH (POST-BASELINE)
+### PHẦN II (BẢN CẬP NHẬT): HƯỚNG NÂNG CẤP - PRAGMATIC GRAPH (KIẾN TRÚC TÔ-PÔ PHÂN CẤP)
 
-Sau khi Baseline đạt điểm số an toàn và hệ thống vận hành không lỗi, thuật toán Đồ thị Thực dụng (Pragmatic Graph) được gắn thêm vào Pha 3 nhằm tái xếp hạng (Re-ranking) các ca lâm sàng phức tạp dựa trên logic hình thức.
+*(Phần này thay thế hoàn toàn PHẦN II cũ, tập trung vào bản chất Cây phân cấp của ICD-10 và tái cấu trúc các thuật toán lấy cảm hứng từ luồng AD-GPS-RAG của người dùng)*
 
-#### 1. Đồ thị hóa Chuẩn Y khoa
+#### 1. Đồ thị hóa Chuẩn Y khoa thành Cây Phân cấp (Hierarchical Tree)
 
-* **Khởi tạo:** Biểu diễn danh mục ICD-10 thành một Đồ thị có hướng không chu trình (Directed Acyclic Graph - DAG) $G = (V, E)$ bằng thư viện `NetworkX`.
-* **Tính chất:** Khối lượng xử lý đồ thị được đẩy hoàn toàn sang CPU. Thao tác trên $G$ sử dụng đại số tuyến tính cơ bản, không tiêu tốn VRAM, đảm bảo hệ thống có thể được Ban tổ chức dựng lại (reproduce) offline mà không gây lỗi Out-of-Memory.
+* **Khởi tạo:** Chuyển đổi toàn bộ danh mục ICD-10 thành một Cây phân cấp có hướng (từ Chương $\rightarrow$ Nhóm $\rightarrow$ Loại $\rightarrow$ Biến thể chi tiết) bằng thư viện `NetworkX`.
+* **Tính chất:** Khác với một đồ thị mạng lưới thông thường, cấu trúc Cây đảm bảo mọi node đều có một đường đi duy nhất ngược về Node Gốc (Root). Toàn bộ thao tác chạy trên CPU RAM, đảm bảo tuyệt đối không gây tràn bộ nhớ VRAM khi Ban tổ chức chấm offline.
 
-#### 2. Graph Distance Pruning (Cắt tỉa bằng Khoảng cách Hình học)
+#### 2. Cắt tỉa Ứng viên bằng Tổ tiên chung gần nhất (LCA Pruning)
 
-Sử dụng cấu trúc đồ thị như một màng lọc kiểm chứng chéo (Cross-validation).
+Đây là màng lọc toán học cốt lõi để bảo vệ điểm Jaccard Similarity (tối ưu hóa Precision, tránh phạt hình phạt nhân đôi).
 
-* **Logic Toán học:** Giả sử tập ứng viên ban đầu của thực thể $e_1$ là $C = \{c_1, c_2, c_3\}$. Nếu ngữ cảnh có tồn tại một thực thể mỏ neo $e_{anchor}$ (ví dụ: một thuốc đã map chắc chắn vào RxNorm), hệ thống tính khoảng cách đường đi ngắn nhất $d(c_i, c_{anchor})$ trên đồ thị liên kết chéo.
-* **Thực thi:** Bất kỳ ứng viên $c_i$ nào nằm ở nhánh đồ thị hoàn toàn xa lạ (khoảng cách $d$ lớn hơn một ngưỡng $\epsilon$) so với cụm thực thể còn lại trong câu sẽ bị gạch bỏ lập tức. Loại trừ hiện tượng suy diễn nhầm bệnh hệ hô hấp sang bệnh hệ tiêu hóa do lỗi của mô hình Vector.
+* **Logic Toán học:** Khi Phase 2 (Hybrid Retrieval) trả về một tập ứng viên $C = \{c_1, c_2, c_3\}$, hệ thống thay vì duyệt toàn bộ đồ thị, sẽ sử dụng thuật toán **Lowest Common Ancestor (LCA)** để tính khoảng cách giữa hai node ứng viên bất kỳ (ví dụ $u$ và $v$):
 
-#### 3. Activation Spreading (Lan truyền Kích hoạt)
+$$\operatorname{dist}_{\mathcal{G}}(u, v) = \operatorname{depth}(u) + \operatorname{depth}(v) - 2 \cdot \operatorname{depth}(\operatorname{LCA}(u, v))$$
 
-Sử dụng khi Baseline quá "bảo thủ", dẫn đến bỏ sót mã chuẩn (Recall thấp).
+* **Thực thi:** Dựa trên hàm phạt $s_{\mathrm{ontology}} = \exp(-\lambda \operatorname{dist}_{\mathcal{G}})$. Nếu $\operatorname{dist}_{\mathcal{G}}$ lớn (tức LCA nằm tuốt trên Node gốc, đại diện cho 2 hệ cơ quan hoàn toàn khác nhau), $s_{\mathrm{ontology}}$ tiến về 0. Hệ thống ngay lập tức gạch bỏ ứng viên có xác suất vector thấp hơn, triệt tiêu hoàn toàn "ảo giác" của thuật toán Embedding.
 
-* **Cơ chế:** Khi thuật toán nhận diện được một mã $v_{root}$ (ví dụ: K21.0 - Bệnh trào ngược), năng lượng kích hoạt sẽ được lan truyền dọc theo các cạnh xuống các node con trực tiếp của nó trong cây phân cấp ICD-10.
-* **Thực thi:** Cộng một lượng điểm ưu tiên nhỏ (Bias) cho các node con này. Nếu quá trình Hybrid Retrieval trả về các mã con này ở thứ hạng thấp, chúng sẽ được "kéo" lên nhờ điểm lan truyền đồ thị, khôi phục lại các ứng viên bị chìm lấp mà vẫn tuân thủ đúng định lý nội suy y khoa.
+#### 3. Lan truyền Lân cận (Graph-Neighborhood Expansion - Kế hoạch B)
+
+*(Mô-đun này kế thừa trực tiếp tư duy gom tụ ID từ kiến trúc AD-GPS-RAG, chỉ kích hoạt khi Baseline cắt tỉa quá mạnh dẫn đến điểm Recall bị thấp).*
+
+* **Logic Toán học:** Nếu mô hình LLM (Phase 1) chỉ trích xuất được khái niệm y khoa ở dạng mờ nhạt (ví dụ: chỉ map được vào node cha "Bệnh dạ dày" thay vì node lá "Trào ngược"), ta áp dụng thuật toán lan truyền kích hoạt từ node cha $\hat{v}_q$.
+* **Thực thi:** Duyệt đồ thị từ $\hat{v}_q$ xuống các nút con trong bán kính $r=1$ (Level 4 của ICD-10). Đối chiếu chéo các ID của nhánh con này với các "Triệu chứng" được trích xuất trong cùng một ngữ cảnh (ví dụ: "ho", "ợ hơi"). Nếu khớp, hệ thống tự động "trôi" ứng viên xuống đúng node lá chi tiết nhất, tối đa hóa điểm tuyệt đối mà không cần dùng đến các mô hình GNN nặng nề.
+
+#### 4. Đánh giá và Đề xuất cải tiến (Hướng Nâng Cấp Cuối Cùng)
+
+* **Đồ thị hóa Chuẩn Y khoa thành Cây Phân cấp:** Rất chuẩn xác. ICD-10 bản chất là một Directed Rooted Tree. Việc dùng `NetworkX` và nạp toàn bộ vào RAM tĩnh (chỉ tốn vài chục MB) giúp hệ thống cực kỳ an toàn khỏi lỗi Out-of-Memory (OOM).
+  * 💎 **Hướng nâng cấp (Weighted Edges - Trọng số cạnh):** Hiện tại, trên một cây thuần túy, mọi cạnh đều có độ dài bằng 1. Tuy nhiên, trong y khoa, khoảng cách ngữ nghĩa (Semantic Distance) giữa *Chương (Chapter)* $\rightarrow$ *Nhóm (Block)* lớn hơn rất nhiều so với khoảng cách từ *Loại (Category)* $\rightarrow$ *Biến thể chi tiết (Variant)*.
+  $\Rightarrow$ **Giải pháp:** Thay vì gán trọng số cạnh = 1, hãy gán trọng số dựa trên **Information Content (IC)**. Các node lá càng sâu thì trọng số cạnh càng nhỏ (vì ý nghĩa càng tương đồng).
+
+* **Cắt tỉa bằng Tổ tiên chung gần nhất (LCA Pruning):** Công thức $\operatorname{dist}_{\mathcal{G}}(u, v) = \operatorname{depth}(u) + \operatorname{depth}(v) - 2 \cdot \operatorname{depth}(\operatorname{LCA}(u, v))$ là khoảng cách đường đi ngắn nhất kinh điển trên cây. Hàm phạt $s_{\mathrm{ontology}}$ xử lý triệt để được "ảo giác vector".
+  * 💎 **Hướng nâng cấp (Lin/Resnik Similarity thay vì Raw Depth):** Cây ICD-10 không cân bằng. Có những nhánh rất sâu, có nhánh lại rất nông.
+  $\Rightarrow$ **Giải pháp (Hệ số Wu-Palmer hoặc Lin):** Sử dụng độ sâu của chính node LCA làm thước đo độ tin cậy. Hai node có LCA nằm càng sâu (gần node lá) thì càng liên quan.
+  $$Sim_{WUP}(u, v) = \frac{2 \cdot \operatorname{depth}(\operatorname{LCA}(u, v))}{\operatorname{depth}(u) + \operatorname{depth}(v)}$$
+  Hàm phạt khi đó sẽ là: $s_{\mathrm{ontology}} = \exp(-\lambda \cdot (1 - Sim_{WUP}(u, v)))$. Công thức này mượt mà hơn và không bị ảnh hưởng bởi độ sâu bất đối xứng của cây ICD-10.
+
+* **Lan truyền Lân cận (Graph-Neighborhood Expansion):** Đây chính là "killer feature". Rất nhiều LLM nhỏ (7B) sẽ trích xuất ra các từ khóa chung chung. Việc dùng các Thực thể vệ tinh để ép ứng viên trôi xuống node con là một tư duy rất giống bác sĩ lâm sàng.
+  * 💎 **Hướng nâng cấp (Probabilistic Child Routing):** Biến Kế hoạch B thành một quá trình **Markov Decision Process (MDP)** đơn giản trên cây. Để quyết định sẽ "trôi" xuống node con nào, ta tính toán phân phối xác suất dựa trên độ giao thoa (Overlap) giữa vector *Triệu chứng* có trong câu và bộ từ khóa của các node con:
+  $$ P(v_{ci} | \text{Context}) = \frac{\exp( \text{Cosine}(E_{symptoms}, E_{v_{ci}}) / T )}{\sum_{j} \exp( \text{Cosine}(E_{symptoms}, E_{v_{cj}}) / T )} $$
+  Nếu một node con có xác suất $P > 0.8$, thuật toán mới cho phép "trôi" xuống node đó (tăng Recall). Ngược lại sẽ giữ nguyên ở node cha để đảm bảo tính an toàn (giữ vững Precision).
+
+Bản nâng cấp này mang đậm màu sắc của Ontological Reasoning và thể hiện được cái "chất" riêng (sử dụng toán học và cấu trúc dữ liệu rời rạc) để giải quyết bài toán NLP, thay vì chỉ nhồi nhét mọi thứ vào Neural Network.
 
 ---
 

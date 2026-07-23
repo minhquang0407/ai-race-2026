@@ -1,0 +1,2812 @@
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MATHS PACKAGES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{bm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{dsfont}
+\usepackage{bbm} % column vector 1
+\usepackage{stmaryrd} % llbrackets
+\usepackage{enumitem}
+\usepackage{todonotes}
+\usepackage{overpic}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+\DeclarePairedDelimiter\opnorm{\lVert}{\rVert_{\textnormal{op}}}
+
+\newcommand{\indep}{\perp \!\!\! \perp}
+\newcommand{\diag}{\textnormal{diag}}
+\newcommand{\trace}{\textnormal{Tr}}
+\newcommand{\cov}{\mathbf{\Sigma}}
+\newcommand{\xina}{\mathbf{x}_i^\textnormal{\texttt{NA}}}
+\newcommand{\zina}{\mathbf{z}_i^\textnormal{\texttt{NA}}}
+\newcommand{\zinat}{\mathbf{z}_i^{\textnormal{\texttt{NA}}\top}}
+
+\newcommand{\wjna}{\mathbf{w}_j^\textnormal{\texttt{NA}}}
+\newcommand{\wjnat}{\mathbf{w}_i^{\textnormal{\texttt{NA}}}\top}
+
+\newcommand{\xinat}{\mathbf{x}_i^{\textnormal{\texttt{NA}}\top}}
+\newcommand{\yjna}{\mathbf{y}_j^\textnormal{\texttt{NA}}}
+\newcommand{\yjnat}{\mathbf{y}_j^\textnormal{\texttt{NA}}}
+
+\newcommand{\omxi}{\omega_{xi}}
+\newcommand{\omxit}{\omega_{xi}^{\top}}
+\newcommand{\omyj}{\omega_{yj}}
+\newcommand{\omyjt}{\omega_{yj}^{\top}}
+
+\newcommand{\bigp}{\mathbf{P}}
+\newcommand{\bigq}{\mathbf{Q}}
+
+\newcommand{\wasserstein}{\mathbf{W}}
+\newcommand{\slicedwasserstein}{\mathbf{SW}}
+\newcommand{\kl}{\mathbf{H}}
+\newcommand{\na}{\texttt{NA}}
+
+\newcommand{\ncl}[1]{{\textbf{\color{purple}{Long: #1}}}}
+
+\newcommand{\ntb}[1]{{\textbf{\color{blue}{Binh: #1}}}}
+
+
+
+\title{Ontology-Guided Hierarchical Retrieval-Augmented Generation for Trustworthy Bilingual Alzheimer’s Disease Information Support}
+\author{Binh Nguyen}
+\date{July 2026}
+
+\begin{document}
+
+\maketitle
+
+
+% ============================================================
+% Proposed Methodology Extension for MMM 2027
+% ============================================================
+
+\section{Proposed Research Direction}
+
+The central hypothesis of this work is that a medical chatbot can retrieve more accurate and contextually appropriate evidence for each knowledge unit that is assigned a structured semantic location within Alzheimer's disease ontology, rather than being represented solely by a textual embedding.
+
+We refer to this structured semantic location as a 
+\textit{Semantic Knowledge Coordinate}. Conceptually, this coordinate acts as a clinical ``GPS'' that helps the retrieval system identify where a user query and a knowledge passage are located within the Alzheimer's disease knowledge space.
+
+For each knowledge chunk $d_i$, we define its semantic coordinate as
+
+\begin{equation}
+    \mathbf{z}_i =
+    \left[
+    z_i^{\mathrm{topic}},
+    z_i^{\mathrm{subtopic}},
+    z_i^{\mathrm{user}},
+    z_i^{\mathrm{stage}},
+    z_i^{\mathrm{intent}},
+    z_i^{\mathrm{risk}},
+    z_i^{\mathrm{language}},
+    z_i^{\mathrm{source}},
+    z_i^{\mathrm{time}}
+    \right]
+\end{equation}
+
+These dimensions represent the medical topic, fine-grained subtopic, target user group, disease stage, user intent, clinical urgency, language, evidence provenance, and temporal validity of the knowledge unit.
+
+Given a user query, the proposed system first estimates its semantic coordinate and subsequently retrieves passages from the corresponding region of the structured knowledge space.
+
+
+
+
+\subsection{Interpretation of the Semantic Coordinate}
+
+For each knowledge chunk $d_i$, we define its semantic coordinate as
+\begin{equation}
+    \mathbf{z}_i =
+    \left[
+    z_i^{\mathrm{topic}},
+    z_i^{\mathrm{subtopic}},
+    z_i^{\mathrm{user}},
+    z_i^{\mathrm{stage}},
+    z_i^{\mathrm{intent}},
+    z_i^{\mathrm{risk}},
+    z_i^{\mathrm{language}},
+    z_i^{\mathrm{source}},
+    z_i^{\mathrm{time}}
+    \right].
+\end{equation}
+
+The main idea is that each knowledge chunk is associated not only with its
+textual content, but also with a structured semantic coordinate indicating its position in the Alzheimer's disease knowledge space.
+
+\subsubsection{Knowledge Chunk $d_i$}
+The symbol $d_i$ denotes the $i$-th knowledge chunk in the knowledge base. After a source document is segmented into smaller passages, the resulting knowledge units can be represented as
+\begin{equation}
+    \mathcal{D} = \{d_1,d_2,\ldots,d_N\},
+\end{equation}
+where $N$ is the total number of chunks.
+For example, a knowledge chunk may contain the following statement:
+\begin{quote}
+People with moderate Alzheimer's disease may wander, particularly at night.
+Caregivers should secure exits and seek professional advice if wandering
+becomes frequent.
+\end{quote}
+This passage can be represented as a particular knowledge chunk $d_i$.
+
+\subsubsection{Semantic Coordinate $\mathbf{z}_i$}
+The symbol $\mathbf{z}_i$ denotes the semantic coordinate associated with knowledge chunk $d_i$. The bold notation indicates that $\mathbf{z}_i$ is a multi-dimensional vector or structured descriptor rather than a scalar value.
+
+The mapping between a knowledge chunk and its coordinate can be written as
+\begin{equation}
+    d_i \longmapsto \mathbf{z}_i.
+\end{equation}
+The coordinate $\mathbf{z}_i$ describes the medical topic of the passage, its fine-grained concept, intended audience, disease stage, information purpose, clinical urgency, language, evidence provenance, and temporal validity.
+
+\subsubsection{Topic Component $z_i^{\mathrm{topic}}$}
+The component
+\begin{equation}
+    z_i^{\mathrm{topic}}
+\end{equation}
+represents the high-level medical topic of knowledge chunk $d_i$.
+
+Possible values include
+\begin{equation}
+\begin{split}
+    z_i^{\mathrm{topic}} \in
+    \{&
+    \mathrm{Symptoms},
+    \mathrm{Diagnosis},
+    \mathrm{Treatment},\\
+    &\mathrm{Caregiving},
+    \mathrm{Safety},
+    \mathrm{Prevention}
+    \}.
+\end{split}
+\end{equation}
+
+For a passage about wandering behavior and caregiver actions, the topic may be
+\begin{equation}
+    z_i^{\mathrm{topic}} = \mathrm{Caregiving}.
+\end{equation}
+
+\subsubsection{Subtopic Component $z_i^{\mathrm{subtopic}}$}
+The component
+\begin{equation}
+    z_i^{\mathrm{subtopic}}
+\end{equation}
+represents a fine-grained concept within the main topic. 
+For example,
+\begin{equation}
+    \mathrm{Caregiving}
+    \rightarrow
+    \mathrm{Wandering},
+\end{equation}
+and therefore
+\begin{equation}
+    z_i^{\mathrm{subtopic}} = \mathrm{Wandering}.
+\end{equation}
+Other examples include
+\begin{equation}
+    \mathrm{Diagnosis}
+    \rightarrow
+    \mathrm{MRI},
+\end{equation}
+\begin{equation}
+    \mathrm{Symptoms}
+    \rightarrow
+    \mathrm{Memory\ Loss},
+\end{equation}
+and
+\begin{equation}
+    \mathrm{Treatment}
+    \rightarrow
+    \mathrm{Cholinesterase\ Inhibitors}.
+\end{equation}
+Thus, the topic represents a broad knowledge category, whereas the subtopic identifies a more specific medical concept.
+
+\subsubsection{Target User Component $z_i^{\mathrm{user}}$}
+The component
+\begin{equation}
+    z_i^{\mathrm{user}}
+\end{equation}
+indicates the user group for which the passage is most relevant.
+It may take values such as
+\begin{equation}
+\begin{split}
+    z_i^{\mathrm{user}} \in
+    \{&
+    \mathrm{General\ Public},
+    \mathrm{Person\ with\ Symptoms},\\
+    &\mathrm{Patient},
+    \mathrm{Caregiver},
+    \mathrm{Healthcare\ Professional}
+    \}.
+\end{split}
+\end{equation}
+For a passage containing practical instructions for managing wandering, a suitable label is
+\begin{equation}
+    z_i^{\mathrm{user}} = \mathrm{Caregiver}.
+\end{equation}
+This dimension is useful because the same medical topic may require different levels of detail and different language styles for clinicians, patients, and caregivers.
+
+\subsubsection{Disease Stage Component $z_i^{\mathrm{stage}}$}
+The component
+\begin{equation}
+    z_i^{\mathrm{stage}}
+\end{equation}
+represents the stage of Alzheimer's disease associated with the knowledge chunk.
+Possible values include
+\begin{equation}
+\begin{split}
+    z_i^{\mathrm{stage}} \in
+    \{&
+    \mathrm{Preclinical},
+    \mathrm{MCI},
+    \mathrm{Mild\ AD},\\
+    &\mathrm{Moderate\ AD},
+    \mathrm{Severe\ AD},
+    \mathrm{Unspecified}
+    \}.
+\end{split}
+\end{equation}
+For a passage describing wandering during the moderate stage, we may assign
+\begin{equation}
+    z_i^{\mathrm{stage}} = \mathrm{Moderate\ AD}.
+\end{equation}
+
+This dimension helps prevent the system from retrieving medically relevant but stage-inappropriate information.
+
+\subsubsection{Intent Component $z_i^{\mathrm{intent}}$}
+The component
+\begin{equation}
+    z_i^{\mathrm{intent}}
+\end{equation}
+describes the information-seeking intent that the knowledge chunk can support.
+Possible intent labels include
+\begin{equation}
+\begin{split}
+    z_i^{\mathrm{intent}} \in
+    \{&
+    \mathrm{Definition},
+    \mathrm{Explanation},
+    \mathrm{Comparison},\\
+    &\mathrm{Prevention},
+    \mathrm{Treatment},
+    \mathrm{Caregiving\ Action},\\
+    &\mathrm{Reassurance},
+    \mathrm{Referral},
+    \mathrm{Emergency}
+    \}.
+\end{split}
+\end{equation}
+For a passage offering practical advice to a caregiver, the intent may be
+\begin{equation}
+    z_i^{\mathrm{intent}} = \mathrm{Caregiving\ Action}.
+\end{equation}
+A passage explaining the meaning of Alzheimer's disease may instead be assigned
+\begin{equation}
+    z_i^{\mathrm{intent}} = \mathrm{Definition}.
+\end{equation}
+Similarly, a passage comparing MRI and EEG may be assigned
+\begin{equation}
+    z_i^{\mathrm{intent}} = \mathrm{Comparison}.
+\end{equation}
+
+\subsubsection{Risk Component $z_i^{\mathrm{risk}}$}
+The component
+\begin{equation}
+    z_i^{\mathrm{risk}}
+\end{equation}
+represents the clinical urgency or safety level associated with the passage.
+Possible values include
+\begin{equation}
+\begin{split}
+    z_i^{\mathrm{risk}} \in
+    \{&
+    \mathrm{Educational},
+    \mathrm{Routine\ Consultation},\\
+    &\mathrm{Prompt\ Medical\ Review},
+    \mathrm{Urgent},
+    \mathrm{Emergency}
+    \}.
+\end{split}
+\end{equation}
+For a passage concerning nighttime wandering, the label may be
+\begin{equation}
+    z_i^{\mathrm{risk}} = \mathrm{Urgent},
+\end{equation}
+because the behavior may create an immediate safety concern.
+
+In contrast, a basic definition of Alzheimer's disease may be assigned
+\begin{equation}
+    z_i^{\mathrm{risk}} = \mathrm{Educational}.
+\end{equation}
+This component allows the retrieval system to prioritize warnings, urgent
+actions, and referral information when necessary.
+
+\subsubsection{Language Component $z_i^{\mathrm{language}}$}
+The component
+\begin{equation}
+    z_i^{\mathrm{language}}
+\end{equation}
+indicates the language in which the knowledge chunk is written.
+
+For a bilingual system, this component may take values such as
+\begin{equation}
+    z_i^{\mathrm{language}}
+    \in
+    \{
+    \mathrm{English},
+    \mathrm{Vietnamese}
+    \}.
+\end{equation}
+
+For a Vietnamese passage, we assign
+\begin{equation}
+    z_i^{\mathrm{language}} = \mathrm{Vietnamese}.
+\end{equation}
+This dimension supports language-aware retrieval, cross-lingual balancing,
+preservation of local terminology, and preference for evidence in the user's
+language.
+
+\subsubsection{Source Component $z_i^{\mathrm{source}}$}
+The component
+\begin{equation}
+    z_i^{\mathrm{source}}
+\end{equation}
+represents the provenance and authority of the supporting evidence.
+It may be structured as
+\begin{equation}
+    z_i^{\mathrm{source}}
+    =
+    \left(
+    o_i,
+    \tau_i,
+    a_i
+    \right),
+\end{equation}
+where
+\begin{itemize}
+    \item $o_i$ is the source organization;
+    \item $\tau_i$ is the document or evidence type;
+    \item $a_i$ is the authority level.
+\end{itemize}
+For example,
+\begin{equation}
+    z_i^{\mathrm{source}}
+    =
+    \left(
+    \mathrm{WHO},
+    \mathrm{Public\ Health\ Guidance},
+    \mathrm{High}
+    \right).
+\end{equation}
+Another example is
+\begin{equation}
+    z_i^{\mathrm{source}}
+    =
+    \left(
+    \mathrm{Vietnamese\ Hospital},
+    \mathrm{Patient\ Education},
+    \mathrm{Medium\text{-}High}
+    \right).
+\end{equation}
+This component enables the retrieval system to favor authoritative and clinically reliable sources when multiple passages discuss the same topic.
+
+\subsubsection{Temporal Component $z_i^{\mathrm{time}}$}
+
+The component
+\begin{equation}
+    z_i^{\mathrm{time}}
+\end{equation}
+describes the temporal validity and recency of the knowledge chunk.
+It may be represented as
+\begin{equation}
+    z_i^{\mathrm{time}}
+    =
+    \left(
+    t_i^{\mathrm{published}},
+    t_i^{\mathrm{reviewed}},
+    v_i^{\mathrm{guideline}},
+    s_i^{\mathrm{validity}}
+    \right),
+\end{equation}
+where
+\begin{itemize}
+    \item $t_i^{\mathrm{published}}$ is the publication date;
+    \item $t_i^{\mathrm{reviewed}}$ is the latest review or update date;
+    \item $v_i^{\mathrm{guideline}}$ is the guideline version;
+    \item $s_i^{\mathrm{validity}}$ is the validity status.
+\end{itemize}
+For example,
+\begin{equation}
+    z_i^{\mathrm{time}}
+    =
+    \left(
+    2025,
+    2026,
+    \mathrm{v2.1},
+    \mathrm{Active}
+    \right).
+\end{equation}
+
+This information helps the retrieval system prioritize current evidence and avoid outdated recommendations.
+
+\subsection{Complete Example}
+Consider the following knowledge chunk:
+\begin{quote}
+People with moderate Alzheimer's disease may wander, particularly at night.
+Caregivers should secure exits, use identification devices, and seek
+professional advice if wandering becomes frequent.
+\end{quote}
+
+Its semantic coordinate may be represented as
+\begin{equation}
+\begin{split}
+    \mathbf{z}_i =
+    [&
+    \mathrm{Caregiving},
+    \mathrm{Wandering},
+    \mathrm{Caregiver},\\
+    &
+    \mathrm{Moderate\ AD},
+    \mathrm{Caregiving\ Action},
+    \mathrm{Urgent},\\
+    &
+    \mathrm{English},
+    \mathrm{Trusted\ Hospital},
+    \mathrm{Active}
+    ].
+\end{split}
+\end{equation}
+Equivalently, the individual components can be written as
+\begin{align}
+    z_i^{\mathrm{topic}}
+    &= \mathrm{Caregiving},\\
+    z_i^{\mathrm{subtopic}}
+    &= \mathrm{Wandering},\\
+    z_i^{\mathrm{user}}
+    &= \mathrm{Caregiver},\\
+    z_i^{\mathrm{stage}}
+    &= \mathrm{Moderate\ AD},\\
+    z_i^{\mathrm{intent}}
+    &= \mathrm{Caregiving\ Action},\\
+    z_i^{\mathrm{risk}}
+    &= \mathrm{Urgent},\\
+    z_i^{\mathrm{language}}
+    &= \mathrm{English},\\
+    z_i^{\mathrm{source}}
+    &= \mathrm{Trusted\ Hospital},\\
+    z_i^{\mathrm{time}}
+    &= \mathrm{Active}.
+\end{align}
+Suppose that the user asks
+\begin{quote}
+My father often leaves the house at night. What should I do?
+\end{quote}
+
+The query-understanding module may estimate the query coordinate as
+\begin{equation}
+\begin{split}
+    \hat{\mathbf{z}}_q \approx
+    [&
+    \mathrm{Caregiving},
+    \mathrm{Wandering},
+    \mathrm{Caregiver},\\
+    &
+    \mathrm{Moderate\ AD},
+    \mathrm{Caregiving\ Action},
+    \mathrm{Urgent},\\
+    &
+    \mathrm{English},
+    *,
+    *
+    ].
+\end{split}
+\end{equation}
+The symbol $*$ indicates that the user query does not explicitly specify a preferred source or temporal condition. The retrieval system can therefore automatically prioritize authoritative and recent sources.
+
+Because $\hat{\mathbf{z}}_q$ is close to $\mathbf{z}_i$ in the structuredknowledge space, the corresponding passage $d_i$ should receive a high retrieval score.
+
+\subsection{Machine-Readable Encoding}
+The elements of $\mathbf{z}_i$ are not necessarily numerical values. Some components are categorical, some are hierarchical, and others may be continuous or structured attributes. Therefore, $\mathbf{z}_i$ is more precisely interpreted as a structured semantic descriptor.
+
+For machine learning, each component is transformed into a dense embedding. For example, the topic component is encoded as
+\begin{equation}
+    \mathbf{e}_i^{\mathrm{topic}}
+    =
+    \operatorname{Emb}_{\mathrm{topic}}
+    \left(
+    z_i^{\mathrm{topic}}
+    \right).
+\end{equation}
+Similarly, the remaining components are encoded as
+\begin{align}
+    \mathbf{e}_i^{\mathrm{subtopic}}
+    &=
+    \operatorname{Emb}_{\mathrm{subtopic}}
+    \left(
+    z_i^{\mathrm{subtopic}}
+    \right),\\
+    \mathbf{e}_i^{\mathrm{user}}
+    &=
+    \operatorname{Emb}_{\mathrm{user}}
+    \left(
+    z_i^{\mathrm{user}}
+    \right),\\
+    \mathbf{e}_i^{\mathrm{stage}}
+    &=
+    \operatorname{Emb}_{\mathrm{stage}}
+    \left(
+    z_i^{\mathrm{stage}}
+    \right),\\
+    \mathbf{e}_i^{\mathrm{intent}}
+    &=
+    \operatorname{Emb}_{\mathrm{intent}}
+    \left(
+    z_i^{\mathrm{intent}}
+    \right),\\
+    \mathbf{e}_i^{\mathrm{risk}}
+    &=
+    \operatorname{Emb}_{\mathrm{risk}}
+    \left(
+    z_i^{\mathrm{risk}}
+    \right),\\
+    \mathbf{e}_i^{\mathrm{language}}
+    &=
+    \operatorname{Emb}_{\mathrm{language}}
+    \left(
+    z_i^{\mathrm{language}}
+    \right),\\
+    \mathbf{e}_i^{\mathrm{source}}
+    &=
+    \operatorname{Emb}_{\mathrm{source}}
+    \left(
+    z_i^{\mathrm{source}}
+    \right),\\
+    \mathbf{e}_i^{\mathrm{time}}
+    &=
+    \operatorname{Emb}_{\mathrm{time}}
+    \left(
+    z_i^{\mathrm{time}}
+    \right).
+\end{align}
+The machine-readable semantic coordinate is then constructed as
+\begin{equation}
+\begin{split}
+    \widetilde{\mathbf{z}}_i
+    =\;&
+    \mathbf{e}_i^{\mathrm{topic}}
+    \Vert
+    \mathbf{e}_i^{\mathrm{subtopic}}
+    \Vert
+    \mathbf{e}_i^{\mathrm{user}}
+    \Vert
+    \mathbf{e}_i^{\mathrm{stage}}\\
+    &\Vert
+    \mathbf{e}_i^{\mathrm{intent}}
+    \Vert
+    \mathbf{e}_i^{\mathrm{risk}}
+    \Vert
+    \mathbf{e}_i^{\mathrm{language}}
+    \Vert
+    \mathbf{e}_i^{\mathrm{source}}
+    \Vert
+    \mathbf{e}_i^{\mathrm{time}},
+\end{split}
+\end{equation}
+where $\Vert$ denotes vector concatenation.
+
+A projection layer may subsequently map the concatenated representation into a fixed-dimensional latent space:
+\begin{equation}
+    \bar{\mathbf{z}}_i
+    =
+    \phi
+    \left(
+    \mathbf{W}_z
+    \widetilde{\mathbf{z}}_i
+    +
+    \mathbf{b}_z
+    \right),
+\end{equation}
+where $\mathbf{W}_z$ and $\mathbf{b}_z$ are learnable parameters and $\phi$
+is a nonlinear activation function.
+
+\subsection{Recommended Formal Definition}
+For greater methodological precision, the semantic coordinate can be formally introduced as follows:
+\begin{quote}
+For each knowledge chunk $d_i$, we define a structured semantic coordinate
+\begin{equation}
+    \mathbf{z}_i =
+    \left[
+    z_i^{\mathrm{topic}},
+    z_i^{\mathrm{subtopic}},
+    z_i^{\mathrm{user}},
+    z_i^{\mathrm{stage}},
+    z_i^{\mathrm{intent}},
+    z_i^{\mathrm{risk}},
+    z_i^{\mathrm{language}},
+    z_i^{\mathrm{source}},
+    z_i^{\mathrm{time}}
+    \right],
+\end{equation}
+
+where each component is a categorical, hierarchical, continuous, or structured attribute describing the semantic and contextual position of $d_i$ within the Alzheimer's disease knowledge space. During implementation, the individual components are encoded into dense representations and combined to form a machine-readable semantic coordinate.
+\end{quote}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Alzheimer's Disease Knowledge Ontology}
+
+\subsection{Hierarchical Topic Structure}
+
+We organize Alzheimer's disease knowledge into a multi-level hierarchical 
+ontology.
+
+\subsubsection{Level 0: Alzheimer's Disease Domain}
+
+The root node represents the complete Alzheimer's disease information domain.
+
+\subsubsection{Level 1: Major Knowledge Domains}
+
+The first level contains the following major knowledge categories:
+
+\begin{enumerate}
+    \item Disease overview;
+    \item Risk factors and prevention;
+    \item Symptoms and warning signs;
+    \item Disease stages and progression;
+    \item Screening and diagnosis;
+    \item Treatment and disease management;
+    \item Caregiving;
+    \item Behavioral and psychological symptoms;
+    \item Daily living and safety;
+    \item Communication and emotional support;
+    \item Legal, financial, and social support;
+    \item Research and emerging technologies;
+    \item Emergency and professional referral guidance.
+\end{enumerate}
+
+\subsubsection{Level 2: Medical Subdomains}
+
+Each major domain is divided into more specific medical subdomains. 
+For example, the diagnosis domain can be represented as
+\begin{equation}
+\begin{split}
+    \mathrm{Diagnosis} \rightarrow
+    \{&
+    \mathrm{Cognitive\ Assessment},
+    \mathrm{Laboratory\ Tests},
+    \mathrm{MRI},\\
+    &\mathrm{PET},
+    \mathrm{EEG},
+    \mathrm{Biomarkers},
+    \mathrm{Differential\ Diagnosis}
+    \}.
+\end{split}
+\end{equation}
+
+Similarly, the caregiving domain can be organized as
+
+\begin{equation}
+\begin{split}
+    \mathrm{Caregiving} \rightarrow
+    \{&
+    \mathrm{Daily\ Routine},
+    \mathrm{Communication},
+    \mathrm{Medication\ Support},\\
+    &\mathrm{Nutrition},
+    \mathrm{Sleep},
+    \mathrm{Wandering},
+    \mathrm{Caregiver\ Stress}
+    \}.
+\end{split}
+\end{equation}
+
+\subsubsection{Level 3: Atomic Medical Concepts}
+
+The lowest level contains fine-grained medical concepts, such as
+
+\begin{itemize}
+    \item memory impairment;
+    \item executive dysfunction;
+    \item amyloid-beta accumulation;
+    \item tau pathology;
+    \item hippocampal atrophy;
+    \item mild cognitive impairment;
+    \item cholinesterase inhibitors;
+    \item agitation;
+    \item wandering;
+    \item caregiver burden.
+\end{itemize}
+
+Whenever possible, these concepts should be aligned with established 
+biomedical terminology systems, such as SNOMED CT, MeSH, UMLS, ICD, 
+or the Disease Ontology. Vietnamese medical terminology and locally used 
+expressions should be retained as bilingual lexical variants linked to the 
+same underlying concepts.
+
+\subsection{Orthogonal Ontology Dimensions}
+
+A topic hierarchy alone may not sufficiently capture the contextual 
+requirements of patient-facing medical information retrieval. We therefore 
+associate each knowledge unit with several orthogonal dimensions.
+
+\subsubsection{Target User Group}
+
+The target user dimension is defined as
+
+\begin{equation}
+    U \in
+    \{
+    \mathrm{general\ public},
+    \mathrm{person\ with\ symptoms},
+    \mathrm{patient},
+    \mathrm{caregiver},
+    \mathrm{healthcare\ professional}
+    \}.
+\end{equation}
+
+\subsubsection{Disease Stage}
+
+The disease-stage dimension is defined as
+
+\begin{equation}
+    S \in
+    \{
+    \mathrm{preclinical},
+    \mathrm{MCI},
+    \mathrm{mild\ AD},
+    \mathrm{moderate\ AD},
+    \mathrm{severe\ AD},
+    \mathrm{unspecified}
+    \}.
+\end{equation}
+
+\subsubsection{User Intent}
+
+The user-intent dimension is defined as
+
+\begin{equation}
+\begin{split}
+    I \in \{&
+    \mathrm{definition},
+    \mathrm{symptom\ recognition},
+    \mathrm{comparison},\\
+    &\mathrm{causal\ explanation},
+    \mathrm{prevention},
+    \mathrm{treatment},\\
+    &\mathrm{caregiving\ action},
+    \mathrm{reassurance},
+    \mathrm{referral},
+    \mathrm{emergency}
+    \}.
+\end{split}
+\end{equation}
+
+\subsubsection{Clinical Urgency}
+
+The clinical urgency of each passage or query is represented as
+
+\begin{equation}
+    R \in
+    \{
+    \mathrm{educational},
+    \mathrm{routine\ consultation},
+    \mathrm{prompt\ medical\ review},
+    \mathrm{urgent},
+    \mathrm{emergency}
+    \}.
+\end{equation}
+
+\subsubsection{Evidence Type}
+
+The evidence type is defined as
+
+\begin{equation}
+\begin{split}
+    E \in \{&
+    \mathrm{clinical\ guideline},
+    \mathrm{public\ health\ guidance},
+    \mathrm{systematic\ review},\\
+    &\mathrm{research\ article},
+    \mathrm{hospital\ education},
+    \mathrm{association\ guidance}
+    \}.
+\end{split}
+\end{equation}
+
+\subsubsection{Temporal Validity}
+
+Each knowledge passage is associated with temporal metadata, including
+
+\begin{itemize}
+    \item publication date;
+    \item latest review date;
+    \item guideline version;
+    \item active, outdated, or under-review status.
+\end{itemize}
+
+This information allows the retrieval system to prioritize recent evidence 
+and reduce the risk of returning outdated medical recommendations.
+
+\section{Ontology-Enriched Bilingual Dataset}
+
+\subsection{Dataset Organization}
+
+The proposed dataset consists of four interconnected layers: a document layer, 
+a passage layer, a query layer, and a dialogue layer.
+
+\subsubsection{Document Layer}
+
+Each source document contains the following metadata:
+
+\begin{itemize}
+    \item document title;
+    \item source organization;
+    \item publication and review dates;
+    \item language;
+    \item document type;
+    \item persistent source identifier or URL;
+    \item expert validation status.
+\end{itemize}
+
+\subsubsection{Passage Layer}
+
+Each passage is annotated with
+
+\begin{itemize}
+    \item passage text;
+    \item source document identifier;
+    \item ontology path;
+    \item semantic knowledge coordinate;
+    \item medical entities and relations;
+    \item intended audience;
+    \item disease stage;
+    \item clinical urgency;
+    \item evidence authority level.
+\end{itemize}
+
+\subsubsection{Query Layer}
+
+The query dataset contains bilingual user questions designed to represent 
+realistic information-seeking behaviors. Each query is associated with
+
+\begin{itemize}
+    \item English and Vietnamese versions;
+    \item colloquial, noisy, and misspelled variants;
+    \item user intent;
+    \item gold ontology node or ontology path;
+    \item relevant evidence passages;
+    \item partially relevant passages;
+    \item hard-negative passages;
+    \item safety label;
+    \item expected response behavior.
+\end{itemize}
+
+\subsubsection{Dialogue Layer}
+
+The dialogue layer contains multi-turn interactions involving
+
+\begin{itemize}
+    \item conversational history;
+    \item anaphora and coreference;
+    \item follow-up questions;
+    \item topic transitions;
+    \item changes in user emotion;
+    \item changes in clinical urgency;
+    \item expected ontology trajectories across turns.
+\end{itemize}
+
+\subsection{Recommended Dataset Scale}
+
+A target dataset configuration may include
+
+\begin{itemize}
+    \item 1,000--2,000 authoritative source documents;
+    \item 8,000--20,000 expert-reviewed knowledge passages;
+    \item 3,000--5,000 bilingual user questions;
+    \item 500--1,000 multi-turn dialogues;
+    \item 15--20 major ontology branches;
+    \item 100--300 fine-grained Alzheimer's disease concepts.
+\end{itemize}
+
+Although a smaller dataset may also be useful, the value of the benchmark 
+should be demonstrated through high-quality annotation, expert validation, 
+and systematic experimental design.
+
+\subsection{Question Construction}
+
+The question set can be constructed using a combination of
+
+\begin{enumerate}
+    \item real questions collected from caregivers and the general public;
+    \item questions written by neurologists or geriatric specialists;
+    \item anonymized questions adapted from public information-seeking forums;
+    \item LLM-generated questions manually validated by medical experts;
+    \item adversarial and hard-negative questions.
+\end{enumerate}
+
+The benchmark should contain specialized questions that are difficult for 
+conventional retrieval systems, including comparisons between diagnostic 
+methods, questions about disease mechanisms, prevention, brain-region 
+involvement, and AI-based disease prediction.
+
+\subsection{Dataset Splitting}
+
+To prevent information leakage, the dataset should not be divided solely 
+through random passage-level sampling. We propose the following evaluation 
+splits:
+
+\begin{itemize}
+    \item document-disjoint split;
+    \item source-disjoint split;
+    \item temporal split;
+    \item cross-lingual split;
+    \item ontology-branch generalization split.
+\end{itemize}
+
+In the temporal split, the test set may contain recently published documents 
+or guideline updates that are not available during model development.
+
+\section{Our Proposed AD-GPS-RAG Model}
+
+% We refer to the proposed model as 
+% \textbf{AD-GPS-RAG: Ontology-Guided Semantic Positioning for Bilingual 
+% Alzheimer's Disease Retrieval-Augmented Generation}.
+
+\subsection{Overall Architecture}
+
+The proposed architecture consists of six major stages:
+
+\begin{equation}
+\begin{split}
+    q
+    \rightarrow&
+    \mathrm{Query\ Understanding}
+    \rightarrow
+    \mathrm{Semantic\ Coordinate\ Prediction}\\
+    \rightarrow&
+    \mathrm{Hierarchical\ Retrieval}
+    \rightarrow
+    \mathrm{Ontology\text{-}Aware\ Reranking}\\
+    \rightarrow&
+    \mathrm{Evidence\text{-}Constrained\ Generation}
+    \rightarrow
+    \mathrm{Answer\ Verification}.
+\end{split}
+\end{equation}
+
+\subsection{Query Understanding}
+
+Given a user query $q$ and its dialogue history $h$, the query understanding 
+module estimates the semantic coordinate
+\begin{equation}
+    \hat{\mathbf{z}}_q = f_{\theta}(q,h),
+\end{equation}
+where $f_{\theta}$ is a multi-label query classification or semantic routing 
+model.
+
+The predicted coordinate contains distributions over
+\begin{itemize}
+    \item medical topic and subtopic;
+    \item target user group;
+    \item disease stage;
+    \item user intent;
+    \item clinical urgency;
+    \item preferred response language.
+\end{itemize}
+Because a single query may belong to multiple ontology regions, the routing 
+task is formulated as a multi-label prediction problem rather than a 
+single-class classification problem.
+
+For example, the query
+\begin{quote}
+``My father keeps leaving the house at night. What should I do?''
+\end{quote}
+may be mapped to
+\begin{equation}
+    \mathrm{Caregiving}
+    \rightarrow
+    \mathrm{Wandering},
+\end{equation}
+with additional coordinates
+\begin{equation}
+\begin{split}
+    \mathrm{user} &= \mathrm{caregiver},\\
+    \mathrm{intent} &= \mathrm{caregiving\ action},\\
+    \mathrm{risk} &= \mathrm{urgent}.
+\end{split}
+\end{equation}
+
+\subsection{Ontology Node Representation}
+
+Let the Alzheimer's disease ontology be represented as a graph
+\begin{equation}
+    \mathcal{G} = (\mathcal{V},\mathcal{E}),
+\end{equation}
+where $\mathcal{V}$ is the set of medical concepts and $\mathcal{E}$ is the set of hierarchical or semantic relations.
+
+The representation of an ontology node $v$ is computed as
+\begin{equation}
+    \mathbf{o}_v = g_{\phi}(v,\mathcal{G}),
+\end{equation}
+where $g_{\phi}$ may be implemented using a graph neural network, a 
+knowledge-graph embedding model, or a hierarchical path encoder.
+
+The representation of passage $d$ combines textual, ontological, and metadata 
+information:
+\begin{equation}
+    \mathbf{h}_d =
+    \mathbf{W}
+    \left[
+    \mathbf{e}_d
+    \,\Vert\,
+    \mathbf{o}_{v_d}
+    \,\Vert\,
+    \mathbf{m}_d
+    \right],
+\end{equation}
+where $\mathbf{e}_d$ is the passage embedding, $\mathbf{o}_{v_d}$ is the 
+embedding of the associated ontology node, $\mathbf{m}_d$ is the metadata 
+representation, and $\Vert$ denotes vector concatenation.
+
+This joint representation provides each passage with both textual semantics 
+and an explicit structured location in the Alzheimer's disease knowledge 
+space.
+
+\subsection{Hierarchical Retrieval}
+Instead of directly searching the complete knowledge base, AD-GPS-RAG adopts a coarse-to-fine retrieval strategy.
+
+\subsubsection{Ontology Routing}
+The system first selects the most probable ontology regions:
+\begin{equation}
+    \mathcal{V}_q =
+    \operatorname{TopK}_{v \in \mathcal{V}}
+    P(v \mid q,h).
+\end{equation}
+
+\subsubsection{Local Hybrid Retrieval}
+Dense and sparse retrieval are then performed within passages associated with the selected ontology regions. Sparse retrieval captures exact medical terms, whereas dense retrieval captures semantic similarity and bilingual paraphrases.
+
+\subsubsection{Graph Neighborhood Expansion}
+
+To reduce the risk of overly restrictive routing, the retrieval region is 
+expanded to include semantically related ontology nodes:
+\begin{equation}
+    \widetilde{\mathcal{V}}_q
+    =
+    \mathcal{V}_q
+    \cup
+    \mathcal{N}(\mathcal{V}_q),
+\end{equation}
+where $\mathcal{N}(\mathcal{V}_q)$ may contain parent nodes, child nodes, sibling nodes, and medically related concepts.
+
+For safety-sensitive questions, the neighborhood may also include relevant warning, contraindication, emergency, and professional-referral nodes.
+
+\subsection{Ontology-Aware Retrieval Score}
+The final relevance score between query $q$ and passage $d$ is defined as
+\begin{equation}
+\begin{split}
+    s(q,d) =\;&
+    \alpha s_{\mathrm{dense}}(q,d)
+    +
+    \beta s_{\mathrm{sparse}}(q,d)\\
+    &+
+    \gamma s_{\mathrm{ontology}}(q,d)
+    +
+    \delta s_{\mathrm{metadata}}(q,d)\\
+    &+
+    \eta s_{\mathrm{authority}}(d)
+    +
+    \mu s_{\mathrm{recency}}(d),
+\end{split}
+\end{equation}
+where $\alpha$, $\beta$, $\gamma$, $\delta$, $\eta$, and $\mu$ control the relative contributions of individual relevance dimensions.
+
+The ontology relevance score is computed based on graph distance:
+\begin{equation}
+    s_{\mathrm{ontology}}(q,d)
+    =
+    \exp
+    \left(
+    -\lambda
+    \operatorname{dist}_{\mathcal{G}}
+    (\hat{v}_q,v_d)
+    \right),
+\end{equation}
+where $\hat{v}_q$ is the predicted ontology node for the query, $v_d$ is the ontology node assigned to passage $d$, and $\lambda$ is a distance-decay parameter.
+
+Passages located near the predicted query node receive larger ontology scores, while passages from unrelated regions are penalized.
+
+\subsection{Relation-Aware Evidence Assembly}
+
+Conventional RAG systems commonly concatenate the top-$k$ retrieved passages without explicitly considering their semantic roles. In contrast, the proposed framework assembles a structured evidence set:
+\begin{equation}
+    \mathcal{C}_q =
+    \{
+    d_{\mathrm{definition}},
+    d_{\mathrm{explanation}},
+    d_{\mathrm{action}},
+    d_{\mathrm{safety}},
+    d_{\mathrm{referral}}
+    \}.
+\end{equation}
+The required evidence roles depend on the predicted query intent. For example, a caregiving question may require
+\begin{itemize}
+    \item an explanatory passage;
+    \item an actionable caregiving passage;
+    \item a safety passage;
+    \item a professional-referral passage.
+\end{itemize}
+The evidence assembly problem may be formulated as
+\begin{equation}
+    \mathcal{C}_q^{*}
+    =
+    \arg\max_{\mathcal{C} \subseteq \mathcal{D}}
+    \left[
+    \sum_{d \in \mathcal{C}} s(q,d)
+    +
+    \rho \operatorname{Coverage}(\mathcal{C},q)
+    -
+    \xi \operatorname{Redundancy}(\mathcal{C})
+    \right],
+\end{equation}
+where $\operatorname{Coverage}(\mathcal{C},q)$ measures how well the selected 
+passages cover the required evidence roles and 
+$\operatorname{Redundancy}(\mathcal{C})$ penalizes repeated information.
+
+\subsection{Evidence-Constrained Response Generation}
+The response generator produces an answer containing
+\begin{enumerate}
+    \item a direct response to the user's question;
+    \item a non-technical explanation;
+    \item actionable guidance when appropriate;
+    \item safety or referral advice when required;
+    \item passage-level citations.
+\end{enumerate}
+
+Let the generated answer consist of a set of claims
+\begin{equation}
+    A = \{c_1,c_2,\ldots,c_M\}.
+\end{equation}
+
+Each medically meaningful claim $c_j$ must be aligned with at least one 
+supporting passage:
+
+\begin{equation}
+    c_j \rightarrow d_i,
+    \qquad d_i \in \mathcal{C}_q.
+\end{equation}
+Claims without sufficient supporting evidence should be removed or rewritten with calibrated uncertainty, or replaced with an explicit statement that the available evidence is insufficient.
+
+\subsection{Post-Generation Verification}
+A claim-level verifier estimates whether each generated claim is supported by its cited evidence:
+\begin{equation}
+    p_j =
+    P
+    \left(
+    \mathrm{supported}
+    \mid
+    c_j,d_i
+    \right).
+\end{equation}
+A claim is retained only when
+\begin{equation}
+    p_j \geq \tau,
+\end{equation}
+where $\tau$ is a verification threshold.
+
+The verification module additionally checks for
+\begin{itemize}
+    \item contradictions between generated claims and retrieved evidence;
+    \item missing or incorrect citations;
+    \item outdated supporting evidence;
+    \item inappropriate diagnostic certainty;
+    \item potentially unsafe medical recommendations;
+    \item missing professional-referral advice.
+\end{itemize}
+The final answer can therefore be expressed as
+\begin{equation}
+    A^{*}
+    =
+    \operatorname{Verify}
+    \left(
+    \operatorname{Generate}
+    (q,h,\mathcal{C}_q)
+    \right).
+\end{equation}
+
+\section{Research Questions}
+The experimental study is designed to address the following research questions.
+\begin{description}
+    \item[\textbf{RQ1:}]
+    Does ontology-guided retrieval improve passage retrieval compared with conventional hybrid RAG?
+    \item[\textbf{RQ2:}]
+    Which semantic-coordinate dimensions contribute most to retrieval 
+    performance?
+    \item[\textbf{RQ3:}]
+    Does ontology-guided retrieval improve answer factuality, completeness, safety, and citation correctness?
+
+    \item[\textbf{RQ4:}]
+    Does the proposed method improve performance on difficult queries, including advanced, ambiguous, multilingual, noisy, and multi-turn questions?
+
+    \item[\textbf{RQ5:}]
+    Do medical experts, caregivers, and public users prefer answers produced by ontology-guided RAG?
+
+    \item[\textbf{RQ6:}]
+    How robust is the proposed framework to ontology-routing errors, missing annotations, and incomplete knowledge structures?
+\end{description}
+
+\section{Experimental Baselines}
+We compare the proposed framework with the following retrieval and generation 
+baselines:
+\begin{enumerate}
+    \item BM25 retrieval;
+    \item dense-vector retrieval;
+    \item dense and BM25 retrieval with reciprocal rank fusion;
+    \item hybrid retrieval with cross-encoder reranking;
+    \item metadata-filtered RAG;
+    \item knowledge-graph RAG without hierarchical query routing;
+    \item ontology-guided hierarchical RAG;
+    \item the complete AD-GPS-RAG model with answer verification.
+\end{enumerate}
+
+Table~\ref{tab:baseline-components} summarizes the components used by each 
+system.
+\begin{table*}[t]
+    \centering
+    \caption{Component-level comparison of the evaluated systems.}
+    \label{tab:baseline-components}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{lccccc}
+        \hline
+        \textbf{Model}
+        & \textbf{Hybrid Retrieval}
+        & \textbf{Ontology Routing}
+        & \textbf{Graph Expansion}
+        & \textbf{Relation-Aware Evidence}
+        & \textbf{Verification} \\
+        \hline
+        BM25
+        & No & No & No & No & No \\
+        Dense RAG
+        & No & No & No & No & No \\
+        Hybrid RAG
+        & Yes & No & No & No & No \\
+        Metadata RAG
+        & Yes & Partial & No & No & No \\
+        KG-RAG
+        & Yes & No & Yes & No & No \\
+        AD-GPS-RAG
+        & Yes & Yes & Yes & Yes & No \\
+        Full AD-GPS-RAG
+        & Yes & Yes & Yes & Yes & Yes \\
+        \hline
+    \end{tabular}}
+\end{table*}
+
+\section{Retrieval Evaluation}
+\subsection{Standard Retrieval Metrics}
+Retrieval performance is evaluated using
+\begin{equation}
+    \mathrm{Recall@}k,\quad
+    \mathrm{Precision@}k,\quad
+    \mathrm{MRR},\quad
+    \mathrm{nDCG@}k,\quad
+    \mathrm{MAP}.
+\end{equation}
+Recall is particularly important in medical information retrieval because failure to retrieve a critical supporting passage may result in an incomplete or potentially unsafe response.
+
+Recall at rank $k$ is defined as
+\begin{equation}
+    \mathrm{Recall@}k
+    =
+    \frac{
+    |\mathcal{R}_q^{k} \cap \mathcal{G}_q|
+    }{
+    |\mathcal{G}_q|
+    },
+\end{equation}
+where $\mathcal{R}_q^{k}$ is the set of top-$k$ retrieved passages and $\mathcal{G}_q$ is the set of gold-relevant passages for query $q$.
+
+\subsection{Ontology Routing Accuracy}
+
+Exact ontology-node accuracy is defined as
+\begin{equation}
+    \operatorname{Acc}_{\mathrm{exact}}
+    =
+    \frac{1}{N}
+    \sum_{i=1}^{N}
+    \mathbb{I}
+    \left[
+    \hat{v}_i = v_i
+    \right],
+\end{equation}
+where $\hat{v}_i$ and $v_i$ denote the predicted and gold ontology nodes, respectively.
+Because ontology predictions may be partially correct when they belong to a 
+nearby parent or child node, we additionally define hierarchical accuracy as
+\begin{equation}
+    \operatorname{HAcc}
+    =
+    \frac{1}{N}
+    \sum_{i=1}^{N}
+    \exp
+    \left(
+    -\lambda
+    \operatorname{dist}_{\mathcal{G}}
+    (\hat{v}_i,v_i)
+    \right).
+\end{equation}
+
+\subsection{Ontology Coverage}
+Ontology coverage measures whether the retrieved passage set covers all required medical concepts for a query:
+\begin{equation}
+    \operatorname{OntologyCoverage@}k
+    =
+    \frac{
+    |\mathcal{O}(\mathcal{R}_q^{k}) \cap \mathcal{O}_q^{*}|
+    }{
+    |\mathcal{O}_q^{*}|
+    },
+\end{equation}
+where $\mathcal{O}(\mathcal{R}_q^{k})$ denotes the ontology concepts covered by the top-$k$ retrieved passages and $\mathcal{O}_q^{*}$ is the set of gold concepts required to answer query $q$.
+
+\subsection{Critical Evidence Recall}
+For safety-sensitive questions, we introduce critical evidence recall:
+\begin{equation}
+    \operatorname{CER@}k
+    =
+    \frac{
+    |\mathcal{R}_q^{k} \cap \mathcal{G}_q^{\mathrm{critical}}|
+    }{
+    |\mathcal{G}_q^{\mathrm{critical}}|
+    },
+\end{equation}
+where $\mathcal{G}_q^{\mathrm{critical}}$ contains passages describing warnings, contraindications, urgent actions, and professional-referral recommendations.
+
+\section{Answer-Level Automatic Evaluation}
+
+Generated answers are evaluated in terms of
+\begin{itemize}
+    \item factual correctness;
+    \item faithfulness to retrieved evidence;
+    \item answer relevance;
+    \item answer completeness;
+    \item citation precision;
+    \item citation recall;
+    \item unsupported-claim rate;
+    \item contradiction rate;
+    \item safety-violation rate;
+    \item latency and computational cost.
+\end{itemize}
+
+Citation precision is defined as
+\begin{equation}
+    \mathrm{CitationPrecision}
+    =
+    \frac{
+    \#\mathrm{\ citations\ supporting\ their\ associated\ claims}
+    }{
+    \#\mathrm{\ generated\ citations}
+    }.
+\end{equation}
+Citation recall is defined as
+\begin{equation}
+    \mathrm{CitationRecall}
+    =
+    \frac{
+    \#\mathrm{\ verifiable\ claims\ with\ valid\ citations}
+    }{
+    \#\mathrm{\ verifiable\ claims}
+    }.
+\end{equation}
+The unsupported-claim rate is computed as
+\begin{equation}
+    \mathrm{UCR}
+    =
+    \frac{
+    \#\mathrm{\ unsupported\ medical\ claims}
+    }{
+    \#\mathrm{\ medical\ claims}
+    }.
+\end{equation}
+We also report the answer completeness score
+\begin{equation}
+    \mathrm{Completeness}
+    =
+    \frac{
+    |\mathcal{F}(A) \cap \mathcal{F}_q^{*}|
+    }{
+    |\mathcal{F}_q^{*}|
+    },
+\end{equation}
+where $\mathcal{F}(A)$ denotes the information facets covered by answer $A$ and $\mathcal{F}_q^{*}$ denotes the gold-required facets for query $q$.
+
+\section{Human Evaluation}
+
+\subsection{Evaluator Groups}
+The human evaluation should involve multiple stakeholder groups:
+\begin{itemize}
+    \item four to six neurologists or geriatric specialists;
+    \item six to ten general physicians or healthcare professionals;
+    \item twenty to thirty caregivers;
+    \item twenty to thirty general users.
+\end{itemize}
+
+Clinicians and non-clinical users evaluate different aspects of system quality.
+
+\subsection{Clinician Evaluation Criteria}
+Medical experts assess each answer according to
+\begin{enumerate}
+    \item medical correctness;
+    \item relevance of retrieved evidence;
+    \item completeness;
+    \item clinical safety;
+    \item uncertainty calibration;
+    \item appropriateness of referral advice;
+    \item citation validity.
+\end{enumerate}
+Each criterion is rated on a five-point Likert scale, where a higher score indicates better performance.
+
+\subsection{Caregiver and Public Evaluation Criteria}
+
+Caregivers and general users assess
+\begin{enumerate}
+    \item understandability;
+    \item perceived usefulness;
+    \item actionability;
+    \item emotional appropriateness;
+    \item perceived trustworthiness;
+    \item cognitive burden;
+    \item willingness to use the chatbot again.
+\end{enumerate}
+
+\subsection{Pairwise Preference Evaluation}
+
+In addition to independent Likert-scale evaluation, each participant is shown two anonymized responses generated by the baseline RAG system and the proposed AD-GPS-RAG system.
+
+The participant selects the preferred response according to
+\begin{itemize}
+    \item correctness;
+    \item completeness;
+    \item trustworthiness;
+    \item clarity;
+    \item usefulness.
+\end{itemize}
+The order of the two systems is randomized, and system identities are hidden from evaluators.
+The preference rate for the proposed system is calculated as
+\begin{equation}
+    \mathrm{PreferenceRate}
+    =
+    \frac{
+    \#\mathrm{\ comparisons\ preferring\ AD\text{-}GPS\text{-}RAG}
+    }{
+    \#\mathrm{\ valid\ comparisons}
+    }.
+\end{equation}
+
+\subsection{Inter-Rater Reliability}
+We report inter-rater reliability using
+\begin{itemize}
+    \item Krippendorff's $\alpha$;
+    \item weighted Cohen's $\kappa$;
+    \item intraclass correlation coefficient;
+    \item exact agreement;
+    \item within-one-point agreement.
+\end{itemize}
+
+\subsection{Statistical Significance}
+For paired ordinal ratings, statistical significance is evaluated using the Wilcoxon signed-rank test. McNemar's test is used for paired binary outcomes, such as the presence or absence of safety violations.
+
+Bootstrap confidence intervals are reported for retrieval and generation metrics. When multiple models or evaluation dimensions are compared, Holm--Bonferroni correction is applied.
+
+A mixed-effects model may additionally be used:
+\begin{equation}
+    y_{ijk}
+    =
+    \beta_0
+    +
+    \beta_1 \mathrm{Model}_i
+    +
+    \beta_2 \mathrm{Scenario}_j
+    +
+    u_k
+    +
+    \epsilon_{ijk},
+\end{equation}
+where $u_k$ represents evaluator-specific random effects.
+
+\section{Ablation Studies}
+
+\subsection{Ontology Dimension Ablation}
+To identify the contribution of individual semantic-coordinate dimensions, we compare the complete model with the following variants:
+\begin{itemize}
+    \item without target-user information;
+    \item without disease-stage information;
+    \item without user-intent information;
+    \item without urgency information;
+    \item without source-authority information;
+    \item without temporal metadata;
+    \item without graph relations.
+\end{itemize}
+
+The importance of component $c$ is measured as
+\begin{equation}
+    \Delta_c
+    =
+    \operatorname{Metric}(\mathrm{Full})
+    -
+    \operatorname{Metric}(\mathrm{Full}\setminus c).
+\end{equation}
+
+\subsection{Retrieval Strategy Ablation}
+We compare
+\begin{enumerate}
+    \item retrieval without ontology routing;
+    \item hard ontology filtering;
+    \item soft ontology score integration;
+    \item ontology routing with neighborhood expansion;
+    \item ontology routing with relation-aware evidence assembly.
+\end{enumerate}
+
+Hard filtering restricts retrieval to passages belonging to selected ontology nodes:
+\begin{equation}
+    \mathcal{D}_q^{\mathrm{hard}}
+    =
+    \{
+    d \in \mathcal{D}
+    \mid
+    v_d \in \mathcal{V}_q
+    \}.
+\end{equation}
+Soft routing retains the complete knowledge base while adding an ontology relevance term to the ranking score. We hypothesize that hard routing may increase precision but reduce recall, whereas soft routing combined with graph-neighborhood expansion provides a more effective balance.
+
+\subsection{Semantic Coordinate Representation Ablation}
+
+We compare the following coordinate representations:
+\begin{enumerate}
+    \item categorical metadata;
+    \item hierarchical ontology-path encoding;
+    \item graph neural network embeddings;
+    \item joint text--ontology embeddings;
+    \item learned query--ontology alignment.
+\end{enumerate}
+
+\subsection{Multilingual Retrieval Ablation}
+
+The multilingual evaluation compares
+\begin{itemize}
+    \item Vietnamese-only retrieval;
+    \item English-only retrieval;
+    \item query translation;
+    \item bilingual query expansion;
+    \item ontology-aligned bilingual retrieval.
+\end{itemize}
+
+\subsection{Verification Ablation}
+To evaluate the post-generation verifier, we compare
+\begin{itemize}
+    \item generation without verification;
+    \item claim-level evidence verification;
+    \item citation-level verification;
+    \item complete evidence and medical-safety verification.
+\end{itemize}
+
+\section{Robustness Evaluation}
+
+\subsection{Noisy and Colloquial Language}
+The robustness test set contains
+\begin{itemize}
+    \item spelling errors;
+    \item Vietnamese text without diacritics;
+    \item abbreviations;
+    \item colloquial expressions;
+    \item English--Vietnamese code-switching;
+    \item incomplete questions.
+\end{itemize}
+
+\subsection{Ambiguous Queries}
+
+The benchmark includes ambiguous questions, such as
+\begin{quote}
+``My mother frequently forgets things. Does she have Alzheimer's disease?''
+\end{quote}
+A safe system should avoid making a diagnosis, provide an appropriate explanation, request additional context when necessary, and recommend professional assessment.
+
+\subsection{Contradictory and Outdated Evidence}
+
+To evaluate provenance-aware retrieval, controlled experiments introduce
+\begin{itemize}
+    \item outdated medical recommendations;
+    \item conflicting statements;
+    \item low-authority sources;
+    \item duplicated passages with different publication dates.
+\end{itemize}
+We evaluate whether source-authority and recency-aware scoring reduce the retrieval of unreliable evidence.
+
+\subsection{Out-of-Scope Queries}
+
+The system is evaluated on questions outside the Alzheimer's disease domain. The desired behavior is to appropriately refuse, redirect, or state that the available knowledge base does not contain sufficient information.
+
+\subsection{Ontology Perturbation}
+
+To assess robustness to incomplete ontology annotation, we randomly remove or corrupt a proportion $p$ of passage-level ontology labels:
+\begin{equation}
+    p \in \{0.1,0.2,0.3,0.5\}.
+\end{equation}
+
+The relative degradation at perturbation level $p$ is measured as
+\begin{equation}
+    \operatorname{Degradation}(p)
+    =
+    \frac{
+    M(0)-M(p)
+    }{
+    M(0)
+    },
+\end{equation}
+where $M(0)$ is the performance with complete annotations and $M(p)$ is the performance after perturbing proportion $p$ of the annotations.
+
+\section{Evaluation Matrix}
+
+The test dataset is stratified according to the dimensions shown in Table~\ref{tab:evaluation-matrix}.
+\begin{table}[t]
+    \centering
+    \caption{Proposed dimensions for stratified evaluation.}
+    \label{tab:evaluation-matrix}
+    \resizebox{\columnwidth}{!}{
+    \begin{tabular}{ll}
+        \hline
+        \textbf{Dimension} & \textbf{Categories} \\
+        \hline
+        Language
+        & English, Vietnamese, code-switched \\
+        Query difficulty
+        & Simple, intermediate, advanced \\
+        User group
+        & Public, patient, caregiver, clinician \\
+        Intent
+        & Definition, comparison, action, reassurance, referral \\
+        Interaction
+        & Single-turn, multi-turn \\
+        Input quality
+        & Clean, noisy, ambiguous \\
+        Clinical risk
+        & Low, moderate, urgent \\
+        Evidence type
+        & Public guidance, guideline, research evidence \\
+        \hline
+    \end{tabular}}
+\end{table}
+
+This stratified evaluation allows us to determine not only whether the proposed method improves overall performance, but also under which user, linguistic, clinical, and interaction conditions the improvements occur.
+
+\section{Expected Contributions}
+
+The expected contributions of this study are summarized as follows:
+\begin{enumerate}
+    \item We introduce a bilingual, ontology-enriched Alzheimer's disease 
+    knowledge resource in which documents, passages, queries, and dialogues are aligned with hierarchical medical concepts, user intents, disease stages, safety levels, temporal validity, and evidence provenance.
+
+    \item We propose AD-GPS-RAG, an ontology-guided hierarchical retrieval framework that assigns semantic coordinates to both user queries and knowledge passages, enabling coarse-to-fine retrieval and graph-neighborhood expansion.
+
+    \item We introduce relation-aware evidence assembly to construct a complementary set of explanatory, actionable, safety, and referral evidence for medical response generation.
+
+    \item We propose a claim-level verification mechanism to improve factual grounding, citation correctness, uncertainty calibration, and medical 
+    safety.
+
+    \item We establish a bilingual benchmark covering basic, advanced, noisy, ambiguous, safety-sensitive, cross-lingual, and multi-turn Alzheimer's 
+    disease information-seeking scenarios.
+
+    \item We conduct comprehensive automatic, expert, caregiver, and public-user evaluations to demonstrate the advantages of structured knowledge 
+    positioning over conventional flat RAG.
+\end{enumerate}
+
+\section{Methodological Positioning}
+
+The proposed method should not be positioned merely as the application of a better ontology to an existing RAG chatbot. Instead, the main methodological contribution is the learning and utilization of semantic coordinates over a multidimensional medical ontology for hierarchical retrieval, structured evidence composition, and verifiable bilingual response generation.
+
+Conventional RAG systems retrieve passages that are textually or semantically similar to a user query. In contrast, AD-GPS-RAG retrieves evidence that is both textually relevant and correctly positioned within the clinical topic, 
+disease stage, user intent, safety, language, provenance, and temporal dimensions of the Alzheimer's disease knowledge space.
+
+The proposed ``clinical GPS'' is therefore formalized through
+\begin{itemize}
+    \item ontology-node prediction;
+    \item semantic-coordinate estimation;
+    \item hierarchical graph distance;
+    \item ontology-aware ranking;
+    \item graph-neighborhood expansion;
+    \item evidence-role assignment;
+    \item claim-level evidence verification.
+\end{itemize}
+
+
+
+
+% ============================================================
+% Publication Roadmap for Ontology-Guided Alzheimer's Disease RAG
+% ============================================================
+
+\section{Our Roadmap}
+
+The proposed research direction is sufficiently broad to support a sequence of three or four complementary publications. Rather than combining the dataset, ontology, retrieval, response generation, and generalization components into a single paper, we propose a progressive roadmap in which each study addresses a distinct scientific question.
+
+The overall research trajectory can be summarized as
+\begin{equation*}
+    \mathrm{Dataset}
+    \rightarrow
+    \mathrm{Ontology}
+    \rightarrow
+    \mathrm{Retrieval}
+    \rightarrow
+    \mathrm{Generation}
+    \rightarrow
+    \mathrm{Verification}
+    \rightarrow
+    \mathrm{Generalization}.
+\end{equation*}
+
+The four proposed papers are:
+\begin{enumerate}
+    \item a bilingual Alzheimer's disease dataset and benchmark paper;
+    \item an ontology-guided semantic-coordinate retrieval paper;
+    \item a trustworthy evidence-grounded response generation paper;
+    \item a generalized semantic-coordinate retrieval paper.
+\end{enumerate}
+Each paper builds upon the previous work while maintaining a clearly differentiated contribution, methodology, evaluation protocol, and target research community.
+
+% ============================================================
+\subsection{A Bilingual Alzheimer's Disease Dataset and Benchmark}
+
+
+% \begin{quote}
+% \textbf{AD-KnowledgeBench: A Bilingual Expert-Validated Benchmark for Alzheimer's Disease Information-Seeking and Conversational Question Answering}
+% \end{quote}
+
+\subsubsection{Main Objective}
+
+The first paper should focus on constructing a comprehensive bilingual
+English--Vietnamese benchmark for Alzheimer's disease information support.
+
+The central contribution of this paper is not a new retrieval algorithm. Instead, the paper introduces a carefully curated and expert-validated resource that supports the systematic evaluation of retrieval-augmented medical conversational systems.
+
+The study should formalize the Alzheimer's disease information-seeking problem by organizing source documents, passages, user questions, and multi-turn dialogues into a unified benchmark.
+
+\subsubsection{Core Research Perspective}
+
+This paper approaches the problem from a \textbf{dataset and evaluation} perspective.
+
+Its primary research question is:
+\begin{quote}
+How should bilingual Alzheimer's disease knowledge and realistic user
+information needs be represented, annotated, and evaluated for trustworthy
+conversational artificial intelligence?
+\end{quote}
+
+The paper should emphasize that existing medical question-answering benchmarks may not adequately represent the practical requirements of Alzheimer's disease information support, particularly for Vietnamese users, caregivers, noisy questions, emotional situations, and multi-turn interactions.
+
+\subsubsection{Main Contributions}
+
+The paper may claim the following contributions:
+\begin{enumerate}
+    \item We construct a bilingual English--Vietnamese Alzheimer's disease knowledge corpus collected from authoritative healthcare organizations, hospitals, public-health institutions, and medically reviewed resources.
+
+    \item We introduce passage-level annotations covering hierarchical medical topics, intended user groups, disease stages, user intents, clinical urgency, source authority, language, and temporal validity.
+
+    \item We develop a bilingual question-answering benchmark containing clean, colloquial, noisy, ambiguous, advanced, safety-sensitive, and multi-turn questions.
+
+    \item We provide gold-relevant passages, partially relevant passages, hard-negative evidence, expected answer facets, and safety-response requirements.
+
+    \item We establish protocols for retrieval, response generation, citation, safety, and human evaluation for Alzheimer's disease conversational systems.
+
+    \item We benchmark representative sparse, dense, hybrid, multilingual, and large-language-model-based retrieval systems.
+\end{enumerate}
+
+\subsubsection{Dataset Structure}
+
+The benchmark should contain four interconnected layers:
+\begin{enumerate}
+    \item \textbf{Document layer:} authoritative English and Vietnamese source documents with provenance and temporal metadata;
+
+    \item \textbf{Passage layer:} fine-grained knowledge chunks annotated with medical concepts and semantic coordinates;
+
+    \item \textbf{Query layer:} bilingual questions with gold evidence, intent labels, safety labels, and difficulty levels;
+
+    \item \textbf{Dialogue layer:} multi-turn conversations containing follow-up questions, coreference, topic changes, emotional expressions, and changes in clinical urgency.
+\end{enumerate}
+
+\subsubsection{Recommended Dataset Scale}
+
+A practical target may include
+\begin{itemize}
+    \item 1,000--2,000 authoritative source documents;
+    \item 8,000--20,000 annotated knowledge passages;
+    \item 3,000--5,000 bilingual questions;
+    \item 500--1,000 multi-turn dialogues;
+    \item 100--300 fine-grained Alzheimer's disease concepts;
+    \item multiple expert-reviewed gold evidence passages for each question.
+\end{itemize}
+
+The final scale may be smaller if the annotation quality and expert validation
+are sufficiently strong.
+
+\subsubsection{Experimental Design}
+
+The experiments should benchmark the following systems:
+\begin{enumerate}
+    \item BM25;
+    \item multilingual dense retrieval;
+    \item hybrid dense--sparse retrieval;
+    \item hybrid retrieval with cross-encoder reranking;
+    \item multilingual query expansion;
+    \item standard retrieval-augmented generation systems;
+    \item selected medical or general-purpose large language models.
+\end{enumerate}
+
+Retrieval performance should be evaluated using
+\begin{equation}
+    \mathrm{Recall@}k,\quad
+    \mathrm{Precision@}k,\quad
+    \mathrm{MRR},\quad
+    \mathrm{nDCG@}k,\quad
+    \mathrm{MAP}.
+\end{equation}
+
+Answer-level evaluation should consider
+\begin{itemize}
+    \item factual correctness;
+    \item completeness;
+    \item evidence faithfulness;
+    \item citation correctness;
+    \item safety;
+    \item clarity;
+    \item usefulness.
+\end{itemize}
+
+\subsubsection{Human Evaluation}
+The paper should include expert evaluation by neurologists or geriatric specialists and, where possible, user evaluation by caregivers and members of the general public.
+
+The expert evaluation should assess
+\begin{itemize}
+    \item medical correctness;
+    \item relevance of supporting evidence;
+    \item completeness;
+    \item safety;
+    \item referral appropriateness;
+    \item citation validity.
+\end{itemize}
+
+The user evaluation should assess
+\begin{itemize}
+    \item understandability;
+    \item usefulness;
+    \item actionability;
+    \item perceived trustworthiness;
+    \item emotional appropriateness.
+\end{itemize}
+
+\subsubsection{Expected Positioning}
+
+The paper should be positioned as a \textbf{benchmarking and resource contribution}, rather than as a new RAG algorithm.
+
+Its central claim may be expressed as follows:
+\begin{quote}
+We introduce a comprehensive bilingual, expert-validated benchmark for
+evaluating retrieval and response generation in Alzheimer's disease
+information-support systems.
+\end{quote}
+
+\subsubsection{Possible Target Venues}
+
+Potential publication venues include
+\begin{itemize}
+    \item NeurIPS Datasets and Benchmarks Track;
+    \item ACL or Findings of ACL;
+    \item EMNLP or Findings of EMNLP;
+    \item LREC-COLING;
+    \item Scientific Data;
+    \item Data in Brief.
+\end{itemize}
+
+% ============================================================
+\subsection{Ontology-Guided Semantic-Coordinate Retrieval}
+
+% \subsection{Possible Title}
+
+% \begin{quote}
+% \textbf{AD-GPS-RAG: Ontology-Guided Semantic Positioning for Bilingual
+% Alzheimer's Disease Information Retrieval}
+% \end{quote}
+
+% An alternative, more accessible title is
+
+% \begin{quote}
+% \textbf{Giving RAG a Clinical GPS: Hierarchical Ontology-Guided Retrieval for
+% Alzheimer's Disease Information Support}
+% \end{quote}
+
+\subsubsection{Main Objective}
+
+The second paper should introduce the primary retrieval methodology. The main idea is that conventional RAG systems retrieve passages primarily according to lexical overlap or embedding similarity. In contrast, the proposed method assigns each user query and each knowledge passage a structured semantic coordinate within an Alzheimer's disease ontology.
+
+Retrieval is then guided by both textual relevance and semantic position in the medical knowledge space.
+
+\subsubsection{Core Research Perspective}
+
+This paper approaches the problem from an \textbf{information retrieval and knowledge navigation} perspective.
+
+Its central research question is:
+\begin{quote}
+Can ontology-guided semantic coordinates improve the precision, coverage, interpretability, and robustness of bilingual medical retrieval compared with conventional flat RAG?
+\end{quote}
+
+The paper should focus mainly on retrieval performance rather than on the quality of the final chatbot interface.
+
+\subsubsection{Semantic Coordinate Formulation}
+
+For each knowledge passage $d_i$, define a structured semantic coordinate
+\begin{equation}
+    \mathbf{z}_i =
+    \left[
+    z_i^{\mathrm{topic}},
+    z_i^{\mathrm{subtopic}},
+    z_i^{\mathrm{user}},
+    z_i^{\mathrm{stage}},
+    z_i^{\mathrm{intent}},
+    z_i^{\mathrm{risk}},
+    z_i^{\mathrm{language}},
+    z_i^{\mathrm{source}},
+    z_i^{\mathrm{time}}
+    \right].
+\end{equation}
+
+For a user query $q$, the query-understanding module predicts
+\begin{equation}
+    \hat{\mathbf{z}}_q = f_{\theta}(q,h),
+\end{equation}
+where $h$ denotes the dialogue history and $f_{\theta}$ is a multi-label semantic routing model.
+
+\subsection{Main Methodological Components}
+
+The proposed framework may contain the following components:
+\begin{enumerate}
+    \item \textbf{Semantic-coordinate prediction:} estimating the topic,
+    subtopic, intent, target user, disease stage, and urgency of a query;
+
+    \item \textbf{Hierarchical ontology routing:} selecting relevant regions
+    of the Alzheimer's disease ontology;
+
+    \item \textbf{Local hybrid retrieval:} applying dense and sparse
+    retrieval within the selected ontology regions;
+
+    \item \textbf{Graph-neighborhood expansion:} retrieving information from
+    parent, child, sibling, and medically related ontology nodes;
+
+    \item \textbf{Ontology-aware reranking:} combining textual relevance,
+    ontology distance, source authority, and recency;
+
+    \item \textbf{Uncertainty-aware routing:} expanding the search region
+    when the ontology prediction is uncertain.
+\end{enumerate}
+
+\subsubsection{Ontology-Aware Retrieval Score}
+
+The final relevance score can be defined as
+\begin{equation}
+\begin{split}
+    s(q,d) =\;&
+    \alpha s_{\mathrm{dense}}(q,d)
+    +
+    \beta s_{\mathrm{sparse}}(q,d)\\
+    &+
+    \gamma s_{\mathrm{ontology}}(q,d)
+    +
+    \delta s_{\mathrm{metadata}}(q,d)\\
+    &+
+    \eta s_{\mathrm{authority}}(d)
+    +
+    \mu s_{\mathrm{recency}}(d).
+\end{split}
+\end{equation}
+
+The ontology relevance term may be computed using graph distance:
+\begin{equation}
+    s_{\mathrm{ontology}}(q,d)
+    =
+    \exp
+    \left(
+    -\lambda
+    \operatorname{dist}_{\mathcal{G}}
+    (\hat{v}_q,v_d)
+    \right),
+\end{equation}
+where $\hat{v}_q$ is the predicted ontology node for the query, $v_d$ is the node assigned to passage $d$, and $\mathcal{G}$ denotes the medical ontology.
+
+\subsubsection{Main Contributions}
+
+The paper may claim the following contributions:
+\begin{enumerate}
+    \item We introduce semantic knowledge coordinates for representing the clinical and contextual positions of medical queries and evidence passages.
+
+    \item We propose a coarse-to-fine ontology-guided retrieval architecture that combines semantic routing, hybrid retrieval, and graph-neighborhood expansion.
+
+    \item We develop an ontology-aware ranking function that integrates textual relevance, graph distance, metadata compatibility, evidence authority, and temporal validity.
+
+    \item We introduce hierarchical and safety-sensitive retrieval metrics, including ontology accuracy, ontology coverage, and critical evidence recall.
+
+    \item We demonstrate that ontology-guided retrieval improves performance particularly for advanced, ambiguous, multilingual, and safety-sensitive questions.
+\end{enumerate}
+
+\subsubsection{Research Questions}
+
+The experiments should address the following research questions:
+\begin{description}
+    \item[\textbf{RQ1:}]
+    Does semantic-coordinate retrieval improve standard retrieval metrics compared with sparse, dense, and hybrid RAG baselines?
+
+    \item[\textbf{RQ2:}]
+    Does ontology routing improve evidence precision without substantially reducing recall?
+
+    \item[\textbf{RQ3:}]
+    Which semantic-coordinate dimensions contribute most to performance?
+
+    \item[\textbf{RQ4:}]
+    How robust is the framework to routing errors and incomplete ontology annotations?
+
+    \item[\textbf{RQ5:}]
+    Does ontology-guided retrieval improve performance across English, Vietnamese, and code-switched queries?
+\end{description}
+
+\subsubsection{Baselines}
+
+The proposed model should be compared with
+\begin{enumerate}
+    \item BM25;
+    \item dense retrieval;
+    \item hybrid dense--sparse retrieval;
+    \item hybrid retrieval with reciprocal rank fusion;
+    \item hybrid retrieval with cross-encoder reranking;
+    \item metadata-filtered retrieval;
+    \item knowledge-graph retrieval without semantic-coordinate prediction;
+    \item the complete AD-GPS-RAG model.
+\end{enumerate}
+
+\subsubsection{Ablation Studies}
+
+Important ablation experiments include
+\begin{itemize}
+    \item removal of topic and subtopic labels;
+    \item removal of user-group labels;
+    \item removal of disease-stage labels;
+    \item removal of intent labels;
+    \item removal of risk labels;
+    \item removal of source-authority scores;
+    \item removal of recency scores;
+    \item removal of graph-neighborhood expansion;
+    \item hard ontology filtering versus soft ontology weighting.
+\end{itemize}
+
+\subsubsection{Expected Positioning}
+This study should be positioned primarily as a \textbf{retrieval methodology paper}, not merely as an Alzheimer's chatbot paper.
+
+Its main claim may be expressed as follows:
+\begin{quote}
+Conventional RAG retrieves passages that are textually close to a user query,
+whereas AD-GPS-RAG retrieves passages that are both textually relevant and
+correctly positioned within the clinical knowledge space.
+\end{quote}
+
+\subsubsection{Possible Target Venues}
+Potential venues include
+\begin{itemize}
+    \item ACM Multimedia;
+    \item ACM SIGIR;
+    \item The Web Conference;
+    \item ACM CIKM;
+    \item ECIR.
+\end{itemize}
+
+For a submission to ACM Multimedia, the paper should emphasize multilingual conversational interaction, heterogeneous medical documents, knowledge organization, and user-facing information access.
+
+% ============================================================
+\subsection{Trustworthy Evidence-Grounded Medical Response Generation}
+
+% \subsection{Possible Title}
+
+% \begin{quote}
+% \textbf{From Retrieved Evidence to Verifiable Answers: Relation-Aware and
+% Claim-Verified RAG for Alzheimer's Disease Information Support}
+% \end{quote}
+
+% Another possible title is
+
+% \begin{quote}
+% \textbf{TrustAD-RAG: Evidence Composition and Claim-Level Verification for
+% Safe Alzheimer's Disease Conversational Assistance}
+% \end{quote}
+
+\subsubsection{Main Objective}
+
+The third paper should focus on the stages following evidence retrieval. Even when a retrieval system successfully identifies relevant passages, the large language model may omit important evidence, combine incompatible passages, generate unsupported claims, cite irrelevant passages, or express excessive diagnostic certainty.
+
+This paper therefore studies how retrieved evidence should be selected, organized, attributed, and verified before presenting a response to the user.
+
+\subsubsection{Core Research Perspective}
+
+This paper approaches the problem from a \textbf{trustworthy generation, evidence attribution, and medical safety} perspective.
+
+Its central research question is:
+\begin{quote}
+How can retrieved medical evidence be composed and verified to generate
+complete, well-cited, uncertainty-aware, and clinically safe responses?
+\end{quote}
+
+Unlike the second paper, which focuses on finding the correct passages, this third paper focuses on using those passages correctly.
+
+\subsubsection{Main Methodological Components}
+
+The proposed framework may include
+\begin{enumerate}
+    \item \textbf{Relation-aware evidence assembly:} selecting complementary
+    passages according to their semantic roles;
+
+    \item \textbf{Evidence-facet coverage:} ensuring that the selected evidence covers definitions, explanations, practical actions, safety warnings, and referral advice when required;
+
+    \item \textbf{Claim-level evidence attribution:} aligning every medically meaningful generated claim with one or more supporting passages;
+
+    \item \textbf{Citation verification:} determining whether each citation genuinely supports its associated claim;
+
+    \item \textbf{Uncertainty calibration:} controlling diagnostic or causal certainty according to the available evidence;
+
+    \item \textbf{Medical safety verification:} detecting unsafe advice, missing referral guidance, or inappropriate treatment recommendations.
+\end{enumerate}
+
+\subsubsection{Relation-Aware Evidence Assembly}
+
+Instead of concatenating the top-$k$ passages directly, the system constructs
+a structured evidence set
+\begin{equation}
+    \mathcal{C}_q =
+    \{
+    d_{\mathrm{definition}},
+    d_{\mathrm{explanation}},
+    d_{\mathrm{action}},
+    d_{\mathrm{safety}},
+    d_{\mathrm{referral}}
+    \}.
+\end{equation}
+
+The evidence-selection objective can be formulated as
+\begin{equation}
+\begin{split}
+    \mathcal{C}_q^{*}
+    =
+    \arg\max_{\mathcal{C} \subseteq \mathcal{D}}
+    \Big[
+    &\sum_{d \in \mathcal{C}} s(q,d)
+    +
+    \rho \operatorname{Coverage}(\mathcal{C},q)\\
+    &-
+    \xi \operatorname{Redundancy}(\mathcal{C})
+    -
+    \omega \operatorname{Conflict}(\mathcal{C})
+    \Big].
+\end{split}
+\end{equation}
+Here, $\operatorname{Coverage}(\mathcal{C},q)$ measures the coverage of required answer facets, while $\operatorname{Redundancy}(\mathcal{C})$ and
+$\operatorname{Conflict}(\mathcal{C})$ penalize repeated or contradictory evidence.
+
+\subsubsection{Claim-Level Verification}
+
+Let the generated answer contain claims
+\begin{equation}
+    A = \{c_1,c_2,\ldots,c_M\}.
+\end{equation}
+
+For each claim $c_j$, the verifier estimates
+\begin{equation}
+    p_j =
+    P
+    \left(
+    \mathrm{supported}
+    \mid
+    c_j,\mathcal{C}_q
+    \right).
+\end{equation}
+
+A claim may be retained when
+\begin{equation}
+    p_j \geq \tau_{\mathrm{support}},
+\end{equation}
+rewritten with calibrated uncertainty when
+\begin{equation}
+    \tau_{\mathrm{uncertain}}
+    \leq
+    p_j
+    <
+    \tau_{\mathrm{support}},
+\end{equation}
+and removed when
+\begin{equation}
+    p_j < \tau_{\mathrm{uncertain}}.
+\end{equation}
+
+\subsubsection{Main Contributions}
+
+The paper may claim the following contributions:
+\begin{enumerate}
+    \item We introduce relation-aware evidence composition for medical RAG, selecting complementary passages based on the expected structure of the response.
+
+    \item We propose claim-level evidence attribution and citation verification for medical response generation.
+
+    \item We develop an uncertainty-aware generation mechanism that reduces unsupported diagnostic certainty.
+
+    \item We introduce a safety verifier that detects unsupported treatment advice, missing warnings, and inappropriate professional-referral behavior.
+
+    \item We conduct comprehensive expert and user evaluations showing that structured evidence composition improves completeness, factuality, trustworthiness, and medical safety.
+\end{enumerate}
+
+\subsubsection{Research Questions}
+The paper should investigate
+\begin{description}
+    \item[\textbf{RQ1:}]
+    Does relation-aware evidence assembly improve answer completeness compared with simple top-$k$ passage concatenation?
+
+    \item[\textbf{RQ2:}]
+    Does claim-level verification reduce unsupported medical statements?
+
+    \item[\textbf{RQ3:}]
+    Does citation verification improve citation precision and citation recall?
+
+    \item[\textbf{RQ4:}]
+    Does uncertainty calibration reduce overconfident diagnostic or treatment claims?
+
+    \item[\textbf{RQ5:}]
+    Do clinicians and caregivers prefer verified responses over conventional
+    RAG responses?
+\end{description}
+
+\subsubsection{Evaluation Metrics}
+
+The automatic evaluation should report
+
+\begin{itemize}
+    \item answer correctness;
+    \item answer completeness;
+    \item answer relevance;
+    \item faithfulness;
+    \item citation precision;
+    \item citation recall;
+    \item unsupported-claim rate;
+    \item contradiction rate;
+    \item safety-violation rate;
+    \item referral-appropriateness rate.
+\end{itemize}
+
+Citation precision may be defined as
+\begin{equation}
+    \mathrm{CitationPrecision}
+    =
+    \frac{
+    \#\text{citations that support their associated claims}
+    }{
+    \#\text{generated citations}
+    }.
+\end{equation}
+
+The unsupported-claim rate may be defined as
+\begin{equation}
+    \mathrm{UCR}
+    =
+    \frac{
+    \#\text{unsupported medical claims}
+    }{
+    \#\text{medical claims}
+    }.
+\end{equation}
+
+\subsubsection{Human Evaluation}
+
+The human evaluation should contain two complementary protocols.
+First, clinicians should assess
+\begin{itemize}
+    \item medical correctness;
+    \item evidence support;
+    \item completeness;
+    \item uncertainty calibration;
+    \item safety;
+    \item referral appropriateness.
+\end{itemize}
+
+Second, caregivers and general users should assess
+\begin{itemize}
+    \item understandability;
+    \item actionability;
+    \item trust;
+    \item emotional appropriateness;
+    \item perceived safety.
+\end{itemize}
+
+A blinded pairwise comparison between standard RAG and the proposed verified
+RAG system is strongly recommended.
+
+\subsubsection{Expected Positioning}
+
+The paper should be positioned as a \textbf{trustworthy medical artificialintelligence} contribution.
+
+Its main claim may be expressed as follows:
+\begin{quote}
+Reliable medical RAG requires not only retrieving relevant passages, but also
+assembling complementary evidence, attributing each generated claim, and
+verifying the final response before delivery.
+\end{quote}
+
+\subsubsection{Possible Target Venues}
+
+Potential venues include
+\begin{itemize}
+    \item Artificial Intelligence in Medicine;
+    \item Journal of Biomedical Informatics;
+    \item Journal of the American Medical Informatics Association;
+    \item npj Digital Medicine;
+    \item Computer Methods and Programs in Biomedicine;
+    \item IEEE Journal of Biomedical and Health Informatics.
+\end{itemize}
+
+% ============================================================
+\subsection{Generalized Semantic-Coordinate Retrieval}
+
+% \subsection{Possible Title}
+
+% \begin{quote}
+% \textbf{Beyond Disease-Specific Ontologies: Transferable Semantic Coordinates
+% for Medical Retrieval-Augmented Generation}
+% \end{quote}
+
+% Another possible title is
+
+% \begin{quote}
+% \textbf{MedGPS: Learning Transferable Semantic Coordinates for
+% Knowledge-Grounded Medical Assistants}
+% \end{quote}
+
+\subsubsection{Main Objective}
+
+The fourth paper should generalize the semantic-coordinate framework beyond Alzheimer's disease.
+
+In the previous papers, the ontology and semantic coordinates are designed specifically for Alzheimer's disease. The final paper should investigate whether semantic coordinates can be learned, transferred, and adapted across multiple medical domains.
+
+Alzheimer's disease then becomes one of several downstream evaluation domains rather than the sole application.
+
+\subsubsection{Core Research Perspective}
+
+This paper approaches the problem from a \textbf{general representation learning and domain transfer} perspective.
+
+Its central research question is:
+\begin{quote}
+Can a general semantic-coordinate representation be learned across medical domains and transferred to new diseases with limited ontology annotation?
+\end{quote}
+
+\subsubsection{Possible Medical Domains}
+
+In addition to Alzheimer's disease, the study may include
+\begin{itemize}
+    \item Parkinson's disease;
+    \item stroke;
+    \item diabetes;
+    \item cardiovascular disease;
+    \item breast cancer;
+    \item chronic kidney disease.
+\end{itemize}
+The selected domains should contain different types of knowledge, user intents, disease stages, safety requirements, and clinical workflows.
+
+\subsubsection{Main Methodological Components}
+
+The generalized framework may include
+\begin{enumerate}
+    \item automatic or semi-automatic ontology induction;
+    \item shared and disease-specific semantic-coordinate dimensions;
+    \item cross-domain query--passage alignment;
+    \item ontology-node representation learning;
+    \item few-shot ontology adaptation;
+    \item zero-shot or weakly supervised routing;
+    \item transfer learning across disease domains.
+\end{enumerate}
+
+\subsubsection{Shared and Domain-Specific Coordinates}
+
+A general medical semantic coordinate may be decomposed as
+\begin{equation}
+    \mathbf{z}_i
+    =
+    \left[
+    \mathbf{z}_i^{\mathrm{shared}}
+    \,\Vert\,
+    \mathbf{z}_i^{\mathrm{domain}}
+    \right],
+\end{equation}
+where $\mathbf{z}_i^{\mathrm{shared}}$ contains reusable dimensions such as
+\begin{equation}
+\begin{split}
+    \mathbf{z}_i^{\mathrm{shared}}
+    =
+    [&
+    z_i^{\mathrm{user}},
+    z_i^{\mathrm{intent}},
+    z_i^{\mathrm{risk}},\\
+    &
+    z_i^{\mathrm{language}},
+    z_i^{\mathrm{source}},
+    z_i^{\mathrm{time}}
+    ],
+\end{split}
+\end{equation}
+and $\mathbf{z}_i^{\mathrm{domain}}$ contains disease-specific topic, subtopic, stage, symptom, treatment, and diagnostic concepts.
+
+\subsubsection{Transfer-Learning Objective}
+
+Let $\mathcal{S}$ denote a set of source medical domains and $\mathcal{T}$ denote a new target domain. The learning objective may be formulated as
+\begin{equation}
+\begin{split}
+    \mathcal{L}
+    =\;&
+    \mathcal{L}_{\mathrm{retrieval}}
+    +
+    \lambda_1 \mathcal{L}_{\mathrm{coordinate}}
+    +
+    \lambda_2 \mathcal{L}_{\mathrm{hierarchy}}\\
+    &+
+    \lambda_3 \mathcal{L}_{\mathrm{alignment}}
+    +
+    \lambda_4 \mathcal{L}_{\mathrm{transfer}}.
+\end{split}
+\end{equation}
+The coordinate loss supervises semantic-coordinate prediction, the hierarchy loss preserves ontology structure, the alignment loss aligns queries and relevant passages, and the transfer loss encourages representations that generalize across domains.
+
+\subsubsection{Main Contributions}
+
+The paper may claim the following contributions:
+\begin{enumerate}
+    \item We generalize semantic-coordinate retrieval from a disease-specific ontology to a transferable multi-domain medical framework.
+
+    \item We separate universal medical-information dimensions from disease-specific ontology dimensions.
+
+    \item We propose automatic or weakly supervised ontology induction and few-shot coordinate adaptation for new diseases.
+
+    \item We evaluate cross-domain and unseen-domain retrieval under full, limited, and zero ontology supervision.
+
+    \item We demonstrate that transferable semantic coordinates improve retrieval and medical question answering across multiple disease domains.
+\end{enumerate}
+
+\subsubsection{Research Questions}
+
+The experiments should address
+\begin{description}
+    \item[\textbf{RQ1:}]
+    Can semantic coordinates learned from multiple diseases improve retrieval in a new medical domain?
+
+    \item[\textbf{RQ2:}]
+    Which coordinate dimensions are transferable across diseases?
+
+    \item[\textbf{RQ3:}]
+    How much expert ontology annotation is required for effective adaptation?
+
+    \item[\textbf{RQ4:}]
+    Can automatic ontology induction approach the performance of expert-designed ontologies?
+
+    \item[\textbf{RQ5:}]
+    Does the generalized framework remain robust for multilingual, safety-sensitive, and out-of-domain questions?
+\end{description}
+
+\subsubsection{Experimental Settings}
+
+The paper should evaluate
+\begin{itemize}
+    \item in-domain retrieval;
+    \item cross-domain transfer;
+    \item leave-one-disease-out evaluation;
+    \item few-shot adaptation;
+    \item zero-shot routing;
+    \item incomplete-ontology robustness;
+    \item multilingual transfer.
+\end{itemize}
+In a leave-one-disease-out setting, the model is trained on all domains except
+one and evaluated on the held-out disease.
+
+\subsubsection{Expected Positioning}
+The final paper should be positioned as a \textbf{general machine-learning or medical representation-learning framework}, rather than as another Alzheimer's disease chatbot.\\
+Its central claim may be expressed as follows:
+\begin{quote}
+Semantic coordinates provide a transferable representation for navigating
+medical knowledge across diseases, languages, user intents, safety levels,
+and evidence sources.
+\end{quote}
+
+\subsubsection{Possible Target Venues}
+Potential venues include
+\begin{itemize}
+    \item NeurIPS;
+    \item ICLR;
+    \item ICML;
+    \item AAAI;
+    \item Nature Machine Intelligence;
+    \item IEEE Transactions on Pattern Analysis and Machine Intelligence,
+    subject to sufficiently strong methodological generalization.
+\end{itemize}
+
+% % ============================================================
+% \subsection{Recommended Three-Paper Alternative}
+
+% If resources are limited, the roadmap can be reduced to three papers by
+% combining the dataset and retrieval contributions.
+
+% The three-paper structure would be
+
+% \begin{enumerate}
+%     \item \textbf{Paper I: Dataset and ontology-guided retrieval.}\\
+%     Introduce the bilingual dataset, ontology, semantic coordinates, and
+%     retrieval methodology. This paper may target ACM Multimedia 2027.
+
+%     \item \textbf{Paper II: Trustworthy response generation.}\\
+%     Introduce relation-aware evidence assembly, claim-level verification,
+%     citation checking, and safety evaluation.
+
+%     \item \textbf{Paper III: Generalized medical semantic coordinates.}\\
+%     Extend the method to multiple diseases and study domain transfer,
+%     weak supervision, and ontology induction.
+% \end{enumerate}
+
+% The three-paper roadmap is more compact, but the first paper would become
+% substantially larger and would need to balance dataset and algorithmic
+% contributions carefully.
+
+% % ============================================================
+% \section{Recommended Four-Paper Strategy}
+
+% The four-paper strategy is preferable when sufficient data annotation,
+% medical-expert collaboration, and engineering resources are available.
+
+% The separation among papers can be summarized as follows:
+
+% \begin{table*}[t]
+%     \centering
+%     \caption{Recommended separation of the four proposed publications.}
+%     \label{tab:publication-roadmap}
+%     \resizebox{\textwidth}{!}{
+%     \begin{tabular}{p{2.2cm}p{3.2cm}p{4.2cm}p{3.3cm}p{3.0cm}}
+%         \hline
+%         \textbf{Paper}
+%         & \textbf{Primary Perspective}
+%         & \textbf{Main Contribution}
+%         & \textbf{Primary Evaluation}
+%         & \textbf{Potential Venue} \\
+%         \hline
+%         Paper I
+%         & Dataset and benchmark
+%         & Bilingual corpus, ontology annotations, questions, dialogues,
+%         benchmark protocols
+%         & Retrieval and generation baselines, expert validation
+%         & ACL, LREC-COLING, NeurIPS Datasets and Benchmarks \\
+
+%         Paper II
+%         & Information retrieval
+%         & Semantic coordinates, ontology routing, hierarchical retrieval,
+%         graph-aware ranking
+%         & Retrieval metrics, routing accuracy, ablation studies
+%         & ACM MM, SIGIR, WWW, CIKM \\
+
+%         Paper III
+%         & Trustworthy generation
+%         & Evidence assembly, claim attribution, citation verification,
+%         safety and uncertainty control
+%         & Factuality, completeness, safety, clinician and caregiver studies
+%         & AI in Medicine, JBI, JAMIA, npj Digital Medicine \\
+
+%         Paper IV
+%         & Generalization and transfer
+%         & Disease-independent semantic coordinates, ontology induction,
+%         few-shot cross-domain adaptation
+%         & Multi-disease transfer, unseen-domain evaluation
+%         & NeurIPS, ICLR, ICML, AAAI \\
+%         \hline
+%     \end{tabular}}
+% \end{table*}
+
+% % ============================================================
+% \section{Relationship Among the Four Papers}
+
+% The proposed publication sequence follows a bottom-up development strategy:
+
+% \begin{equation}
+% \begin{split}
+%     \mathrm{Paper\ I:}\;&
+%     \mathrm{What\ knowledge\ and\ evaluation\ data\ are\ needed?}\\
+%     \Downarrow\quad&\\[-0.5em]
+%     \mathrm{Paper\ II:}\;&
+%     \mathrm{How\ should\ the\ system\ find\ the\ correct\ evidence?}\\
+%     \Downarrow\quad&\\[-0.5em]
+%     \mathrm{Paper\ III:}\;&
+%     \mathrm{How\ should\ the\ system\ use\ and\ verify\ the\ evidence?}\\
+%     \Downarrow\quad&\\[-0.5em]
+%     \mathrm{Paper\ IV:}\;&
+%     \mathrm{How\ can\ the\ method\ generalize\ across\ diseases?}
+% \end{split}
+% \end{equation}
+
+% The papers should share infrastructure and selected resources but should avoid
+% repeating the same central contribution.
+
+% Paper I establishes the benchmark and annotation framework.
+
+% Paper II introduces the retrieval algorithm and uses the benchmark from
+% Paper I.
+
+% Paper III assumes a strong retrieval backbone and focuses on evidence
+% composition and response verification.
+
+% Paper IV removes the disease-specific assumption and investigates
+% transferable semantic-coordinate representations.
+
+% % ============================================================
+% \section{Avoiding Contribution Overlap}
+
+% To maintain a clear distinction among the papers, the following separation is
+% recommended.
+
+% \subsection{Paper I}
+
+% Paper I should claim the dataset, annotation methodology, benchmark design,
+% and baseline analysis. It should not claim the complete ontology-guided
+% retrieval architecture as its principal contribution.
+
+% \subsection{Paper II}
+
+% Paper II should claim semantic-coordinate prediction, hierarchical retrieval,
+% ontology-aware ranking, and graph expansion. The dataset should be described
+% as an evaluation resource rather than presented again as the main novelty.
+
+% \subsection{Paper III}
+
+% Paper III should treat retrieval as an upstream component. Its novelty should
+% be evidence-role selection, claim attribution, citation verification,
+% uncertainty calibration, and safety control.
+
+% \subsection{Paper IV}
+
+% Paper IV should focus on disease-independent representation learning,
+% ontology induction, cross-domain transfer, and limited-supervision
+% adaptation. Alzheimer's disease should appear as one experimental domain
+% among several.
+
+
+
+
+
+% % ============================================================
+% \section{Suggested Research Timeline}
+
+% A possible two-year implementation timeline is presented below.
+
+% \begin{table}[t]
+%     \centering
+%     \caption{Illustrative timeline for the proposed publication roadmap.}
+%     \label{tab:timeline}
+%     \resizebox{\columnwidth}{!}{
+%     \begin{tabular}{p{2.0cm}p{5.8cm}}
+%         \hline
+%         \textbf{Period} & \textbf{Main Activities} \\
+%         \hline
+%         Months 1--4
+%         & Extend the bilingual corpus, design the ontology, define annotation
+%         guidelines, and conduct pilot annotation. \\
+
+%         Months 5--8
+%         & Complete the main question and passage annotations, establish
+%         benchmark splits, and run baseline experiments for Paper I. \\
+
+%         Months 7--11
+%         & Develop semantic-coordinate prediction, ontology routing, and
+%         ontology-aware retrieval for Paper II. \\
+
+%         Months 10--14
+%         & Conduct retrieval ablations, robustness analysis, and human
+%         evaluation; submit Paper II. \\
+
+%         Months 13--18
+%         & Develop relation-aware evidence assembly, claim verification,
+%         citation checking, and medical safety control for Paper III. \\
+
+%         Months 17--21
+%         & Conduct clinician and caregiver evaluations and prepare Paper III. \\
+
+%         Months 19--24
+%         & Extend the framework to additional diseases, investigate ontology
+%         induction and cross-domain transfer, and prepare Paper IV. \\
+%         \hline
+%     \end{tabular}}
+% \end{table}
+
+% Several activities can be conducted in parallel. For example, the benchmark
+% team can continue data annotation while the methodology team develops the
+% retrieval system.
+
+% % ============================================================
+% \section{Recommended Research Identity}
+
+% The complete research line may be organized under the broader theme of
+
+% \begin{quote}
+% \textbf{Medical Knowledge Navigation}
+% \end{quote}
+
+% This theme can be divided into four stages:
+
+% \begin{enumerate}
+%     \item \textbf{Medical Knowledge Mapping:}\\
+%     constructing bilingual corpora, medical ontologies, semantic coordinates,
+%     and evaluation benchmarks;
+
+%     \item \textbf{Medical Knowledge Navigation:}\\
+%     retrieving evidence through ontology-guided routing and hierarchical
+%     semantic positioning;
+
+%     \item \textbf{Medical Knowledge Reasoning:}\\
+%     composing, attributing, and verifying retrieved evidence for trustworthy
+%     response generation;
+
+%     \item \textbf{Medical Knowledge Agents:}\\
+%     developing adaptive systems that plan retrieval, request clarification,
+%     verify evidence, and decide when professional referral is required.
+% \end{enumerate}
+
+% This broader framing allows the project to develop beyond one chatbot or one
+% disease. It provides a coherent research identity connecting knowledge
+% representation, information retrieval, multilingual medical artificial
+% intelligence, trustworthy generation, and agentic systems.
+
+% % ============================================================
+% \section{Overall Recommendation}
+
+% For the immediate ACM Multimedia 2027 submission, the recommended focus is
+% Paper II: ontology-guided semantic-coordinate retrieval.
+
+% The paper should use the bilingual Alzheimer's disease dataset as an
+% evaluation resource, but its principal novelty should be the retrieval
+% methodology:
+
+% \begin{itemize}
+%     \item semantic-coordinate representation;
+%     \item ontology-aware query routing;
+%     \item hierarchical and neighborhood-based retrieval;
+%     \item source- and recency-aware reranking;
+%     \item retrieval evaluation across multilingual, advanced, noisy, and
+%     safety-sensitive questions.
+% \end{itemize}
+
+% Paper I may be prepared in parallel if the dataset becomes sufficiently large
+% and thoroughly annotated. Paper III should follow after the retrieval
+% framework is stable, while Paper IV should be treated as the longer-term and
+% most ambitious methodological contribution.
+
+
+
+
+
+\end{document}

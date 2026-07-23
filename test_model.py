@@ -1,8 +1,10 @@
 import torch
+import transformers
 from transformers import AutoModelForCausalLM, AutoTokenizer
-import outlines
 from pydantic import BaseModel, Field
 from typing import List
+from lmformatenforcer import JsonSchemaParser
+from lmformatenforcer.integrations.transformers import build_transformers_prefix_allowed_tokens_fn
 
 # 1. Định nghĩa JSON Schema cực kỳ chặt chẽ (để không bị phạt nhân đôi)
 class Entity(BaseModel):
@@ -32,20 +34,28 @@ model = AutoModelForCausalLM.from_pretrained(
     quantization_config=quantization_config
 )
 
-# 3. Sử dụng Outlines để ép mô hình chỉ sinh ra JSON theo schema
-generator = outlines.models.transformers(model, tokenizer)
-json_generator = outlines.generate.json(generator, MedicalRecord)
+# 3. Sử dụng lm-format-enforcer để ép mô hình sinh JSON theo schema
+parser = JsonSchemaParser(MedicalRecord.model_json_schema())
+prefix_function = build_transformers_prefix_allowed_tokens_fn(tokenizer, parser)
 
 # 4. Kiểm thử với một câu lâm sàng
 clinical_text = "Bệnh nhân nam 45 tuổi có tiền sử đái tháo đường tuýp 2, nay vào viện vì đau tức ngực trái. Bác sĩ chỉ định dùng Aspirin."
 
-prompt = f"""Bạn là một chuyên gia y khoa. Hãy trích xuất các thực thể y tế (BỆNH, TRIỆU_CHỨNG, THUỐC) từ câu sau và trả về ĐÚNG định dạng JSON.
-Câu lâm sàng: {clinical_text}
-"""
+prompt = f"Bạn là một chuyên gia y khoa. Hãy trích xuất các thực thể y tế (BỆNH, TRIỆU_CHỨNG, THUỐC) từ câu sau và trả về ĐÚNG định dạng JSON.\nCâu lâm sàng: {clinical_text}\nJSON Output:\n"
+
+inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
 print("\nĐang xử lý suy luận...")
-result = json_generator(prompt)
+with torch.no_grad():
+    output_ids = model.generate(
+        **inputs,
+        max_new_tokens=512,
+        prefix_allowed_tokens_fn=prefix_function,
+        pad_token_id=tokenizer.eos_token_id
+    )
 
-# In kết quả chuẩn JSON
+# Trích xuất phần output mới sinh ra
+generated_text = tokenizer.decode(output_ids[0][inputs.input_ids.shape[-1]:], skip_special_tokens=True)
+
 print("\n=== KẾT QUẢ TRÍCH XUẤT (JSON) ===")
-print(result.model_dump_json(indent=2))
+print(generated_text)

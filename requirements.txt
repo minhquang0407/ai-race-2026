@@ -1,0 +1,8 @@
+torch
+transformers
+bitsandbytes
+accelerate
+outlines
+pydantic
+networkx
+rank_bm25

@@ -50,7 +50,7 @@ class LLMExtractor:
     def __init__(
         self,
         model_id: str = "Qwen/Qwen2.5-7B-Instruct",
-        max_new_tokens: int = 512,
+        max_new_tokens: int = 1536,
         load_in_4bit: bool = True,
         debug_dir: str | Path | None = "debug_llm_outputs",
     ) -> None:
@@ -108,6 +108,8 @@ class LLMExtractor:
                 **inputs,
                 max_new_tokens=self.max_new_tokens,
                 prefix_allowed_tokens_fn=self._prefix_function,
+                do_sample=False,
+                eos_token_id=self._tokenizer.eos_token_id,
                 pad_token_id=self._tokenizer.eos_token_id,
             )
         generated_text = self._tokenizer.decode(

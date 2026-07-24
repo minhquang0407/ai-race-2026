@@ -1,5 +1,7 @@
 ﻿from dataclasses import dataclass
 
+import pytest
+
 from src.extraction.chunking import SemanticChunker, TextChunk
 from src.extraction.pipeline import ExtractionPipeline
 from src.extraction.schema import Entity, EntityType, MedicalRecord
@@ -14,6 +16,13 @@ class FakeExtractor:
         if "Aspirin" in chunk.text:
             entities.append(Entity(text="Aspirin", position=[0, 7], type=EntityType.MEDICATION))
         return MedicalRecord(entities=entities)
+
+
+class FailingOnSecondChunkExtractor:
+    def extract_chunk(self, chunk: TextChunk) -> MedicalRecord:
+        if chunk.index == 1:
+            raise ValueError("boom")
+        return MedicalRecord(entities=[])
 
 
 def test_pipeline_extracts_corrected_global_entities_with_fake_extractor():
@@ -38,3 +47,23 @@ def test_pipeline_deduplicates_overlap_entities():
     )
     entities = pipeline.extract(text)
     assert len({(entity.text, tuple(entity.position), entity.type) for entity in entities}) == len(entities)
+
+
+def test_pipeline_skips_failed_chunks_by_default():
+    text = "Câu một ho. Câu hai sốt. Câu ba Aspirin."
+    pipeline = ExtractionPipeline(
+        chunker=SemanticChunker(target_size=10, min_size=5, max_size=20),
+        extractor=FailingOnSecondChunkExtractor(),
+    )
+    assert pipeline.extract(text) == []
+
+
+def test_pipeline_can_raise_failed_chunks_when_configured():
+    text = "Câu một ho. Câu hai sốt. Câu ba Aspirin."
+    pipeline = ExtractionPipeline(
+        chunker=SemanticChunker(target_size=10, min_size=5, max_size=20),
+        extractor=FailingOnSecondChunkExtractor(),
+        skip_failed_chunks=False,
+    )
+    with pytest.raises(ValueError, match="boom"):
+        pipeline.extract(text)

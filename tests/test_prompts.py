@@ -1,4 +1,4 @@
-﻿from src.extraction.prompts import build_extraction_prompt
+from src.extraction.prompts import build_extraction_prompt
 from src.extraction.schema import AssertionType, EntityType
 
 
@@ -11,4 +11,7 @@ def test_prompt_contains_schema_constraints():
         assert assertion.value in prompt
     assert "candidates: []" in prompt
     assert "[start, end)" in prompt
+    assert "PRECISION hơn RECALL" in prompt
+    assert "bé trai" in prompt
+    assert "thuốc" in prompt
     assert "không ho" in prompt

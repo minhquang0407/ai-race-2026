@@ -1,4 +1,4 @@
-﻿"""Prompt templates for chunk-level medical entity extraction."""
+"""Prompt templates for chunk-level medical entity extraction."""
 
 from __future__ import annotations
 
@@ -20,6 +20,15 @@ Nhiệm vụ: đọc duy nhất đoạn CHUNK bên dưới và trả về JSON �
 
 Quy tắc bắt buộc:
 - Chỉ trích xuất các type hợp lệ: {entity_types}.
+- Ưu tiên PRECISION hơn RECALL: nếu không chắc chắn entity/type, hãy bỏ qua.
+- Không trích xuất người, nhóm người, vai trò hoặc từ nhân xưng: "trẻ", "trẻ sơ sinh", "bé trai", "bé gái", "con", "bác sĩ", "bệnh nhân", "người bệnh".
+- Không trích xuất từ chung chung nếu không phải tên cụ thể: "bệnh", "thuốc", "thực phẩm", "hóa chất", "khám", "chẩn đoán", "vận động".
+- Không trích xuất gene/vị trí gene nếu schema không có type phù hợp: "gen G6PD", "Xq28", "nhiễm sắc thể X".
+- `CHẨN_ĐOÁN`: chỉ tên bệnh/rối loạn/biến chứng cụ thể, không lấy chữ "bệnh" hoặc "chẩn đoán" đơn lẻ.
+- `TRIỆU_CHỨNG`: chỉ dấu hiệu/triệu chứng lâm sàng cụ thể như "khó thở", "vàng da", "thiếu máu".
+- `THUỐC`: chỉ tên thuốc/hoạt chất cụ thể, không lấy chữ "thuốc" chung chung.
+- `TÊN_XÉT_NGHIỆM`: tên xét nghiệm cụ thể.
+- `KẾT_QUẢ_XÉT_NGHIỆM`: giá trị/kết luận xét nghiệm cụ thể.
 - `assertions` chỉ được dùng các giá trị: {assertions}.
 - Nếu không có assertion đặc biệt, dùng `assertions: []`.
 - Luôn để `candidates: []`; không tự đoán ICD-10/RxNorm.

@@ -59,3 +59,35 @@ def test_deduplicate_keeps_richer_entity():
 
 def test_find_exact_matches_returns_all_half_open_spans():
     assert find_exact_matches("ho rồi ho", "ho") == [(0, 2), (7, 9)]
+
+
+def test_filter_noisy_entities_drops_known_false_positives():
+    from src.extraction.postprocess_llm import filter_noisy_entities
+
+    entities = [
+        Entity(text="bé trai", position=[0, 7], type=EntityType.SYMPTOM),
+        Entity(text="bác sĩ", position=[8, 14], type=EntityType.SYMPTOM),
+        Entity(text="thuốc", position=[15, 20], type=EntityType.MEDICATION),
+        Entity(text="bệnh", position=[21, 25], type=EntityType.DIAGNOSIS),
+        Entity(text="khó thở", position=[26, 33], type=EntityType.SYMPTOM),
+        Entity(text="Aspirin", position=[34, 41], type=EntityType.MEDICATION),
+        Entity(text="thiếu men G6PD", position=[42, 56], type=EntityType.DIAGNOSIS),
+    ]
+
+    kept = filter_noisy_entities(entities)
+    assert [entity.text for entity in kept] == ["khó thở", "Aspirin", "thiếu men G6PD"]
+
+
+def test_filter_noisy_entities_drops_nested_same_type_entity():
+    from src.extraction.postprocess_llm import filter_noisy_entities
+
+    entities = [
+        Entity(text="chậm phát triển trí tuệ", position=[0, 23], type=EntityType.SYMPTOM),
+        Entity(text="triển trí tuệ", position=[10, 23], type=EntityType.SYMPTOM),
+        Entity(text="vàng da", position=[30, 37], type=EntityType.SYMPTOM),
+    ]
+
+    assert [entity.text for entity in filter_noisy_entities(entities)] == [
+        "chậm phát triển trí tuệ",
+        "vàng da",
+    ]

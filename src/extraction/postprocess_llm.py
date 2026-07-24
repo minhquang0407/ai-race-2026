@@ -1,12 +1,45 @@
-﻿"""Post-processing utilities for local LLM extraction records."""
+"""Post-processing utilities for local LLM extraction records."""
 
 from __future__ import annotations
 
 from dataclasses import replace
 
 from .chunking import TextChunk
-from .schema import Entity, MedicalRecord
+from .schema import Entity, EntityType, MedicalRecord
 from .validation import local_to_global, validate_span
+
+NOISY_TEXTS = {
+    "bé trai",
+    "bé gái",
+    "trẻ",
+    "trẻ sơ sinh",
+    "con",
+    "bác sĩ",
+    "bệnh nhân",
+    "người bệnh",
+    "bệnh",
+    "thuốc",
+    "thực phẩm",
+    "hóa chất",
+    "khám",
+    "chẩn đoán",
+    "vận động",
+    "nhiễm sắc thể x",
+    "xq28",
+    "gen g6pd",
+}
+PERSON_ROLE_TEXTS = {
+    "bé trai",
+    "bé gái",
+    "trẻ",
+    "trẻ sơ sinh",
+    "con",
+    "bác sĩ",
+    "bệnh nhân",
+    "người bệnh",
+}
+COMMON_MEDICATION_TEXTS = {"thuốc", "thực phẩm", "hóa chất"}
+COMMON_DIAGNOSIS_TEXTS = {"bệnh", "chẩn đoán"}
 
 
 def find_exact_matches(source_text: str, mention: str) -> list[tuple[int, int]]:
@@ -81,6 +114,62 @@ def postprocess_chunk_record(record: MedicalRecord, chunk: TextChunk) -> list[En
     return output
 
 
+def normalize_entity_text(text: str) -> str:
+    """Normalize entity text for conservative rule-based filters."""
+
+    return " ".join(text.casefold().strip().split())
+
+
+def is_noisy_entity(entity: Entity) -> bool:
+    """Return True for obvious false-positive entities seen in LLM smoke tests."""
+
+    normalized = normalize_entity_text(entity.text)
+    entity_type = EntityType(entity.type) if isinstance(entity.type, str) else entity.type
+    if normalized in NOISY_TEXTS:
+        return True
+    if entity_type == EntityType.MEDICATION and normalized in COMMON_MEDICATION_TEXTS:
+        return True
+    if entity_type == EntityType.DIAGNOSIS and normalized in COMMON_DIAGNOSIS_TEXTS:
+        return True
+    if entity_type == EntityType.SYMPTOM and normalized in PERSON_ROLE_TEXTS:
+        return True
+    return False
+
+
+def filter_nested_entities(entities: list[Entity]) -> list[Entity]:
+    """Drop shorter same-type entities fully contained in longer spans."""
+
+    keep: list[Entity] = []
+    for entity in entities:
+        entity_type = str(entity.type)
+        entity_start, entity_end = entity.position
+        entity_len = entity_end - entity_start
+        entity_score = len(entity.assertions) + len(entity.candidates)
+        contained_by_richer_longer = False
+        for other in entities:
+            if other is entity or str(other.type) != entity_type:
+                continue
+            other_start, other_end = other.position
+            other_len = other_end - other_start
+            if other_len <= entity_len:
+                continue
+            if other_start <= entity_start and entity_end <= other_end:
+                other_score = len(other.assertions) + len(other.candidates)
+                if other_score >= entity_score:
+                    contained_by_richer_longer = True
+                    break
+        if not contained_by_richer_longer:
+            keep.append(entity)
+    return keep
+
+
+def filter_noisy_entities(entities: list[Entity]) -> list[Entity]:
+    """Apply conservative precision-first filters after span correction."""
+
+    non_noisy = [entity for entity in entities if not is_noisy_entity(entity)]
+    return filter_nested_entities(non_noisy)
+
+
 def deduplicate_entities(entities: list[Entity]) -> list[Entity]:
     """Deduplicate entities produced by overlapping chunks."""
 
@@ -104,7 +193,11 @@ __all__ = [
     "choose_match",
     "correct_entity_span",
     "deduplicate_entities",
+    "filter_nested_entities",
+    "filter_noisy_entities",
     "find_exact_matches",
+    "is_noisy_entity",
     "map_entity_to_global",
+    "normalize_entity_text",
     "postprocess_chunk_record",
 ]

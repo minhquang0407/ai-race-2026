@@ -6,7 +6,7 @@ import sys
 
 from .chunking import SemanticChunker, TextChunk
 from .llm_inference import ChunkExtractor
-from .postprocess_llm import deduplicate_entities, postprocess_chunk_record
+from .postprocess_llm import deduplicate_entities, filter_noisy_entities, postprocess_chunk_record
 from .schema import Entity
 
 
@@ -38,7 +38,8 @@ class ExtractionPipeline:
                 )
                 continue
             entities.extend(postprocess_chunk_record(record, chunk))
-        return deduplicate_entities(entities)
+        deduplicated = deduplicate_entities(entities)
+        return filter_noisy_entities(deduplicated)
 
     def split(self, source_text: str) -> list[TextChunk]:
         return self.chunker.split(source_text)

@@ -76,13 +76,13 @@ Dưới đây là kế hoạch chi tiết từng bước (Step-by-step) để l�
 ## 📍 PHASE 7: REAL LLM SMOKE TEST (CHẠY THỬ MODEL THẬT)
 **Mục tiêu:** Thay `FakeExtractor` bằng `LLMExtractor` để kiểm tra Qwen2.5-7B chạy thật end-to-end trên một số file nhỏ trước khi chạy toàn bộ 100 input.
 
-- [ ] **7.1. Single-file Smoke Test:** Chạy `python main.py --input-dir input --output-dir output_llm --extractor llm --limit 1 --safe` và kiểm tra model load, generate, parse JSON thành công.
-- [ ] **7.2. VRAM & Runtime Check:** Ghi nhận thời gian load model, thời gian xử lý mỗi chunk/file, mức VRAM/RAM sử dụng và lỗi OOM nếu có.
-- [ ] **7.3. Prompt Debugging:** Kiểm tra output thật có đúng `type`, `assertions`, `text`, `position` không; nếu position hallucination nhiều thì điều chỉnh prompt hoặc chuyển sang chiến lược LLM trả `text` để code tự tìm span.
-- [ ] **7.4. LLM Output Validator:** Chạy Phase 6 validator trên `output_llm/` để phát hiện lỗi format/span trước khi mở rộng batch.
-- [ ] **7.5. Limited Batch Test:** Chạy thử 5-10 file bằng `--extractor llm --limit 10 --safe` sau khi single-file ổn định.
+- [x] **7.1. Single-file Smoke Test:** Đã chạy `python main.py --input-dir input --output-dir output_llm --extractor llm --limit 1 --safe`; model load/generate được, file `1.json` được tạo với 61 entities. Có 1 chunk bị partial JSON nhưng pipeline đã skip an toàn thay vì fail cả file.
+- [ ] **7.2. VRAM & Runtime Check:** Cần ghi nhận thủ công thời gian load model, thời gian xử lý `1.txt`, VRAM/RAM peak và cấu hình GPU/CPU. Warning `bitsandbytes FutureWarning` hiện không chặn pipeline.
+- [/] **7.3. Prompt Debugging:** Validator đã pass nhưng output đang over-extract nhiều false positives (`bé trai`, `bé gái`, `bác sĩ`, `thuốc`, `thực phẩm`, `bệnh`, `chẩn đoán`). Cần làm tiếp **7.3A Precision-first Prompt** và **7.3B Noisy Entity Filter** trước khi chạy batch lớn.
+- [x] **7.4. LLM Output Validator:** Đã chạy `python -m src.evaluation.submission_validator --input-dir input --output-dir output_llm --limit 1` → `checked_files=1, valid_files=1, invalid_files=0, issues=0`.
+- [ ] **7.5. Limited Batch Test:** Chưa chạy 5-10 file. Chỉ thực hiện sau khi giảm false positive bằng prompt/filter.
 
-**Checkpoint Phase 7:** Hoàn thành khi LLM thật chạy được ít nhất 1-10 file, output parse được, validator báo lỗi rõ ràng, và có ghi nhận runtime/VRAM để quyết định cấu hình chạy toàn bộ.
+**Checkpoint Phase 7 hiện tại:** PASS về mặt kỹ thuật end-to-end cho 1 file thật: LLM chạy được, output JSON hợp lệ, validator pass. Chưa hoàn thành chất lượng extraction vì output còn recall-heavy/false-positive-heavy. Bước tiếp theo: triển khai `precision-first prompt + noisy entity filter`, sau đó chạy lại `--limit 1`, validator, rồi mới mở rộng `--limit 10`.
 
 ---
 

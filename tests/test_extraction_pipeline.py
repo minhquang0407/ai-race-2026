@@ -67,3 +67,21 @@ def test_pipeline_can_raise_failed_chunks_when_configured():
     )
     with pytest.raises(ValueError, match="boom"):
         pipeline.extract(text)
+
+
+def test_pipeline_applies_noisy_entity_filter():
+    class NoisyExtractor:
+        def extract_chunk(self, chunk: TextChunk) -> MedicalRecord:
+            return MedicalRecord(
+                entities=[
+                    Entity(text="thuốc", position=[0, 5], type=EntityType.MEDICATION),
+                    Entity(text="khó thở", position=[14, 21], type=EntityType.SYMPTOM),
+                ]
+            )
+
+    text = "thuốc gây khó thở"
+    pipeline = ExtractionPipeline(
+        chunker=SemanticChunker(target_size=200, min_size=10, max_size=250),
+        extractor=NoisyExtractor(),
+    )
+    assert [entity.text for entity in pipeline.extract(text)] == ["khó thở"]

@@ -10,7 +10,7 @@ from pydantic import ValidationError
 
 from .chunking import TextChunk
 from .prompts import build_extraction_prompt
-from .schema import MedicalRecord
+from .schema import ASSERTION_ENTITY_TYPES, CANDIDATE_ENTITY_TYPES, Entity, EntityType, MedicalRecord
 
 
 class ChunkExtractor(Protocol):
@@ -41,7 +41,41 @@ def parse_json_output(output_text: str) -> MedicalRecord:
     try:
         return MedicalRecord.model_validate(payload)
     except ValidationError:
-        raise
+        return _parse_json_output_tolerant(payload)
+
+
+def _parse_json_output_tolerant(payload: object) -> MedicalRecord:
+    """Best-effort parser for real LLM outputs.
+
+    If one entity has type-restricted fields wrong, sanitize/drop that entity
+    instead of failing the whole chunk. This is only a fallback after strict
+    schema validation fails.
+    """
+
+    if not isinstance(payload, dict):
+        raise ValueError("model JSON root must be an object")
+    raw_entities = payload.get("entities", [])
+    if not isinstance(raw_entities, list):
+        raise ValueError("model JSON field 'entities' must be a list")
+
+    entities: list[Entity] = []
+    for raw_entity in raw_entities:
+        if not isinstance(raw_entity, dict):
+            continue
+        candidate = dict(raw_entity)
+        try:
+            entity_type = EntityType(candidate.get("type"))
+        except Exception:
+            continue
+        if entity_type not in CANDIDATE_ENTITY_TYPES:
+            candidate["candidates"] = []
+        if entity_type not in ASSERTION_ENTITY_TYPES:
+            candidate["assertions"] = []
+        try:
+            entities.append(Entity.model_validate(candidate))
+        except ValidationError:
+            continue
+    return MedicalRecord(entities=entities)
 
 
 class LLMExtractor:

@@ -1,8 +1,9 @@
-﻿"""LLM inference wrapper for chunk-level extraction."""
+"""LLM inference wrapper for chunk-level extraction."""
 
 from __future__ import annotations
 
 import json
+from pathlib import Path
 from typing import Protocol
 
 from pydantic import ValidationError
@@ -34,7 +35,8 @@ def parse_json_output(output_text: str) -> MedicalRecord:
     start = text.find("{")
     end = text.rfind("}")
     if start == -1 or end == -1 or end < start:
-        raise ValueError("model output does not contain a JSON object")
+        preview = text[:500] if text else "<empty>"
+        raise ValueError(f"model output does not contain a JSON object. Raw preview: {preview!r}")
     payload = json.loads(text[start : end + 1])
     try:
         return MedicalRecord.model_validate(payload)
@@ -50,10 +52,12 @@ class LLMExtractor:
         model_id: str = "Qwen/Qwen2.5-7B-Instruct",
         max_new_tokens: int = 512,
         load_in_4bit: bool = True,
+        debug_dir: str | Path | None = "debug_llm_outputs",
     ) -> None:
         self.model_id = model_id
         self.max_new_tokens = max_new_tokens
         self.load_in_4bit = load_in_4bit
+        self.debug_dir = Path(debug_dir) if debug_dir is not None else None
         self._tokenizer = None
         self._model = None
         self._prefix_function = None
@@ -110,10 +114,29 @@ class LLMExtractor:
             output_ids[0][inputs.input_ids.shape[-1] :],
             skip_special_tokens=True,
         )
-        return parse_json_output(generated_text)
+        try:
+            return parse_json_output(generated_text)
+        except Exception:
+            self._write_debug_output(chunk, prompt, generated_text)
+            raise
 
     def extract_chunks(self, chunks: list[TextChunk]) -> list[MedicalRecord]:
         return [self.extract_chunk(chunk) for chunk in chunks]
+
+    def _write_debug_output(self, chunk: TextChunk, prompt: str, generated_text: str) -> None:
+        if self.debug_dir is None:
+            return
+        self.debug_dir.mkdir(parents=True, exist_ok=True)
+        debug_path = self.debug_dir / f"chunk_{chunk.index}_{chunk.start}_{chunk.end}.txt"
+        debug_path.write_text(
+            "=== CHUNK ===\n"
+            f"{chunk.text}\n\n"
+            "=== PROMPT ===\n"
+            f"{prompt}\n\n"
+            "=== RAW GENERATED TEXT ===\n"
+            f"{generated_text if generated_text else '<empty>'}\n",
+            encoding="utf-8",
+        )
 
 
 __all__ = ["ChunkExtractor", "LLMExtractor", "parse_json_output"]

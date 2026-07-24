@@ -6,3 +6,4 @@ lm-format-enforcer
 pydantic
 networkx
 rank_bm25
+pytest

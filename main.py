@@ -1,4 +1,4 @@
-﻿"""Command-line entry point for the end-to-end medical extraction pipeline."""
+"""Command-line entry point for the end-to-end medical extraction pipeline."""
 
 from __future__ import annotations
 
@@ -54,7 +54,13 @@ def main(argv: list[str] | None = None) -> int:
 
     extractor = build_extractor(args.extractor, args.model_id)
     pipeline = ExtractionPipeline(
-        chunker=SemanticChunker(target_size=220, min_size=120, max_size=280, overlap_chars=30),
+        chunker=SemanticChunker(
+            target_size=600,
+            min_size=300,
+            max_size=800,
+            overlap_chars=0,
+            no_split_below=1500,
+        ),
         extractor=extractor,
     )
     retriever = CandidateRetriever.from_sample_data()

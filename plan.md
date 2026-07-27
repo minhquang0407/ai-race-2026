@@ -78,11 +78,15 @@ Dưới đây là kế hoạch chi tiết từng bước (Step-by-step) để l�
 
 - [x] **7.1. Single-file Smoke Test:** Đã chạy `python main.py --input-dir input --output-dir output_llm --extractor llm --limit 1 --safe`; model load/generate được, file `1.json` được tạo với 61 entities. Có 1 chunk bị partial JSON nhưng pipeline đã skip an toàn thay vì fail cả file.
 - [ ] **7.2. VRAM & Runtime Check:** Cần ghi nhận thủ công thời gian load model, thời gian xử lý `1.txt`, VRAM/RAM peak và cấu hình GPU/CPU. Warning `bitsandbytes FutureWarning` hiện không chặn pipeline.
-- [/] **7.3. Prompt Debugging:** Validator đã pass nhưng output đang over-extract nhiều false positives (`bé trai`, `bé gái`, `bác sĩ`, `thuốc`, `thực phẩm`, `bệnh`, `chẩn đoán`). Cần làm tiếp **7.3A Precision-first Prompt** và **7.3B Noisy Entity Filter** trước khi chạy batch lớn.
+- [x] **7.3. Prompt Debugging & Filter:** Đã triển khai precision-first prompt, noisy entity blacklist và nested overlap filter. Entity count giảm từ 61 → 32 sau 7.3A/B. Validator pass `checked_files=1, valid_files=1, invalid_files=0, issues=0`. Còn 2 chunk bị partial JSON (Expecting ',' delimiter) bị skip. Cần 7.3C JSON Salvage Parser để tận dụng entity hợp lệ trong chunk partial.
 - [x] **7.4. LLM Output Validator:** Đã chạy `python -m src.evaluation.submission_validator --input-dir input --output-dir output_llm --limit 1` → `checked_files=1, valid_files=1, invalid_files=0, issues=0`.
-- [ ] **7.5. Limited Batch Test:** Chưa chạy 5-10 file. Chỉ thực hiện sau khi giảm false positive bằng prompt/filter.
+- [ ] **7.5. Limited Batch Test:** Chưa chạy 5-10 file. Đề xuất làm sau khi commit chunking fix và chạy lại `--limit 1` với config chunk mới.
 
-**Checkpoint Phase 7 hiện tại:** PASS về mặt kỹ thuật end-to-end cho 1 file thật: LLM chạy được, output JSON hợp lệ, validator pass. Chưa hoàn thành chất lượng extraction vì output còn recall-heavy/false-positive-heavy. Bước tiếp theo: triển khai `precision-first prompt + noisy entity filter`, sau đó chạy lại `--limit 1`, validator, rồi mới mở rộng `--limit 10`.
+**TODO 7.3C JSON Salvage Parser:** ✅ Hoàn thành. Khi `json.loads` fail do partial JSON, `_salvage_json_entities` dùng regex scan từng object `{...}` hoàn chỉnh, parse qua tolerant parser và trả về entity hợp lệ. Chunks trước đây bị skip nay có thể salvage được một phần entity. Debug output chỉ ghi khi entity rỗng. `python -m pytest -q` → `67 passed`.
+
+**TODO 7.3D Chunking Fix:** ✅ Hoàn thành. Thêm `no_split_below`, ưu tiên blank-line boundary `\n\n`, tăng chunk config lên `target_size=600/min_size=300/max_size=800`, bỏ overlap. Thống kê mới: total chunks `1015 → 314`, avg chunks/file `10.2 → 3.1`, mid-sentence starts `908 → 20`, tests `70 passed`.
+
+**Checkpoint Phase 7 hiện tại:** 7.1, 7.3 (A/B/C/D), 7.4 hoàn thành. Pipeline end-to-end thật chạy được, output hợp lệ, entity count giảm 48% (61→32), validator pass, JSON salvage parser tận dụng được entity từ chunk partial, chunking không còn cắt vụn/mất context nghiêm trọng. Còn 7.2 (VRAM), 7.5 (limited batch).
 
 ---
 

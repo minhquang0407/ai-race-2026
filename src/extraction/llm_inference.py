@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Protocol
 
@@ -35,9 +36,11 @@ def parse_json_output(output_text: str) -> MedicalRecord:
     start = text.find("{")
     end = text.rfind("}")
     if start == -1 or end == -1 or end < start:
-        preview = text[:500] if text else "<empty>"
-        raise ValueError(f"model output does not contain a JSON object. Raw preview: {preview!r}")
-    payload = json.loads(text[start : end + 1])
+        return _salvage_json_entities(text)
+    try:
+        payload = json.loads(text[start : end + 1])
+    except json.JSONDecodeError:
+        return _salvage_json_entities(text)
     try:
         return MedicalRecord.model_validate(payload)
     except ValidationError:
@@ -75,6 +78,36 @@ def _parse_json_output_tolerant(payload: object) -> MedicalRecord:
             entities.append(Entity.model_validate(candidate))
         except ValidationError:
             continue
+    return MedicalRecord(entities=entities)
+
+
+# Matches a single flat JSON object (no nested braces).
+_ENTITY_OBJECT_RE = re.compile(r"\{[^{}]+\}", re.DOTALL)
+
+
+def _salvage_json_entities(raw_text: str) -> MedicalRecord:
+    """Recover valid entity objects from partial/truncated LLM JSON.
+
+    Scans for complete flat ``{...}`` objects in the raw output, parses each
+    individually through the tolerant parser, and returns whatever is valid.
+    Objects that are themselves partial (e.g. truncated mid-string) are skipped.
+    No text/span is modified or hallucinated.
+    """
+
+    entities: list[Entity] = []
+    for match in _ENTITY_OBJECT_RE.finditer(raw_text):
+        obj_text = match.group()
+        try:
+            obj = json.loads(obj_text)
+        except json.JSONDecodeError:
+            continue
+        if not isinstance(obj, dict):
+            continue
+        try:
+            record = _parse_json_output_tolerant({"entities": [obj]})
+        except (ValueError, Exception):
+            continue
+        entities.extend(record.entities)
     return MedicalRecord(entities=entities)
 
 
@@ -151,10 +184,13 @@ class LLMExtractor:
             skip_special_tokens=True,
         )
         try:
-            return parse_json_output(generated_text)
+            record = parse_json_output(generated_text)
         except Exception:
             self._write_debug_output(chunk, prompt, generated_text)
             raise
+        if not record.entities:
+            self._write_debug_output(chunk, prompt, generated_text)
+        return record
 
     def extract_chunks(self, chunks: list[TextChunk]) -> list[MedicalRecord]:
         return [self.extract_chunk(chunk) for chunk in chunks]

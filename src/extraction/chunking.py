@@ -1,4 +1,4 @@
-﻿"""Semantic chunking utilities that preserve original offsets."""
+"""Semantic chunking utilities that preserve original offsets."""
 
 from __future__ import annotations
 
@@ -32,6 +32,7 @@ class SemanticChunker:
         min_size: int = 150,
         max_size: int = 250,
         overlap_chars: int = 0,
+        no_split_below: int | None = None,
     ) -> None:
         if not (0 <= overlap_chars < max_size):
             raise ValueError("overlap_chars must satisfy 0 <= overlap_chars < max_size")
@@ -39,14 +40,19 @@ class SemanticChunker:
             raise ValueError("chunk sizes must be positive")
         if min_size > target_size or target_size > max_size:
             raise ValueError("sizes must satisfy min_size <= target_size <= max_size")
+        if no_split_below is not None and no_split_below < 0:
+            raise ValueError("no_split_below must be non-negative or None")
         self.target_size = target_size
         self.min_size = min_size
         self.max_size = max_size
         self.overlap_chars = overlap_chars
+        self.no_split_below = no_split_below
 
     def split(self, source_text: str) -> list[TextChunk]:
         if source_text == "":
             return []
+        if self.no_split_below is not None and len(source_text) <= self.no_split_below:
+            return [TextChunk(source_text, 0, len(source_text), 0)]
 
         chunks: list[TextChunk] = []
         start = 0
@@ -75,6 +81,10 @@ class SemanticChunker:
         target = min(start + self.target_size, hard_limit)
         min_end = min(start + self.min_size, hard_limit)
 
+        blank_line = self._find_last_blank_line_boundary(text, min_end, hard_limit)
+        if blank_line is not None:
+            return blank_line
+
         newline = self._find_last_newline_boundary(text, min_end, hard_limit)
         if newline is not None:
             return newline
@@ -100,6 +110,13 @@ class SemanticChunker:
         while next_start < end and not text[next_start].isspace() and not text[next_start - 1].isspace():
             next_start += 1
         return min(next_start, end)
+
+    @staticmethod
+    def _find_last_blank_line_boundary(text: str, min_end: int, hard_limit: int) -> int | None:
+        for i in range(hard_limit - 1, min_end - 1, -1):
+            if text.startswith("\n\n", i):
+                return i + 2
+        return None
 
     @staticmethod
     def _find_last_newline_boundary(text: str, min_end: int, hard_limit: int) -> int | None:

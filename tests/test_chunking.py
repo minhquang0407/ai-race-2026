@@ -55,3 +55,40 @@ def test_competition_example_half_open_span():
     assert (start, end) == (56, 81)
     assert text[start:end] == mention
     assert end - start == len(mention)
+
+
+def test_no_split_below_returns_single_chunk():
+    text = "Bệnh nhân ho và sốt. " * 20
+    chunks = SemanticChunker(
+        target_size=50,
+        min_size=30,
+        max_size=80,
+        no_split_below=len(text),
+    ).split(text)
+    assert len(chunks) == 1
+    assert chunks[0].text == text
+    assert chunks[0].start == 0
+    assert chunks[0].end == len(text)
+
+
+def test_prefers_blank_line_boundary_over_single_newline():
+    first = "A" * 80
+    second = "B" * 80
+    third = "C" * 80
+    text = first + "\n" + second + "\n\n" + third
+    chunks = SemanticChunker(target_size=140, min_size=60, max_size=170).split(text)
+    assert chunks[0].text.endswith("\n\n")
+    assert_chunks_match_source(text, chunks)
+
+
+def test_large_file_chunks_at_section_boundaries_when_possible():
+    text = (
+        "1. Tiền sử bệnh\n" + "Bệnh nhân tăng huyết áp. " * 20 + "\n\n"
+        "2. Bệnh sử hiện tại\n" + "Bệnh nhân ho và khó thở. " * 20 + "\n\n"
+        "3. Kết quả xét nghiệm\n" + "bạch cầu 26.7. " * 20
+    )
+    chunks = SemanticChunker(target_size=500, min_size=250, max_size=700).split(text)
+    assert len(chunks) > 1
+    assert chunks[0].text.endswith("\n\n")
+    assert_chunks_match_source(text, chunks)
+    assert "".join(chunk.text for chunk in chunks) == text

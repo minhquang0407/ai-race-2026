@@ -68,3 +68,26 @@ def test_candidate_retriever_keeps_symptom_candidates_empty():
 def test_bm25_index_exact_alias_score():
     index = BM25SearchIndex([BM25Document(id="x", text="Aspirin", aliases=("ASA",))])
     assert index.search("ASA")[0].score == 1.0
+
+
+def test_ontology_gate_drops_medication_with_no_rxnorm_match():
+    """Men G6PD, long nao, bang phien have no RxNorm match -> gate drops them."""
+    retriever = CandidateRetriever.from_sample_data()
+    # These are false-positive THUOC entities from real LLM output
+    noisy = [
+        Entity(text="men G6PD", position=[0, 8], type=EntityType.MEDICATION),
+        Entity(text="long nao", position=[10, 18], type=EntityType.MEDICATION),
+        Entity(text="thuc pham", position=[20, 29], type=EntityType.MEDICATION),
+    ]
+    result = retriever.retrieve_for_entities(noisy)
+    assert result == [], f"Expected all dropped by gate, got: {[e.text for e in result]}"
+
+
+def test_ontology_gate_keeps_aspirin():
+    """Aspirin should pass the RxNorm gate."""
+    retriever = CandidateRetriever.from_sample_data()
+    entity = Entity(text="Aspirin", position=[0, 7], type=EntityType.MEDICATION)
+    result = retriever.retrieve_for_entity(entity)
+    assert result is not None
+    assert result.text == "Aspirin"
+    assert result.candidates  # should have RxNorm candidates

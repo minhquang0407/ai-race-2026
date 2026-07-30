@@ -1,4 +1,4 @@
-﻿"""Rule-based fake extractor for fast integration tests.
+"""Rule-based fake extractor for fast integration tests.
 
 This is not the competition solution. It only lets CI exercise the full
 pipeline without loading a 7B LLM.
@@ -7,10 +7,11 @@ pipeline without loading a 7B LLM.
 from __future__ import annotations
 
 from .chunking import TextChunk
+from .llm_inference import ChunkExtractor
 from .schema import AssertionType, Entity, EntityType, MedicalRecord
 
 
-class FakeExtractor:
+class FakeExtractor(ChunkExtractor):
     patterns: tuple[tuple[str, EntityType], ...] = (
         ("đái tháo đường tuýp 2", EntityType.DIAGNOSIS),
         ("đái tháo đường", EntityType.DIAGNOSIS),

@@ -38,8 +38,15 @@ PERSON_ROLE_TEXTS = {
     "bệnh nhân",
     "người bệnh",
 }
-COMMON_MEDICATION_TEXTS = {"thuốc", "thực phẩm", "hóa chất"}
 COMMON_DIAGNOSIS_TEXTS = {"bệnh", "chẩn đoán"}
+COMMON_SYMPTOM_TEXTS = {
+    "hồng cầu",
+    "sơ sinh",
+    "biến chứng",
+    "sàng lọc sớm",
+    "sàng lọc sớm các bệnh bẩm sinh",
+}
+GENE_OR_ENZYME_TEXTS = {"men g6pd", "g6pd", "gen g6pd"}
 
 
 def find_exact_matches(source_text: str, mention: str) -> list[tuple[int, int]]:
@@ -127,11 +134,13 @@ def is_noisy_entity(entity: Entity) -> bool:
     entity_type = EntityType(entity.type) if isinstance(entity.type, str) else entity.type
     if normalized in NOISY_TEXTS:
         return True
-    if entity_type == EntityType.MEDICATION and normalized in COMMON_MEDICATION_TEXTS:
-        return True
     if entity_type == EntityType.DIAGNOSIS and normalized in COMMON_DIAGNOSIS_TEXTS:
         return True
     if entity_type == EntityType.SYMPTOM and normalized in PERSON_ROLE_TEXTS:
+        return True
+    if entity_type == EntityType.SYMPTOM and normalized in COMMON_SYMPTOM_TEXTS:
+        return True
+    if entity_type == EntityType.SYMPTOM and normalized in GENE_OR_ENZYME_TEXTS:
         return True
     return False
 

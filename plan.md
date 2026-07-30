@@ -116,13 +116,54 @@ Dưới đây là kế hoạch chi tiết từng bước (Step-by-step) để l�
 
 ---
 
-## 📍 PHASE 10: OPTIONAL QLORA UPGRADE
+## 📍 PHASE 10: MODEL EXPERIMENT — QWEN3.5-9B
+**Mục tiêu:** So sánh Qwen3.5-9B-Instruct với Qwen2.5-7B-Instruct hiện tại trên cùng bộ input, cùng pipeline và cùng validator, để quyết định model tối ưu cho bài nộp cuối.
+
+**Lý do thử nghiệm:**
+- Qwen3.5-9B tốt hơn tiếng Việt và instruction following so với 2.5-7B.
+- 9B INT4 ≈ 5.5GB VRAM, vẫn vừa RTX 3060 12GB.
+- Nhưng Qwen3 mặc định có **thinking mode** (`<think>`) → phải disable vì conflict với `lm-format-enforcer`.
+
+**Rủi ro cần kiểm soát:**
+- Thinking mode token bị lm-format-enforcer chặn → partial JSON tăng.
+- Tokenizer khác → cần kiểm tra lm-format-enforcer compatibility.
+- VRAM cao hơn ~1GB → cần theo dõi OOM.
+
+- [ ] **10.1. Download & Load:** Thêm `LLMExtractor(model_id="Qwen/Qwen3.5-9B-Instruct")` vào CLI. Chạy `--limit 1` để kiểm tra model load không OOM.
+- [ ] **10.2. Disable Thinking Mode:** Thêm system prompt hoặc generation config để tắt thinking:
+  ```python
+  # Option A: system prompt prefix
+  "/no_think\nBạn là hệ thống trích xuất..."
+  # Option B: generation config
+  model.generation_config.thinking_mode = "disabled"
+  ```
+  Verify raw generated text không có `<think>` tags.
+- [ ] **10.3. lm-format-enforcer Compatibility Check:** Chạy `--limit 1`, đếm số chunk bị skip partial JSON. So sánh với Qwen2.5-7B baseline (hiện 0-2 chunk/file).
+- [ ] **10.4. A/B Comparison trên 5 file:** Chạy cùng 5 file với cả 2 model:
+  ```powershell
+  python main.py --extractor llm --model-id Qwen/Qwen2.5-7B-Instruct --limit 5 --output-dir output_qwen25
+  python main.py --extractor llm --model-id Qwen/Qwen3.5-9B-Instruct --limit 5 --output-dir output_qwen35
+  ```
+  Validator trên cả 2:
+  ```powershell
+  python -m src.evaluation.submission_validator --input-dir input --output-dir output_qwen25 --limit 5
+  python -m src.evaluation.submission_validator --input-dir input --output-dir output_qwen35 --limit 5
+  ```
+  So sánh: entity count, chunk fails, validator issues.
+- [ ] **10.5. Decision:** Nếu Qwen3.5-9B ít partial JSON hơn hoặc bằng, và entity quality tốt hơn → switch. Nếu tệ hơn → giữ Qwen2.5-7B.
+
+**Checkpoint Phase 10:** Hoàn thành khi có kết quả A/B rõ ràng và quyết định model cho toàn bộ 100 file.
+
+---
+
+## 📍 PHASE 11: OPTIONAL QLORA UPGRADE
 **Mục tiêu:** Nếu baseline LLM zero/few-shot chưa đủ ổn định, dùng synthetic/pseudo-label data để fine-tune QLoRA nhằm cải thiện NER, `type`, `assertions` và format discipline.
 
-- [ ] **10.1. Synthetic Data Generator:** Tạo dữ liệu câu y khoa tiếng Việt có nhãn JSON trung gian, tập trung vào phủ định, tiền sử, người nhà, thuốc, xét nghiệm.
-- [ ] **10.2. Pseudo-label Filtering:** Dùng validator để lọc pseudo-label có span chính xác và schema hợp lệ.
-- [ ] **10.3. QLoRA Training Script:** Tạo script train adapter cho Qwen2.5-7B-Instruct 4-bit, không học candidate ID.
-- [ ] **10.4. Adapter Inference:** Cho `LLMExtractor` load LoRA adapter tùy chọn.
-- [ ] **10.5. Before/After Evaluation:** So sánh zero-shot vs QLoRA bằng validator, runtime và sample metrics nội bộ.
+- [ ] **11.1. Synthetic Data Generator:** Tạo dữ liệu câu y khoa tiếng Việt có nhãn JSON trung gian, tập trung vào phủ định, tiền sử, người nhà, thuốc, xét nghiệm.
+- [ ] **11.2. Pseudo-label Filtering:** Dùng validator để lọc pseudo-label có span chính xác và schema hợp lệ.
+- [ ] **11.3. QLoRA Training Script:** Tạo script train adapter cho model được chọn (Qwen2.5-7B hoặc Qwen3.5-9B) 4-bit, không học candidate ID.
+- [ ] **11.4. Adapter Inference:** Cho `LLMExtractor` load LoRA adapter tùy chọn.
+- [ ] **11.5. Before/After Evaluation:** So sánh zero-shot vs QLoRA bằng validator, runtime và sample metrics nội bộ.
 
-**Checkpoint Phase 10:** Hoàn thành khi adapter QLoRA chạy được offline, cải thiện type/assertion trên bộ smoke test, và không phá schema/position validation.
+**Checkpoint Phase 11:** Hoàn thành khi adapter QLoRA chạy được offline, cải thiện type/assertion trên bộ smoke test, và không phá schema/position validation.
+

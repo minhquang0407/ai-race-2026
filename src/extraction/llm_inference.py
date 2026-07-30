@@ -111,7 +111,7 @@ def _salvage_json_entities(raw_text: str) -> MedicalRecord:
     return MedicalRecord(entities=entities)
 
 
-class LLMExtractor:
+class LLMExtractor(ChunkExtractor):
     """Qwen/lm-format-enforcer extractor loaded lazily to keep tests lightweight."""
 
     def __init__(

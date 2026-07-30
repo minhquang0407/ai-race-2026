@@ -1,4 +1,4 @@
-﻿import pytest
+import pytest
 
 from src.extraction.chunking import TextChunk
 from src.extraction.postprocess_llm import (
@@ -91,3 +91,36 @@ def test_filter_noisy_entities_drops_nested_same_type_entity():
         "chậm phát triển trí tuệ",
         "vàng da",
     ]
+
+
+def test_filter_noisy_entities_drops_symptom_structural_noise():
+    from src.extraction.postprocess_llm import filter_noisy_entities
+
+    entities = [
+        # structural SYMPTOM noise -> dropped by filter
+        Entity(text="men G6PD", position=[20, 28], type=EntityType.SYMPTOM),
+        Entity(text="hồng cầu", position=[30, 38], type=EntityType.SYMPTOM),
+        Entity(text="sàng lọc sớm các bệnh bẩm sinh", position=[40, 70], type=EntityType.SYMPTOM),
+        Entity(text="sơ sinh", position=[71, 78], type=EntityType.SYMPTOM),
+        Entity(text="biến chứng", position=[79, 89], type=EntityType.SYMPTOM),
+        # MEDICATION entities pass filter (handled by RxNorm gate in retriever)
+        Entity(text="men G6PD", position=[0, 8], type=EntityType.MEDICATION),
+        Entity(text="long não", position=[90, 98], type=EntityType.MEDICATION),
+        Entity(text="Aspirin", position=[200, 207], type=EntityType.MEDICATION),
+        # valid entities -> kept
+        Entity(text="thiếu men G6PD", position=[10, 24], type=EntityType.DIAGNOSIS),
+        Entity(text="khó thở", position=[140, 147], type=EntityType.SYMPTOM),
+    ]
+
+    kept = [entity.text for entity in filter_noisy_entities(entities)]
+    # diagnosis and symptom valid -> kept
+    assert "thiếu men G6PD" in kept
+    assert "khó thở" in kept
+    # structural symptom noise -> dropped
+    assert "hồng cầu" not in kept
+    assert "sơ sinh" not in kept
+    assert "biến chứng" not in kept
+    # gene/enzyme as symptom -> dropped
+    assert all(e.type != EntityType.SYMPTOM or e.text != "men G6PD" for e in filter_noisy_entities(entities))
+    # medication entities pass filter layer (gate is in retriever, not here)
+    assert "Aspirin" in kept

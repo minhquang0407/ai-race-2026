@@ -24,6 +24,8 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--limit", type=int, default=None, help="Optional max number of files to process")
     parser.add_argument("--safe", action="store_true", help="Write [] instead of aborting when one file fails")
     parser.add_argument("--model-id", default="Qwen/Qwen2.5-7B-Instruct", help="HuggingFace model id for --extractor llm")
+    parser.add_argument("--icd-path", default="data/raw/icd10_sample.csv", help="CSV path for ICD-10 knowledge data")
+    parser.add_argument("--rxnorm-path", default="data/raw/rxnorm_sample.csv", help="CSV path for RxNorm knowledge data")
     return parser
 
 
@@ -63,7 +65,7 @@ def main(argv: list[str] | None = None) -> int:
         ),
         extractor=extractor,
     )
-    retriever = CandidateRetriever.from_sample_data()
+    retriever = CandidateRetriever.from_data(icd_path=args.icd_path, rxnorm_path=args.rxnorm_path)
 
     output_dir.mkdir(parents=True, exist_ok=True)
     for input_path in files:

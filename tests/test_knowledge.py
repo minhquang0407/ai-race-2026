@@ -36,3 +36,19 @@ def test_rxnorm_index_paracetamol_alias():
 
     results = index.search("paracetamol", top_k=3)
     assert results[0][0].rxcui == "313782"
+
+
+def test_icd10_graph_loads_aliases(tmp_path):
+    csv_path = tmp_path / "icd.csv"
+    csv_path.write_text(
+        "code,name,parent_code,level,aliases\n"
+        "ROOT,ICD-10,,0,\n"
+        "A00-B99,Infectious diseases,ROOT,1,bệnh nhiễm trùng\n"
+        "A00,Cholera,A00-B99,2,tả|bệnh tả\n",
+        encoding="utf-8",
+    )
+    from src.knowledge.icd10_graph import load_icd10_graph
+
+    graph = load_icd10_graph(csv_path)
+    assert graph.aliases("A00") == ("tả", "bệnh tả")
+    assert ("A00", "Cholera", ("tả", "bệnh tả")) in graph.iter_search_documents()

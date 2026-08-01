@@ -91,3 +91,24 @@ def test_ontology_gate_keeps_aspirin():
     assert result is not None
     assert result.text == "Aspirin"
     assert result.candidates  # should have RxNorm candidates
+
+
+def test_candidate_retriever_from_data_uses_custom_paths_and_icd_aliases(tmp_path):
+    icd_path = tmp_path / "icd.csv"
+    rx_path = tmp_path / "rx.csv"
+    icd_path.write_text(
+        "code,name,parent_code,level,aliases\n"
+        "ROOT,ICD-10,,0,\n"
+        "A00-B99,Infectious diseases,ROOT,1,bệnh nhiễm trùng\n"
+        "A00,Cholera,A00-B99,2,tả|bệnh tả\n",
+        encoding="utf-8",
+    )
+    rx_path.write_text(
+        "rxcui,name,tty,synonyms\n"
+        "1191,Aspirin,IN,acetylsalicylic acid|aspirin\n",
+        encoding="utf-8",
+    )
+
+    retriever = CandidateRetriever.from_data(icd_path=str(icd_path), rxnorm_path=str(rx_path))
+    assert retriever.retrieve_icd_candidates("bệnh tả")[0] == "A00"
+    assert retriever.retrieve_rxnorm_candidates("aspirin")[0] == "1191"

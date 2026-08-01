@@ -1,4 +1,4 @@
-﻿"""ICD-10 hierarchy graph utilities.
+"""ICD-10 hierarchy graph utilities.
 
 ICD-10 is naturally modeled as a rooted directed tree:
 ROOT -> chapter -> block -> category -> detailed code.
@@ -11,7 +11,7 @@ from pathlib import Path
 
 import networkx as nx
 
-from .loaders import read_csv_rows
+from .loaders import read_csv_rows, split_aliases
 
 
 @dataclass(frozen=True)
@@ -40,9 +40,11 @@ class ICD10Graph:
         for row in read_csv_rows(path):
             code = row["code"].strip()
             parent_code = (row.get("parent_code") or "").strip() or None
+            aliases = tuple(split_aliases(row.get("aliases")))
             graph.add_node(
                 code,
                 name=row.get("name", "").strip(),
+                aliases=aliases,
                 level=int(row.get("level") or 0),
                 parent_code=parent_code,
             )
@@ -55,6 +57,18 @@ class ICD10Graph:
 
     def name(self, code: str) -> str:
         return self.graph.nodes[code].get("name", "")
+
+    def aliases(self, code: str) -> tuple[str, ...]:
+        return tuple(self.graph.nodes[code].get("aliases", ()))
+
+    def iter_search_documents(self) -> list[tuple[str, str, tuple[str, ...]]]:
+        """Return `(code, name, aliases)` rows for retrieval indexing."""
+
+        return [
+            (code, self.name(code), self.aliases(code))
+            for code in self.graph.nodes
+            if code != self.root_code
+        ]
 
     def depth(self, code: str) -> int:
         self._require_code(code)

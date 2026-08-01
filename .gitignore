@@ -3,3 +3,7 @@ __pycache__/
 .pytest_cache/
 output/
 .venv/
+.idea/# Large/local knowledge datasets
+data/raw/RxNorm/
+output_llm_fullkb/
+data/raw/icd10cm-April-1-2026-XML/

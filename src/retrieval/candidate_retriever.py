@@ -32,16 +32,27 @@ class CandidateRetriever:
 
     @classmethod
     def from_sample_data(cls) -> "CandidateRetriever":
-        icd_graph = load_icd10_graph()
-        rxnorm_index = load_rxnorm_index()
+        return cls.from_data(
+            icd_path="data/raw/icd10_sample.csv",
+            rxnorm_path="data/raw/rxnorm_sample.csv",
+        )
+
+    @classmethod
+    def from_data(
+        cls,
+        icd_path: str = "data/raw/icd10_sample.csv",
+        rxnorm_path: str = "data/raw/rxnorm_sample.csv",
+    ) -> "CandidateRetriever":
+        icd_graph = load_icd10_graph(icd_path)
+        rxnorm_index = load_rxnorm_index(rxnorm_path)
         icd_documents = [
             BM25Document(
                 id=code,
-                text=f"{code} {icd_graph.name(code)}",
-                aliases=(icd_graph.name(code),),
+                text=" ".join([code, name, *aliases]),
+                aliases=(name, *aliases),
             )
-            for code in icd_graph.graph.nodes
-            if code != icd_graph.root_code
+            for code, name, aliases in icd_graph.iter_search_documents()
+            if not code.startswith(("CHAPTER_", "SECTION_"))
         ]
         icd_sparse = BM25SearchIndex(icd_documents)
         return cls(

@@ -93,13 +93,13 @@ Dưới đây là kế hoạch chi tiết từng bước (Step-by-step) để l�
 ## 📍 PHASE 8: REAL KNOWLEDGE DATA (THAY DATA ICD/RXNORM MẪU)
 **Mục tiêu:** Thay `icd10_sample.csv` và `rxnorm_sample.csv` bằng dữ liệu thật để retrieval/candidates có ý nghĩa khi nộp bài.
 
-- [ ] **8.1. ICD-10 Full Data:** Tìm/tải nguồn ICD-10 phù hợp với quy định BTC, chuẩn hóa thành schema `code,name,parent_code,level` hoặc bổ sung loader suy luận parent.
-- [ ] **8.2. RxNorm Full Data:** Tải/chuẩn hóa RxNorm concept names và synonyms thành schema `rxcui,name,tty,synonyms`.
-- [ ] **8.3. Configurable Data Paths:** Thêm cấu hình/CLI cho `CandidateRetriever` để chọn sample data hoặc full data, ví dụ `--icd-path`, `--rxnorm-path`.
-- [ ] **8.4. Index Build & Cache:** Build index processed nếu data lớn, lưu vào `data/processed/` để lần chạy sau không phải parse lại toàn bộ raw data.
-- [ ] **8.5. Retrieval Quality Check:** Tạo test/smoke query cho bệnh và thuốc phổ biến để kiểm tra top candidates hợp lý.
+- [x] **8.1. ICD-10 Full Data:** Đã convert CDC ICD-10-CM April 1 2026 XML `icd10c-tabular-April-1-2026.xml` → `data/raw/icd10_full.csv` bằng `scripts/convert_icd10cm_xml.py`. Có seed alias tiếng Việt ở `data/raw/icd10_aliases_vi.csv`.
+- [x] **8.2. RxNorm Full Data:** Đã convert `data/raw/RxNorm/rrf/RXNCONSO.RRF` → `data/raw/rxnorm_full.csv` bằng `scripts/convert_rxnorm_rrf.py`. Smoke: `aspirin`, `ceftriaxone`, `levothyroxine`, `albuterol` đều match đúng RxCUI.
+- [x] **8.3. Configurable Data Paths:** Đã thêm `--icd-path`, `--rxnorm-path` và `CandidateRetriever.from_data(...)`.
+- [/] **8.4. Index Build & Cache:** Chưa cần cache; full smoke hiện load được `47,201` ICD nodes + `82,429` RxNorm concepts trong thời gian chấp nhận được. Cache sẽ làm nếu batch lớn chậm.
+- [x] **8.5. Retrieval Quality Check:** Full smoke pass: `Kawasaki`, `bệnh Kawasaki`, `hội chứng Parkinson`, `viêm dạ dày ruột do virus`, `loét tá tràng`, `thiếu men G6PD`, `sỏi thận` đều match đúng ICD candidate.
 
-**Checkpoint Phase 8:** Hoàn thành khi pipeline dùng được ICD/RxNorm full data, retrieval trả candidate thật, không vỡ RAM, và test retrieval/smoke query pass.
+**Checkpoint Phase 8 hiện tại:** Full ICD/RxNorm đã dùng được, smoke query pass, test suite `75 passed`. Bước tiếp theo là chạy lại batch 10 file với `--icd-path data/raw/icd10_full.csv --rxnorm-path data/raw/rxnorm_full.csv` để kiểm tra candidates thực tế.
 
 ---
 

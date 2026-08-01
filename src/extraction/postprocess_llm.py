@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import replace
+import re
 
 from .chunking import TextChunk
 from .schema import Entity, EntityType, MedicalRecord
@@ -47,6 +48,26 @@ COMMON_SYMPTOM_TEXTS = {
     "sàng lọc sớm các bệnh bẩm sinh",
 }
 GENE_OR_ENZYME_TEXTS = {"men g6pd", "g6pd", "gen g6pd"}
+GENERIC_DIAGNOSIS_TEXTS = {
+    "cấp",
+    "gan",
+    "hội chứng",
+    "ung thư",
+    "bệnh lý",
+}
+PROCEDURE_DIAGNOSIS_PREFIXES = (
+    "phẫu thuật",
+    "cắt bỏ",
+    "nối ",
+    "mổ ",
+    "sinh thiết",
+    "đặt stent",
+    "can thiệp",
+)
+UNIT_ONLY_RE = re.compile(
+    r"^\d+(?:[.,]\d+)?\s*(?:kg|g|mg|mcg|microgam|µg|ug|nanogam/ml|ng/ml|w|tuần)$",
+    re.IGNORECASE,
+)
 
 
 def find_exact_matches(source_text: str, mention: str) -> list[tuple[int, int]]:
@@ -134,7 +155,13 @@ def is_noisy_entity(entity: Entity) -> bool:
     entity_type = EntityType(entity.type) if isinstance(entity.type, str) else entity.type
     if normalized in NOISY_TEXTS:
         return True
+    if UNIT_ONLY_RE.match(normalized):
+        return True
     if entity_type == EntityType.DIAGNOSIS and normalized in COMMON_DIAGNOSIS_TEXTS:
+        return True
+    if entity_type == EntityType.DIAGNOSIS and normalized in GENERIC_DIAGNOSIS_TEXTS:
+        return True
+    if entity_type == EntityType.DIAGNOSIS and normalized.startswith(PROCEDURE_DIAGNOSIS_PREFIXES):
         return True
     if entity_type == EntityType.SYMPTOM and normalized in PERSON_ROLE_TEXTS:
         return True

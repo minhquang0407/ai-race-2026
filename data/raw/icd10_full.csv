@@ -1458,7 +1458,7 @@ C21.2,Malignant neoplasm of cloacogenic zone,C21,4,
 C21.8,"Malignant neoplasm of overlapping sites of rectum, anus and anal canal",C21,4,"Malignant neoplasm of anorectal junction|Malignant neoplasm of anorectum|Primary malignant neoplasm of two or more contiguous sites of rectum, anus and anal canal"
 C22,Malignant neoplasm of liver and intrahepatic bile ducts,SECTION_C15-C26,3,
 C22.0,Liver cell carcinoma,C22,4,Hepatocellular carcinoma|Hepatoma
-C22.1,Intrahepatic bile duct carcinoma,C22,4,Cholangiocarcinoma
+C22.1,Intrahepatic bile duct carcinoma,C22,4,Cholangiocarcinoma|ung thư biểu mô tế bào mật|ung thư đường mật trong gan
 C22.2,Hepatoblastoma,C22,4,
 C22.3,Angiosarcoma of liver,C22,4,Kupffer cell sarcoma
 C22.4,Other sarcomas of liver,C22,4,
@@ -4414,7 +4414,7 @@ E27.9,"Disorder of adrenal gland, unspecified",E27,4,
 E28,Ovarian dysfunction,SECTION_E20-E35,3,
 E28.0,Estrogen excess,E28,4,
 E28.1,Androgen excess,E28,4,Hypersecretion of ovarian androgens
-E28.2,Polycystic ovarian syndrome,E28,4,Sclerocystic ovary syndrome|Stein-Leventhal syndrome
+E28.2,Polycystic ovarian syndrome,E28,4,Sclerocystic ovary syndrome|Stein-Leventhal syndrome|hội chứng buồng trứng đa nang|buồng trứng đa nang|PCOS
 E28.3,Primary ovarian failure,E28,4,
 E28.31,Premature menopause,E28.3,5,
 E28.310,Symptomatic premature menopause,E28.31,6,"Symptoms such as flushing, sleeplessness, headache, lack of concentration, associated with premature menopause"
@@ -5111,7 +5111,7 @@ F10.181,Alcohol abuse with alcohol-induced sexual dysfunction,F10.18,6,
 F10.182,Alcohol abuse with alcohol-induced sleep disorder,F10.18,6,
 F10.188,Alcohol abuse with other alcohol-induced disorder,F10.18,6,
 F10.19,Alcohol abuse with unspecified alcohol-induced disorder,F10.1,5,
-F10.2,Alcohol dependence,F10,4,
+F10.2,Alcohol dependence,F10,4,hội chứng nghiện rượu|nghiện rượu|lệ thuộc rượu
 F10.20,"Alcohol dependence, uncomplicated",F10.2,5,"Alcohol use disorder, moderate|Alcohol use disorder, severe"
 F10.21,"Alcohol dependence, in remission",F10.2,5,"Alcohol use disorder, moderate, in early remission|Alcohol use disorder, moderate, in sustained remission|Alcohol use disorder, severe, in early remission|Alcohol use disorder, severe, in sustained remission"
 F10.22,Alcohol dependence with intoxication,F10.2,5,Acute drunkenness (in alcoholism)
@@ -12345,7 +12345,7 @@ I70.793,"Other atherosclerosis of other type of bypass graft(s) of the extremiti
 I70.798,"Other atherosclerosis of other type of bypass graft(s) of the extremities, other extremity",I70.79,6,
 I70.799,"Other atherosclerosis of other type of bypass graft(s) of the extremities, unspecified extremity",I70.79,6,
 I70.8,Atherosclerosis of other arteries,I70,4,
-I70.9,Other and unspecified atherosclerosis,I70,4,
+I70.9,Other and unspecified atherosclerosis,I70,4,xơ vữa động mạch
 I70.90,Unspecified atherosclerosis,I70.9,5,
 I70.91,Generalized atherosclerosis,I70.9,5,
 I70.92,Chronic total occlusion of artery of the extremities,I70.9,5,Complete occlusion of artery of the extremities|Total occlusion of artery of the extremities
@@ -14129,7 +14129,7 @@ K58.0,Irritable bowel syndrome with diarrhea,K58,4,
 K58.1,Irritable bowel syndrome with constipation,K58,4,
 K58.2,Mixed irritable bowel syndrome,K58,4,
 K58.8,Other irritable bowel syndrome,K58,4,
-K58.9,"Irritable bowel syndrome, unspecified",K58,4,Irritable bowel syndrome NOS
+K58.9,"Irritable bowel syndrome, unspecified",K58,4,Irritable bowel syndrome NOS|hội chứng ruột kích thích|ruột kích thích
 K59,Other functional intestinal disorders,SECTION_K55-K64,3,
 K59.0,Constipation,K59,4,
 K59.00,"Constipation, unspecified",K59.0,5,

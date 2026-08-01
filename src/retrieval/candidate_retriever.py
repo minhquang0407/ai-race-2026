@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import re
+import unicodedata
 
 from src.extraction.schema import Entity, EntityType
 from src.knowledge.icd10_graph import ICD10Graph, load_icd10_graph
@@ -11,7 +13,41 @@ from src.postprocessing.pragmatic_graph import PragmaticGraphPruner
 
 from .bm25_search import BM25Document, BM25SearchIndex, RetrievalResult
 from .dense_search import DenseSearchIndex
+from .query_expansion import CachingQueryExpander, QueryExpansion
 from .thresholding import apply_dynamic_threshold
+
+ICD_GENERIC_TOKENS = {
+    "bao",
+    "benh",
+    "cap",
+    "chung",
+    "da",
+    "dai",
+    "day",
+    "gan",
+    "hoi",
+    "man",
+    "ruot",
+    "tu",
+    "ung",
+    "viem",
+}
+ICD_SITE_TOKENS = {
+    "bao",
+    "buong",
+    "dai",
+    "duong",
+    "gan",
+    "giap",
+    "kich",
+    "mat",
+    "nghien",
+    "ruot",
+    "ruou",
+    "thich",
+    "trung",
+    "tuyen",
+}
 
 
 @dataclass
@@ -28,7 +64,8 @@ class CandidateRetriever:
     # Ontology gates: drop entities whose best candidate score is below this threshold.
     # Set to 0.0 to disable the gate for that type.
     rxnorm_gate_min_score: float = 0.3
-    icd_gate_min_score: float = 0.0  # disabled until Phase 8 full ICD
+    icd_gate_min_score: float = 0.0
+    expander: CachingQueryExpander | None = None
 
     @classmethod
     def from_sample_data(cls) -> "CandidateRetriever":
@@ -61,6 +98,7 @@ class CandidateRetriever:
             rxnorm_index=rxnorm_index,
             icd_graph=icd_graph,
             pruner=PragmaticGraphPruner(icd_graph),
+            expander=CachingQueryExpander(),
         )
 
     def retrieve_for_entity(self, entity: Entity) -> Entity | None:
@@ -94,10 +132,28 @@ class CandidateRetriever:
     def _retrieve_icd_with_score(self, query: str) -> tuple[list[str], float]:
         """Return (candidates, best_score). best_score is 0.0 if nothing matches."""
 
-        results = self._ensemble_results(
-            self.icd_sparse.search(query, top_k=self.top_k),
-            self.icd_dense.search(query, top_k=self.top_k) if self.icd_dense else [],
-        )
+        expansion = self.expander.expand(query) if self.expander else QueryExpansion(original=query)
+        weighted_queries = expansion.all_queries()
+
+        # Collect scored results across all query variants.
+        merged: dict[str, RetrievalResult] = {}
+        for q_text, q_weight in weighted_queries:
+            raw = self._ensemble_results(
+                self.icd_sparse.search(q_text, top_k=self.top_k),
+                self.icd_dense.search(q_text, top_k=self.top_k) if self.icd_dense else [],
+            )
+            for result in raw:
+                existing = merged.get(result.id)
+                new_score = result.score * q_weight
+                if existing is None or new_score > existing.score:
+                    merged[result.id] = RetrievalResult(result.id, new_score, result.text, source=result.source)
+        results = sorted(merged.values(), key=lambda r: (-r.score, r.id))
+
+        # Apply guardrails on the merged pool.
+        results = self._guard_icd_results(query, results)
+        if expansion.must_have_terms:
+            results = self._apply_must_have_guard(expansion.must_have_terms, results)
+
         thresholded = apply_dynamic_threshold(
             results,
             margin=self.margin,
@@ -152,6 +208,46 @@ class CandidateRetriever:
                     source="ensemble",
                 )
         return sorted(scores.values(), key=lambda item: (-item.score, item.id))
+
+    @classmethod
+    def _apply_must_have_guard(
+        cls, must_have_terms: list[str], results: list[RetrievalResult]
+    ) -> list[RetrievalResult]:
+        """Drop candidates that don't contain any must-have anchor term."""
+        if not must_have_terms:
+            return results
+        anchors = {cls._strip_diacritics(t).lower() for t in must_have_terms}
+        kept = []
+        for result in results:
+            candidate_text_norm = cls._strip_diacritics(result.text)
+            if any(anchor in candidate_text_norm for anchor in anchors):
+                kept.append(result)
+        return kept if kept else results  # fallback: return all if anchors filter everything
+
+    @classmethod
+    def _guard_icd_results(cls, query: str, results: list[RetrievalResult]) -> list[RetrievalResult]:
+        query_tokens = cls._meaningful_icd_tokens(query)
+        if not query_tokens:
+            return results
+        guarded: list[RetrievalResult] = []
+        for result in results:
+            candidate_tokens = cls._meaningful_icd_tokens(result.text)
+            if query_tokens & candidate_tokens:
+                guarded.append(result)
+        return guarded
+
+    @staticmethod
+    def _strip_diacritics(text: str) -> str:
+        decomposed = unicodedata.normalize("NFD", text.casefold())
+        return "".join(char for char in decomposed if unicodedata.category(char) != "Mn").replace("đ", "d")
+
+    @classmethod
+    def _meaningful_icd_tokens(cls, text: str) -> set[str]:
+        normalized = cls._strip_diacritics(text)
+        tokens = set(re.findall(r"[a-z0-9]+", normalized))
+        non_generic = {token for token in tokens if token not in ICD_GENERIC_TOKENS and len(token) > 1}
+        site_tokens = tokens & ICD_SITE_TOKENS
+        return non_generic | site_tokens
 
 
 __all__ = ["CandidateRetriever"]

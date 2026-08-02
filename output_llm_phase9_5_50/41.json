@@ -1,0 +1,162 @@
+[
+  {
+    "text": "mụn trứng cá",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "B07"
+    ],
+    "assertions": [],
+    "position": [
+      80,
+      92
+    ]
+  },
+  {
+    "text": "mụn",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      80,
+      83
+    ]
+  },
+  {
+    "text": "chất bã nhờn",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      504,
+      516
+    ]
+  },
+  {
+    "text": "tế bào sừng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      550,
+      561
+    ]
+  },
+  {
+    "text": "Propionibacterium acnes",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      586,
+      609
+    ]
+  },
+  {
+    "text": "vi khuẩn kỵ khí",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      611,
+      626
+    ]
+  },
+  {
+    "text": "trung gian",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      661,
+      671
+    ]
+  },
+  {
+    "text": "viêm",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      676,
+      680
+    ]
+  },
+  {
+    "text": "viêm",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      724,
+      728
+    ]
+  },
+  {
+    "text": "sản tuyến bã nhờn",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      855,
+      872
+    ]
+  },
+  {
+    "text": "Tretinoin",
+    "type": "THUỐC",
+    "candidates": [
+      "10753"
+    ],
+    "assertions": [],
+    "position": [
+      962,
+      971
+    ]
+  },
+  {
+    "text": "trứng cá",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "C56"
+    ],
+    "assertions": [],
+    "position": [
+      1250,
+      1258
+    ]
+  },
+  {
+    "text": "viêm nhẹ",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      991,
+      999
+    ]
+  },
+  {
+    "text": "mụn trứng cá",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "B07"
+    ],
+    "assertions": [],
+    "position": [
+      1333,
+      1345
+    ]
+  },
+  {
+    "text": "sức khỏe sinh sản",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "A34"
+    ],
+    "assertions": [],
+    "position": [
+      1878,
+      1895
+    ]
+  }
+]

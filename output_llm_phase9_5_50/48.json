@@ -1,0 +1,110 @@
+[
+  {
+    "text": "lỗ tai",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      93,
+      99
+    ]
+  },
+  {
+    "text": "vành tai",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      108,
+      116
+    ]
+  },
+  {
+    "text": "lỗ kia",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      368,
+      374
+    ]
+  },
+  {
+    "text": "vành tai",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      375,
+      383
+    ]
+  },
+  {
+    "text": "dị tật thiểu sản vành tai",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "A34"
+    ],
+    "assertions": [],
+    "position": [
+      1042,
+      1067
+    ]
+  },
+  {
+    "text": "tịt ống tai ngoài bẩm sinh",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "H60"
+    ],
+    "assertions": [],
+    "position": [
+      1071,
+      1097
+    ]
+  },
+  {
+    "text": "cấu trúc tai trong",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "H83"
+    ],
+    "assertions": [],
+    "position": [
+      1112,
+      1130
+    ]
+  },
+  {
+    "text": "thần kinh thính giác",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "H47"
+    ],
+    "assertions": [],
+    "position": [
+      1150,
+      1170
+    ]
+  },
+  {
+    "text": "bé",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1330,
+      1332
+    ]
+  },
+  {
+    "text": "lúng túng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1390,
+      1399
+    ]
+  }
+]

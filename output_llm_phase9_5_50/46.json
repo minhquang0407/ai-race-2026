@@ -1,0 +1,221 @@
+[
+  {
+    "text": "khó thở",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      35,
+      42
+    ]
+  },
+  {
+    "text": "suy tim",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "I11.0"
+    ],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      71,
+      78
+    ]
+  },
+  {
+    "text": "tăng huyết áp",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "I1A.0"
+    ],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      82,
+      95
+    ]
+  },
+  {
+    "text": "HoHL",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      98,
+      102
+    ]
+  },
+  {
+    "text": "phù phổi cấp",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "P23"
+    ],
+    "assertions": [],
+    "position": [
+      303,
+      315
+    ]
+  },
+  {
+    "text": "stent mạch vành",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "T82.855",
+      "T82.856"
+    ],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      53,
+      68
+    ]
+  },
+  {
+    "text": "Lactat",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      633,
+      639
+    ]
+  },
+  {
+    "text": "HCO3",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      648,
+      652
+    ]
+  },
+  {
+    "text": "PO2",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      664,
+      667
+    ]
+  },
+  {
+    "text": "PCO2",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      677,
+      681
+    ]
+  },
+  {
+    "text": "pH",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      689,
+      691
+    ]
+  },
+  {
+    "text": "HCO3: 32.09",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      833,
+      844
+    ]
+  },
+  {
+    "text": "PO2: 97.0",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      848,
+      857
+    ]
+  },
+  {
+    "text": "PCO2: 39",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      862,
+      870
+    ]
+  },
+  {
+    "text": "pH: 7.517",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      874,
+      883
+    ]
+  },
+  {
+    "text": "buồng thất trái không giãn",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1043,
+      1069
+    ]
+  },
+  {
+    "text": "chức năng tâm thu thất trái bảo tồn",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1071,
+      1106
+    ]
+  },
+  {
+    "text": "Phù phổi cấp",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "P23"
+    ],
+    "assertions": [],
+    "position": [
+      1192,
+      1204
+    ]
+  },
+  {
+    "text": "mệt mỏi",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1444,
+      1451
+    ]
+  },
+  {
+    "text": "mất trí nhớ chi tiết",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1453,
+      1473
+    ]
+  }
+]

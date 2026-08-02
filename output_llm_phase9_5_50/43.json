@@ -1,0 +1,100 @@
+[
+  {
+    "text": "tăng cholesterol máu đơn thuần",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "A82",
+      "A82.0",
+      "A82.1"
+    ],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      95,
+      125
+    ]
+  },
+  {
+    "text": "tăng huyết áp",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "I1A.0"
+    ],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      132,
+      145
+    ]
+  },
+  {
+    "text": "gleevec",
+    "type": "THUỐC",
+    "candidates": [
+      "282386"
+    ],
+    "assertions": [
+      "isFamily",
+      "isNegated"
+    ],
+    "position": [
+      190,
+      197
+    ]
+  },
+  {
+    "text": "allopurinol",
+    "type": "THUỐC",
+    "candidates": [
+      "519"
+    ],
+    "assertions": [
+      "isFamily",
+      "isNegated"
+    ],
+    "position": [
+      239,
+      250
+    ]
+  },
+  {
+    "text": "5 ngày",
+    "type": "THUỐC",
+    "candidates": [
+      "1305578",
+      "1305744",
+      "1311171"
+    ],
+    "assertions": [],
+    "position": [
+      833,
+      839
+    ]
+  },
+  {
+    "text": "gleevec",
+    "type": "THUỐC",
+    "candidates": [
+      "282386"
+    ],
+    "assertions": [],
+    "position": [
+      1743,
+      1750
+    ]
+  },
+  {
+    "text": "allopurinol",
+    "type": "THUỐC",
+    "candidates": [
+      "519"
+    ],
+    "assertions": [],
+    "position": [
+      1788,
+      1799
+    ]
+  }
+]

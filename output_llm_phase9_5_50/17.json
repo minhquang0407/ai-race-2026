@@ -1,0 +1,246 @@
+[
+  {
+    "text": "vi khuẩn",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      546,
+      554
+    ]
+  },
+  {
+    "text": "viêm",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      661,
+      665
+    ]
+  },
+  {
+    "text": "viêm nha chu",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "K05.3",
+      "K04.4",
+      "K04.5"
+    ],
+    "assertions": [],
+    "position": [
+      1083,
+      1095
+    ]
+  },
+  {
+    "text": "vi khuẩn",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1778,
+      1786
+    ]
+  },
+  {
+    "text": "viêm",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2186,
+      2190
+    ]
+  },
+  {
+    "text": "men răng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1734,
+      1742
+    ]
+  },
+  {
+    "text": "gai lưỡi",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1744,
+      1752
+    ]
+  },
+  {
+    "text": "niêm mạc",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2200,
+      2208
+    ]
+  },
+  {
+    "text": "sưng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2215,
+      2219
+    ]
+  },
+  {
+    "text": "dương tính",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2068,
+      2078
+    ]
+  },
+  {
+    "text": "biệt hóa",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2018,
+      2026
+    ]
+  },
+  {
+    "text": "biểu mô tế bào vảy",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1977,
+      1995
+    ]
+  },
+  {
+    "text": "mùi hôi",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2254,
+      2261
+    ]
+  },
+  {
+    "text": "khoang miệng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2268,
+      2280
+    ]
+  },
+  {
+    "text": "chảy máu",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2292,
+      2300
+    ]
+  },
+  {
+    "text": "chảy máu chân răng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2318,
+      2336
+    ]
+  },
+  {
+    "text": "hôi miệng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2340,
+      2349
+    ]
+  },
+  {
+    "text": "bào láng gốc răng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2365,
+      2382
+    ]
+  },
+  {
+    "text": "cao răng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2414,
+      2422
+    ]
+  },
+  {
+    "text": "vi khuẩn",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2441,
+      2449
+    ]
+  },
+  {
+    "text": "viêm",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2454,
+      2458
+    ]
+  },
+  {
+    "text": "mô mềm",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2467,
+      2473
+    ]
+  },
+  {
+    "text": "vòm họng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2476,
+      2484
+    ]
+  },
+  {
+    "text": "nướu",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2494,
+      2498
+    ]
+  }
+]

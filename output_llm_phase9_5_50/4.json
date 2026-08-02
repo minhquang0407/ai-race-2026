@@ -1,0 +1,387 @@
+[
+  {
+    "text": "tiêu chảy",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      85,
+      94
+    ]
+  },
+  {
+    "text": "viêm dạ dày ruột",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "K29.5",
+      "K29.6",
+      "K29.0"
+    ],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      144,
+      160
+    ]
+  },
+  {
+    "text": "hội chứng ruột kích thích",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "K58.9",
+      "K58",
+      "K58.2"
+    ],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      226,
+      251
+    ]
+  },
+  {
+    "text": "omeprazole",
+    "type": "THUỐC",
+    "candidates": [
+      "7646"
+    ],
+    "assertions": [],
+    "position": [
+      625,
+      635
+    ]
+  },
+  {
+    "text": "buồn nôn",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      809,
+      817
+    ]
+  },
+  {
+    "text": "tiêu chảy",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      821,
+      830
+    ]
+  },
+  {
+    "text": "viêm dạ dày ruột do virus",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "A08.4",
+      "A08.3",
+      "A08.39"
+    ],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      842,
+      867
+    ]
+  },
+  {
+    "text": "buồn nôn",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      937,
+      945
+    ]
+  },
+  {
+    "text": "tiêu chảy",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      949,
+      958
+    ]
+  },
+  {
+    "text": "loét tá tràng",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "K26.9",
+      "K26"
+    ],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      1314,
+      1327
+    ]
+  },
+  {
+    "text": "viêm dạ dày ruột do virus",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "A08.4",
+      "A08.3",
+      "A08.39"
+    ],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      975,
+      1000
+    ]
+  },
+  {
+    "text": "omeprazole",
+    "type": "THUỐC",
+    "candidates": [
+      "7646"
+    ],
+    "assertions": [],
+    "position": [
+      1168,
+      1178
+    ]
+  },
+  {
+    "text": "nôn ra máu",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      1127,
+      1137
+    ]
+  },
+  {
+    "text": "viêm dạ dày ruột do virus",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "A08.4",
+      "A08.3",
+      "A08.39"
+    ],
+    "assertions": [],
+    "position": [
+      1460,
+      1485
+    ]
+  },
+  {
+    "text": "khó khăn khi ăn uống qua đường miệng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1496,
+      1532
+    ]
+  },
+  {
+    "text": "buồn nôn",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1534,
+      1542
+    ]
+  },
+  {
+    "text": "tiêu chảy",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1544,
+      1553
+    ]
+  },
+  {
+    "text": "nôn ra máu",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1555,
+      1565
+    ]
+  },
+  {
+    "text": "nôn ra máu",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2204,
+      2214
+    ]
+  },
+  {
+    "text": "viêm dạ dày ruột do virus",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "A08.4",
+      "A08.3",
+      "A08.39"
+    ],
+    "assertions": [],
+    "position": [
+      2231,
+      2256
+    ]
+  },
+  {
+    "text": "loét tá tràng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2287,
+      2300
+    ]
+  },
+  {
+    "text": "cryptosporidium",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2394,
+      2409
+    ]
+  },
+  {
+    "text": "omeprazole",
+    "type": "THUỐC",
+    "candidates": [
+      "7646"
+    ],
+    "assertions": [],
+    "position": [
+      2473,
+      2483
+    ]
+  },
+  {
+    "text": "hơi thở h. pylori",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2496,
+      2513
+    ]
+  },
+  {
+    "text": "ung thư tuyến giáp",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "C73"
+    ],
+    "assertions": [],
+    "position": [
+      2625,
+      2643
+    ]
+  },
+  {
+    "text": "phẫu thuật",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2655,
+      2665
+    ]
+  },
+  {
+    "text": "levothyroxine",
+    "type": "THUỐC",
+    "candidates": [
+      "10582"
+    ],
+    "assertions": [],
+    "position": [
+      2704,
+      2717
+    ]
+  },
+  {
+    "text": "200-300 microgam/ngày",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      3241,
+      3262
+    ]
+  },
+  {
+    "text": "loét thực quản",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "D00"
+    ],
+    "assertions": [],
+    "position": [
+      3557,
+      3571
+    ]
+  },
+  {
+    "text": "tá tràng",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "K26.9"
+    ],
+    "assertions": [],
+    "position": [
+      3625,
+      3633
+    ]
+  },
+  {
+    "text": "hành tá tràng",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "K26.9"
+    ],
+    "assertions": [],
+    "position": [
+      3645,
+      3658
+    ]
+  },
+  {
+    "text": "hồi tràng",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "K26.9"
+    ],
+    "assertions": [],
+    "position": [
+      3663,
+      3672
+    ]
+  }
+]

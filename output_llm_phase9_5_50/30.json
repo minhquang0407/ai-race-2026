@@ -1,0 +1,70 @@
+[
+  {
+    "text": "bệnh mãn tính",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "B15",
+      "B16",
+      "B17"
+    ],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      8,
+      21
+    ]
+  },
+  {
+    "text": "tim mạch",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "I70.9"
+    ],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      45,
+      53
+    ]
+  },
+  {
+    "text": "thận",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "N20.0"
+    ],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      59,
+      63
+    ]
+  },
+  {
+    "text": "sốt",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      217,
+      220
+    ]
+  },
+  {
+    "text": "mày đay vô căn",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "N97.9"
+    ],
+    "assertions": [],
+    "position": [
+      1495,
+      1509
+    ]
+  }
+]

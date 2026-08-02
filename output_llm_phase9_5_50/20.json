@@ -1,0 +1,128 @@
+[
+  {
+    "text": "bệnh dại",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "A82",
+      "A82.0",
+      "A82.1"
+    ],
+    "assertions": [],
+    "position": [
+      327,
+      335
+    ]
+  },
+  {
+    "text": "bệnh dại",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "A82",
+      "A82.0",
+      "A82.1"
+    ],
+    "assertions": [],
+    "position": [
+      612,
+      620
+    ]
+  },
+  {
+    "text": "Lyssavirus",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      865,
+      875
+    ]
+  },
+  {
+    "text": "130/76 mmHg",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1179,
+      1190
+    ]
+  },
+  {
+    "text": "93 l/p",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1197,
+      1203
+    ]
+  },
+  {
+    "text": "36.3 độ C",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1215,
+      1224
+    ]
+  },
+  {
+    "text": "nước bọt",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1486,
+      1494
+    ]
+  },
+  {
+    "text": "chó",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [
+      "isFamily"
+    ],
+    "position": [
+      1656,
+      1659
+    ]
+  },
+  {
+    "text": "hang dơi",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1819,
+      1827
+    ]
+  },
+  {
+    "text": "bệnh dại",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "A82",
+      "A82.0",
+      "A82.1"
+    ],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      1938,
+      1946
+    ]
+  },
+  {
+    "text": "vi rút dại",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2222,
+      2232
+    ]
+  }
+]

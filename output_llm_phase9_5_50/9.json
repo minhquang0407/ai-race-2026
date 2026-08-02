@@ -1,0 +1,98 @@
+[
+  {
+    "text": "dấu hiệu đau bao tử",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      104,
+      123
+    ]
+  },
+  {
+    "text": "tăng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      808,
+      812
+    ]
+  },
+  {
+    "text": "sỏi thận",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "N20.0"
+    ],
+    "assertions": [],
+    "position": [
+      1455,
+      1463
+    ]
+  },
+  {
+    "text": "viêm bao tử",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "K29.70",
+      "K29.5",
+      "K29.6"
+    ],
+    "assertions": [],
+    "position": [
+      1517,
+      1528
+    ]
+  },
+  {
+    "text": "Alverin citrate",
+    "type": "THUỐC",
+    "candidates": [
+      "1306066",
+      "1310554",
+      "1311603"
+    ],
+    "assertions": [],
+    "position": [
+      2094,
+      2109
+    ]
+  },
+  {
+    "text": "Simethicon",
+    "type": "THUỐC",
+    "candidates": [
+      "1007044",
+      "1086437",
+      "1086968"
+    ],
+    "assertions": [],
+    "position": [
+      2118,
+      2128
+    ]
+  },
+  {
+    "text": "metoclopramide",
+    "type": "THUỐC",
+    "candidates": [
+      "6915"
+    ],
+    "assertions": [],
+    "position": [
+      2145,
+      2159
+    ]
+  },
+  {
+    "text": "lơ mơ",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2980,
+      2985
+    ]
+  }
+]

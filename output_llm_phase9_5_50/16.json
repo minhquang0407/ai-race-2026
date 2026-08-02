@@ -1,0 +1,122 @@
+[
+  {
+    "text": "bệnh dại",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "A82",
+      "A82.0",
+      "A82.1"
+    ],
+    "assertions": [],
+    "position": [
+      327,
+      335
+    ]
+  },
+  {
+    "text": "bệnh dại",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "A82",
+      "A82.0",
+      "A82.1"
+    ],
+    "assertions": [],
+    "position": [
+      612,
+      620
+    ]
+  },
+  {
+    "text": "Lyssavirus",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      865,
+      875
+    ]
+  },
+  {
+    "text": "bệnh dại",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "A82",
+      "A82.0",
+      "A82.1"
+    ],
+    "assertions": [],
+    "position": [
+      1450,
+      1458
+    ]
+  },
+  {
+    "text": "tiêm",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1320,
+      1324
+    ]
+  },
+  {
+    "text": "chó",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1727,
+      1730
+    ]
+  },
+  {
+    "text": "vi rút dại",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [
+      "isFamily"
+    ],
+    "position": [
+      2275,
+      2285
+    ]
+  },
+  {
+    "text": "bumetanide",
+    "type": "THUỐC",
+    "candidates": [
+      "1808"
+    ],
+    "assertions": [],
+    "position": [
+      2178,
+      2188
+    ]
+  },
+  {
+    "text": "vancomycin",
+    "type": "THUỐC",
+    "candidates": [
+      "11124"
+    ],
+    "assertions": [],
+    "position": [
+      2211,
+      2221
+    ]
+  },
+  {
+    "text": "levofloxacin",
+    "type": "THUỐC",
+    "candidates": [
+      "82122"
+    ],
+    "assertions": [],
+    "position": [
+      2244,
+      2256
+    ]
+  }
+]

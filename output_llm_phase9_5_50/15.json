@@ -1,0 +1,257 @@
+[
+  {
+    "text": "corticoid liều cao kéo dài",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      68,
+      94
+    ]
+  },
+  {
+    "text": "béo phì",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "E66",
+      "E66.8",
+      "E66.81"
+    ],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      170,
+      177
+    ]
+  },
+  {
+    "text": "bactrim",
+    "type": "THUỐC",
+    "candidates": [
+      "151399"
+    ],
+    "assertions": [],
+    "position": [
+      382,
+      389
+    ]
+  },
+  {
+    "text": "doxycycline",
+    "type": "THUỐC",
+    "candidates": [
+      "3640"
+    ],
+    "assertions": [],
+    "position": [
+      430,
+      441
+    ]
+  },
+  {
+    "text": "viêm mô tế bào",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "L03.213"
+    ],
+    "assertions": [],
+    "position": [
+      976,
+      990
+    ]
+  },
+  {
+    "text": "doxycyclin",
+    "type": "THUỐC",
+    "candidates": [
+      "1101054",
+      "1101055",
+      "1160776"
+    ],
+    "assertions": [],
+    "position": [
+      953,
+      963
+    ]
+  },
+  {
+    "text": "ban đỏ",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1008,
+      1014
+    ]
+  },
+  {
+    "text": "liều",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      916,
+      920
+    ]
+  },
+  {
+    "text": "rỉ",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1175,
+      1177
+    ]
+  },
+  {
+    "text": "dịch",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1178,
+      1182
+    ]
+  },
+  {
+    "text": "mủ",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1198,
+      1200
+    ]
+  },
+  {
+    "text": "viêm",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      976,
+      980
+    ]
+  },
+  {
+    "text": "Viêm mô tế bào",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "L03.213"
+    ],
+    "assertions": [],
+    "position": [
+      2029,
+      2043
+    ]
+  },
+  {
+    "text": "bactrim",
+    "type": "THUỐC",
+    "candidates": [
+      "151399"
+    ],
+    "assertions": [],
+    "position": [
+      1984,
+      1991
+    ]
+  },
+  {
+    "text": "doxycycline",
+    "type": "THUỐC",
+    "candidates": [
+      "3640"
+    ],
+    "assertions": [],
+    "position": [
+      1995,
+      2006
+    ]
+  },
+  {
+    "text": "ban đỏ",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1860,
+      1866
+    ]
+  },
+  {
+    "text": "mủ",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1873,
+      1875
+    ]
+  },
+  {
+    "text": "dịch tiết",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2096,
+      2105
+    ]
+  },
+  {
+    "text": "Viêm mô tế bào",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2364,
+      2378
+    ]
+  },
+  {
+    "text": "doxycyclinebactrim",
+    "type": "THUỐC",
+    "candidates": [
+      "151399",
+      "3640",
+      "544837"
+    ],
+    "assertions": [],
+    "position": [
+      2332,
+      2350
+    ]
+  },
+  {
+    "text": "Bệnh thủy đậu/Zona",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "B01",
+      "B01.9",
+      "B02.0"
+    ],
+    "assertions": [],
+    "position": [
+      2623,
+      2641
+    ]
+  },
+  {
+    "text": "Varicella Zoster Virus",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "B01.9",
+      "B02.0"
+    ],
+    "assertions": [],
+    "position": [
+      2646,
+      2668
+    ]
+  }
+]

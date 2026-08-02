@@ -1,0 +1,70 @@
+[
+  {
+    "text": "suy hô hấp",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      700,
+      710
+    ]
+  },
+  {
+    "text": "tăng huyết áp",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      715,
+      728
+    ]
+  },
+  {
+    "text": "hội chứng bàn chân bẹt bẩm sinh",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "Q66.5"
+    ],
+    "assertions": [],
+    "position": [
+      1309,
+      1340
+    ]
+  },
+  {
+    "text": "bàn chân bẹt",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "Q66.5"
+    ],
+    "assertions": [],
+    "position": [
+      1705,
+      1717
+    ]
+  },
+  {
+    "text": "huyết khối",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2149,
+      2159
+    ]
+  },
+  {
+    "text": "thuyên tắc phổi",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "P23"
+    ],
+    "assertions": [
+      "isNegated"
+    ],
+    "position": [
+      2218,
+      2233
+    ]
+  }
+]

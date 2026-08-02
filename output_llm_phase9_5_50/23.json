@@ -1,0 +1,72 @@
+[
+  {
+    "text": "các chất kích thích",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      65,
+      84
+    ]
+  },
+  {
+    "text": "cà phê",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      89,
+      95
+    ]
+  },
+  {
+    "text": "chè",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      97,
+      100
+    ]
+  },
+  {
+    "text": "thuốc lá",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      102,
+      110
+    ]
+  },
+  {
+    "text": "thời kỳ mãn kinh",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      181,
+      197
+    ]
+  },
+  {
+    "text": "tăng nhãn áp",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      848,
+      860
+    ]
+  },
+  {
+    "text": "phẫu thuật",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      781,
+      791
+    ]
+  }
+]

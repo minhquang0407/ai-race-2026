@@ -1,0 +1,97 @@
+=== CHUNK ===
+Chào em
+- đi tiêu không liên quan đến đau bụng, buồn nôn, nôn, tiêu chảy, hoặc táo bón.
+- Bệnh nhân đang có đi tiêu mỗi ngày.
+- Không có sốt, đau ngực, chóng mặt, đánh trống ngực.
+- Không có đau bụng hoặc dịch từ vết mổ.
+- Không có đỏ da, hoặc bục chỉ khâu bụng.
+3. Đánh giá tại bệnh viện
+Kết quả khám thực thể
+- Khám thấy ran nổ, phù phù, dịch rỉ huyết thanh từ vết mổ, và phân nâu dương tính guaiac.
+- dấu hiệu sinh tồn là: 98.8 65 9360 20 95 2LNC (tại khoa Cấp cứu)
+- dấu hiệu sinh tồn 98.6 70 10356 17 962LNC (khi đến MICU)
+Dấu hiệu lâm sàng
+- hạ huyết áp, không đặc hiệu
+- mệt mỏi
+- mệt mỏi
+- khó thở khi gắng sức
+- ho mạn tính có đờm vàng loãng
+- ran
+- phù phù
+- dịch thanh dịch lẫn máu từ vết mổ
+- phân nâu dương tính guaiac
+
+
+=== PROMPT ===
+Bạn là hệ thống trích xuất thực thể y khoa tiếng Việt.
+
+Nhiệm vụ: đọc duy nhất đoạn CHUNK bên dưới và trả về JSON đúng schema.
+
+Quy tắc bắt buộc:
+- Chỉ trích xuất các type hợp lệ: `TRIỆU_CHỨNG`, `TÊN_XÉT_NGHIỆM`, `KẾT_QUẢ_XÉT_NGHIỆM`, `CHẨN_ĐOÁN`, `THUỐC`.
+- Ưu tiên PRECISION hơn RECALL: nếu không chắc chắn entity/type, hãy bỏ qua.
+- Không trích xuất người, nhóm người, vai trò hoặc từ nhân xưng: "trẻ", "trẻ sơ sinh", "bé trai", "bé gái", "con", "bác sĩ", "bệnh nhân", "người bệnh".
+- Không trích xuất từ chung chung nếu không phải tên cụ thể: "bệnh", "thuốc", "thực phẩm", "hóa chất", "khám", "chẩn đoán", "vận động".
+- Không trích xuất gene/vị trí gene nếu schema không có type phù hợp: "gen G6PD", "Xq28", "nhiễm sắc thể X".
+- `CHẨN_ĐOÁN`: chỉ tên bệnh/rối loạn/biến chứng cụ thể, không lấy chữ "bệnh" hoặc "chẩn đoán" đơn lẻ.
+- `TRIỆU_CHỨNG`: chỉ dấu hiệu/triệu chứng lâm sàng cụ thể như "khó thở", "vàng da", "thiếu máu".
+- `THUỐC`: chỉ tên thuốc/hoạt chất cụ thể, không lấy chữ "thuốc" chung chung.
+- `TÊN_XÉT_NGHIỆM`: tên xét nghiệm cụ thể.
+- `KẾT_QUẢ_XÉT_NGHIỆM`: giá trị/kết luận xét nghiệm cụ thể.
+- `assertions` chỉ được dùng các giá trị: `isNegated`, `isFamily`, `isHistorical`.
+- Nếu không có assertion đặc biệt, dùng `assertions: []`.
+- Luôn để `candidates: []`; không tự đoán ICD-10/RxNorm.
+- `position` là tọa độ ký tự LOCAL trong CHUNK theo dạng half-open `[start, end)`.
+- `text` phải là chuỗi xuất hiện nguyên văn trong CHUNK.
+- Chỉ trả về JSON, không giải thích thêm.
+
+Gợi ý assertion:
+- Có từ phủ định như "không", "phủ nhận", "chưa ghi nhận", "âm tính" -> `isNegated`.
+- Có "tiền sử", "từng", "đã dùng", "trước nhập viện" -> `isHistorical`.
+- Có "bố", "mẹ", "anh", "chị", "em", "gia đình", "người thân" -> `isFamily`.
+
+Ví dụ ngắn:
+CHUNK: "Bệnh nhân có tiền sử hen suyễn, hiện không ho."
+JSON:
+{
+  "entities": [
+    {"text": "hen suyễn", "position": [23, 32], "type": "CHẨN_ĐOÁN", "assertions": ["isHistorical"], "candidates": []},
+    {"text": "ho", "position": [45, 47], "type": "TRIỆU_CHỨNG", "assertions": ["isNegated"], "candidates": []}
+  ]
+}
+
+CHUNK:
+Chào em
+- đi tiêu không liên quan đến đau bụng, buồn nôn, nôn, tiêu chảy, hoặc táo bón.
+- Bệnh nhân đang có đi tiêu mỗi ngày.
+- Không có sốt, đau ngực, chóng mặt, đánh trống ngực.
+- Không có đau bụng hoặc dịch từ vết mổ.
+- Không có đỏ da, hoặc bục chỉ khâu bụng.
+3. Đánh giá tại bệnh viện
+Kết quả khám thực thể
+- Khám thấy ran nổ, phù phù, dịch rỉ huyết thanh từ vết mổ, và phân nâu dương tính guaiac.
+- dấu hiệu sinh tồn là: 98.8 65 9360 20 95 2LNC (tại khoa Cấp cứu)
+- dấu hiệu sinh tồn 98.6 70 10356 17 962LNC (khi đến MICU)
+Dấu hiệu lâm sàng
+- hạ huyết áp, không đặc hiệu
+- mệt mỏi
+- mệt mỏi
+- khó thở khi gắng sức
+- ho mạn tính có đờm vàng loãng
+- ran
+- phù phù
+- dịch thanh dịch lẫn máu từ vết mổ
+- phân nâu dương tính guaiac
+
+
+JSON:
+
+
+=== RAW GENERATED TEXT ===
+{
+  "entities": [
+    {"text": "đ	
+	
+
+		 		
+	

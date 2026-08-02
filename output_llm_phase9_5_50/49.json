@@ -1,0 +1,96 @@
+[
+  {
+    "text": "bệnh rụng tóc",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "B79"
+    ],
+    "assertions": [],
+    "position": [
+      30,
+      43
+    ]
+  },
+  {
+    "text": "tràn dịch màng phổi trái tái phát",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "A20"
+    ],
+    "assertions": [],
+    "position": [
+      214,
+      247
+    ]
+  },
+  {
+    "text": "khó thở",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      286,
+      293
+    ]
+  },
+  {
+    "text": "tràn dịch màng ngoài tim mức độ trung bình",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      326,
+      368
+    ]
+  },
+  {
+    "text": "ung thư di căn theo đường bạch huyết ở hai phổi",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      397,
+      444
+    ]
+  },
+  {
+    "text": "viêm da tiếp xúc dị ứng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1389,
+      1412
+    ]
+  },
+  {
+    "text": "mày đay",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1535,
+      1542
+    ]
+  },
+  {
+    "text": "bất thường sắc tố",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1544,
+      1561
+    ]
+  },
+  {
+    "text": "bạch biến",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1570,
+      1579
+    ]
+  }
+]

@@ -1,0 +1,148 @@
+[
+  {
+    "text": "xơ vữa động mạch",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "I70.9",
+      "I70",
+      "I70.90"
+    ],
+    "assertions": [],
+    "position": [
+      38,
+      54
+    ]
+  },
+  {
+    "text": "tụ máu ngoài màng cứng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      752,
+      774
+    ]
+  },
+  {
+    "text": "tổn thương mạn tính",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      798,
+      817
+    ]
+  },
+  {
+    "text": "CT",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      867,
+      869
+    ]
+  },
+  {
+    "text": "biểu hiện bất thường",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1354,
+      1374
+    ]
+  },
+  {
+    "text": "mất định hướng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1376,
+      1390
+    ]
+  },
+  {
+    "text": "kích thích nhẹ",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1596,
+      1610
+    ]
+  },
+  {
+    "text": "bàn chân bẹt",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "Q66.5"
+    ],
+    "assertions": [],
+    "position": [
+      1903,
+      1915
+    ]
+  },
+  {
+    "text": "mất định hướng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2343,
+      2357
+    ]
+  },
+  {
+    "text": "CT sọ não",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2564,
+      2573
+    ]
+  },
+  {
+    "text": "xuất huyết dưới nhện",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2592,
+      2612
+    ]
+  },
+  {
+    "text": "dịch dưới màng cứng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2688,
+      2707
+    ]
+  },
+  {
+    "text": "nang màng nhện",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2743,
+      2757
+    ]
+  },
+  {
+    "text": "tụ máu dưới màng cứng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2763,
+      2784
+    ]
+  }
+]

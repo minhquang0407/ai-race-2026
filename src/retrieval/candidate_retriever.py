@@ -81,6 +81,7 @@ class CandidateRetriever:
         cls,
         icd_path: str = "data/raw/icd10_sample.csv",
         rxnorm_path: str = "data/raw/rxnorm_sample.csv",
+        expander: CachingQueryExpander | None = None,
     ) -> "CandidateRetriever":
         icd_graph = load_icd10_graph(icd_path)
         rxnorm_index = load_rxnorm_index(rxnorm_path)
@@ -100,7 +101,7 @@ class CandidateRetriever:
             rxnorm_index=rxnorm_index,
             icd_graph=icd_graph,
             pruner=PragmaticGraphPruner(icd_graph),
-            expander=CachingQueryExpander(),
+            expander=expander or CachingQueryExpander(),
         )
 
     def retrieve_for_entity(self, entity: Entity) -> Entity | None:

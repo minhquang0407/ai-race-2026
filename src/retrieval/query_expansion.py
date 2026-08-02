@@ -89,15 +89,21 @@ class QueryExpansion:
     confidence: str = "low"
 
     def all_queries(self) -> list[tuple[str, float]]:
-        """Return weighted (query, weight) pairs for retrieval."""
-        queries: list[tuple[str, float]] = [(self.original, 1.0)]
+        """Return weighted (query, weight) pairs for retrieval.
+
+        If translation exists, query English FIRST. The original Vietnamese mention
+        is retained only as a low-weight fallback so BM25 Vietnamese noise cannot
+        dominate translated biomedical concepts.
+        """
         if self.normalized_english:
-            queries.append((self.normalized_english, 0.95))
-        for syn in self.synonyms:
-            queries.append((syn, 0.90))
-        if self.body_site and self.normalized_english:
-            queries.append((f"{self.normalized_english} {self.body_site}", 0.70))
-        return queries
+            queries: list[tuple[str, float]] = [(self.normalized_english, 1.0)]
+            for syn in self.synonyms:
+                queries.append((syn, 0.90))
+            if self.body_site:
+                queries.append((f"{self.normalized_english} {self.body_site}", 0.75))
+            queries.append((self.original, 0.20))
+            return queries
+        return [(self.original, 1.0)]
 
 
 class QueryExpanderProtocol(Protocol):

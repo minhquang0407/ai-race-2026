@@ -1,4 +1,4 @@
-﻿"""Dense/embedding search for ICD retrieval.
+"""Dense/embedding search for ICD retrieval.
 
 Uses SapBERT (biomedical concept bi-encoder) as primary backend.
 Falls back to paraphrase-multilingual-MiniLM-L12-v2 (multilingual general), then
@@ -30,10 +30,14 @@ logger = logging.getLogger(__name__)
 
 _PRIMARY_MODEL = "cambridgeltl/SapBERT-from-PubMedBERT-fulltext"
 _FALLBACK_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
-_DEFAULT_MODEL = os.environ.get("DENSE_MODEL_NAME", _PRIMARY_MODEL)
-_EMBEDDING_CACHE = Path(os.environ.get("DENSE_CACHE_PATH", "data/processed/icd_dense_embeddings.npz"))
 
-_ENABLE_DENSE = os.environ.get("ENABLE_DENSE_SEARCH", "").lower() in ("1", "true", "yes")
+
+def _env_flag(name: str) -> bool:
+    return os.environ.get(name, "").lower() in ("1", "true", "yes", "required", "strict")
+
+
+def _dense_required() -> bool:
+    return os.environ.get("ENABLE_DENSE_SEARCH", "").lower() in ("required", "strict")
 
 
 def _build_doc_text(doc: BM25Document) -> str:
@@ -53,18 +57,18 @@ class DenseSearchIndex:
     def __init__(
         self,
         documents: list[BM25Document],
-        model_name: str = _DEFAULT_MODEL,
+        model_name: str | None = None,
         cache_path: Path | None = None,
     ) -> None:
         self.documents = documents
-        self._model_name = model_name
-        self._cache_path = cache_path or _EMBEDDING_CACHE
+        self._model_name = model_name or os.environ.get("DENSE_MODEL_NAME", _PRIMARY_MODEL)
+        self._cache_path = cache_path or Path(os.environ.get("DENSE_CACHE_PATH", "data/processed/icd_dense_embeddings.npz"))
         self._embeddings = None
         self._model = None
         self._fallback: BM25SearchIndex | None = None
         self._loaded = False
 
-        if _ENABLE_DENSE:
+        if _env_flag("ENABLE_DENSE_SEARCH"):
             self._try_load()
         else:
             self._fallback = BM25SearchIndex(self.documents)
@@ -74,6 +78,11 @@ class DenseSearchIndex:
         for model_id in _resolve_model_chain(self._model_name):
             if self._try_load_model(model_id):
                 return
+        if _dense_required():
+            raise RuntimeError(
+                "ENABLE_DENSE_SEARCH is required/strict but dense model/cache failed to load. "
+                "Run scripts/build_dense_index.py first or fix sentence-transformers/model availability."
+            )
         logger.warning("dense_search: all models failed, falling back to lexical BM25")
         self._fallback = BM25SearchIndex(self.documents)
 
@@ -88,7 +97,14 @@ class DenseSearchIndex:
             if cache.exists():
                 cached = np.load(str(cache), allow_pickle=False)
                 embeddings = cached["embeddings"]
-                if embeddings.shape[0] == len(self.documents):
+                cached_model = str(cached["model_name"]) if "model_name" in cached.files else ""
+                if cached_model and cached_model != model_id:
+                    logger.warning(
+                        "dense_search: cache model mismatch (%s vs %s), recomputing",
+                        cached_model,
+                        model_id,
+                    )
+                elif embeddings.shape[0] == len(self.documents):
                     self._embeddings = embeddings
                     self._model = model
                     self._model_name = model_id
@@ -115,7 +131,7 @@ class DenseSearchIndex:
                 convert_to_numpy=True,
             )
             cache.parent.mkdir(parents=True, exist_ok=True)
-            np.savez_compressed(str(cache), embeddings=embeddings)
+            np.savez_compressed(str(cache), embeddings=embeddings, model_name=model_id)
             self._embeddings = embeddings
             self._model = model
             self._model_name = model_id

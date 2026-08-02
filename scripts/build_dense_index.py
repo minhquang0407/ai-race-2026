@@ -1,4 +1,4 @@
-﻿"""Pre-build and cache ICD embedding index for dense retrieval.
+"""Pre-build and cache ICD embedding index for dense retrieval.
 
 Run this once to avoid recomputing embeddings on every pipeline start.
 After this, set ENABLE_DENSE_SEARCH=1 to activate dense retrieval.
@@ -90,7 +90,7 @@ def main() -> int:
 
     # Save
     cache_path.parent.mkdir(parents=True, exist_ok=True)
-    np.savez_compressed(str(cache_path), embeddings=embeddings)
+    np.savez_compressed(str(cache_path), embeddings=embeddings, model_name=args.model)
     size_mb = cache_path.stat().st_size / 1024 / 1024
     print(f"saved {cache_path}  ({size_mb:.1f} MB)")
 

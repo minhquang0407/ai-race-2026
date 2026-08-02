@@ -1,0 +1,162 @@
+[
+  {
+    "text": "co giật",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [
+      "isNegated"
+    ],
+    "position": [
+      1568,
+      1575
+    ]
+  },
+  {
+    "text": "cứng đờ",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [
+      "isNegated"
+    ],
+    "position": [
+      1577,
+      1584
+    ]
+  },
+  {
+    "text": "cắn lưỡi",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [
+      "isNegated"
+    ],
+    "position": [
+      1586,
+      1594
+    ]
+  },
+  {
+    "text": "tiểu tiện không tự chủ",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [
+      "isNegated"
+    ],
+    "position": [
+      1600,
+      1622
+    ]
+  },
+  {
+    "text": "CRP",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1647,
+      1650
+    ]
+  },
+  {
+    "text": "227.0 mg/L",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1652,
+      1662
+    ]
+  },
+  {
+    "text": "Creatinin",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1663,
+      1672
+    ]
+  },
+  {
+    "text": "46 µmol/L",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1675,
+      1684
+    ]
+  },
+  {
+    "text": "Kali",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1685,
+      1689
+    ]
+  },
+  {
+    "text": "3.6 mmol/L",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1693,
+      1703
+    ]
+  },
+  {
+    "text": "CT Bụng - Tiểu khung",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1748,
+      1768
+    ]
+  },
+  {
+    "text": "64–128 dãy",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1770,
+      1780
+    ]
+  },
+  {
+    "text": "Ceftriaxone",
+    "type": "THUỐC",
+    "candidates": [
+      "2193"
+    ],
+    "assertions": [],
+    "position": [
+      1886,
+      1897
+    ]
+  },
+  {
+    "text": "2 lọ",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1913,
+      1917
+    ]
+  },
+  {
+    "text": "giọt/phút",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1972,
+      1981
+    ]
+  }
+]

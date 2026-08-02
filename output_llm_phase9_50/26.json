@@ -1,0 +1,110 @@
+[
+  {
+    "text": "Bệnh mạch vành",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "I70.9"
+    ],
+    "assertions": [],
+    "position": [
+      52,
+      66
+    ]
+  },
+  {
+    "text": "xơ vữa động mạch",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      208,
+      224
+    ]
+  },
+  {
+    "text": "tim",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      180,
+      183
+    ]
+  },
+  {
+    "text": "viêm tụy",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      1517,
+      1525
+    ]
+  },
+  {
+    "text": "rung nhĩ",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      1561,
+      1569
+    ]
+  },
+  {
+    "text": "eliquis",
+    "type": "THUỐC",
+    "candidates": [
+      "1364436"
+    ],
+    "assertions": [],
+    "position": [
+      1813,
+      1820
+    ]
+  },
+  {
+    "text": "sốt",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1883,
+      1886
+    ]
+  },
+  {
+    "text": "LDL",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2296,
+      2299
+    ]
+  },
+  {
+    "text": "< 1,8 mmol/L",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2300,
+      2312
+    ]
+  },
+  {
+    "text": "<70 mg/dL",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2319,
+      2328
+    ]
+  }
+]

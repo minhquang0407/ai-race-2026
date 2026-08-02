@@ -1,0 +1,184 @@
+[
+  {
+    "text": "run tay",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      35,
+      42
+    ]
+  },
+  {
+    "text": "run rấy toàn thân",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      576,
+      593
+    ]
+  },
+  {
+    "text": "hội chứng Parkinson",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "G20.C"
+    ],
+    "assertions": [],
+    "position": [
+      510,
+      529
+    ]
+  },
+  {
+    "text": "chống chỉ định",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      782,
+      796
+    ]
+  },
+  {
+    "text": "chóng mặt",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      808,
+      817
+    ]
+  },
+  {
+    "text": "chụp ct sọ não",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1485,
+      1499
+    ]
+  },
+  {
+    "text": "chọc dò dịch não tủy",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1546,
+      1566
+    ]
+  },
+  {
+    "text": "cơn nhịp tim chậm",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1581,
+      1598
+    ]
+  },
+  {
+    "text": "hạ huyết áp",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1607,
+      1618
+    ]
+  },
+  {
+    "text": "nhìn song thị",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2239,
+      2252
+    ]
+  },
+  {
+    "text": "mệt mỏi",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2259,
+      2266
+    ]
+  },
+  {
+    "text": "yếu chân phải",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2306,
+      2319
+    ]
+  },
+  {
+    "text": "yếu nửa người bên phải",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      3272,
+      3294
+    ]
+  },
+  {
+    "text": "suy giảm tri giác",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      3301,
+      3318
+    ]
+  },
+  {
+    "text": "nhìn song thị",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      3325,
+      3338
+    ]
+  },
+  {
+    "text": "nhịp tim chậm",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      3345,
+      3358
+    ]
+  },
+  {
+    "text": "hạ huyết áp",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      3365,
+      3376
+    ]
+  },
+  {
+    "text": "chụp ct sọ não",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      3555,
+      3569
+    ]
+  }
+]

@@ -27,7 +27,9 @@ ICD_GENERIC_TOKENS = {
     "gan",
     "hoi",
     "man",
+    "mo",
     "ruot",
+    "te",
     "tu",
     "ung",
     "viem",
@@ -150,7 +152,12 @@ class CandidateRetriever:
         results = sorted(merged.values(), key=lambda r: (-r.score, r.id))
 
         # Apply guardrails on the merged pool.
-        results = self._guard_icd_results(query, results)
+        # Skip the Vietnamese-token guard when expansion fired with high confidence:
+        # the English queries already anchor retrieval; applying Vi-token guard over
+        # English ICD names would incorrectly drop valid matches (e.g. bàn chân bẹt
+        # → "pes planus" → M21.4 "Flat foot [pes planus]").
+        if expansion.confidence != "high":
+            results = self._guard_icd_results(query, results)
         if expansion.must_have_terms:
             results = self._apply_must_have_guard(expansion.must_have_terms, results)
 
@@ -213,16 +220,20 @@ class CandidateRetriever:
     def _apply_must_have_guard(
         cls, must_have_terms: list[str], results: list[RetrievalResult]
     ) -> list[RetrievalResult]:
-        """Drop candidates that don't contain any must-have anchor term."""
+        """Drop candidates that don't contain any must-have anchor term.
+
+        If ALL candidates are filtered out (none contain any anchor),
+        return empty list — prefer no candidates over wrong candidates.
+        This prevents generic BM25 token overlaps from sneaking through.
+        """
         if not must_have_terms:
             return results
         anchors = {cls._strip_diacritics(t).lower() for t in must_have_terms}
-        kept = []
-        for result in results:
-            candidate_text_norm = cls._strip_diacritics(result.text)
-            if any(anchor in candidate_text_norm for anchor in anchors):
-                kept.append(result)
-        return kept if kept else results  # fallback: return all if anchors filter everything
+        kept = [
+            result for result in results
+            if any(anchor in cls._strip_diacritics(result.text) for anchor in anchors)
+        ]
+        return kept  # intentionally return [] if nothing passes the anchor gate
 
     @classmethod
     def _guard_icd_results(cls, query: str, results: list[RetrievalResult]) -> list[RetrievalResult]:

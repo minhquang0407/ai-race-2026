@@ -1,0 +1,320 @@
+[
+  {
+    "text": "nặng mặt",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      42,
+      50
+    ]
+  },
+  {
+    "text": "tiểu ít",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      73,
+      80
+    ]
+  },
+  {
+    "text": "phù 2 chi dưới",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      308,
+      322
+    ]
+  },
+  {
+    "text": "protein",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      651,
+      658
+    ]
+  },
+  {
+    "text": "HC",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      664,
+      666
+    ]
+  },
+  {
+    "text": "sỏi đài bể thận",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      740,
+      755
+    ]
+  },
+  {
+    "text": "viêm cầu thận",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      777,
+      790
+    ]
+  },
+  {
+    "text": "cầu thận mạn tính",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "N20.0"
+    ],
+    "assertions": [],
+    "position": [
+      568,
+      585
+    ]
+  },
+  {
+    "text": "suy thận",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "N20.0"
+    ],
+    "assertions": [
+      "isNegated"
+    ],
+    "position": [
+      808,
+      816
+    ]
+  },
+  {
+    "text": "6,4 mmol/l",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      823,
+      833
+    ]
+  },
+  {
+    "text": "79 micromol/l",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      846,
+      859
+    ]
+  },
+  {
+    "text": "thiếu máu",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "D55.0"
+    ],
+    "assertions": [
+      "isNegated"
+    ],
+    "position": [
+      874,
+      883
+    ]
+  },
+  {
+    "text": "4,49 T/l",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      889,
+      897
+    ]
+  },
+  {
+    "text": "103 g/l",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      904,
+      911
+    ]
+  },
+  {
+    "text": "viêm nhiễm",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1035,
+      1045
+    ]
+  },
+  {
+    "text": "viêm họng cấp",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1020,
+      1033
+    ]
+  },
+  {
+    "text": "protein niệu 24h",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1281,
+      1297
+    ]
+  },
+  {
+    "text": "protein máu",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1299,
+      1310
+    ]
+  },
+  {
+    "text": "albumin máu",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1312,
+      1323
+    ]
+  },
+  {
+    "text": "phù",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1561,
+      1564
+    ]
+  },
+  {
+    "text": "tăng lipid máu",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1566,
+      1580
+    ]
+  },
+  {
+    "text": "giảm thải protein",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1582,
+      1599
+    ]
+  },
+  {
+    "text": "Medrol",
+    "type": "THUỐC",
+    "candidates": [
+      "202702"
+    ],
+    "assertions": [],
+    "position": [
+      1642,
+      1648
+    ]
+  },
+  {
+    "text": "Furosemid",
+    "type": "THUỐC",
+    "candidates": [
+      "1162712",
+      "1162713",
+      "1162714"
+    ],
+    "assertions": [],
+    "position": [
+      1741,
+      1750
+    ]
+  },
+  {
+    "text": "Zestril",
+    "type": "THUỐC",
+    "candidates": [
+      "196472"
+    ],
+    "assertions": [],
+    "position": [
+      2007,
+      2014
+    ]
+  },
+  {
+    "text": "siêu âm",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1972,
+      1979
+    ]
+  },
+  {
+    "text": "sỏi mật",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1989,
+      1996
+    ]
+  },
+  {
+    "text": "FNA",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1826,
+      1829
+    ]
+  },
+  {
+    "text": "nốt sần tuyến giáp",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1838,
+      1856
+    ]
+  },
+  {
+    "text": "vi nang",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1874,
+      1881
+    ]
+  }
+]

@@ -1,0 +1,190 @@
+[
+  {
+    "text": "Rối loạn chuyển hóa tinh bột",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      29,
+      57
+    ]
+  },
+  {
+    "text": "amyloidosis",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "E85",
+      "E85.3",
+      "E85.8"
+    ],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      59,
+      70
+    ]
+  },
+  {
+    "text": "thoái hóa tinh bột",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      313,
+      331
+    ]
+  },
+  {
+    "text": "protein",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      381,
+      388
+    ]
+  },
+  {
+    "text": "protein bất thường",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      442,
+      460
+    ]
+  },
+  {
+    "text": "protein amyloid",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      521,
+      536
+    ]
+  },
+  {
+    "text": "cấu trúc",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      573,
+      581
+    ]
+  },
+  {
+    "text": "chức năng sinh lý",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      597,
+      614
+    ]
+  },
+  {
+    "text": "suy các cơ quan",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      713,
+      728
+    ]
+  },
+  {
+    "text": "bệnh thoái hóa tinh bột",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      806,
+      829
+    ]
+  },
+  {
+    "text": "amyloidosis",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "E85",
+      "E85.3",
+      "E85.8"
+    ],
+    "assertions": [],
+    "position": [
+      1444,
+      1455
+    ]
+  },
+  {
+    "text": "viêm dạ dày",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2159,
+      2170
+    ]
+  },
+  {
+    "text": "omeprazole",
+    "type": "THUỐC",
+    "candidates": [
+      "7646"
+    ],
+    "assertions": [],
+    "position": [
+      2222,
+      2232
+    ]
+  },
+  {
+    "text": "sỏi đoạn cuối ống mật chủ",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2271,
+      2296
+    ]
+  },
+  {
+    "text": "men gan",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [
+      "isNegated"
+    ],
+    "position": [
+      2332,
+      2339
+    ]
+  },
+  {
+    "text": "Xét nghiệm chức năng gan",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2298,
+      2322
+    ]
+  },
+  {
+    "text": "men gan",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2332,
+      2339
+    ]
+  }
+]

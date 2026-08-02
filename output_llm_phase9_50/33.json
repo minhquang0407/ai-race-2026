@@ -1,0 +1,222 @@
+[
+  {
+    "text": "rung nhĩ",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      39,
+      47
+    ]
+  },
+  {
+    "text": "tăng huyết áp",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      50,
+      63
+    ]
+  },
+  {
+    "text": "suy tim",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      66,
+      73
+    ]
+  },
+  {
+    "text": "béo phì",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      92,
+      99
+    ]
+  },
+  {
+    "text": "mụn cám",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      392,
+      399
+    ]
+  },
+  {
+    "text": "mụn đầu trắng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      403,
+      416
+    ]
+  },
+  {
+    "text": "mụn",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      283,
+      286
+    ]
+  },
+  {
+    "text": "da liễu",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      200,
+      207
+    ]
+  },
+  {
+    "text": "mụn",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      145,
+      148
+    ]
+  },
+  {
+    "text": "mệt mỏi",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      720,
+      727
+    ]
+  },
+  {
+    "text": "weak",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      731,
+      735
+    ]
+  },
+  {
+    "text": "ngủ quên",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      751,
+      759
+    ]
+  },
+  {
+    "text": "ngất xỉu",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      772,
+      780
+    ]
+  },
+  {
+    "text": "giảm khả năng quan hệ tình dục",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      783,
+      813
+    ]
+  },
+  {
+    "text": "ntg",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1912,
+      1915
+    ]
+  },
+  {
+    "text": "lasix",
+    "type": "THUỐC",
+    "candidates": [
+      "202991"
+    ],
+    "assertions": [
+      "isNegated"
+    ],
+    "position": [
+      1659,
+      1664
+    ]
+  },
+  {
+    "text": "morphine",
+    "type": "THUỐC",
+    "candidates": [
+      "7052"
+    ],
+    "assertions": [],
+    "position": [
+      1959,
+      1967
+    ]
+  },
+  {
+    "text": "dilaudid",
+    "type": "THUỐC",
+    "candidates": [
+      "224913"
+    ],
+    "assertions": [],
+    "position": [
+      1979,
+      1987
+    ]
+  },
+  {
+    "text": "metoprolol",
+    "type": "THUỐC",
+    "candidates": [
+      "6918"
+    ],
+    "assertions": [],
+    "position": [
+      2002,
+      2012
+    ]
+  },
+  {
+    "text": "diltiazem",
+    "type": "THUỐC",
+    "candidates": [
+      "3443"
+    ],
+    "assertions": [],
+    "position": [
+      2032,
+      2041
+    ]
+  }
+]

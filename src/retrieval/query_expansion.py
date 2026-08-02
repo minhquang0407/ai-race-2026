@@ -61,6 +61,21 @@ _rule(r"covid|SARS-CoV-2", "COVID-19", ["SARS-CoV-2"], "respiratory", ["COVID"])
 _rule(r"tr[aầ]m c[a\u1ea3]m|depression|depressive", "depressive disorder", ["major depression"], "mental", ["depression", "depressive"])
 _rule(r"lo [aâ]u|anxiety disorder", "anxiety disorder", [], "mental", ["anxiety"])
 _rule(r"t[aâ]m th[aầ]n ph[aâ]n li[eệ]t|schizophrenia", "schizophrenia", [], "mental", ["schizophrenia"])
+# Skin / soft tissue
+_rule(r"vi[eê]m m[oô] t[eế] b[aà]o|cellulitis", "cellulitis", ["skin infection"], "skin", ["cellulitis", "skin"])
+# Infectious disease
+_rule(r"b[eệ]nh d[aạ]i|ch[oó]|l[yý]ssavirus|rabies", "rabies", ["lyssavirus"], "nervous system", ["rabies", "lyssavirus"])
+_rule(r"virus vi[eê]m gan B|vi[eê]m gan vi r[uú]t B|hepatitis B virus|HBV", "hepatitis B", ["HBV", "HBV hepatitis"], "liver", ["hepatitis", "liver"])
+_rule(r"virus vi[eê]m gan C|vi[eê]m gan vi r[uú]t C|hepatitis C virus|HCV", "hepatitis C", ["HCV", "HCV hepatitis"], "liver", ["hepatitis", "liver"])
+# Metabolic / systemic
+_rule(r"amyloidosis|tho[aá]i h[oó]a tinh b[oộ]t|r[oố]i lo[aạ]n chuy[eể]n h[oó]a tinh b[oộ]t", "amyloidosis", [], "systemic", ["amyloid"])
+_rule(r"t[aă]ng lipid m[aá]u|hyperlipidemia|dyslipidemia", "hyperlipidemia", ["dyslipidemia"], "blood", ["lipid"])
+_rule(r"b[eé]o ph[iì]|obesity", "obesity", [], "metabolic", ["obesity"])
+# Neuro
+_rule(r"xu[aấ]t huy[eế]t n[aã]o|intracerebral hemorrhage", "intracerebral hemorrhage", ["cerebral hemorrhage"], "brain", ["hemorrhage", "intracerebral"])
+_rule(r"b[aà]n ch[aâ]n b[eẹ]t|flat foot|pes planus", "pes planus", ["flat foot"], "foot", ["pes", "planus", "foot"])
+_rule(r"viêm nha chu|periodontitis", "periodontitis", [], "oral", ["periodontitis"])
+_rule(r"t[hị][uụ]y [đd][aậ]u|varicella|thủy đậu|zona|herpes zoster", "varicella zoster", ["chickenpox", "herpes zoster"], "skin", ["varicella", "zoster"])
 
 
 @dataclass
@@ -108,6 +123,20 @@ class RuleBasedQueryExpander:
             ("nghien ruou", "alcohol dependence", ["alcohol use disorder", "alcohol dependence syndrome"], "alcohol", ["alcohol"]),
             ("xo vua dong mach", "atherosclerosis", ["arteriosclerosis"], "artery", ["atherosclerosis"]),
             ("ung thu bieu mo te bao mat", "cholangiocarcinoma", ["bile duct carcinoma", "intrahepatic cholangiocarcinoma"], "bile duct", ["bile", "duct", "cholangiocarcinoma"]),
+            ("viem mo te bao", "cellulitis", ["skin infection"], "skin", ["cellulitis", "skin"]),
+            ("benh dai", "rabies", ["lyssavirus"], "nervous system", ["rabies", "lyssavirus"]),
+            ("virus viem gan b", "hepatitis B", ["HBV", "HBV hepatitis"], "liver", ["hepatitis", "liver"]),
+            ("viem gan vi rut b", "hepatitis B", ["HBV", "HBV hepatitis"], "liver", ["hepatitis", "liver"]),
+            ("virus viem gan c", "hepatitis C", ["HCV", "HCV hepatitis"], "liver", ["hepatitis", "liver"]),
+            ("viem gan vi rut c", "hepatitis C", ["HCV", "HCV hepatitis"], "liver", ["hepatitis", "liver"]),
+            ("amyloidosis", "amyloidosis", [], "systemic", ["amyloid"]),
+            ("thoai hoa tinh bot", "amyloidosis", [], "systemic", ["amyloid"]),
+            ("roi loan chuyen hoa tinh bot", "amyloidosis", [], "systemic", ["amyloid"]),
+            ("tang lipid mau", "hyperlipidemia", ["dyslipidemia"], "blood", ["lipid"]),
+            ("beo phi", "obesity", [], "metabolic", ["obesity"]),
+            ("ban chan bet", "pes planus", ["flat foot"], "foot", ["pes", "planus", "foot"]),
+            ("viem nha chu", "periodontitis", [], "oral", ["periodontitis"]),
+            ("thuy dau", "varicella zoster", ["chickenpox", "herpes zoster"], "skin", ["varicella", "zoster"]),
         ]
         for needle, english, synonyms, site, must in normalized_fallbacks:
             if needle in normalized:

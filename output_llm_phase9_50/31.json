@@ -1,0 +1,94 @@
+[
+  {
+    "text": "giãn thừng tinh",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      240,
+      255
+    ]
+  },
+  {
+    "text": "NSAID",
+    "type": "THUỐC",
+    "candidates": [
+      "1176829",
+      "1176830",
+      "1184581"
+    ],
+    "assertions": [
+      "isFamily"
+    ],
+    "position": [
+      59,
+      64
+    ]
+  },
+  {
+    "text": "omeprazole",
+    "type": "THUỐC",
+    "candidates": [
+      "7646"
+    ],
+    "assertions": [
+      "isFamily"
+    ],
+    "position": [
+      106,
+      116
+    ]
+  },
+  {
+    "text": "giãn thừng tinh",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      873,
+      888
+    ]
+  },
+  {
+    "text": "vô sinh thứ phát",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "N97.9"
+    ],
+    "assertions": [],
+    "position": [
+      643,
+      659
+    ]
+  },
+  {
+    "text": "chướng bụng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1337,
+      1348
+    ]
+  },
+  {
+    "text": "buồn nôn",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1351,
+      1359
+    ]
+  },
+  {
+    "text": "02 viên sỏi",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2083,
+      2094
+    ]
+  }
+]

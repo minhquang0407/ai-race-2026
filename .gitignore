@@ -7,6 +7,5 @@ output/
 data/raw/RxNorm/
 output_llm_fullkb/
 data/raw/icd10cm-April-1-2026-XML/
-data/raw/icd10_kcb_vi.csv
 data/processed/icd_kcb_cache/
-data/processed/icd10_graph/
+data/processed/icd10_graph

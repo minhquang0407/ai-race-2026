@@ -1,0 +1,176 @@
+[
+  {
+    "text": "tăng men gan",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      31,
+      43
+    ]
+  },
+  {
+    "text": "tăng bilirubin máu",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      48,
+      66
+    ]
+  },
+  {
+    "text": "ast",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      68,
+      71
+    ]
+  },
+  {
+    "text": "336",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      81,
+      84
+    ]
+  },
+  {
+    "text": "alp",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      86,
+      89
+    ]
+  },
+  {
+    "text": "185",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      90,
+      93
+    ]
+  },
+  {
+    "text": "bilirubin toàn phần",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      95,
+      114
+    ]
+  },
+  {
+    "text": "0.9",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      115,
+      118
+    ]
+  },
+  {
+    "text": "siêu âm bụng",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      129,
+      141
+    ]
+  },
+  {
+    "text": "chụp hida",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      163,
+      172
+    ]
+  },
+  {
+    "text": "acetaminophen",
+    "type": "THUỐC",
+    "candidates": [
+      "161"
+    ],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      204,
+      217
+    ]
+  },
+  {
+    "text": "nac",
+    "type": "THUỐC",
+    "candidates": [
+      "1006915",
+      "1007290",
+      "1007545"
+    ],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      235,
+      238
+    ]
+  },
+  {
+    "text": "ercp",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      270,
+      274
+    ]
+  },
+  {
+    "text": "MÀY đay VÔ CĂN",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "N97.9"
+    ],
+    "assertions": [],
+    "position": [
+      618,
+      632
+    ]
+  },
+  {
+    "text": "MÀY đay MẠN",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      716,
+      727
+    ]
+  },
+  {
+    "text": "mày đay vô căn",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "N97.9"
+    ],
+    "assertions": [],
+    "position": [
+      1195,
+      1209
+    ]
+  }
+]

@@ -1,0 +1,283 @@
+[
+  {
+    "text": "khó chịu",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      52,
+      60
+    ]
+  },
+  {
+    "text": "liều cao acetaminophen",
+    "type": "THUỐC",
+    "candidates": [
+      "161"
+    ],
+    "assertions": [],
+    "position": [
+      162,
+      184
+    ]
+  },
+  {
+    "text": "nổi",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1346,
+      1349
+    ]
+  },
+  {
+    "text": "acetaminophen",
+    "type": "THUỐC",
+    "candidates": [
+      "161"
+    ],
+    "assertions": [],
+    "position": [
+      1183,
+      1196
+    ]
+  },
+  {
+    "text": "dị ứng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1652,
+      1658
+    ]
+  },
+  {
+    "text": "thời tiết",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1659,
+      1668
+    ]
+  },
+  {
+    "text": "thức ăn",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1673,
+      1680
+    ]
+  },
+  {
+    "text": "ast",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1967,
+      1970
+    ]
+  },
+  {
+    "text": "421",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1971,
+      1974
+    ]
+  },
+  {
+    "text": "alt",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1977,
+      1980
+    ]
+  },
+  {
+    "text": "336",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1981,
+      1984
+    ]
+  },
+  {
+    "text": "alp",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1987,
+      1990
+    ]
+  },
+  {
+    "text": "185",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1991,
+      1994
+    ]
+  },
+  {
+    "text": "bilirubin toàn phần",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1997,
+      2016
+    ]
+  },
+  {
+    "text": "0.9",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2017,
+      2020
+    ]
+  },
+  {
+    "text": "total bili",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2023,
+      2033
+    ]
+  },
+  {
+    "text": "6.7",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2060,
+      2063
+    ]
+  },
+  {
+    "text": "viêm gan virus",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2082,
+      2096
+    ]
+  },
+  {
+    "text": "ferritin",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2110,
+      2118
+    ]
+  },
+  {
+    "text": "ceruloplasmin",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2136,
+      2149
+    ]
+  },
+  {
+    "text": "siêu âm bụng",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2243,
+      2255
+    ]
+  },
+  {
+    "text": "doppler",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2259,
+      2266
+    ]
+  },
+  {
+    "text": "chụp hida",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2293,
+      2302
+    ]
+  },
+  {
+    "text": "túi mật",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2319,
+      2326
+    ]
+  },
+  {
+    "text": "giãn nở",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2327,
+      2334
+    ]
+  },
+  {
+    "text": "men gan",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "F40.290"
+    ],
+    "assertions": [],
+    "position": [
+      2469,
+      2476
+    ]
+  },
+  {
+    "text": "bilirubin máu",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "E80.7",
+      "E80"
+    ],
+    "assertions": [],
+    "position": [
+      2484,
+      2497
+    ]
+  }
+]

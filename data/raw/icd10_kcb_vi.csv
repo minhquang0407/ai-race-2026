@@ -1,0 +1,3559 @@
+code,name,parent_code,level,aliases,source_id,model,is_leaf
+ROOT,ICD-10 tiếng Việt,,0,,ROOT,root,false
+A00-B99,Bệnh nhiễm trùng và ký sinh trùng,ROOT,1,(A00-B99) Bệnh nhiễm trùng và ký sinh trùng,A00-B99,chapter,false
+C00-D48,U tân sinh,ROOT,1,(C00-D48) U tân sinh,C00-D48,chapter,false
+D50-D89,"Bệnh máu, cơ quan tạo máu và các bệnh lý liên quan đến cơ chế miễn dịch",ROOT,1,"(D50-D89) Bệnh máu, cơ quan tạo máu và các bệnh lý liên quan đến cơ chế miễn dịch",D50-D89,chapter,false
+E00-E90,"Bệnh nội tiết, dinh dưỡng và chuyển hoá",ROOT,1,"(E00-E90) Bệnh nội tiết, dinh dưỡng và chuyển hoá",E00-E90,chapter,false
+F00-F99,Rối loạn tâm thần và hành vi,ROOT,1,(F00-F99) Rối loạn tâm thần và hành vi,F00-F99,chapter,false
+G00-G99,Bệnh hệ thần kinh,ROOT,1,(G00-G99) Bệnh hệ thần kinh,G00-G99,chapter,false
+H00-H59,Bệnh mắt và phần phụ của mắt,ROOT,1,(H00-H59) Bệnh mắt và phần phụ của mắt,H00-H59,chapter,false
+H60-H95,Bệnh tai và xương chũm,ROOT,1,(H60-H95) Bệnh tai và xương chũm,H60-H95,chapter,false
+I00-I99,Bệnh hệ tuần hoàn,ROOT,1,(I00-I99) Bệnh hệ tuần hoàn,I00-I99,chapter,false
+J00-J99,Bệnh hệ hô hấp,ROOT,1,(J00-J99) Bệnh hệ hô hấp,J00-J99,chapter,false
+K00-K93,Bệnh hệ tiêu hoá,ROOT,1,(K00-K93) Bệnh hệ tiêu hoá,K00-K93,chapter,false
+L00-L99,Bệnh da và tổ chức dưới da,ROOT,1,(L00-L99) Bệnh da và tổ chức dưới da,L00-L99,chapter,false
+M00-M99,"Bệnh hệ cơ, xương, khớp và mô liên kết",ROOT,1,"(M00-M99) Bệnh hệ cơ, xương, khớp và mô liên kết",M00-M99,chapter,false
+N00-N99,"Bệnh hệ tiết niệu, sinh dục",ROOT,1,"(N00-N99) Bệnh hệ tiết niệu, sinh dục",N00-N99,chapter,false
+O00-O99,"Mang thai, sinh đẻ và hậu sản",ROOT,1,"(O00-O99) Mang thai, sinh đẻ và hậu sản",O00-O99,chapter,false
+P00-P96,Một số bệnh lý khởi phát trong thời kỳ chu sinh,ROOT,1,(P00-P96) Một số bệnh lý khởi phát trong thời kỳ chu sinh,P00-P96,chapter,false
+Q00-Q99,"Dị tật bẩm sinh, biến dạng và bất thường về nhiễm sắc thể",ROOT,1,"(Q00-Q99) Dị tật bẩm sinh, biến dạng và bất thường về nhiễm sắc thể",Q00-Q99,chapter,false
+R00-R99,"Các triệu chứng cơ năng, thực thể và bất thường về lâm sàng và cận lâm sàng không phân loại nơi khác",ROOT,1,"(R00-R99) Các triệu chứng cơ năng, thực thể và bất thường về lâm sàng và cận lâm sàng không phân loại nơi khác",R00-R99,chapter,false
+S00-T98,"Tổn thương, ngộ độc và một số hậu quả do nguyên nhân ngoại sinh",ROOT,1,"(S00-T98) Tổn thương, ngộ độc và một số hậu quả do nguyên nhân ngoại sinh",S00-T98,chapter,false
+V01-Y98,Các nguyên nhân ngoại sinh của bệnh tật và tử vong,ROOT,1,(V01-Y98) Các nguyên nhân ngoại sinh của bệnh tật và tử vong,V01-Y98,chapter,false
+Z00-Z99,Các yếu tố ảnh hưởng đến tình trạng sức khoẻ và tiếp cận dịch vụ y tế,ROOT,1,(Z00-Z99) Các yếu tố ảnh hưởng đến tình trạng sức khoẻ và tiếp cận dịch vụ y tế,Z00-Z99,chapter,false
+U00-U99,Mã dành cho những mục đích đặc biệt,ROOT,1,(U00-U99) Mã dành cho những mục đích đặc biệt,U00-U99,chapter,false
+U82-U85,Kháng các thuốc kháng sinh và chống ung thư,A00-B99,2,,U82-U85,section,false
+P35-P39,Nhiễm trùng đặc hiệu trong thời kỳ chu sinh,A00-B99,2,,P35-P39,section,false
+A00-A09,Bệnh nhiễm trùng đường ruột,A00-B99,2,,A00-A09,section,false
+A15-A19,Bệnh lao,A00-B99,2,,A15-A19,section,false
+A20-A28,Bệnh nhiễm khuẩn do động vật truyền sang người,A00-B99,2,,A20-A28,section,false
+A30-A49,Bệnh nhiễm khuẩn khác,A00-B99,2,,A30-A49,section,false
+A50-A64,Bệnh nhiễm trùng lây truyền chủ yếu qua đường tình dục,A00-B99,2,,A50-A64,section,false
+A65-A69,Bệnh do xoắn trùng khác,A00-B99,2,,A65-A69,section,false
+A70-A74,Các bệnh khác do Chlamydia,A00-B99,2,,A70-A74,section,false
+A75-A79,Bệnh do Rickettsia,A00-B99,2,,A75-A79,section,false
+A80-A89,Nhiễm vi rút ở hệ thần kinh trung ương,A00-B99,2,,A80-A89,section,false
+A92-A99,Sốt do vi rút lây truyền qua côn trùng và sốt xuất huyết do vi rút,A00-B99,2,,A92-A99,section,false
+B00-B09,Nhiễm vi rút có đặc điểm tổn thương tại da và niêm mạc,A00-B99,2,,B00-B09,section,false
+B15-B19,Viêm gan vi rút,A00-B99,2,,B15-B19,section,false
+B20-B24,Bệnh do nhiễm vi rút suy giảm miễn dịch ở người [HIV],A00-B99,2,,B20-B24,section,false
+B25-B34,Các bệnh nhiễm vi rút khác,A00-B99,2,,B25-B34,section,false
+B35-B49,Bệnh nhiễm nấm,A00-B99,2,,B35-B49,section,false
+B50-B64,Bệnh do ký sinh trùng đơn bào,A00-B99,2,,B50-B64,section,false
+B65-B83,Bệnh giun sán,A00-B99,2,,B65-B83,section,false
+B85-B89,"Bệnh chấy rận, bệnh ghẻ và nhiễm ký sinh trùng khác",A00-B99,2,,B85-B89,section,false
+B90-B94,Di chứng của bệnh nhiễm trùng và ký sinh trùng,A00-B99,2,,B90-B94,section,false
+B95-B98,"Vi khuẩn, vi rút và các tác nhân gây nhiễm trùng khác",A00-B99,2,,B95-B98,section,false
+B99-B99,Bệnh nhiễm trùng khác,A00-B99,2,,B99-B99,section,false
+C00-C97,U ác tính,C00-D48,2,,C00-C97,section,false
+D00-D09,U tân sinh tại chỗ,C00-D48,2,,D00-D09,section,false
+D10-D36,U lành tính,C00-D48,2,,D10-D36,section,false
+D37-D48,U tân sinh không chắc chắn hoặc chưa rõ tính chất,C00-D48,2,,D37-D48,section,false
+D50-D53,Bệnh thiếu máu dinh dưỡng,D50-D89,2,,D50-D53,section,false
+D55-D59,Thiếu máu tan máu,D50-D89,2,,D55-D59,section,false
+D60-D64,Suy tuỷ xương và các bệnh thiếu máu khác,D50-D89,2,,D60-D64,section,false
+D65-D69,"Các rối loạn đông máu, ban xuất huyết và tình trạng xuất huyết khác",D50-D89,2,,D65-D69,section,false
+D70-D77,Các bệnh khác của máu và cơ quan tạo máu,D50-D89,2,,D70-D77,section,false
+D80-D89,Các rối loạn liên quan đến cơ chế miễn dịch,D50-D89,2,,D80-D89,section,false
+P70-P74,"Các rối loạn nội tiết, chuyển hoá tạm thời đặc hiệu cho thai và trẻ sơ sinh",E00-E90,2,,P70-P74,section,false
+E00-E07,Bệnh tuyến giáp,E00-E90,2,,E00-E07,section,false
+E10-E14,Đái tháo đường,E00-E90,2,,E10-E14,section,false
+E15-E16,Các rối loạn khác về sự điều hoà glucose và bài tiết của tuỵ nội tiết,E00-E90,2,,E15-E16,section,false
+E20-E35,Rối loạn các tuyến nội tiết khác,E00-E90,2,,E20-E35,section,false
+E40-E46,Suy dinh dưỡng,E00-E90,2,,E40-E46,section,false
+E50-E64,Các bệnh thiếu dinh dưỡng khác,E00-E90,2,,E50-E64,section,false
+E65-E68,Béo phì và tình trạng thừa dinh dưỡng khác,E00-E90,2,,E65-E68,section,false
+E70-E90,Rối loạn chuyển hoá,E00-E90,2,,E70-E90,section,false
+F00-F09,Rối loạn tâm thần thực tổn bao gồm rối loạn tâm thần triệu chứng,F00-F99,2,,F00-F09,section,false
+F10-F19,Rối loạn tâm thần và hành vi do sử dụng chất tác động tâm thần,F00-F99,2,,F10-F19,section,false
+F20-F29,"Tâm thần phân liệt, rối loạn loại phân liệt và các rối loạn hoang tưởng",F00-F99,2,,F20-F29,section,false
+F30-F39,Rối loạn khí sắc [cảm xúc],F00-F99,2,,F30-F39,section,false
+F40-F48,Các rối loạn bệnh tâm căn có liên quan đến stress và rối loạn dạng cơ thể,F00-F99,2,,F40-F48,section,false
+F50-F59,Hội chứng hành vi kết hợp với rối loạn sinh lý và nhân tố cơ thể,F00-F99,2,,F50-F59,section,false
+F60-F69,Rối loạn nhân cách và hành vi ở người trưởng thành,F00-F99,2,,F60-F69,section,false
+F70-F79,Chậm phát triển trí tuệ,F00-F99,2,,F70-F79,section,false
+F80-F89,Các rối loạn về phát triển tâm lý,F00-F99,2,,F80-F89,section,false
+F90-F98,Các rối loạn hành vi và cảm xúc thường khởi phát ở tuổi trẻ em và thanh thiếu niên,F00-F99,2,,F90-F98,section,false
+F99-F99,Rối loạn tâm thần không biệt định,F00-F99,2,,F99-F99,section,false
+G00-G09,Bệnh viêm hệ thần kinh trung ương,G00-G99,2,,G00-G09,section,false
+G10-G14,Bệnh teo hệ thống ảnh hưởng chủ yếu tới hệ thần kinh trung ương,G00-G99,2,,G10-G14,section,false
+G20-G26,Hội chứng ngoại tháp và rối loạn vận động,G00-G99,2,,G20-G26,section,false
+G30-G32,Bệnh thoái hoá khác của hệ thần kinh,G00-G99,2,,G30-G32,section,false
+G35-G37,Bệnh thoái hoá myelin của hệ thần kinh trung ương,G00-G99,2,,G35-G37,section,false
+G40-G47,Bệnh chu kỳ và kịch phát,G00-G99,2,,G40-G47,section,false
+G50-G59,"Bệnh dây, rễ và đám rối thần kinh",G00-G99,2,,G50-G59,section,false
+G60-G64,Bệnh nhiều dây thần kinh và bệnh hệ thần kinh ngoại biên khác,G00-G99,2,,G60-G64,section,false
+G70-G73,Bệnh của khớp thần kinh- cơ và cơ,G00-G99,2,,G70-G73,section,false
+G80-G83,Bại não và những hội chứng liệt khác,G00-G99,2,,G80-G83,section,false
+G90-G99,Các bệnh khác của hệ thần kinh,G00-G99,2,,G90-G99,section,false
+H00-H06,"Bệnh của mí mắt, lệ bộ và hốc mắt",H00-H59,2,,H00-H06,section,false
+H10-H13,Bệnh của kết mạc,H00-H59,2,,H10-H13,section,false
+H15-H22,"Bệnh củng mạc, giác mạc, mống mắt và thể mi",H00-H59,2,,H15-H22,section,false
+H25-H28,Bệnh thể thuỷ tinh,H00-H59,2,,H25-H28,section,false
+H30-H36,Bệnh hắc mạc và võng mạc,H00-H59,2,,H30-H36,section,false
+H40-H42,Bệnh glocom,H00-H59,2,,H40-H42,section,false
+H43-H45,Bệnh dịch kính và nhãn cầu,H00-H59,2,,H43-H45,section,false
+H46-H48,Bệnh thần kinh thị và đường dẫn thị giác,H00-H59,2,,H46-H48,section,false
+H49-H52,"Bệnh cơ vận nhãn, vận nhãn hai mắt điều tiết và khúc xạ",H00-H59,2,,H49-H52,section,false
+H53-H54,Rối loạn thị giác và mù loà,H00-H59,2,,H53-H54,section,false
+H55-H59,Bệnh mắt và phần phụ,H00-H59,2,,H55-H59,section,false
+H60-H62,Bệnh của tai ngoài,H60-H95,2,,H60-H62,section,false
+H65-H75,Bệnh của tai giữa và xương chũm,H60-H95,2,,H65-H75,section,false
+H80-H83,Bệnh của tai trong,H60-H95,2,,H80-H83,section,false
+H90-H95,Bệnh khác của tai,H60-H95,2,,H90-H95,section,false
+M30-M36,Bệnh mô liên kết hệ thống,I00-I99,2,,M30-M36,section,false
+I00-I02,Thấp khớp cấp,I00-I99,2,,I00-I02,section,false
+I05-I09,Bệnh tim mạn tính do thấp,I00-I99,2,,I05-I09,section,false
+I10-I15,Bệnh lý tăng huyết áp,I00-I99,2,,I10-I15,section,false
+I20-I25,Bệnh tim thiếu máu cục bộ,I00-I99,2,,I20-I25,section,false
+I26-I28,Bệnh tim do phổi và bệnh tuần hoàn phổi,I00-I99,2,,I26-I28,section,false
+I30-I52,Thể bệnh tim khác,I00-I99,2,,I30-I52,section,false
+I60-I69,Bệnh mạch máu não,I00-I99,2,,I60-I69,section,false
+I70-I79,"Bệnh động mạch, tiểu động mạch và mao mạch",I00-I99,2,,I70-I79,section,false
+I80-I89,"Bệnh tĩnh mạch, mạch bạch huyết và hạch bạch huyết không phân loại nơi khác",I00-I99,2,,I80-I89,section,false
+I95-I99,Rối loạn khác và không xác định của hệ tuần hoàn,I00-I99,2,,I95-I99,section,false
+J00-J06,Nhiễm trùng hô hấp trên cấp tính,J00-J99,2,,J00-J06,section,false
+J09-J18,Cúm và viêm phổi,J00-J99,2,,J09-J18,section,false
+J20-J22,Nhiễm trùng đường hô hấp dưới cấp khác,J00-J99,2,,J20-J22,section,false
+J30-J39,Các bệnh khác của đường hô hấp trên,J00-J99,2,,J30-J39,section,false
+J40-J47,Các bệnh hô hấp dưới mạn tính,J00-J99,2,,J40-J47,section,false
+J60-J70,Các bệnh phổi do nguyên nhân ngoại sinh,J00-J99,2,,J60-J70,section,false
+J80-J84,Các bệnh hô hấp khác ảnh hưởng chủ yếu đến mô kẽ,J00-J99,2,,J80-J84,section,false
+J85-J86,Tình trạng nung mủ và hoại tử của đường hô hấp dưới,J00-J99,2,,J85-J86,section,false
+J90-J94,Bệnh khác của màng phổi,J00-J99,2,,J90-J94,section,false
+J95-J99,Các bệnh lý khác của hệ hô hấp,J00-J99,2,,J95-J99,section,false
+K00-K14,"Bệnh của khoang miệng, tuyến nước bọt và xương hàm",K00-K93,2,,K00-K14,section,false
+K20-K31,"Bệnh của thực quản, dạ dày và tá tràng",K00-K93,2,,K20-K31,section,false
+K35-K38,Bệnh ruột thừa,K00-K93,2,,K35-K38,section,false
+K40-K46,Thoát vị,K00-K93,2,,K40-K46,section,false
+K50-K52,Viêm ruột non và đại tràng không do nhiễm trùng,K00-K93,2,,K50-K52,section,false
+K55-K64,Bệnh đường ruột khác,K00-K93,2,,K55-K64,section,false
+K65-K67,Bệnh của phúc mạc,K00-K93,2,,K65-K67,section,false
+K70-K77,Bệnh của gan,K00-K93,2,,K70-K77,section,false
+K80-K87,"Bệnh túi mật, ống mật và tuỵ",K00-K93,2,,K80-K87,section,false
+K90-K93,Bệnh khác của hệ tiêu hoá,K00-K93,2,,K90-K93,section,false
+L00-L08,Nhiễm trùng da và mô dưới da,L00-L99,2,,L00-L08,section,false
+L10-L14,Bệnh da bọng nước,L00-L99,2,,L10-L14,section,false
+L20-L30,Viêm da và chàm,L00-L99,2,,L20-L30,section,false
+L40-L45,Bệnh sẩn có vảy,L00-L99,2,,L40-L45,section,false
+L50-L54,Mày đay và hồng ban,L00-L99,2,,L50-L54,section,false
+L55-L59,Các bệnh da và tổ chức dưới da liên quan đến bức xạ,L00-L99,2,,L55-L59,section,false
+L60-L75,Các bệnh phần phụ của da,L00-L99,2,,L60-L75,section,false
+L80-L99,Các bệnh khác của da và tổ chức dưới da,L00-L99,2,,L80-L99,section,false
+M00-M25,Bệnh khớp,M00-M99,2,,M00-M25,section,false
+M40-M54,Bệnh cột sống,M00-M99,2,,M40-M54,section,false
+M60-M79,Các bệnh lý mô mềm,M00-M99,2,,M60-M79,section,false
+M80-M94,Bệnh của xương và sụn,M00-M99,2,,M80-M94,section,false
+M95-M99,Các bệnh khác của hệ cơ- xương- khớp và mô liên kết,M00-M99,2,,M95-M99,section,false
+N00-N08,Bệnh cầu thận,N00-N99,2,,N00-N08,section,false
+N10-N16,Bệnh kẽ ống thận,N00-N99,2,,N10-N16,section,false
+N17-N19,Suy thận,N00-N99,2,,N17-N19,section,false
+N20-N23,Sỏi tiết niệu,N00-N99,2,,N20-N23,section,false
+N25-N29,Các rối loạn khác của thận và niệu quản,N00-N99,2,,N25-N29,section,false
+N30-N39,Các bệnh khác của hệ tiết niệu,N00-N99,2,,N30-N39,section,false
+N40-N51,Bệnh cơ quan sinh dục nam,N00-N99,2,,N40-N51,section,false
+N60-N64,Các biến đổi của vú,N00-N99,2,,N60-N64,section,false
+N70-N77,Viêm cơ quan sinh dục vùng chậu nữ,N00-N99,2,,N70-N77,section,false
+N80-N98,Biến đổi không do viêm của đường sinh dục nữ,N00-N99,2,,N80-N98,section,false
+N99-N99,Các rối loạn khác của hệ sinh dục tiết niệu,N00-N99,2,,N99-N99,section,false
+O00-O08,"Sảy thai, phá thai",O00-O99,2,,O00-O08,section,false
+O10-O16,"Phù, protein niệu và tăng huyết áp trong khi có thai, khi đẻ và sau đẻ",O00-O99,2,,O10-O16,section,false
+O20-O29,Các bệnh lý khác của bà mẹ chủ yếu liên quan đến thai kỳ,O00-O99,2,,O20-O29,section,false
+O30-O48,"Chăm sóc bà mẹ liên quan đến thai, buồng ối và các vấn đề có thể gặp khi đẻ",O00-O99,2,,O30-O48,section,false
+O60-O75,Biến chứng của chuyển dạ và đẻ,O00-O99,2,,O60-O75,section,false
+O80-O84,Cuộc đẻ,O00-O99,2,,O80-O84,section,false
+O85-O92,Biến chứng thường gặp liên quan đến sau đẻ,O00-O99,2,,O85-O92,section,false
+O94-O99,"Các tình trạng sản khoa khác, không phân loại nơi khác",O00-O99,2,,O94-O99,section,false
+P00-P04,"Thai nhi và trẻ sơ sinh bị ảnh hưởng do các yếu tố về phía mẹ và bởi các biến chứng trong thời kỳ mang thai, chuyển dạ và cuộc đẻ",P00-P96,2,,P00-P04,section,false
+P05-P08,Các rối loạn liên quan đến tuổi thai và sự phát triển của thai,P00-P96,2,,P05-P08,section,false
+P10-P15,Chấn thương khi sinh,P00-P96,2,,P10-P15,section,false
+P20-P29,Rối loạn hô hấp và tim mạch đặc hiệu cho giai đoạn chu sinh,P00-P96,2,,P20-P29,section,false
+P50-P61,Rối loạn chảy máu và huyết học của thai và trẻ sơ sinh,P00-P96,2,,P50-P61,section,false
+P75-P78,Các rối loạn của hệ thống tiêu hoá ở thai và trẻ sơ sinh,P00-P96,2,,P75-P78,section,false
+P80-P83,Các bệnh lý của da và điều hoà thân nhiệt của thai và trẻ sơ sinh,P00-P96,2,,P80-P83,section,false
+P90-P96,Các bệnh lý khác xuất phát từ giai đoạn chu sinh,P00-P96,2,,P90-P96,section,false
+Q00-Q07,Dị tật bẩm sinh hệ thần kinh,Q00-Q99,2,,Q00-Q07,section,false
+Q10-Q18,"Các dị tật bẩm sinh ở mắt, tai, mặt và cổ",Q00-Q99,2,,Q10-Q18,section,false
+Q20-Q28,Các dị tật bẩm sinh của hệ thống tuần hoàn,Q00-Q99,2,,Q20-Q28,section,false
+Q30-Q34,Các bất thường bẩm sinh của bộ máy hô hấp,Q00-Q99,2,,Q30-Q34,section,false
+Q35-Q37,Khe hở môi và khe hở vòm miệng,Q00-Q99,2,,Q35-Q37,section,false
+Q38-Q45,Các dị tật bẩm sinh khác của hệ tiêu hoá,Q00-Q99,2,,Q38-Q45,section,false
+Q50-Q56,Dị tật bẩm sinh của cơ quan sinh dục,Q00-Q99,2,,Q50-Q56,section,false
+Q60-Q64,Các dị tật bẩm sinh của hệ tiết niệu,Q00-Q99,2,,Q60-Q64,section,false
+Q65-Q79,Dị tật và biến dạng bẩm sinh của hệ cơ xương,Q00-Q99,2,,Q65-Q79,section,false
+Q80-Q89,Các dị tật bẩm sinh khác,Q00-Q99,2,,Q80-Q89,section,false
+Q90-Q99,"Các bất thường nhiễm sắc thể, không phân loại nơi khác",Q00-Q99,2,,Q90-Q99,section,false
+R00-R09,Triệu chứng liên quan tới hệ tuần hoàn và hô hấp,R00-R99,2,,R00-R09,section,false
+R10-R19,Triệu chứng liên quan tới hệ tiêu hoá và bụng,R00-R99,2,,R10-R19,section,false
+R20-R23,Triệu chứng liên quan tới da và tổ chức dưới da,R00-R99,2,,R20-R23,section,false
+R25-R29,Triệu chứng liên quan tới hệ thần kinh và hệ cơ xương,R00-R99,2,,R25-R29,section,false
+R30-R39,Triệu chứng liên quan tới hệ tiết niệu,R00-R99,2,,R30-R39,section,false
+R40-R46,"Triệu chứng liên quan tới nhận thức, tri giác và trạng thái cảm",R00-R99,2,,R40-R46,section,false
+R47-R49,Triệu chứng liên quan tới ngôn ngữ và giọng nói,R00-R99,2,,R47-R49,section,false
+R50-R69,Triệu chứng tổng quát,R00-R99,2,,R50-R69,section,false
+R70-R79,"Bất thường về xét nghiệm máu, không có chẩn đoán",R00-R99,2,,R70-R79,section,false
+R80-R82,"Bất thường về xét nghiệm nước tiểu, không có chẩn đoán",R00-R99,2,,R80-R82,section,false
+R83-R89,"Bất thường về xét nghiệm các dịch cơ thể các chất và mô, không có chẩn đoán",R00-R99,2,,R83-R89,section,false
+R90-R94,"Bất thường về chẩn đoán hình ảnh và thăm dò chức năng, không có chẩn đoán",R00-R99,2,,R90-R94,section,false
+R95-R99,Nguyên nhân tử vong không xác định,R00-R99,2,,R95-R99,section,false
+T90-T98,"Di chứng của tổn thương, của nhiễm độc và của hậu quả khác của các nguyên nhân từ bên ngoài",S00-T98,2,,T90-T98,section,false
+S00-S09,Tổn thương ở đầu,S00-T98,2,,S00-S09,section,false
+S10-S19,Tổn thương ở cổ,S00-T98,2,,S10-S19,section,false
+S20-S29,Tổn thương lồng ngực,S00-T98,2,,S20-S29,section,false
+S30-S39,"Tổn thương bụng, lưng dưới, cột sống thắt lưng và vùng chậu",S00-T98,2,,S30-S39,section,false
+S40-S49,Tổn thương vai và cánh tay,S00-T98,2,,S40-S49,section,false
+S50-S59,Tổn thương tại khuỷu tay và cẳng tay,S00-T98,2,,S50-S59,section,false
+S60-S69,Tổn thương ở cổ tay và bàn tay,S00-T98,2,,S60-S69,section,false
+S70-S79,Tổn thương tại hông và đùi,S00-T98,2,,S70-S79,section,false
+S80-S89,Tổn thương tại đầu gối và cẳng chân,S00-T98,2,,S80-S89,section,false
+S90-S99,Tổn thương tại cổ chân và bàn chân,S00-T98,2,,S90-S99,section,false
+T00-T07,Tổn thương tác động nhiều vùng cơ thể,S00-T98,2,,T00-T07,section,false
+T08-T14,"Tổn thương phần không xác định của thân, các chi hoặc vùng cơ thể",S00-T98,2,,T08-T14,section,false
+T15-T19,Tác động của dị vật vào qua lỗ tự nhiên,S00-T98,2,,T15-T19,section,false
+T20-T32,Bỏng và ăn mòn,S00-T98,2,,T20-T32,section,false
+T33-T35,Tổn thương do cóng lạnh,S00-T98,2,,T33-T35,section,false
+T36-T50,"Ngộ độc do thuốc, dược phẩm và chất sinh học",S00-T98,2,,T36-T50,section,false
+T51-T65,Nhiễm độc tố chủ yếu không có nguồn gốc y học,S00-T98,2,,T51-T65,section,false
+T66-T78,Tác dụng khác và không xác định của các nguyên nhân từ bên ngoài,S00-T98,2,,T66-T78,section,false
+T79-T79,Một số biến chứng sớm của chấn thương,S00-T98,2,,T79-T79,section,false
+T80-T88,"Biến chứng điều trị nội khoa, ngoại khoa, không phân loại nơi khác",S00-T98,2,,T80-T88,section,false
+V01-X59,Tai nạn,V01-Y98,2,,V01-X59,section,false
+X60-X84,Cố tình tự hại,V01-Y98,2,,X60-X84,section,false
+X85-Y09,Tấn công,V01-Y98,2,,X85-Y09,section,false
+Y10-Y34,Biến cố do ý đồ không xác định được.,V01-Y98,2,,Y10-Y34,section,false
+Y35-Y36,Can thiệp pháp lý và hoạt động chiến tranh,V01-Y98,2,,Y35-Y36,section,false
+Y40-Y84,Biến chứng do chăm sóc nội khoa và ngoại khoa,V01-Y98,2,,Y40-Y84,section,false
+Y85-Y89,Di chứng của các nguyên nhân ngoại sinh gây biến chứng và tử vong,V01-Y98,2,,Y85-Y89,section,false
+Y90-Y98,Các yếu tố bổ sung liên quan đến nguyên nhân gây ra bệnh tật và tử vong phân loại nơi khác,V01-Y98,2,,Y90-Y98,section,false
+Z00-Z13,Người đến cơ sở y tế để khám và kiểm tra sức khoẻ,Z00-Z99,2,,Z00-Z13,section,false
+Z20-Z29,Người có nguy cơ tiềm ẩn về sức khoẻ liên quan đến các bệnh lây truyền,Z00-Z99,2,,Z20-Z29,section,false
+Z30-Z39,Người đến cơ sở y tế về các vấn đề liên quan đến sinh sản,Z00-Z99,2,,Z30-Z39,section,false
+Z40-Z54,"Người đến cơ sở y tế để được chăm sóc y tế và tiến hành các phẫu thuật, thủ thuật chuyên khoa",Z00-Z99,2,,Z40-Z54,section,false
+Z55-Z65,Người có nguy cơ sức khoẻ tiềm ẩn liên quan đến hoàn cảnh kinh tế xã hội và tâm lý xã hội,Z00-Z99,2,,Z55-Z65,section,false
+Z70-Z76,Người đến cơ sở y tế trong các hoàn cảnh khác,Z00-Z99,2,,Z70-Z76,section,false
+Z80-Z99,"Người có nguy cơ sức khoẻ tiềm ẩn liên quan đến tiền sử bản thân, tiền sử gia đình và một số tình trạng ảnh hưởng đến sức khoẻ",Z00-Z99,2,,Z80-Z99,section,false
+U00-U49,Mã tạm thời cho một số bệnh mới chưa rõ bệnh nguyên hoặc sử dụng trong tình huống khẩn cấp,U00-U99,2,,U00-U49,section,false
+U82,Kháng kháng sinh họ betalactam,U82-U85,3,,U82,type,false
+U82.0,U82.0,U82,4,,U820,disease,true
+U82.1,U82.1,U82,4,,U821,disease,true
+U82.8,U82.8,U82,4,,U828,disease,true
+U82.9,U82.9,U82,4,,U829,disease,true
+U83,Kháng các kháng sinh khác,U82-U85,3,,U83,type,false
+U83.0,U83.0,U83,4,,U830,disease,true
+U83.1,U83.1,U83,4,,U831,disease,true
+U83.2,U83.2,U83,4,,U832,disease,true
+U83.7,U83.7,U83,4,,U837,disease,true
+U83.8,U83.8,U83,4,,U838,disease,true
+U83.9,U83.9,U83,4,,U839,disease,true
+U84,Kháng các thuốc kháng sinh khác,U82-U85,3,,U84,type,false
+U84.0,U84.0,U84,4,,U840,disease,true
+U84.1,U84.1,U84,4,,U841,disease,true
+U84.2,U84.2,U84,4,,U842,disease,true
+U84.3,U84.3,U84,4,,U843,disease,true
+U84.7,U84.7,U84,4,,U847,disease,true
+U84.8,U84.8,U84,4,,U848,disease,true
+U84.9,U84.9,U84,4,,U849,disease,true
+U85,Kháng các thuốc kháng ung thư,U82-U85,3,,U85,type,true
+A33,Bệnh uốn ván sơ sinh,P35-P39,3,,A33,type,true
+A37,Bệnh ho gà,P35-P39,3,,A37,type,false
+A37.0,A37.0,A37,4,,A370,disease,true
+A37.1,A37.1,A37,4,,A371,disease,true
+A37.8,A37.8,A37,4,,A378,disease,true
+A37.9,A37.9,A37,4,,A379,disease,true
+Z21,Trạng thái nhiễm vi rút suy giảm miễn dịch (HIV) không triệu chứng,P35-P39,3,,Z21,type,true
+A54,Bệnh lậu,P35-P39,3,,A54,type,false
+A54.0,A54.0,A54,4,,A540,disease,true
+A54.1,A54.1,A54,4,,A541,disease,true
+A54.2,A54.2,A54,4,,A542,disease,true
+A54.3,A54.3,A54,4,,A543,disease,true
+A54.4†,A54.4†,A54,4,,A544,disease,true
+A54.5,A54.5,A54,4,,A545,disease,true
+A54.6,A54.6,A54,4,,A546,disease,true
+A54.8,A54.8,A54,4,,A548,disease,true
+A54.9,A54.9,A54,4,,A549,disease,true
+P23,Viêm phổi bẩm sinh,P35-P39,3,,P23,type,false
+P23.0,P23.0,P23,4,,P230,disease,true
+P23.1,P23.1,P23,4,,P231,disease,true
+P23.2,P23.2,P23,4,,P232,disease,true
+P23.3,P23.3,P23,4,,P233,disease,true
+P23.4,P23.4,P23,4,,P234,disease,true
+P23.5,P23.5,P23,4,,P235,disease,true
+P23.6,P23.6,P23,4,,P236,disease,true
+P23.8,P23.8,P23,4,,P238,disease,true
+P23.9,P23.9,P23,4,,P239,disease,true
+A50,Giang mai bẩm sinh,P35-P39,3,,A50,type,false
+A50.0,A50.0,A50,4,,A500,disease,true
+A50.1,A50.1,A50,4,,A501,disease,true
+A50.2,A50.2,A50,4,,A502,disease,true
+A50.3,A50.3,A50,4,,A503,disease,true
+A50.4,A50.4,A50,4,,A504,disease,true
+A50.5,A50.5,A50,4,,A505,disease,true
+A50.6,A50.6,A50,4,,A506,disease,true
+A50.7,A50.7,A50,4,,A507,disease,true
+A50.9,A50.9,A50,4,,A509,disease,true
+J09,Cúm do vi rút đã được định danh,P35-P39,3,,J09,type,true
+J11,"Cúm, vi rút không được định danh",P35-P39,3,,J11,type,false
+J11.0,J11.0,J11,4,,J110,disease,true
+J11.1,J11.1,J11,4,,J111,disease,true
+J11.8,J11.8,J11,4,,J118,disease,true
+R75,Biểu hiện cận lâm sàng của vi rút gây suy giảm miễn dịch ở người (HIV),P35-P39,3,,R75,type,true
+P35,Bệnh nhiễm vi rút bẩm sinh,P35-P39,3,,P35,type,false
+P35.0,P35.0,P35,4,,P350,disease,true
+P35.1,P35.1,P35,4,,P351,disease,true
+P35.2,P35.2,P35,4,,P352,disease,true
+P35.3,P35.3,P35,4,,P353,disease,true
+P35.4,P35.4,P35,4,,P354,disease,true
+P35.8,P35.8,P35,4,,P358,disease,true
+P35.9,P35.9,P35,4,,P359,disease,true
+P36,Nhiễm khuẩn huyết của trẻ sơ sinh,P35-P39,3,,P36,type,false
+P36.0,P36.0,P36,4,,P360,disease,true
+P36.1,P36.1,P36,4,,P361,disease,true
+P36.2,P36.2,P36,4,,P362,disease,true
+P36.3,P36.3,P36,4,,P363,disease,true
+P36.4,P36.4,P36,4,,P364,disease,true
+P36.5,P36.5,P36,4,,P365,disease,true
+P36.8,P36.8,P36,4,,P368,disease,true
+P36.9,P36.9,P36,4,,P369,disease,true
+P37,Bệnh nhiễm trùng và ký sinh trùng bẩm sinh khác,P35-P39,3,,P37,type,false
+P37.0,P37.0,P37,4,,P370,disease,true
+P37.1,P37.1,P37,4,,P371,disease,true
+P37.2,P37.2,P37,4,,P372,disease,true
+P37.3,P37.3,P37,4,,P373,disease,true
+P37.4,P37.4,P37,4,,P374,disease,true
+P37.5,P37.5,P37,4,,P375,disease,true
+P37.8,P37.8,P37,4,,P378,disease,true
+P37.9,P37.9,P37,4,,P379,disease,true
+P38,Viêm rốn trẻ sơ sinh có hoặc không có chảy máu mức độ nhẹ,P35-P39,3,,P38,type,true
+P39,Nhiễm khuẩn đặc hiệu khác trong thời kỳ chu sinh,P35-P39,3,,P39,type,false
+P39.0,P39.0,P39,4,,P390,disease,true
+P39.1,P39.1,P39,4,,P391,disease,true
+P39.2,P39.2,P39,4,,P392,disease,true
+P39.3,P39.3,P39,4,,P393,disease,true
+P39.4,P39.4,P39,4,,P394,disease,true
+P39.8,P39.8,P39,4,,P398,disease,true
+P39.9,P39.9,P39,4,,P399,disease,true
+Z22,Mang mầm bệnh truyền nhiễm,A00-A09,3,,Z22,type,false
+Z22.0,Z22.0,Z22,4,,Z220,disease,true
+Z22.1,Z22.1,Z22,4,,Z221,disease,true
+Z22.2,Z22.2,Z22,4,,Z222,disease,true
+Z22.3,Z22.3,Z22,4,,Z223,disease,true
+Z22.4,Z22.4,Z22,4,,Z224,disease,true
+Z22.6,Z22.6,Z22,4,,Z226,disease,true
+Z22.7,Z22.7,Z22,4,,Z227,disease,true
+Z22.8,Z22.8,Z22,4,,Z228,disease,true
+Z22.9,Z22.9,Z22,4,,Z229,disease,true
+O98,"Nhiễm trùng sản khoa và bệnh ký sinh trùng phân loại nơi khác nhưng gây biến chứng cho thai kỳ, khi đẻ và sau đẻ",A00-A09,3,,O98,type,false
+O98.0,O98.0,O98,4,,O980,disease,true
+O98.1,O98.1,O98,4,,O981,disease,true
+O98.2,O98.2,O98,4,,O982,disease,true
+O98.3,O98.3,O98,4,,O983,disease,true
+O98.4,O98.4,O98,4,,O984,disease,true
+O98.5,O98.5,O98,4,,O985,disease,true
+O98.6,O98.6,O98,4,,O986,disease,true
+O98.7,O98.7,O98,4,,O987,disease,true
+O98.8,O98.8,O98,4,,O988,disease,true
+O98.9,O98.9,O98,4,,O989,disease,true
+J00,Viêm mũi họng cấp [cảm thường],A00-A09,3,,J00,type,true
+J22,Nhiễm trùng hô hấp dưới cấp không phân loại,A00-A09,3,,J22,type,true
+A00,Bệnh tả,A00-A09,3,,A00,type,false
+A00.0,A00.0,A00,4,,A000,disease,true
+A00.1,A00.1,A00,4,,A001,disease,true
+A00.9,A00.9,A00,4,,A009,disease,true
+A01,Bệnh thương hàn và phó thương hàn,A00-A09,3,,A01,type,false
+A01.0,A01.0,A01,4,,A010,disease,true
+A01.1,A01.1,A01,4,,A011,disease,true
+A01.2,A01.2,A01,4,,A012,disease,true
+A01.3,A01.3,A01,4,,A013,disease,true
+A01.4,A01.4,A01,4,,A014,disease,true
+A02,Nhiễm Salmonella khác,A00-A09,3,,A02,type,false
+A02.0,A02.0,A02,4,,A020,disease,true
+A02.1,A02.1,A02,4,,A021,disease,true
+A02.2†,A02.2†,A02,4,,A022,disease,true
+A02.8,A02.8,A02,4,,A028,disease,true
+A02.9,A02.9,A02,4,,A029,disease,true
+A03,Bệnh lỵ trực khuẩn,A00-A09,3,,A03,type,false
+A03.0,A03.0,A03,4,,A030,disease,true
+A03.1,A03.1,A03,4,,A031,disease,true
+A03.2,A03.2,A03,4,,A032,disease,true
+A03.3,A03.3,A03,4,,A033,disease,true
+A03.8,A03.8,A03,4,,A038,disease,true
+A03.9,A03.9,A03,4,,A039,disease,true
+A04,Nhiễm khuẩn đường ruột do vi khuẩn khác,A00-A09,3,,A04,type,false
+A04.0,A04.0,A04,4,,A040,disease,true
+A04.1,A04.1,A04,4,,A041,disease,true
+A04.2,A04.2,A04,4,,A042,disease,true
+A04.3,A04.3,A04,4,,A043,disease,true
+A04.4,A04.4,A04,4,,A044,disease,true
+A04.5,A04.5,A04,4,,A045,disease,true
+A04.6,A04.6,A04,4,,A046,disease,true
+A04.7,A04.7,A04,4,,A047,disease,true
+A04.8,A04.8,A04,4,,A048,disease,true
+A04.9,A04.9,A04,4,,A049,disease,true
+A05,"Nhiễm độc thức ăn do vi khuẩn khác, không phân loại nơi khác",A00-A09,3,,A05,type,false
+A05.0,A05.0,A05,4,,A050,disease,true
+A05.1,A05.1,A05,4,,A051,disease,true
+A05.2,A05.2,A05,4,,A052,disease,true
+A05.3,A05.3,A05,4,,A053,disease,true
+A05.4,A05.4,A05,4,,A054,disease,true
+A05.8,A05.8,A05,4,,A058,disease,true
+A05.9,A05.9,A05,4,,A059,disease,true
+A06,Bệnh do amip,A00-A09,3,,A06,type,false
+A06.0,A06.0,A06,4,,A060,disease,true
+A06.1,A06.1,A06,4,,A061,disease,true
+A06.2,A06.2,A06,4,,A062,disease,true
+A06.3,A06.3,A06,4,,A063,disease,true
+A06.4†,A06.4†,A06,4,,A064,disease,true
+A06.5†,A06.5†,A06,4,,A065,disease,true
+A06.6†,A06.6†,A06,4,,A066,disease,true
+A06.7,A06.7,A06,4,,A067,disease,true
+A06.8,A06.8,A06,4,,A068,disease,true
+A06.9,A06.9,A06,4,,A069,disease,true
+A07,Bệnh đường ruột do đơn bào khác,A00-A09,3,,A07,type,false
+A07.0,A07.0,A07,4,,A070,disease,true
+A07.1,A07.1,A07,4,,A071,disease,true
+A07.2,A07.2,A07,4,,A072,disease,true
+A07.3,A07.3,A07,4,,A073,disease,true
+A07.8,A07.8,A07,4,,A078,disease,true
+A07.9,A07.9,A07,4,,A079,disease,true
+A08,Nhiễm trùng đường ruột do vi rút và tác nhân xác định khác,A00-A09,3,,A08,type,false
+A08.0,A08.0,A08,4,,A080,disease,true
+A08.1,A08.1,A08,4,,A081,disease,true
+A08.2,A08.2,A08,4,,A082,disease,true
+A08.3,A08.3,A08,4,,A083,disease,true
+A08.4,A08.4,A08,4,,A084,disease,true
+A08.5,A08.5,A08,4,,A085,disease,true
+A09,Viêm dạ dày- ruột khác và viêm đại tràng do nhiễm trùng và nguyên nhân không xác định,A00-A09,3,,A09,type,false
+A09.0,A09.0,A09,4,,A090,disease,true
+A09.9,A09.9,A09,4,,A099,disease,true
+J65,Bệnh bụi phổi kết hợp với lao,A15-A19,3,,J65,type,true
+B90,Di chứng do lao,A15-A19,3,,B90,type,false
+B90.0,B90.0,B90,4,,B900,disease,true
+B90.1,B90.1,B90,4,,B901,disease,true
+B90.2,B90.2,B90,4,,B902,disease,true
+B90.8,B90.8,B90,4,,B908,disease,true
+B90.9,B90.9,B90,4,,B909,disease,true
+A15,"Lao hô hấp, có khẳng định về vi khuẩn học và mô học",A15-A19,3,,A15,type,false
+A15.0,A15.0,A15,4,,A150,disease,true
+A15.1,A15.1,A15,4,,A151,disease,true
+A15.2,A15.2,A15,4,,A152,disease,true
+A15.3,A15.3,A15,4,,A153,disease,true
+A15.4,A15.4,A15,4,,A154,disease,true
+A15.5,A15.5,A15,4,,A155,disease,true
+A15.6,A15.6,A15,4,,A156,disease,true
+A15.7,A15.7,A15,4,,A157,disease,true
+A15.8,A15.8,A15,4,,A158,disease,true
+A15.9,A15.9,A15,4,,A159,disease,true
+A16,"Lao đường hô hấp, không khẳng định về vi khuẩn học hoặc mô học",A15-A19,3,,A16,type,false
+A16.0,A16.0,A16,4,,A160,disease,true
+A16.1,A16.1,A16,4,,A161,disease,true
+A16.2,A16.2,A16,4,,A162,disease,true
+A16.3,A16.3,A16,4,,A163,disease,true
+A16.4,A16.4,A16,4,,A164,disease,true
+A16.5,A16.5,A16,4,,A165,disease,true
+A16.7,A16.7,A16,4,,A167,disease,true
+A16.8,A16.8,A16,4,,A168,disease,true
+A16.9,A16.9,A16,4,,A169,disease,true
+A17,Lao hệ thần kinh,A15-A19,3,,A17,type,false
+A17.0†,A17.0†,A17,4,,A170,disease,true
+A17.1†,A17.1†,A17,4,,A171,disease,true
+A17.8†,A17.8†,A17,4,,A178,disease,true
+A17.9†,A17.9†,A17,4,,A179,disease,true
+A18,Lao các cơ quan khác,A15-A19,3,,A18,type,false
+A18.0†,A18.0†,A18,4,,A180,disease,true
+A18.1†,A18.1†,A18,4,,A181,disease,true
+A18.2,A18.2,A18,4,,A182,disease,true
+A18.3,A18.3,A18,4,,A183,disease,true
+A18.4,A18.4,A18,4,,A184,disease,true
+A18.5,A18.5,A18,4,,A185,disease,true
+A18.6,A18.6,A18,4,,A186,disease,true
+A18.7†,A18.7†,A18,4,,A187,disease,true
+A18.8,A18.8,A18,4,,A188,disease,true
+A19,Lao kê,A15-A19,3,,A19,type,false
+A19.0,A19.0,A19,4,,A190,disease,true
+A19.1,A19.1,A19,4,,A191,disease,true
+A19.2,A19.2,A19,4,,A192,disease,true
+A19.8,A19.8,A19,4,,A198,disease,true
+A19.9,A19.9,A19,4,,A199,disease,true
+A20,Dịch hạch,A20-A28,3,,A20,type,false
+A20.0,A20.0,A20,4,,A200,disease,true
+A20.1,A20.1,A20,4,,A201,disease,true
+A20.2,A20.2,A20,4,,A202,disease,true
+A20.3,A20.3,A20,4,,A203,disease,true
+A20.7,A20.7,A20,4,,A207,disease,true
+A20.8,A20.8,A20,4,,A208,disease,true
+A20.9,A20.9,A20,4,,A209,disease,true
+A21,Bệnh Tularemia,A20-A28,3,,A21,type,false
+A21.0,A21.0,A21,4,,A210,disease,true
+A21.1,A21.1,A21,4,,A211,disease,true
+A21.2,A21.2,A21,4,,A212,disease,true
+A21.3,A21.3,A21,4,,A213,disease,true
+A21.7,A21.7,A21,4,,A217,disease,true
+A21.8,A21.8,A21,4,,A218,disease,true
+A21.9,A21.9,A21,4,,A219,disease,true
+A22,Bệnh than,A20-A28,3,,A22,type,false
+A22.0,A22.0,A22,4,,A220,disease,true
+A22.1,A22.1,A22,4,,A221,disease,true
+A22.2,A22.2,A22,4,,A222,disease,true
+A22.7,A22.7,A22,4,,A227,disease,true
+A22.8,A22.8,A22,4,,A228,disease,true
+A22.9,A22.9,A22,4,,A229,disease,true
+A23,Bệnh do Brucella,A20-A28,3,,A23,type,false
+A23.0,A23.0,A23,4,,A230,disease,true
+A23.1,A23.1,A23,4,,A231,disease,true
+A23.2,A23.2,A23,4,,A232,disease,true
+A23.3,A23.3,A23,4,,A233,disease,true
+A23.8,A23.8,A23,4,,A238,disease,true
+A23.9,A23.9,A23,4,,A239,disease,true
+A24,Bệnh do Burkholderia mallei và bệnh do Burkholderia pseudomallei,A20-A28,3,,A24,type,false
+A24.0,A24.0,A24,4,,A240,disease,true
+A24.1,A24.1,A24,4,,A241,disease,true
+A24.2,A24.2,A24,4,,A242,disease,true
+A24.3,A24.3,A24,4,,A243,disease,true
+A24.4,A24.4,A24,4,,A244,disease,true
+A25,Sốt do chuột cắn,A20-A28,3,,A25,type,false
+A25.0,A25.0,A25,4,,A250,disease,true
+A25.1,A25.1,A25,4,,A251,disease,true
+A25.9,A25.9,A25,4,,A259,disease,true
+A26,Bệnh viêm quầng đỏ do Erysipelothrix rhusiopathiae,A20-A28,3,,A26,type,false
+A26.0,A26.0,A26,4,,A260,disease,true
+A26.7,A26.7,A26,4,,A267,disease,true
+A26.8,A26.8,A26,4,,A268,disease,true
+A26.9,A26.9,A26,4,,A269,disease,true
+A27,Bệnh do Leptospira,A20-A28,3,,A27,type,false
+A27.0,A27.0,A27,4,,A270,disease,true
+A27.8,A27.8,A27,4,,A278,disease,true
+A27.9,A27.9,A27,4,,A279,disease,true
+A28,"Bệnh nhiễm trùng khác do động vật truyền sang người, không phân loại nơi khác",A20-A28,3,,A28,type,false
+A28.0,A28.0,A28,4,,A280,disease,true
+A28.1,A28.1,A28,4,,A281,disease,true
+A28.2,A28.2,A28,4,,A282,disease,true
+A28.8,A28.8,A28,4,,A288,disease,true
+A28.9,A28.9,A28,4,,A289,disease,true
+A30,Bệnh phong [bệnh Hansen],A30-A49,3,,A30,type,false
+A30.0,A30.0,A30,4,,A300,disease,true
+A30.1,A30.1,A30,4,,A301,disease,true
+A30.2,A30.2,A30,4,,A302,disease,true
+A30.3,A30.3,A30,4,,A303,disease,true
+A30.4,A30.4,A30,4,,A304,disease,true
+A30.5,A30.5,A30,4,,A305,disease,true
+A30.8,A30.8,A30,4,,A308,disease,true
+A30.9,A30.9,A30,4,,A309,disease,true
+A31,Nhiễm khuẩn do Mycobacteria khác,A30-A49,3,,A31,type,false
+A31.0,A31.0,A31,4,,A310,disease,true
+A31.1,A31.1,A31,4,,A311,disease,true
+A31.8,A31.8,A31,4,,A318,disease,true
+A31.9,A31.9,A31,4,,A319,disease,true
+A32,Nhiễm khuẩn do Listeria monocytogenes,A30-A49,3,,A32,type,false
+A32.0,A32.0,A32,4,,A320,disease,true
+A32.1†,A32.1†,A32,4,,A321,disease,true
+A32.7,A32.7,A32,4,,A327,disease,true
+A32.8,A32.8,A32,4,,A328,disease,true
+A32.9,A32.9,A32,4,,A329,disease,true
+A34,Bệnh uốn ván sản khoa,A30-A49,3,,A34,type,true
+A35,Bệnh uốn ván khác,A30-A49,3,,A35,type,true
+A36,Bệnh bạch hầu,A30-A49,3,,A36,type,false
+A36.0,A36.0,A36,4,,A360,disease,true
+A36.1,A36.1,A36,4,,A361,disease,true
+A36.2,A36.2,A36,4,,A362,disease,true
+A36.3,A36.3,A36,4,,A363,disease,true
+A36.8,A36.8,A36,4,,A368,disease,true
+A36.9,A36.9,A36,4,,A369,disease,true
+A38,Bệnh tinh hồng nhiệt,A30-A49,3,,A38,type,true
+A39,Nhiễm trùng do não mô cầu,A30-A49,3,,A39,type,false
+A39.0†,A39.0†,A39,4,,A390,disease,true
+A39.1†,A39.1†,A39,4,,A391,disease,true
+A39.2,A39.2,A39,4,,A392,disease,true
+A39.3,A39.3,A39,4,,A393,disease,true
+A39.4,A39.4,A39,4,,A394,disease,true
+A39.5†,A39.5†,A39,4,,A395,disease,true
+A39.8,A39.8,A39,4,,A398,disease,true
+A39.9,A39.9,A39,4,,A399,disease,true
+A40,Nhiễm khuẩn huyết do liên cầu,A30-A49,3,,A40,type,false
+A40.0,A40.0,A40,4,,A400,disease,true
+A40.1,A40.1,A40,4,,A401,disease,true
+A40.2,A40.2,A40,4,,A402,disease,true
+A40.3,A40.3,A40,4,,A403,disease,true
+A40.8,A40.8,A40,4,,A408,disease,true
+A40.9,A40.9,A40,4,,A409,disease,true
+A41,Nhiễm khuẩn huyết khác,A30-A49,3,,A41,type,false
+A41.0,A41.0,A41,4,,A410,disease,true
+A41.1,A41.1,A41,4,,A411,disease,true
+A41.2,A41.2,A41,4,,A412,disease,true
+A41.3,A41.3,A41,4,,A413,disease,true
+A41.4,A41.4,A41,4,,A414,disease,true
+A41.5,A41.5,A41,4,,A415,disease,true
+A41.8,A41.8,A41,4,,A418,disease,true
+A41.9,A41.9,A41,4,,A419,disease,true
+A42,Bệnh do nhiễm nấm Actinomyces,A30-A49,3,,A42,type,false
+A42.0,A42.0,A42,4,,A420,disease,true
+A42.1,A42.1,A42,4,,A421,disease,true
+A42.2,A42.2,A42,4,,A422,disease,true
+A42.7,A42.7,A42,4,,A427,disease,true
+A42.8,A42.8,A42,4,,A428,disease,true
+A42.9,A42.9,A42,4,,A429,disease,true
+A43,Bệnh do Nocardia,A30-A49,3,,A43,type,false
+A43.0,A43.0,A43,4,,A430,disease,true
+A43.1,A43.1,A43,4,,A431,disease,true
+A43.8,A43.8,A43,4,,A438,disease,true
+A43.9,A43.9,A43,4,,A439,disease,true
+A44,Bệnh do Bartonella,A30-A49,3,,A44,type,false
+A44.0,A44.0,A44,4,,A440,disease,true
+A44.1,A44.1,A44,4,,A441,disease,true
+A44.8,A44.8,A44,4,,A448,disease,true
+A44.9,A44.9,A44,4,,A449,disease,true
+A46,Viêm quầng,A30-A49,3,,A46,type,true
+A48,"Bệnh nhiễm khuẩn khác, không phân loại nơi khác",A30-A49,3,,A48,type,false
+A48.0,A48.0,A48,4,,A480,disease,true
+A48.1,A48.1,A48,4,,A481,disease,true
+A48.2,A48.2,A48,4,,A482,disease,true
+A48.3,A48.3,A48,4,,A483,disease,true
+A48.4,A48.4,A48,4,,A484,disease,true
+A48.8,A48.8,A48,4,,A488,disease,true
+A49,Tình trạng nhiễm khuẩn ở các vị trí không xác định,A30-A49,3,,A49,type,false
+A49.0,A49.0,A49,4,,A490,disease,true
+A49.1,A49.1,A49,4,,A491,disease,true
+A49.2,A49.2,A49,4,,A492,disease,true
+A49.3,A49.3,A49,4,,A493,disease,true
+A49.8,A49.8,A49,4,,A498,disease,true
+A49.9,A49.9,A49,4,,A499,disease,true
+A51,Giang mai sớm,A50-A64,3,,A51,type,false
+A51.0,A51.0,A51,4,,A510,disease,true
+A51.1,A51.1,A51,4,,A511,disease,true
+A51.2,A51.2,A51,4,,A512,disease,true
+A51.3,A51.3,A51,4,,A513,disease,true
+A51.4,A51.4,A51,4,,A514,disease,true
+A51.5,A51.5,A51,4,,A515,disease,true
+A51.9,A51.9,A51,4,,A519,disease,true
+A52,Giang mai muộn,A50-A64,3,,A52,type,false
+A52.0†,A52.0†,A52,4,,A520,disease,true
+A52.1,A52.1,A52,4,,A521,disease,true
+A52.2,A52.2,A52,4,,A522,disease,true
+A52.3,A52.3,A52,4,,A523,disease,true
+A52.7,A52.7,A52,4,,A527,disease,true
+A52.8,A52.8,A52,4,,A528,disease,true
+A52.9,A52.9,A52,4,,A529,disease,true
+A53,Giang mai khác và không xác định,A50-A64,3,,A53,type,false
+A53.0,A53.0,A53,4,,A530,disease,true
+A53.9,A53.9,A53,4,,A539,disease,true
+A55,Viêm hạch lympho do Chlamydia (Bệnh hột xoài),A50-A64,3,,A55,type,true
+A56,Bệnh khác do Chlamydia lây truyền qua đường tình dục,A50-A64,3,,A56,type,false
+A56.0,A56.0,A56,4,,A560,disease,true
+A56.1,A56.1,A56,4,,A561,disease,true
+A56.2,A56.2,A56,4,,A562,disease,true
+A56.3,A56.3,A56,4,,A563,disease,true
+A56.4,A56.4,A56,4,,A564,disease,true
+A56.8,A56.8,A56,4,,A568,disease,true
+A57,Bệnh hạ cam mềm,A50-A64,3,,A57,type,true
+A58,U hạt ở bẹn,A50-A64,3,,A58,type,true
+A59,U hạt ở bẹn,A50-A64,3,,A59,type,false
+A59.0,A59.0,A59,4,,A590,disease,true
+A59.8,A59.8,A59,4,,A598,disease,true
+A59.9,A59.9,A59,4,,A599,disease,true
+A60,Bệnh do vi rút Herpes [herpes simplex] ở da quanh hậu môn và trực tràng,A50-A64,3,,A60,type,false
+A60.0,A60.0,A60,4,,A600,disease,true
+A60.1,A60.1,A60,4,,A601,disease,true
+A60.9,A60.9,A60,4,,A609,disease,true
+A63,"Bệnh lây khác chủ yếu qua đường tình dục, không phân loại nơi khác",A50-A64,3,,A63,type,false
+A63.0,A63.0,A63,4,,A630,disease,true
+A63.8,A63.8,A63,4,,A638,disease,true
+A64,Bệnh lây truyền qua đường tình dục không xác định,A50-A64,3,,A64,type,true
+A65,Giang mai không lây qua đường tình dục,A65-A69,3,,A65,type,true
+A66,Ghẻ cóc (do nhiễm Treponema pertenue),A65-A69,3,,A66,type,false
+A66.0,A66.0,A66,4,,A660,disease,true
+A66.1,A66.1,A66,4,,A661,disease,true
+A66.2,A66.2,A66,4,,A662,disease,true
+A66.3,A66.3,A66,4,,A663,disease,true
+A66.4,A66.4,A66,4,,A664,disease,true
+A66.5,A66.5,A66,4,,A665,disease,true
+A66.6,A66.6,A66,4,,A666,disease,true
+A66.7,A66.7,A66,4,,A667,disease,true
+A66.8,A66.8,A66,4,,A668,disease,true
+A66.9,A66.9,A66,4,,A669,disease,true
+A67,Bệnh Pinta (bệnh do Treponema carateum),A65-A69,3,,A67,type,false
+A67.0,A67.0,A67,4,,A670,disease,true
+A67.1,A67.1,A67,4,,A671,disease,true
+A67.2,A67.2,A67,4,,A672,disease,true
+A67.3,A67.3,A67,4,,A673,disease,true
+A67.9,A67.9,A67,4,,A679,disease,true
+A68,Bệnh sốt hồi quy,A65-A69,3,,A68,type,false
+A68.0,A68.0,A68,4,,A680,disease,true
+A68.1,A68.1,A68,4,,A681,disease,true
+A68.9,A68.9,A68,4,,A689,disease,true
+A69,Bệnh do xoắn trùng khác,A65-A69,3,,A69,type,false
+A69.0,A69.0,A69,4,,A690,disease,true
+A69.1,A69.1,A69,4,,A691,disease,true
+A69.2,A69.2,A69,4,,A692,disease,true
+A69.8,A69.8,A69,4,,A698,disease,true
+A69.9,A69.9,A69,4,,A699,disease,true
+A70,Bệnh do Chlamydia psittaci,A70-A74,3,,A70,type,true
+A71,Bệnh mắt hột,A70-A74,3,,A71,type,false
+A71.0,A71.0,A71,4,,A710,disease,true
+A71.1,A71.1,A71,4,,A711,disease,true
+A71.9,A71.9,A71,4,,A719,disease,true
+A74,Bệnh khác do Chlamydia,A70-A74,3,,A74,type,false
+A74.0†,A74.0†,A74,4,,A740,disease,true
+A74.8,A74.8,A74,4,,A748,disease,true
+A74.9,A74.9,A74,4,,A749,disease,true
+A75,Bệnh sốt phát ban,A75-A79,3,,A75,type,false
+A75.0,A75.0,A75,4,,A750,disease,true
+A75.1,A75.1,A75,4,,A751,disease,true
+A75.2,A75.2,A75,4,,A752,disease,true
+A75.3,A75.3,A75,4,,A753,disease,true
+A75.9,A75.9,A75,4,,A759,disease,true
+A77,Sốt phát ban dạng đốm [bệnh Rickettsia do bọ ve truyền],A75-A79,3,,A77,type,false
+A77.0,A77.0,A77,4,,A770,disease,true
+A77.1,A77.1,A77,4,,A771,disease,true
+A77.2,A77.2,A77,4,,A772,disease,true
+A77.3,A77.3,A77,4,,A773,disease,true
+A77.8,A77.8,A77,4,,A778,disease,true
+A77.9,A77.9,A77,4,,A779,disease,true
+A78,Sốt Q,A75-A79,3,,A78,type,true
+A79,Các bệnh Rickettsia khác,A75-A79,3,,A79,type,false
+A79.0,A79.0,A79,4,,A790,disease,true
+A79.1,A79.1,A79,4,,A791,disease,true
+A79.8,A79.8,A79,4,,A798,disease,true
+A79.9,A79.9,A79,4,,A799,disease,true
+B91,Di chứng của bệnh bại liệt,A80-A89,3,,B91,type,true
+A80,Bệnh bại liệt cấp,A80-A89,3,,A80,type,false
+A80.0,A80.0,A80,4,,A800,disease,true
+A80.1,A80.1,A80,4,,A801,disease,true
+A80.2,A80.2,A80,4,,A802,disease,true
+A80.3,A80.3,A80,4,,A803,disease,true
+A80.4,A80.4,A80,4,,A804,disease,true
+A80.9,A80.9,A80,4,,A809,disease,true
+A81,Bệnh do vi rút không điển hình ở hệ thần kinh trung ương,A80-A89,3,,A81,type,false
+A81.0,A81.0,A81,4,,A810,disease,true
+A81.1,A81.1,A81,4,,A811,disease,true
+A81.2,A81.2,A81,4,,A812,disease,true
+A81.8,A81.8,A81,4,,A818,disease,true
+A81.9,A81.9,A81,4,,A819,disease,true
+A82,Bệnh dại ở người,A80-A89,3,,A82,type,false
+A82.0,A82.0,A82,4,,A820,disease,true
+A82.1,A82.1,A82,4,,A821,disease,true
+A82.9,A82.9,A82,4,,A829,disease,true
+A83,Bệnh viêm não vi rút do muỗi truyền,A80-A89,3,,A83,type,false
+A83.0,A83.0,A83,4,,A830,disease,true
+A83.1,A83.1,A83,4,,A831,disease,true
+A83.2,A83.2,A83,4,,A832,disease,true
+A83.3,A83.3,A83,4,,A833,disease,true
+A83.4,A83.4,A83,4,,A834,disease,true
+A83.5,A83.5,A83,4,,A835,disease,true
+A83.6,A83.6,A83,4,,A836,disease,true
+A83.8,A83.8,A83,4,,A838,disease,true
+A83.9,A83.9,A83,4,,A839,disease,true
+A84,Bệnh viêm não vi rút do bọ ve truyền,A80-A89,3,,A84,type,false
+A84.0,A84.0,A84,4,,A840,disease,true
+A84.1,A84.1,A84,4,,A841,disease,true
+A84.8,A84.8,A84,4,,A848,disease,true
+A84.9,A84.9,A84,4,,A849,disease,true
+A85,"Viêm não vi rút khác, không phân loại nơi khác",A80-A89,3,,A85,type,false
+A85.0†,A85.0†,A85,4,,A850,disease,true
+A85.1†,A85.1†,A85,4,,A851,disease,true
+A85.2,A85.2,A85,4,,A852,disease,true
+A85.8,A85.8,A85,4,,A858,disease,true
+A86,Viêm não vi rút không đặc hiệu,A80-A89,3,,A86,type,true
+A87,Viêm màng não do vi rút,A80-A89,3,,A87,type,false
+A87.0†,A87.0†,A87,4,,A870,disease,true
+A87.1†,A87.1†,A87,4,,A871,disease,true
+A87.2,A87.2,A87,4,,A872,disease,true
+A87.8,A87.8,A87,4,,A878,disease,true
+A87.9,A87.9,A87,4,,A879,disease,true
+A88,"Nhiễm vi rút khác của hệ thần kinh trung ương, không phân loại nơi khác",A80-A89,3,,A88,type,false
+A88.0,A88.0,A88,4,,A880,disease,true
+A88.1,A88.1,A88,4,,A881,disease,true
+A88.8,A88.8,A88,4,,A888,disease,true
+A89,Nhiễm vi rút không xác định của hệ thần kinh trung ương,A80-A89,3,,A89,type,true
+A92,Bệnh sốt vi rút do muỗi truyền khác,A92-A99,3,,A92,type,false
+A92.0,A92.0,A92,4,,A920,disease,true
+A92.1,A92.1,A92,4,,A921,disease,true
+A92.2,A92.2,A92,4,,A922,disease,true
+A92.3,A92.3,A92,4,,A923,disease,true
+A92.4,A92.4,A92,4,,A924,disease,true
+A92.5,A92.5,A92,4,,A925,disease,true
+A92.8,A92.8,A92,4,,A928,disease,true
+A92.9,A92.9,A92,4,,A929,disease,true
+A93,"Sốt do vi rút lây truyền qua côn trùng khác, không phân loại nơi khác",A92-A99,3,,A93,type,false
+A93.0,A93.0,A93,4,,A930,disease,true
+A93.1,A93.1,A93,4,,A931,disease,true
+A93.2,A93.2,A93,4,,A932,disease,true
+A93.8,A93.8,A93,4,,A938,disease,true
+A94,Sốt vi rút không xác định do tiết túc truyền,A92-A99,3,,A94,type,true
+A95,Sốt vàng,A92-A99,3,,A95,type,false
+A95.0,A95.0,A95,4,,A950,disease,true
+A95.1,A95.1,A95,4,,A951,disease,true
+A95.9,A95.9,A95,4,,A959,disease,true
+A96,Bệnh sốt xuất huyết do vi rút Arena,A92-A99,3,,A96,type,false
+A96.0,A96.0,A96,4,,A960,disease,true
+A96.1,A96.1,A96,4,,A961,disease,true
+A96.2,A96.2,A96,4,,A962,disease,true
+A96.8,A96.8,A96,4,,A968,disease,true
+A96.9,A96.9,A96,4,,A969,disease,true
+A97,Sốt xuất huyết Dengue,A92-A99,3,,A97,type,false
+A97.0,A97.0,A97,4,,A970,disease,true
+A97.1,A97.1,A97,4,,A971,disease,true
+A97.2,A97.2,A97,4,,A972,disease,true
+A97.9,A97.9,A97,4,,A979,disease,true
+A98,"Bệnh sốt xuất huyết do vi rút khác, không phân loại nơi khác",A92-A99,3,,A98,type,false
+A98.0,A98.0,A98,4,,A980,disease,true
+A98.1,A98.1,A98,4,,A981,disease,true
+A98.2,A98.2,A98,4,,A982,disease,true
+A98.3,A98.3,A98,4,,A983,disease,true
+A98.4,A98.4,A98,4,,A984,disease,true
+A98.5,A98.5,A98,4,,A985,disease,true
+A98.8,A98.8,A98,4,,A988,disease,true
+A99,Bệnh sốt xuất huyết do vi rút không xác định,A92-A99,3,,A99,type,true
+B00,Bệnh do nhiễm vi rút Herpes [Herpes simplex],B00-B09,3,,B00,type,false
+B00.0,B00.0,B00,4,,B000,disease,true
+B00.1,B00.1,B00,4,,B001,disease,true
+B00.2,B00.2,B00,4,,B002,disease,true
+B00.3†,B00.3†,B00,4,,B003,disease,true
+B00.4†,B00.4†,B00,4,,B004,disease,true
+B00.5,B00.5,B00,4,,B005,disease,true
+B00.7,B00.7,B00,4,,B007,disease,true
+B00.8,B00.8,B00,4,,B008,disease,true
+B00.9,B00.9,B00,4,,B009,disease,true
+B01,Thuỷ đậu,B00-B09,3,,B01,type,false
+B01.0†,B01.0†,B01,4,,B010,disease,true
+B01.1†,B01.1†,B01,4,,B011,disease,true
+B01.2†,B01.2†,B01,4,,B012,disease,true
+B01.8,B01.8,B01,4,,B018,disease,true
+B01.9,B01.9,B01,4,,B019,disease,true
+B02,Bệnh do herpes zoster,B00-B09,3,,B02,type,false
+B02.0†,B02.0†,B02,4,,B020,disease,true
+B02.1†,B02.1†,B02,4,,B021,disease,true
+B02.2†,B02.2†,B02,4,,B022,disease,true
+B02.3,B02.3,B02,4,,B023,disease,true
+B02.7,B02.7,B02,4,,B027,disease,true
+B02.8,B02.8,B02,4,,B028,disease,true
+B02.9,B02.9,B02,4,,B029,disease,true
+B03,Đậu mùa,B00-B09,3,,B03,type,true
+B04,Đậu mùa khỉ,B00-B09,3,,B04,type,true
+B05,Sởi,B00-B09,3,,B05,type,false
+B05.0†,B05.0†,B05,4,,B050,disease,true
+B05.1†,B05.1†,B05,4,,B051,disease,true
+B05.2†,B05.2†,B05,4,,B052,disease,true
+B05.3†,B05.3†,B05,4,,B053,disease,true
+B05.4,B05.4,B05,4,,B054,disease,true
+B05.8,B05.8,B05,4,,B058,disease,true
+B05.9,B05.9,B05,4,,B059,disease,true
+B06,Bệnh rubella [sởi Đức],B00-B09,3,,B06,type,false
+B06.0†,B06.0†,B06,4,,B060,disease,true
+B06.8,B06.8,B06,4,,B068,disease,true
+B06.9,B06.9,B06,4,,B069,disease,true
+B07,Bệnh mụn cóc do vi rút,B00-B09,3,,B07,type,true
+B08,"Nhiễm vi rút khác có biểu hiện tổn thương tại da và niêm mạc, không phân loại nơi khác",B00-B09,3,,B08,type,false
+B08.0,B08.0,B08,4,,B080,disease,true
+B08.1,B08.1,B08,4,,B081,disease,true
+B08.2,B08.2,B08,4,,B082,disease,true
+B08.3,B08.3,B08,4,,B083,disease,true
+B08.4,B08.4,B08,4,,B084,disease,true
+B08.5,B08.5,B08,4,,B085,disease,true
+B08.8,B08.8,B08,4,,B088,disease,true
+B09,"Nhiễm vi rút không xác định, có biểu hiện tổn thương tại da và niêm mạc",B00-B09,3,,B09,type,true
+B15,Bệnh viêm gan vi rút A cấp tính,B15-B19,3,,B15,type,false
+B15.0,B15.0,B15,4,,B150,disease,true
+B15.9,B15.9,B15,4,,B159,disease,true
+B16,Bệnh viêm gan vi rút B cấp tính,B15-B19,3,,B16,type,false
+B16.0,B16.0,B16,4,,B160,disease,true
+B16.1,B16.1,B16,4,,B161,disease,true
+B16.2,B16.2,B16,4,,B162,disease,true
+B16.9,B16.9,B16,4,,B169,disease,true
+B17,Bệnh viêm gan vi rút cấp tính khác,B15-B19,3,,B17,type,false
+B17.0,B17.0,B17,4,,B170,disease,true
+B17.1,B17.1,B17,4,,B171,disease,true
+B17.2,B17.2,B17,4,,B172,disease,true
+B17.8,B17.8,B17,4,,B178,disease,true
+B17.9,B17.9,B17,4,,B179,disease,true
+B18,Viêm gan vi rút mạn tính,B15-B19,3,,B18,type,false
+B18.0,B18.0,B18,4,,B180,disease,true
+B18.1,B18.1,B18,4,,B181,disease,true
+B18.10,B18.10,B18,4,,B1810,disease,true
+B18.19,B18.19,B18,4,,B1819,disease,true
+B18.2,B18.2,B18,4,,B182,disease,true
+B18.8,B18.8,B18,4,,B188,disease,true
+B18.9,B18.9,B18,4,,B189,disease,true
+B19,Viêm gan vi rút không xác định,B15-B19,3,,B19,type,false
+B19.0,B19.0,B19,4,,B190,disease,true
+B19.9,B19.9,B19,4,,B199,disease,true
+B20,Bệnh do vi rút gây suy giảm miễn dịch ở người [HIV] dẫn đến các bệnh nhiễm trùng và ký sinh trùng,B20-B24,3,,B20,type,false
+B20.0,B20.0,B20,4,,B200,disease,true
+B20.1,B20.1,B20,4,,B201,disease,true
+B20.2,B20.2,B20,4,,B202,disease,true
+B20.3,B20.3,B20,4,,B203,disease,true
+B20.4,B20.4,B20,4,,B204,disease,true
+B20.5,B20.5,B20,4,,B205,disease,true
+B20.6,B20.6,B20,4,,B206,disease,true
+B20.7,B20.7,B20,4,,B207,disease,true
+B20.8,B20.8,B20,4,,B208,disease,true
+B20.9,B20.9,B20,4,,B209,disease,true
+B21,Bệnh do vi rút gây suy giảm miễn dịch ở người [HIV] dẫn đến các u ác tính,B20-B24,3,,B21,type,false
+B21.0,B21.0,B21,4,,B210,disease,true
+B21.1,B21.1,B21,4,,B211,disease,true
+B21.2,B21.2,B21,4,,B212,disease,true
+B21.3,B21.3,B21,4,,B213,disease,true
+B21.7,B21.7,B21,4,,B217,disease,true
+B21.8,B21.8,B21,4,,B218,disease,true
+B21.9,B21.9,B21,4,,B219,disease,true
+B22,Bệnh do vi rút gây suy giảm miễn dịch ở người [HIV] dẫn đến các bệnh xác định khác,B20-B24,3,,B22,type,false
+B22.0,B22.0,B22,4,,B220,disease,true
+B22.1,B22.1,B22,4,,B221,disease,true
+B22.2,B22.2,B22,4,,B222,disease,true
+B22.7,B22.7,B22,4,,B227,disease,true
+B23,Bệnh do vi rút gây suy giảm miễn dịch ở người [HIV] dẫn đến bệnh lý khác,B20-B24,3,,B23,type,false
+B23.0,B23.0,B23,4,,B230,disease,true
+B23.1,B23.1,B23,4,,B231,disease,true
+B23.2,B23.2,B23,4,,B232,disease,true
+B23.8,B23.8,B23,4,,B238,disease,true
+B24,Bệnh do vi rút gây suy giảm miễn dịch ở người [HIV] không đặc hiệu,B20-B24,3,,B24,type,true
+B25,Nhiễm vi rút Cytomegalo,B25-B34,3,,B25,type,false
+B25.0†,B25.0†,B25,4,,B250,disease,true
+B25.1†,B25.1†,B25,4,,B251,disease,true
+B25.2†,B25.2†,B25,4,,B252,disease,true
+B25.8,B25.8,B25,4,,B258,disease,true
+B25.9,B25.9,B25,4,,B259,disease,true
+B26,Bệnh quai bị,B25-B34,3,,B26,type,false
+B26.0†,B26.0†,B26,4,,B260,disease,true
+B26.1†,B26.1†,B26,4,,B261,disease,true
+B26.2†,B26.2†,B26,4,,B262,disease,true
+B26.3†,B26.3†,B26,4,,B263,disease,true
+B26.8,B26.8,B26,4,,B268,disease,true
+B26.9,B26.9,B26,4,,B269,disease,true
+B27,Bệnh tăng bạch cầu đơn nhân nhiễm trùng,B25-B34,3,,B27,type,false
+B27.0,B27.0,B27,4,,B270,disease,true
+B27.1,B27.1,B27,4,,B271,disease,true
+B27.8,B27.8,B27,4,,B278,disease,true
+B27.9,B27.9,B27,4,,B279,disease,true
+B30,Viêm kết mạc do vi rút,B25-B34,3,,B30,type,false
+B30.0†,B30.0†,B30,4,,B300,disease,true
+B30.1†,B30.1†,B30,4,,B301,disease,true
+B30.2,B30.2,B30,4,,B302,disease,true
+B30.3†,B30.3†,B30,4,,B303,disease,true
+B30.8†,B30.8†,B30,4,,B308,disease,true
+B30.9,B30.9,B30,4,,B309,disease,true
+B33,"Bệnh nhiễm vi rút khác, chưa phân loại",B25-B34,3,,B33,type,false
+B33.0,B33.0,B33,4,,B330,disease,true
+B33.1,B33.1,B33,4,,B331,disease,true
+B33.2,B33.2,B33,4,,B332,disease,true
+B33.3,B33.3,B33,4,,B333,disease,true
+B33.4†,B33.4†,B33,4,,B334,disease,true
+B33.8,B33.8,B33,4,,B338,disease,true
+B34,Nhiễm vi rút ở vị trí không xác định,B25-B34,3,,B34,type,false
+B34.0,B34.0,B34,4,,B340,disease,true
+B34.1,B34.1,B34,4,,B341,disease,true
+B34.2,B34.2,B34,4,,B342,disease,true
+B34.3,B34.3,B34,4,,B343,disease,true
+B34.4,B34.4,B34,4,,B344,disease,true
+B34.8,B34.8,B34,4,,B348,disease,true
+B34.9,B34.9,B34,4,,B349,disease,true
+J67,Viêm phổi tăng cảm do bụi hữu cơ,B35-B49,3,,J67,type,false
+J67.0,J67.0,J67,4,,J670,disease,true
+J67.1,J67.1,J67,4,,J671,disease,true
+J67.2,J67.2,J67,4,,J672,disease,true
+J67.3,J67.3,J67,4,,J673,disease,true
+J67.4,J67.4,J67,4,,J674,disease,true
+J67.5,J67.5,J67,4,,J675,disease,true
+J67.6,J67.6,J67,4,,J676,disease,true
+J67.7,J67.7,J67,4,,J677,disease,true
+J67.8,J67.8,J67,4,,J678,disease,true
+J67.9,J67.9,J67,4,,J679,disease,true
+B35,Bệnh nấm ở da,B35-B49,3,,B35,type,false
+B35.0,B35.0,B35,4,,B350,disease,true
+B35.1,B35.1,B35,4,,B351,disease,true
+B35.2,B35.2,B35,4,,B352,disease,true
+B35.3,B35.3,B35,4,,B353,disease,true
+B35.4,B35.4,B35,4,,B354,disease,true
+B35.5,B35.5,B35,4,,B355,disease,true
+B35.6,B35.6,B35,4,,B356,disease,true
+B35.8,B35.8,B35,4,,B358,disease,true
+B35.9,B35.9,B35,4,,B359,disease,true
+B36,Các bệnh nhiễm nấm nông ở da khác,B35-B49,3,,B36,type,false
+B36.0,B36.0,B36,4,,B360,disease,true
+B36.1,B36.1,B36,4,,B361,disease,true
+B36.2,B36.2,B36,4,,B362,disease,true
+B36.3,B36.3,B36,4,,B363,disease,true
+B36.8,B36.8,B36,4,,B368,disease,true
+B36.9,B36.9,B36,4,,B369,disease,true
+B37,Bệnh do nấm Candida,B35-B49,3,,B37,type,false
+B37.0,B37.0,B37,4,,B370,disease,true
+B37.1,B37.1,B37,4,,B371,disease,true
+B37.2,B37.2,B37,4,,B372,disease,true
+B37.3†,B37.3†,B37,4,,B373,disease,true
+B37.4,B37.4,B37,4,,B374,disease,true
+B37.5†,B37.5†,B37,4,,B375,disease,true
+B37.6†,B37.6†,B37,4,,B376,disease,true
+B37.7,B37.7,B37,4,,B377,disease,true
+B37.8,B37.8,B37,4,,B378,disease,true
+B37.9,B37.9,B37,4,,B379,disease,true
+B38,Bệnh nhiễm nấm Coccidioides,B35-B49,3,,B38,type,false
+B38.0,B38.0,B38,4,,B380,disease,true
+B38.1,B38.1,B38,4,,B381,disease,true
+B38.2,B38.2,B38,4,,B382,disease,true
+B38.3,B38.3,B38,4,,B383,disease,true
+B38.4†,B38.4†,B38,4,,B384,disease,true
+B38.7,B38.7,B38,4,,B387,disease,true
+B38.8,B38.8,B38,4,,B388,disease,true
+B38.9,B38.9,B38,4,,B389,disease,true
+B39,Bệnh nhiễm nấm Histoplasma,B35-B49,3,,B39,type,false
+B39.0,B39.0,B39,4,,B390,disease,true
+B39.1,B39.1,B39,4,,B391,disease,true
+B39.2,B39.2,B39,4,,B392,disease,true
+B39.3,B39.3,B39,4,,B393,disease,true
+B39.4,B39.4,B39,4,,B394,disease,true
+B39.5,B39.5,B39,4,,B395,disease,true
+B39.9,B39.9,B39,4,,B399,disease,true
+B40,Bệnh do nhiễm nấm Blastomyces,B35-B49,3,,B40,type,false
+B40.0,B40.0,B40,4,,B400,disease,true
+B40.1,B40.1,B40,4,,B401,disease,true
+B40.2,B40.2,B40,4,,B402,disease,true
+B40.3,B40.3,B40,4,,B403,disease,true
+B40.7,B40.7,B40,4,,B407,disease,true
+B40.8,B40.8,B40,4,,B408,disease,true
+B40.9,B40.9,B40,4,,B409,disease,true
+B41,Bệnh do nhiễm nấm Paracoccidioides,B35-B49,3,,B41,type,false
+B41.0,B41.0,B41,4,,B410,disease,true
+B41.7,B41.7,B41,4,,B417,disease,true
+B41.8,B41.8,B41,4,,B418,disease,true
+B41.9,B41.9,B41,4,,B419,disease,true
+B42,Bệnh do nhiễm nấm Sporotrichum,B35-B49,3,,B42,type,false
+B42.0†,B42.0†,B42,4,,B420,disease,true
+B42.1,B42.1,B42,4,,B421,disease,true
+B42.7,B42.7,B42,4,,B427,disease,true
+B42.8,B42.8,B42,4,,B428,disease,true
+B42.9,B42.9,B42,4,,B429,disease,true
+B43,Bệnh do nhiễm nấm Chromoblastomycosa [nấm màu] và áp xe do phaeomyces,B35-B49,3,,B43,type,false
+B43.0,B43.0,B43,4,,B430,disease,true
+B43.1,B43.1,B43,4,,B431,disease,true
+B43.2,B43.2,B43,4,,B432,disease,true
+B43.8,B43.8,B43,4,,B438,disease,true
+B43.9,B43.9,B43,4,,B439,disease,true
+B44,Bệnh nhiễm nấm Aspergillus,B35-B49,3,,B44,type,false
+B44.0,B44.0,B44,4,,B440,disease,true
+B44.1,B44.1,B44,4,,B441,disease,true
+B44.2,B44.2,B44,4,,B442,disease,true
+B44.7,B44.7,B44,4,,B447,disease,true
+B44.8,B44.8,B44,4,,B448,disease,true
+B44.9,B44.9,B44,4,,B449,disease,true
+B45,Bệnh nhiễm nấm Cryptococcus,B35-B49,3,,B45,type,false
+B45.0,B45.0,B45,4,,B450,disease,true
+B45.1,B45.1,B45,4,,B451,disease,true
+B45.2,B45.2,B45,4,,B452,disease,true
+B45.3,B45.3,B45,4,,B453,disease,true
+B45.7,B45.7,B45,4,,B457,disease,true
+B45.8,B45.8,B45,4,,B458,disease,true
+B45.9,B45.9,B45,4,,B459,disease,true
+B46,Bệnh nhiễm nấm đen Zygomycota,B35-B49,3,,B46,type,false
+B46.0,B46.0,B46,4,,B460,disease,true
+B46.1,B46.1,B46,4,,B461,disease,true
+B46.2,B46.2,B46,4,,B462,disease,true
+B46.3,B46.3,B46,4,,B463,disease,true
+B46.4,B46.4,B46,4,,B464,disease,true
+B46.5,B46.5,B46,4,,B465,disease,true
+B46.8,B46.8,B46,4,,B468,disease,true
+B46.9,B46.9,B46,4,,B469,disease,true
+B47,Bệnh u nấm,B35-B49,3,,B47,type,false
+B47.0,B47.0,B47,4,,B470,disease,true
+B47.1,B47.1,B47,4,,B471,disease,true
+B47.9,B47.9,B47,4,,B479,disease,true
+B48,"Bệnh nhiễm nấm khác, không phân loại nơi khác",B35-B49,3,,B48,type,false
+B48.0,B48.0,B48,4,,B480,disease,true
+B48.1,B48.1,B48,4,,B481,disease,true
+B48.2,B48.2,B48,4,,B482,disease,true
+B48.3,B48.3,B48,4,,B483,disease,true
+B48.4,B48.4,B48,4,,B484,disease,true
+B48.5†,B48.5†,B48,4,,B485,disease,true
+B48.7,B48.7,B48,4,,B487,disease,true
+B48.8,B48.8,B48,4,,B488,disease,true
+B49,Nhiễm nấm không xác định,B35-B49,3,,B49,type,true
+B50,Bệnh sốt rét do Plasmodium falciparum,B50-B64,3,,B50,type,false
+B50.0,B50.0,B50,4,,B500,disease,true
+B50.8,B50.8,B50,4,,B508,disease,true
+B50.9,B50.9,B50,4,,B509,disease,true
+B51,Bệnh sốt rét do Plasmodium vivax,B50-B64,3,,B51,type,false
+B51.0,B51.0,B51,4,,B510,disease,true
+B51.8,B51.8,B51,4,,B518,disease,true
+B51.9,B51.9,B51,4,,B519,disease,true
+B52,Bệnh sốt rét do Plasmodium malariae,B50-B64,3,,B52,type,false
+B52.0,B52.0,B52,4,,B520,disease,true
+B52.8,B52.8,B52,4,,B528,disease,true
+B52.9,B52.9,B52,4,,B529,disease,true
+B53,Bệnh sốt rét khác được khẳng định về ký sinh trùng học,B50-B64,3,,B53,type,false
+B53.0,B53.0,B53,4,,B530,disease,true
+B53.1,B53.1,B53,4,,B531,disease,true
+B53.8,B53.8,B53,4,,B538,disease,true
+B54,Bệnh sốt rét không đặc hiệu,B50-B64,3,,B54,type,true
+B55,Bệnh do Leishmania,B50-B64,3,,B55,type,false
+B55.0,B55.0,B55,4,,B550,disease,true
+B55.1,B55.1,B55,4,,B551,disease,true
+B55.2,B55.2,B55,4,,B552,disease,true
+B55.9,B55.9,B55,4,,B559,disease,true
+B56,Bệnh do nhiễm Trypanosoma châu Phi,B50-B64,3,,B56,type,false
+B56.0,B56.0,B56,4,,B560,disease,true
+B56.1,B56.1,B56,4,,B561,disease,true
+B56.9,B56.9,B56,4,,B569,disease,true
+B57,Bệnh Chagas,B50-B64,3,,B57,type,false
+B57.0†,B57.0†,B57,4,,B570,disease,true
+B57.1,B57.1,B57,4,,B571,disease,true
+B57.2,B57.2,B57,4,,B572,disease,true
+B57.3,B57.3,B57,4,,B573,disease,true
+B57.4,B57.4,B57,4,,B574,disease,true
+B57.5,B57.5,B57,4,,B575,disease,true
+B58,Bệnh do nhiễm Toxoplasma,B50-B64,3,,B58,type,false
+B58.0†,B58.0†,B58,4,,B580,disease,true
+B58.1†,B58.1†,B58,4,,B581,disease,true
+B58.2†,B58.2†,B58,4,,B582,disease,true
+B58.3†,B58.3†,B58,4,,B583,disease,true
+B58.8,B58.8,B58,4,,B588,disease,true
+B58.9,B58.9,B58,4,,B589,disease,true
+B60,"Bệnh do ký sinh trùng đơn bào khác, không phân loại nơi khác",B50-B64,3,,B60,type,false
+B60.0,B60.0,B60,4,,B600,disease,true
+B60.1,B60.1,B60,4,,B601,disease,true
+B60.2,B60.2,B60,4,,B602,disease,true
+B60.8,B60.8,B60,4,,B608,disease,true
+B64,Bệnh do ký sinh trùng đơn bào không xác định,B50-B64,3,,B64,type,true
+B65,Bệnh sán máng [bilharziasis],B65-B83,3,,B65,type,false
+B65.0,B65.0,B65,4,,B650,disease,true
+B65.1,B65.1,B65,4,,B651,disease,true
+B65.2,B65.2,B65,4,,B652,disease,true
+B65.3,B65.3,B65,4,,B653,disease,true
+B65.8,B65.8,B65,4,,B658,disease,true
+B65.9,B65.9,B65,4,,B659,disease,true
+B66,Bệnh nhiễm sán lá khác,B65-B83,3,,B66,type,false
+B66.0,B66.0,B66,4,,B660,disease,true
+B66.1,B66.1,B66,4,,B661,disease,true
+B66.2,B66.2,B66,4,,B662,disease,true
+B66.3,B66.3,B66,4,,B663,disease,true
+B66.4,B66.4,B66,4,,B664,disease,true
+B66.5,B66.5,B66,4,,B665,disease,true
+B66.8,B66.8,B66,4,,B668,disease,true
+B66.9,B66.9,B66,4,,B669,disease,true
+B67,Bệnh do Echinococcus,B65-B83,3,,B67,type,false
+B67.0,B67.0,B67,4,,B670,disease,true
+B67.1,B67.1,B67,4,,B671,disease,true
+B67.2,B67.2,B67,4,,B672,disease,true
+B67.3,B67.3,B67,4,,B673,disease,true
+B67.4,B67.4,B67,4,,B674,disease,true
+B67.5,B67.5,B67,4,,B675,disease,true
+B67.6,B67.6,B67,4,,B676,disease,true
+B67.7,B67.7,B67,4,,B677,disease,true
+B67.8,B67.8,B67,4,,B678,disease,true
+B67.9,B67.9,B67,4,,B679,disease,true
+B68,Bệnh sán dây,B65-B83,3,,B68,type,false
+B68.0,B68.0,B68,4,,B680,disease,true
+B68.1,B68.1,B68,4,,B681,disease,true
+B68.9,B68.9,B68,4,,B689,disease,true
+B69,Bệnh ấu trùng sán lợn,B65-B83,3,,B69,type,false
+B69.0,B69.0,B69,4,,B690,disease,true
+B69.1,B69.1,B69,4,,B691,disease,true
+B69.8,B69.8,B69,4,,B698,disease,true
+B69.9,B69.9,B69,4,,B699,disease,true
+B70,Bệnh nhiễm sán dây cá Diphyllobothrium và bệnh ấu trùng sán nhái Sparganum,B65-B83,3,,B70,type,false
+B70.0,B70.0,B70,4,,B700,disease,true
+B70.1,B70.1,B70,4,,B701,disease,true
+B71,Nhiễm sán dây khác,B65-B83,3,,B71,type,false
+B71.0,B71.0,B71,4,,B710,disease,true
+B71.1,B71.1,B71,4,,B711,disease,true
+B71.8,B71.8,B71,4,,B718,disease,true
+B71.9,B71.9,B71,4,,B719,disease,true
+B72,Bệnh giun Dracunculus,B65-B83,3,,B72,type,true
+B73,Bệnh giun chỉ,B65-B83,3,,B73,type,true
+B74,Bệnh giun chỉ,B65-B83,3,,B74,type,false
+B74.0,B74.0,B74,4,,B740,disease,true
+B74.1,B74.1,B74,4,,B741,disease,true
+B74.2,B74.2,B74,4,,B742,disease,true
+B74.3,B74.3,B74,4,,B743,disease,true
+B74.4,B74.4,B74,4,,B744,disease,true
+B74.8,B74.8,B74,4,,B748,disease,true
+B74.9,B74.9,B74,4,,B749,disease,true
+B75,Bệnh giun xoắn Trichinella,B65-B83,3,,B75,type,true
+B76,Bệnh giun móc,B65-B83,3,,B76,type,false
+B76.0,B76.0,B76,4,,B760,disease,true
+B76.1,B76.1,B76,4,,B761,disease,true
+B76.8,B76.8,B76,4,,B768,disease,true
+B76.9,B76.9,B76,4,,B769,disease,true
+B77,Bệnh giun đũa,B65-B83,3,,B77,type,false
+B77.0,B77.0,B77,4,,B770,disease,true
+B77.8,B77.8,B77,4,,B778,disease,true
+B77.9,B77.9,B77,4,,B779,disease,true
+B78,Bệnh giun lươn,B65-B83,3,,B78,type,false
+B78.0,B78.0,B78,4,,B780,disease,true
+B78.1,B78.1,B78,4,,B781,disease,true
+B78.7,B78.7,B78,4,,B787,disease,true
+B78.9,B78.9,B78,4,,B789,disease,true
+B79,Bệnh giun tóc,B65-B83,3,,B79,type,true
+B80,Bệnh giun kim,B65-B83,3,,B80,type,true
+B81,"Nhiễm giun đường ruột khác, chưa phân loại",B65-B83,3,,B81,type,false
+B81.0,B81.0,B81,4,,B810,disease,true
+B81.1,B81.1,B81,4,,B811,disease,true
+B81.2,B81.2,B81,4,,B812,disease,true
+B81.3,B81.3,B81,4,,B813,disease,true
+B81.4,B81.4,B81,4,,B814,disease,true
+B81.8,B81.8,B81,4,,B818,disease,true
+B82,Bệnh ký sinh trùng đường ruột không xác định,B65-B83,3,,B82,type,false
+B82.0,B82.0,B82,4,,B820,disease,true
+B82.9,B82.9,B82,4,,B829,disease,true
+B83,Bệnh giun sán khác,B65-B83,3,,B83,type,false
+B83.0,B83.0,B83,4,,B830,disease,true
+B83.1,B83.1,B83,4,,B831,disease,true
+B83.2,B83.2,B83,4,,B832,disease,true
+B83.3,B83.3,B83,4,,B833,disease,true
+B83.4,B83.4,B83,4,,B834,disease,true
+B83.8,B83.8,B83,4,,B838,disease,true
+B83.9,B83.9,B83,4,,B839,disease,true
+B85,Bệnh chấy rận,B85-B89,3,,B85,type,false
+B85.0,B85.0,B85,4,,B850,disease,true
+B85.1,B85.1,B85,4,,B851,disease,true
+B85.2,B85.2,B85,4,,B852,disease,true
+B85.3,B85.3,B85,4,,B853,disease,true
+B85.4,B85.4,B85,4,,B854,disease,true
+B86,Bệnh ghẻ,B85-B89,3,,B86,type,true
+B87,Bệnh giòi,B85-B89,3,,B87,type,false
+B87.0,B87.0,B87,4,,B870,disease,true
+B87.1,B87.1,B87,4,,B871,disease,true
+B87.2,B87.2,B87,4,,B872,disease,true
+B87.3,B87.3,B87,4,,B873,disease,true
+B87.4,B87.4,B87,4,,B874,disease,true
+B87.8,B87.8,B87,4,,B878,disease,true
+B87.9,B87.9,B87,4,,B879,disease,true
+B88,Nhiễm ký sinh trùng khác,B85-B89,3,,B88,type,false
+B88.0,B88.0,B88,4,,B880,disease,true
+B88.1,B88.1,B88,4,,B881,disease,true
+B88.2,B88.2,B88,4,,B882,disease,true
+B88.3,B88.3,B88,4,,B883,disease,true
+B88.8,B88.8,B88,4,,B888,disease,true
+B88.9,B88.9,B88,4,,B889,disease,true
+B89,Bệnh do ký sinh trùng không xác định,B85-B89,3,,B89,type,true
+B92,Di chứng của bệnh phong,B90-B94,3,,B92,type,true
+B94,Di chứng của bệnh nhiễm trùng và ký sinh trùng khác và không xác định,B90-B94,3,,B94,type,false
+B94.0,B94.0,B94,4,,B940,disease,true
+B94.1,B94.1,B94,4,,B941,disease,true
+B94.2,B94.2,B94,4,,B942,disease,true
+B94.8,B94.8,B94,4,,B948,disease,true
+B94.9,B94.9,B94,4,,B949,disease,true
+B95,"Liên cầu và tụ cầu là nguyên nhân gây bệnh, được phân loại ở các chương khác",B95-B98,3,,B95,type,false
+B95.0,B95.0,B95,4,,B950,disease,true
+B95.1,B95.1,B95,4,,B951,disease,true
+B95.2,B95.2,B95,4,,B952,disease,true
+B95.3,B95.3,B95,4,,B953,disease,true
+B95.4,B95.4,B95,4,,B954,disease,true
+B95.5,B95.5,B95,4,,B955,disease,true
+B95.6,B95.6,B95,4,,B956,disease,true
+B95.7,B95.7,B95,4,,B957,disease,true
+B95.8,B95.8,B95,4,,B958,disease,true
+B96,Tác nhân vi khuẩn xác định khác là nguyên nhân gây bệnh phân loại ở chương khác,B95-B98,3,,B96,type,false
+B96.0,B96.0,B96,4,,B960,disease,true
+B96.1,B96.1,B96,4,,B961,disease,true
+B96.2,B96.2,B96,4,,B962,disease,true
+B96.3,B96.3,B96,4,,B963,disease,true
+B96.4,B96.4,B96,4,,B964,disease,true
+B96.5,B96.5,B96,4,,B965,disease,true
+B96.6,B96.6,B96,4,,B966,disease,true
+B96.7,B96.7,B96,4,,B967,disease,true
+B96.8,B96.8,B96,4,,B968,disease,true
+B97,Tác nhân vi rút gây các bệnh phân loại ở chương khác,B95-B98,3,,B97,type,false
+B97.0,B97.0,B97,4,,B970,disease,true
+B97.1,B97.1,B97,4,,B971,disease,true
+B97.2,B97.2,B97,4,,B972,disease,true
+B97.3,B97.3,B97,4,,B973,disease,true
+B97.4,B97.4,B97,4,,B974,disease,true
+B97.5,B97.5,B97,4,,B975,disease,true
+B97.6,B97.6,B97,4,,B976,disease,true
+B97.7,B97.7,B97,4,,B977,disease,true
+B97.8,B97.8,B97,4,,B978,disease,true
+B98,Tác nhân nhiễm trùng xác định khác gây các bệnh phân loại ở chương khác,B95-B98,3,,B98,type,false
+B98.0,B98.0,B98,4,,B980,disease,true
+B98.1,B98.1,B98,4,,B981,disease,true
+B99,Các bệnh nhiễm trùng khác và không xác định,B99-B99,3,,B99,type,true
+C80,U ác tính thứ phát không xác định vị trí,C00-C97,3,,C80,type,false
+C80.0,C80.0,C80,4,,C800,disease,true
+C80.9,C80.9,C80,4,,C809,disease,true
+C74,U ác của tuyến thượng thận,C00-C97,3,,C74,type,false
+C74.0,C74.0,C74,4,,C740,disease,true
+C74.1,C74.1,C74,4,,C741,disease,true
+C74.9,C74.9,C74,4,,C749,disease,true
+C67,U ác của bàng quang,C00-C97,3,,C67,type,false
+C67.0,C67.0,C67,4,,C670,disease,true
+C67.1,C67.1,C67,4,,C671,disease,true
+C67.2,C67.2,C67,4,,C672,disease,true
+C67.3,C67.3,C67,4,,C673,disease,true
+C67.4,C67.4,C67,4,,C674,disease,true
+C67.5,C67.5,C67,4,,C675,disease,true
+C67.6,C67.6,C67,4,,C676,disease,true
+C67.7,C67.7,C67,4,,C677,disease,true
+C67.8,C67.8,C67,4,,C678,disease,true
+C67.9,C67.9,C67,4,,C679,disease,true
+C56,U ác buồng trứng,C00-C97,3,,C56,type,true
+C00,U ác của môi,C00-C97,3,,C00,type,false
+C00.0,C00.0,C00,4,,C000,disease,true
+C00.1,C00.1,C00,4,,C001,disease,true
+C00.2,C00.2,C00,4,,C002,disease,true
+C00.3,C00.3,C00,4,,C003,disease,true
+C00.4,C00.4,C00,4,,C004,disease,true
+C00.5,C00.5,C00,4,,C005,disease,true
+C00.6,C00.6,C00,4,,C006,disease,true
+C00.8,C00.8,C00,4,,C008,disease,true
+C00.9,C00.9,C00,4,,C009,disease,true
+C77,U ác thứ phát và không xác định của hạch lympho,C00-C97,3,,C77,type,false
+C77.0,C77.0,C77,4,,C770,disease,true
+C77.1,C77.1,C77,4,,C771,disease,true
+C77.2,C77.2,C77,4,,C772,disease,true
+C77.3,C77.3,C77,4,,C773,disease,true
+C77.4,C77.4,C77,4,,C774,disease,true
+C77.5,C77.5,C77,4,,C775,disease,true
+C77.8,C77.8,C77,4,,C778,disease,true
+C77.9,C77.9,C77,4,,C779,disease,true
+C76,U ác có vị trí khác và không rõ ràng,C00-C97,3,,C76,type,false
+C76.0,C76.0,C76,4,,C760,disease,true
+C76.1,C76.1,C76,4,,C761,disease,true
+C76.2,C76.2,C76,4,,C762,disease,true
+C76.3,C76.3,C76,4,,C763,disease,true
+C76.4,C76.4,C76,4,,C764,disease,true
+C76.5,C76.5,C76,4,,C765,disease,true
+C76.7,C76.7,C76,4,,C767,disease,true
+C76.8,C76.8,C76,4,,C768,disease,true
+D00,"Ung thư biểu mô tại chỗ của khoang miệng, thực quản và dạ dày",D00-D09,3,,D00,type,false
+D00.0,D00.0,D00,4,,D000,disease,true
+D00.1,D00.1,D00,4,,D001,disease,true
+D00.2,D00.2,D00,4,,D002,disease,true
+D01,Ung thư biểu mô tại chỗ của cơ quan tiêu hoá khác và không xác định,D00-D09,3,,D01,type,false
+D01.0,D01.0,D01,4,,D010,disease,true
+D01.1,D01.1,D01,4,,D011,disease,true
+D01.2,D01.2,D01,4,,D012,disease,true
+D01.3,D01.3,D01,4,,D013,disease,true
+D01.4,D01.4,D01,4,,D014,disease,true
+D01.5,D01.5,D01,4,,D015,disease,true
+D01.7,D01.7,D01,4,,D017,disease,true
+D01.9,D01.9,D01,4,,D019,disease,true
+D02,Ung thư biểu mô tại chỗ của tai giữa và hệ hô hấp,D00-D09,3,,D02,type,false
+D02.0,D02.0,D02,4,,D020,disease,true
+D02.1,D02.1,D02,4,,D021,disease,true
+D02.2,D02.2,D02,4,,D022,disease,true
+D02.3,D02.3,D02,4,,D023,disease,true
+D02.4,D02.4,D02,4,,D024,disease,true
+D03,Ung thư tế bào hắc tố tại chỗ,D00-D09,3,,D03,type,false
+D03.0,D03.0,D03,4,,D030,disease,true
+D03.1,D03.1,D03,4,,D031,disease,true
+D03.2,D03.2,D03,4,,D032,disease,true
+D03.3,D03.3,D03,4,,D033,disease,true
+D03.4,D03.4,D03,4,,D034,disease,true
+D03.5,D03.5,D03,4,,D035,disease,true
+D03.6,D03.6,D03,4,,D036,disease,true
+D03.7,D03.7,D03,4,,D037,disease,true
+D03.8,D03.8,D03,4,,D038,disease,true
+D03.9,D03.9,D03,4,,D039,disease,true
+D04,Ung thư biểu mô tại chỗ của da,D00-D09,3,,D04,type,false
+D04.0,D04.0,D04,4,,D040,disease,true
+D04.1,D04.1,D04,4,,D041,disease,true
+D04.2,D04.2,D04,4,,D042,disease,true
+D04.3,D04.3,D04,4,,D043,disease,true
+D04.4,D04.4,D04,4,,D044,disease,true
+D04.5,D04.5,D04,4,,D045,disease,true
+D04.6,D04.6,D04,4,,D046,disease,true
+D04.7,D04.7,D04,4,,D047,disease,true
+D04.8,D04.8,D04,4,,D048,disease,true
+D04.9,D04.9,D04,4,,D049,disease,true
+D05,Ung thư biểu mô tại chỗ của vú,D00-D09,3,,D05,type,false
+D05.0,D05.0,D05,4,,D050,disease,true
+D05.1,D05.1,D05,4,,D051,disease,true
+D05.7,D05.7,D05,4,,D057,disease,true
+D05.9,D05.9,D05,4,,D059,disease,true
+D06,Ung thư biểu mô tại chỗ của cổ tử cung,D00-D09,3,,D06,type,false
+D06.0,D06.0,D06,4,,D060,disease,true
+D06.1,D06.1,D06,4,,D061,disease,true
+D06.7,D06.7,D06,4,,D067,disease,true
+D06.9,D06.9,D06,4,,D069,disease,true
+D07,Ung thư biểu mô tại chỗ của cơ quan sinh dục khác và không xác định,D00-D09,3,,D07,type,false
+D07.0,D07.0,D07,4,,D070,disease,true
+D07.1,D07.1,D07,4,,D071,disease,true
+D07.2,D07.2,D07,4,,D072,disease,true
+D07.3,D07.3,D07,4,,D073,disease,true
+D07.4,D07.4,D07,4,,D074,disease,true
+D07.5,D07.5,D07,4,,D075,disease,true
+D07.6,D07.6,D07,4,,D076,disease,true
+D09,Ung thư biểu mô tại chỗ ở vị trí khác và không xác định,D00-D09,3,,D09,type,false
+D09.0,D09.0,D09,4,,D090,disease,true
+D09.1,D09.1,D09,4,,D091,disease,true
+D09.2,D09.2,D09,4,,D092,disease,true
+D09.3,D09.3,D09,4,,D093,disease,true
+D09.7,D09.7,D09,4,,D097,disease,true
+D09.9,D09.9,D09,4,,D099,disease,true
+D10,U lành của miệng và họng,D10-D36,3,,D10,type,false
+D10.0,D10.0,D10,4,,D100,disease,true
+D10.1,D10.1,D10,4,,D101,disease,true
+D10.2,D10.2,D10,4,,D102,disease,true
+D10.3,D10.3,D10,4,,D103,disease,true
+D10.4,D10.4,D10,4,,D104,disease,true
+D10.5,D10.5,D10,4,,D105,disease,true
+D10.6,D10.6,D10,4,,D106,disease,true
+D10.7,D10.7,D10,4,,D107,disease,true
+D10.9,D10.9,D10,4,,D109,disease,true
+D11,U lành của các tuyến nước bọt chính,D10-D36,3,,D11,type,false
+D11.0,D11.0,D11,4,,D110,disease,true
+D11.7,D11.7,D11,4,,D117,disease,true
+D11.9,D11.9,D11,4,,D119,disease,true
+D12,"U lành của đại tràng, trực tràng, hậu môn và ống hậu môn",D10-D36,3,,D12,type,false
+D12.0,D12.0,D12,4,,D120,disease,true
+D12.1,D12.1,D12,4,,D121,disease,true
+D12.2,D12.2,D12,4,,D122,disease,true
+D12.3,D12.3,D12,4,,D123,disease,true
+D12.4,D12.4,D12,4,,D124,disease,true
+D12.5,D12.5,D12,4,,D125,disease,true
+D12.6,D12.6,D12,4,,D126,disease,true
+D12.7,D12.7,D12,4,,D127,disease,true
+D12.8,D12.8,D12,4,,D128,disease,true
+D12.9,D12.9,D12,4,,D129,disease,true
+D13,U lành của phần khác và không rõ ràng của hệ tiêu hoá,D10-D36,3,,D13,type,false
+D13.0,D13.0,D13,4,,D130,disease,true
+D13.1,D13.1,D13,4,,D131,disease,true
+D13.2,D13.2,D13,4,,D132,disease,true
+D13.3,D13.3,D13,4,,D133,disease,true
+D13.4,D13.4,D13,4,,D134,disease,true
+D13.5,D13.5,D13,4,,D135,disease,true
+D13.6,D13.6,D13,4,,D136,disease,true
+D13.7,D13.7,D13,4,,D137,disease,true
+D13.9,D13.9,D13,4,,D139,disease,true
+D14,U lành tai giữa và hệ hô hấp,D10-D36,3,,D14,type,false
+D14.0,D14.0,D14,4,,D140,disease,true
+D14.1,D14.1,D14,4,,D141,disease,true
+D14.2,D14.2,D14,4,,D142,disease,true
+D14.3,D14.3,D14,4,,D143,disease,true
+D14.4,D14.4,D14,4,,D144,disease,true
+D15,U lành của cơ quan khác và không xác định trong lồng ngực,D10-D36,3,,D15,type,false
+D15.0,D15.0,D15,4,,D150,disease,true
+D15.1,D15.1,D15,4,,D151,disease,true
+D15.2,D15.2,D15,4,,D152,disease,true
+D15.7,D15.7,D15,4,,D157,disease,true
+D15.9,D15.9,D15,4,,D159,disease,true
+D16,U lành của xương và sụn khớp,D10-D36,3,,D16,type,false
+D16.0,D16.0,D16,4,,D160,disease,true
+D16.1,D16.1,D16,4,,D161,disease,true
+D16.2,D16.2,D16,4,,D162,disease,true
+D16.3,D16.3,D16,4,,D163,disease,true
+D16.4,D16.4,D16,4,,D164,disease,true
+D16.5,D16.5,D16,4,,D165,disease,true
+D16.6,D16.6,D16,4,,D166,disease,true
+D16.7,D16.7,D16,4,,D167,disease,true
+D16.8,D16.8,D16,4,,D168,disease,true
+D16.9,D16.9,D16,4,,D169,disease,true
+D17,U mỡ,D10-D36,3,,D17,type,false
+D17.0,D17.0,D17,4,,D170,disease,true
+D17.1,D17.1,D17,4,,D171,disease,true
+D17.2,D17.2,D17,4,,D172,disease,true
+D17.3,D17.3,D17,4,,D173,disease,true
+D17.4,D17.4,D17,4,,D174,disease,true
+D17.5,D17.5,D17,4,,D175,disease,true
+D17.6,D17.6,D17,4,,D176,disease,true
+D17.7,D17.7,D17,4,,D177,disease,true
+D17.9,D17.9,D17,4,,D179,disease,true
+D18,"U máu và u bạch huyết, vị trí bất kỳ",D10-D36,3,,D18,type,false
+D18.0,D18.0,D18,4,,D180,disease,true
+D18.1,D18.1,D18,4,,D181,disease,true
+D19,U lành của trung mô,D10-D36,3,,D19,type,false
+D19.0,D19.0,D19,4,,D190,disease,true
+D19.1,D19.1,D19,4,,D191,disease,true
+D19.7,D19.7,D19,4,,D197,disease,true
+D19.9,D19.9,D19,4,,D199,disease,true
+D20,U lành mô mềm sau phúc mạc và phúc mạc,D10-D36,3,,D20,type,false
+D20.0,D20.0,D20,4,,D200,disease,true
+D20.1,D20.1,D20,4,,D201,disease,true
+D21,U lành khác của mô liên kết và mô mềm khác,D10-D36,3,,D21,type,false
+D21.0,D21.0,D21,4,,D210,disease,true
+D21.1,D21.1,D21,4,,D211,disease,true
+D21.2,D21.2,D21,4,,D212,disease,true
+D21.3,D21.3,D21,4,,D213,disease,true
+D21.4,D21.4,D21,4,,D214,disease,true
+D21.5,D21.5,D21,4,,D215,disease,true
+D21.6,D21.6,D21,4,,D216,disease,true
+D21.9,D21.9,D21,4,,D219,disease,true
+D22,Nốt ruồi,D10-D36,3,,D22,type,false
+D22.0,D22.0,D22,4,,D220,disease,true
+D22.1,D22.1,D22,4,,D221,disease,true
+D22.2,D22.2,D22,4,,D222,disease,true
+D22.3,D22.3,D22,4,,D223,disease,true
+D22.4,D22.4,D22,4,,D224,disease,true
+D22.5,D22.5,D22,4,,D225,disease,true
+D22.6,D22.6,D22,4,,D226,disease,true
+D22.7,D22.7,D22,4,,D227,disease,true
+D22.9,D22.9,D22,4,,D229,disease,true
+D23,U lành khác của da,D10-D36,3,,D23,type,false
+D23.0,D23.0,D23,4,,D230,disease,true
+D23.1,D23.1,D23,4,,D231,disease,true
+D23.2,D23.2,D23,4,,D232,disease,true
+D23.3,D23.3,D23,4,,D233,disease,true
+D23.4,D23.4,D23,4,,D234,disease,true
+D23.5,D23.5,D23,4,,D235,disease,true
+D23.6,D23.6,D23,4,,D236,disease,true
+D23.7,D23.7,D23,4,,D237,disease,true
+D23.9,D23.9,D23,4,,D239,disease,true
+D24,U lành vú,D10-D36,3,,D24,type,true
+D25,U cơ trơn tử cung,D10-D36,3,,D25,type,false
+D25.0,D25.0,D25,4,,D250,disease,true
+D25.1,D25.1,D25,4,,D251,disease,true
+D25.2,D25.2,D25,4,,D252,disease,true
+D25.9,D25.9,D25,4,,D259,disease,true
+D26,U lành khác của tử cung,D10-D36,3,,D26,type,false
+D26.0,D26.0,D26,4,,D260,disease,true
+D26.1,D26.1,D26,4,,D261,disease,true
+D26.7,D26.7,D26,4,,D267,disease,true
+D26.9,D26.9,D26,4,,D269,disease,true
+D27,U lành buồng trứng,D10-D36,3,,D27,type,true
+D28,U lành của cơ quan sinh dục khác và không xác định,D10-D36,3,,D28,type,false
+D28.0,D28.0,D28,4,,D280,disease,true
+D28.1,D28.1,D28,4,,D281,disease,true
+D28.2,D28.2,D28,4,,D282,disease,true
+D28.7,D28.7,D28,4,,D287,disease,true
+D28.9,D28.9,D28,4,,D289,disease,true
+D29,U lành của cơ quan sinh dục nam,D10-D36,3,,D29,type,false
+D29.0,D29.0,D29,4,,D290,disease,true
+D29.1,D29.1,D29,4,,D291,disease,true
+D29.2,D29.2,D29,4,,D292,disease,true
+D29.3,D29.3,D29,4,,D293,disease,true
+D29.4,D29.4,D29,4,,D294,disease,true
+D29.7,D29.7,D29,4,,D297,disease,true
+D29.9,D29.9,D29,4,,D299,disease,true
+D30,U lành của cơ quan tiết niệu,D10-D36,3,,D30,type,false
+D30.0,D30.0,D30,4,,D300,disease,true
+D30.1,D30.1,D30,4,,D301,disease,true
+D30.2,D30.2,D30,4,,D302,disease,true
+D30.3,D30.3,D30,4,,D303,disease,true
+D30.4,D30.4,D30,4,,D304,disease,true
+D30.7,D30.7,D30,4,,D307,disease,true
+D30.9,D30.9,D30,4,,D309,disease,true
+D31,U lành của mắt và phần phụ,D10-D36,3,,D31,type,false
+D31.0,D31.0,D31,4,,D310,disease,true
+D31.1,D31.1,D31,4,,D311,disease,true
+D31.2,D31.2,D31,4,,D312,disease,true
+D31.3,D31.3,D31,4,,D313,disease,true
+D31.4,D31.4,D31,4,,D314,disease,true
+D31.5,D31.5,D31,4,,D315,disease,true
+D31.6,D31.6,D31,4,,D316,disease,true
+D31.9,D31.9,D31,4,,D319,disease,true
+D32,U lành của màng não,D10-D36,3,,D32,type,false
+D32.0,D32.0,D32,4,,D320,disease,true
+D32.1,D32.1,D32,4,,D321,disease,true
+D32.9,D32.9,D32,4,,D329,disease,true
+D33,U lành của não và các phần khác của hệ thần kinh trung ương,D10-D36,3,,D33,type,false
+D33.0,D33.0,D33,4,,D330,disease,true
+D33.1,D33.1,D33,4,,D331,disease,true
+D33.2,D33.2,D33,4,,D332,disease,true
+D33.3,D33.3,D33,4,,D333,disease,true
+D33.4,D33.4,D33,4,,D334,disease,true
+D33.7,D33.7,D33,4,,D337,disease,true
+D33.9,D33.9,D33,4,,D339,disease,true
+D34,U lành của tuyến giáp,D10-D36,3,,D34,type,true
+D35,U lành của tuyến nội tiết khác và không xác định,D10-D36,3,,D35,type,false
+D35.0,D35.0,D35,4,,D350,disease,true
+D35.1,D35.1,D35,4,,D351,disease,true
+D35.2,D35.2,D35,4,,D352,disease,true
+D35.3,D35.3,D35,4,,D353,disease,true
+D35.4,D35.4,D35,4,,D354,disease,true
+D35.5,D35.5,D35,4,,D355,disease,true
+D35.6,D35.6,D35,4,,D356,disease,true
+D35.7,D35.7,D35,4,,D357,disease,true
+D35.8,D35.8,D35,4,,D358,disease,true
+D35.9,D35.9,D35,4,,D359,disease,true
+D36,U lành ở vị trí khác và không xác định,D10-D36,3,,D36,type,false
+D36.0,D36.0,D36,4,,D360,disease,true
+D36.1,D36.1,D36,4,,D361,disease,true
+D36.7,D36.7,D36,4,,D367,disease,true
+D36.9,D36.9,D36,4,,D369,disease,true
+D37,U tân sinh không rõ hoặc không biết tính chất của khoang miệng và cơ quan tiêu hoá,D37-D48,3,,D37,type,false
+D37.0,D37.0,D37,4,,D370,disease,true
+D37.1,D37.1,D37,4,,D371,disease,true
+D37.2,D37.2,D37,4,,D372,disease,true
+D37.3,D37.3,D37,4,,D373,disease,true
+D37.4,D37.4,D37,4,,D374,disease,true
+D37.5,D37.5,D37,4,,D375,disease,true
+D37.6,D37.6,D37,4,,D376,disease,true
+D37.7,D37.7,D37,4,,D377,disease,true
+D37.9,D37.9,D37,4,,D379,disease,true
+D38,"U tân sinh không rõ hoặc không biết tính chất của tai giữa, cơ quan hô hấp và cơ quan trong lồng ngực",D37-D48,3,,D38,type,false
+D38.0,D38.0,D38,4,,D380,disease,true
+D38.1,D38.1,D38,4,,D381,disease,true
+D38.2,D38.2,D38,4,,D382,disease,true
+D38.3,D38.3,D38,4,,D383,disease,true
+D38.4,D38.4,D38,4,,D384,disease,true
+D38.5,D38.5,D38,4,,D385,disease,true
+D38.6,D38.6,D38,4,,D386,disease,true
+D39,U không chắc chắn hoặc không biết tính chất của cơ quan sinh dục nữ,D37-D48,3,,D39,type,false
+D39.0,D39.0,D39,4,,D390,disease,true
+D39.1,D39.1,D39,4,,D391,disease,true
+D39.2,D39.2,D39,4,,D392,disease,true
+D39.7,D39.7,D39,4,,D397,disease,true
+D39.9,D39.9,D39,4,,D399,disease,true
+D40,U tân sinh không chắc chắn hoặc chưa rõ tính chất của cơ quan sinh dục nam,D37-D48,3,,D40,type,false
+D40.0,D40.0,D40,4,,D400,disease,true
+D40.1,D40.1,D40,4,,D401,disease,true
+D40.7,D40.7,D40,4,,D407,disease,true
+D40.9,D40.9,D40,4,,D409,disease,true
+D41,U tân sinh không chắc chắn hoặc chưa rõ tính chất của cơ quan tiết niệu,D37-D48,3,,D41,type,false
+D41.0,D41.0,D41,4,,D410,disease,true
+D41.1,D41.1,D41,4,,D411,disease,true
+D41.2,D41.2,D41,4,,D412,disease,true
+D41.3,D41.3,D41,4,,D413,disease,true
+D41.4,D41.4,D41,4,,D414,disease,true
+D41.7,D41.7,D41,4,,D417,disease,true
+D41.9,D41.9,D41,4,,D419,disease,true
+D42,U tân sinh không chắc chắn hoặc chưa rõ tính chất của màng não,D37-D48,3,,D42,type,false
+D42.0,D42.0,D42,4,,D420,disease,true
+D42.1,D42.1,D42,4,,D421,disease,true
+D42.9,D42.9,D42,4,,D429,disease,true
+D43,U tân sinh không chắc chắn hoặc chưa rõ tính chất của não và hệ thần kinh trung ương,D37-D48,3,,D43,type,false
+D43.0,D43.0,D43,4,,D430,disease,true
+D43.1,D43.1,D43,4,,D431,disease,true
+D43.2,D43.2,D43,4,,D432,disease,true
+D43.3,D43.3,D43,4,,D433,disease,true
+D43.4,D43.4,D43,4,,D434,disease,true
+D43.7,D43.7,D43,4,,D437,disease,true
+D43.9,D43.9,D43,4,,D439,disease,true
+D44,U tân sinh không chắc chắn hoặc chưa rõ tính chất của tuyến nội tiết,D37-D48,3,,D44,type,false
+D44.0,D44.0,D44,4,,D440,disease,true
+D44.1,D44.1,D44,4,,D441,disease,true
+D44.2,D44.2,D44,4,,D442,disease,true
+D44.3,D44.3,D44,4,,D443,disease,true
+D44.4,D44.4,D44,4,,D444,disease,true
+D44.5,D44.5,D44,4,,D445,disease,true
+D44.6,D44.6,D44,4,,D446,disease,true
+D44.7,D44.7,D44,4,,D447,disease,true
+D44.8,D44.8,D44,4,,D448,disease,true
+D44.9,D44.9,D44,4,,D449,disease,true
+D45,Đa hồng cầu nguyên phát,D37-D48,3,,D45,type,true
+D46,Hội chứng rối loạn sinh tuỷ,D37-D48,3,,D46,type,false
+D46.0,D46.0,D46,4,,D460,disease,true
+D46.1,D46.1,D46,4,,D461,disease,true
+D46.2,D46.2,D46,4,,D462,disease,true
+D46.4,D46.4,D46,4,,D464,disease,true
+D46.5,D46.5,D46,4,,D465,disease,true
+D46.6,D46.6,D46,4,,D466,disease,true
+D46.7,D46.7,D46,4,,D467,disease,true
+D46.9,D46.9,D46,4,,D469,disease,true
+D47,"U tân sinh khác không chắc chắn hoặc không biết sinh chất của mô u lympho, mô tạo huyết và mô liên quan",D37-D48,3,,D47,type,false
+D47.0,D47.0,D47,4,,D470,disease,true
+D47.1,D47.1,D47,4,,D471,disease,true
+D47.2,D47.2,D47,4,,D472,disease,true
+D47.3,D47.3,D47,4,,D473,disease,true
+D47.4,D47.4,D47,4,,D474,disease,true
+D47.5,D47.5,D47,4,,D475,disease,true
+D47.7,D47.7,D47,4,,D477,disease,true
+D47.9,D47.9,D47,4,,D479,disease,true
+D48,U tân sinh không chắc chắn hoặc chưa rõ tính chất của vị trí khác và không xác định,D37-D48,3,,D48,type,false
+D48.0,D48.0,D48,4,,D480,disease,true
+D48.1,D48.1,D48,4,,D481,disease,true
+D48.2,D48.2,D48,4,,D482,disease,true
+D48.3,D48.3,D48,4,,D483,disease,true
+D48.4,D48.4,D48,4,,D484,disease,true
+D48.5,D48.5,D48,4,,D485,disease,true
+D48.6,D48.6,D48,4,,D486,disease,true
+D48.7,D48.7,D48,4,,D487,disease,true
+D48.9,D48.9,D48,4,,D489,disease,true
+D50,Thiếu máu do thiếu sắt,D50-D53,3,,D50,type,false
+D50.0,D50.0,D50,4,,D500,disease,true
+D50.1,D50.1,D50,4,,D501,disease,true
+D50.8,D50.8,D50,4,,D508,disease,true
+D50.9,D50.9,D50,4,,D509,disease,true
+D51,Thiếu máu do thiếu vitamin B12,D50-D53,3,,D51,type,false
+D51.0,D51.0,D51,4,,D510,disease,true
+D51.1,D51.1,D51,4,,D511,disease,true
+D51.2,D51.2,D51,4,,D512,disease,true
+D51.3,D51.3,D51,4,,D513,disease,true
+D51.8,D51.8,D51,4,,D518,disease,true
+D51.9,D51.9,D51,4,,D519,disease,true
+D52,Thiếu máu thiếu folate,D50-D53,3,,D52,type,false
+D52.0,D52.0,D52,4,,D520,disease,true
+D52.1,D52.1,D52,4,,D521,disease,true
+D52.8,D52.8,D52,4,,D528,disease,true
+D52.9,D52.9,D52,4,,D529,disease,true
+D53,Các thiếu máu dinh dưỡng khác,D50-D53,3,,D53,type,false
+D53.0,D53.0,D53,4,,D530,disease,true
+D53.1,D53.1,D53,4,,D531,disease,true
+D53.2,D53.2,D53,4,,D532,disease,true
+D53.8,D53.8,D53,4,,D538,disease,true
+D53.9,D53.9,D53,4,,D539,disease,true
+D55,Thiếu máu do rối loạn men,D55-D59,3,,D55,type,false
+D55.0,D55.0,D55,4,,D550,disease,true
+D55.1,D55.1,D55,4,,D551,disease,true
+D55.2,D55.2,D55,4,,D552,disease,true
+D55.3,D55.3,D55,4,,D553,disease,true
+D55.8,D55.8,D55,4,,D558,disease,true
+D55.9,D55.9,D55,4,,D559,disease,true
+D56,Bệnh Thalassemia,D55-D59,3,,D56,type,false
+D56.0,D56.0,D56,4,,D560,disease,true
+D56.1,D56.1,D56,4,,D561,disease,true
+D56.2,D56.2,D56,4,,D562,disease,true
+D56.3,D56.3,D56,4,,D563,disease,true
+D56.4,D56.4,D56,4,,D564,disease,true
+D56.8,D56.8,D56,4,,D568,disease,true
+D56.9,D56.9,D56,4,,D569,disease,true
+D57,Bệnh hồng cầu hình liềm,D55-D59,3,,D57,type,false
+D57.0,D57.0,D57,4,,D570,disease,true
+D57.1,D57.1,D57,4,,D571,disease,true
+D57.2,D57.2,D57,4,,D572,disease,true
+D57.3,D57.3,D57,4,,D573,disease,true
+D57.8,D57.8,D57,4,,D578,disease,true
+D58,Các thiếu máu tan máu di truyền khác,D55-D59,3,,D58,type,false
+D58.0,D58.0,D58,4,,D580,disease,true
+D58.1,D58.1,D58,4,,D581,disease,true
+D58.2,D58.2,D58,4,,D582,disease,true
+D58.8,D58.8,D58,4,,D588,disease,true
+D58.9,D58.9,D58,4,,D589,disease,true
+D59,Thiếu máu tan máu mắc phải,D55-D59,3,,D59,type,false
+D59.0,D59.0,D59,4,,D590,disease,true
+D59.1,D59.1,D59,4,,D591,disease,true
+D59.2,D59.2,D59,4,,D592,disease,true
+D59.3,D59.3,D59,4,,D593,disease,true
+D59.4,D59.4,D59,4,,D594,disease,true
+D59.5,D59.5,D59,4,,D595,disease,true
+D59.6,D59.6,D59,4,,D596,disease,true
+D59.8,D59.8,D59,4,,D598,disease,true
+D59.9,D59.9,D59,4,,D599,disease,true
+D60,Suy tuỷ xương một dòng hồng cầu mắc phải (giảm nguyên hồng cầu),D60-D64,3,,D60,type,false
+D60.0,D60.0,D60,4,,D600,disease,true
+D60.1,D60.1,D60,4,,D601,disease,true
+D60.8,D60.8,D60,4,,D608,disease,true
+D60.9,D60.9,D60,4,,D609,disease,true
+D61,Các thể suy tuỷ xương khác,D60-D64,3,,D61,type,false
+D61.0,D61.0,D61,4,,D610,disease,true
+D61.1,D61.1,D61,4,,D611,disease,true
+D61.2,D61.2,D61,4,,D612,disease,true
+D61.3,D61.3,D61,4,,D613,disease,true
+D61.8,D61.8,D61,4,,D618,disease,true
+D61.9,D61.9,D61,4,,D619,disease,true
+D62,Thiếu máu sau xuất huyết cấp tính,D60-D64,3,,D62,type,true
+D63*,Thiếu máu trong các bệnh mạn tính phân loại nơi khác,D60-D64,3,,D63*,type,false
+D63.0*,D63.0*,D63*,4,,D630,disease,true
+D63.8*,D63.8*,D63*,4,,D638,disease,true
+D64,Các thiếu máu khác,D60-D64,3,,D64,type,false
+D64.0,D64.0,D64,4,,D640,disease,true
+D64.1,D64.1,D64,4,,D641,disease,true
+D64.2,D64.2,D64,4,,D642,disease,true
+D64.3,D64.3,D64,4,,D643,disease,true
+D64.4,D64.4,D64,4,,D644,disease,true
+D64.8,D64.8,D64,4,,D648,disease,true
+D64.9,D64.9,D64,4,,D649,disease,true
+D65,Đông máu nội mạch rải rác (hội chứng tiêu fibrin),D65-D69,3,,D65,type,true
+D66,Thiếu yếu tố VIII di truyền,D65-D69,3,,D66,type,true
+D67,Thiếu yếu tố IX di truyền,D65-D69,3,,D67,type,true
+D68,Các bất thường đông máu khác,D65-D69,3,,D68,type,false
+D68.0,D68.0,D68,4,,D680,disease,true
+D68.1,D68.1,D68,4,,D681,disease,true
+D68.2,D68.2,D68,4,,D682,disease,true
+D68.3,D68.3,D68,4,,D683,disease,true
+D68.4,D68.4,D68,4,,D684,disease,true
+D68.5,D68.5,D68,4,,D685,disease,true
+D68.6,D68.6,D68,4,,D686,disease,true
+D68.8,D68.8,D68,4,,D688,disease,true
+D68.9,D68.9,D68,4,,D689,disease,true
+D69,Ban xuất huyết và các tình trạng xuất huyết khác,D65-D69,3,,D69,type,false
+D69.0,D69.0,D69,4,,D690,disease,true
+D69.1,D69.1,D69,4,,D691,disease,true
+D69.2,D69.2,D69,4,,D692,disease,true
+D69.3,D69.3,D69,4,,D693,disease,true
+D69.4,D69.4,D69,4,,D694,disease,true
+D69.5,D69.5,D69,4,,D695,disease,true
+D69.6,D69.6,D69,4,,D696,disease,true
+D69.8,D69.8,D69,4,,D698,disease,true
+D69.9,D69.9,D69,4,,D699,disease,true
+D70,Tình trạng mất bạch cầu hạt,D70-D77,3,,D70,type,true
+D71,Rối loạn chức năng bạch cầu hạt trung tính,D70-D77,3,,D71,type,true
+D72,Các rối loạn khác của bạch cầu,D70-D77,3,,D72,type,false
+D72.0,D72.0,D72,4,,D720,disease,true
+D72.1,D72.1,D72,4,,D721,disease,true
+D72.8,D72.8,D72,4,,D728,disease,true
+D72.9,D72.9,D72,4,,D729,disease,true
+D73,Bệnh lý lách,D70-D77,3,,D73,type,false
+D73.0,D73.0,D73,4,,D730,disease,true
+D73.1,D73.1,D73,4,,D731,disease,true
+D73.2,D73.2,D73,4,,D732,disease,true
+D73.3,D73.3,D73,4,,D733,disease,true
+D73.4,D73.4,D73,4,,D734,disease,true
+D73.5,D73.5,D73,4,,D735,disease,true
+D73.8,D73.8,D73,4,,D738,disease,true
+D73.9,D73.9,D73,4,,D739,disease,true
+D74,Methemoglobin huyết,D70-D77,3,,D74,type,false
+D74.0,D74.0,D74,4,,D740,disease,true
+D74.8,D74.8,D74,4,,D748,disease,true
+D74.9,D74.9,D74,4,,D749,disease,true
+D75,Các bệnh máu và cơ quan tạo máu khác,D70-D77,3,,D75,type,false
+D75.0,D75.0,D75,4,,D750,disease,true
+D75.1,D75.1,D75,4,,D751,disease,true
+D75.8,D75.8,D75,4,,D758,disease,true
+D75.9,D75.9,D75,4,,D759,disease,true
+D76,Các bệnh của tổ chức lympho- liên võng và (tổ chức bào) mô bào- liên võng xác định khác,D70-D77,3,,D76,type,false
+D76.1,D76.1,D76,4,,D761,disease,true
+D76.2,D76.2,D76,4,,D762,disease,true
+D76.3,D76.3,D76,4,,D763,disease,true
+D77*,Rối loạn khác của máu và cơ quan tạo máu trong các bệnh phân loại nơi khác,D70-D77,3,,D77*,type,true
+D80,Thiếu hụt miễn dịch chủ yếu do bất thường kháng thể,D80-D89,3,,D80,type,false
+D80.0,D80.0,D80,4,,D800,disease,true
+D80.1,D80.1,D80,4,,D801,disease,true
+D80.2,D80.2,D80,4,,D802,disease,true
+D80.3,D80.3,D80,4,,D803,disease,true
+D80.4,D80.4,D80,4,,D804,disease,true
+D80.5,D80.5,D80,4,,D805,disease,true
+D80.6,D80.6,D80,4,,D806,disease,true
+D80.7,D80.7,D80,4,,D807,disease,true
+D80.8,D80.8,D80,4,,D808,disease,true
+D80.9,D80.9,D80,4,,D809,disease,true
+D81,Suy giảm miễn dịch kết hợp,D80-D89,3,,D81,type,false
+D81.0,D81.0,D81,4,,D810,disease,true
+D81.1,D81.1,D81,4,,D811,disease,true
+D81.2,D81.2,D81,4,,D812,disease,true
+D81.3,D81.3,D81,4,,D813,disease,true
+D81.4,D81.4,D81,4,,D814,disease,true
+D81.5,D81.5,D81,4,,D815,disease,true
+D81.6,D81.6,D81,4,,D816,disease,true
+D81.7,D81.7,D81,4,,D817,disease,true
+D81.8,D81.8,D81,4,,D818,disease,true
+D81.9,D81.9,D81,4,,D819,disease,true
+D82,Suy giảm miễn dịch liên quan đến các bất thường nặng khác,D80-D89,3,,D82,type,false
+D82.0,D82.0,D82,4,,D820,disease,true
+D82.1,D82.1,D82,4,,D821,disease,true
+D82.2,D82.2,D82,4,,D822,disease,true
+D82.3,D82.3,D82,4,,D823,disease,true
+D82.4,D82.4,D82,4,,D824,disease,true
+D82.8,D82.8,D82,4,,D828,disease,true
+D82.9,D82.9,D82,4,,D829,disease,true
+D83,Một số các biến thể khác của suy giảm miễn dịch,D80-D89,3,,D83,type,false
+D83.0,D83.0,D83,4,,D830,disease,true
+D83.1,D83.1,D83,4,,D831,disease,true
+D83.2,D83.2,D83,4,,D832,disease,true
+D83.8,D83.8,D83,4,,D838,disease,true
+D83.9,D83.9,D83,4,,D839,disease,true
+D84,Các suy giảm miễn dịch khác,D80-D89,3,,D84,type,false
+D84.0,D84.0,D84,4,,D840,disease,true
+D84.1,D84.1,D84,4,,D841,disease,true
+D84.8,D84.8,D84,4,,D848,disease,true
+D84.9,D84.9,D84,4,,D849,disease,true
+D86,Bệnh sarcoid (u hạt),D80-D89,3,,D86,type,false
+D86.0,D86.0,D86,4,,D860,disease,true
+D86.1,D86.1,D86,4,,D861,disease,true
+D86.2,D86.2,D86,4,,D862,disease,true
+D86.3,D86.3,D86,4,,D863,disease,true
+D86.8,D86.8,D86,4,,D868,disease,true
+D86.9,D86.9,D86,4,,D869,disease,true
+D89,"Rối loạn liên quan đến cơ chế miễn dịch, không phân loại nơi khác",D80-D89,3,,D89,type,false
+D89.0,D89.0,D89,4,,D890,disease,true
+D89.1,D89.1,D89,4,,D891,disease,true
+D89.2,D89.2,D89,4,,D892,disease,true
+D89.3,D89.3,D89,4,,D893,disease,true
+D89.8,D89.8,D89,4,,D898,disease,true
+D89.9,D89.9,D89,4,,D899,disease,true
+P70,Các rối loạn chuyển hoá carbon hydrat thoáng qua đặc hiệu với thai và trẻ sơ sinh,P70-P74,3,,P70,type,false
+P70.0,P70.0,P70,4,,P700,disease,true
+P70.1,P70.1,P70,4,,P701,disease,true
+P70.2,P70.2,P70,4,,P702,disease,true
+P70.3,P70.3,P70,4,,P703,disease,true
+P70.4,P70.4,P70,4,,P704,disease,true
+P70.8,P70.8,P70,4,,P708,disease,true
+P70.9,P70.9,P70,4,,P709,disease,true
+P71,Các rối loạn chuyển hoá calci và magie thoáng qua của sơ sinh,P70-P74,3,,P71,type,false
+P71.0,P71.0,P71,4,,P710,disease,true
+P71.1,P71.1,P71,4,,P711,disease,true
+P71.2,P71.2,P71,4,,P712,disease,true
+P71.3,P71.3,P71,4,,P713,disease,true
+P71.4,P71.4,P71,4,,P714,disease,true
+P71.8,P71.8,P71,4,,P718,disease,true
+P71.9,P71.9,P71,4,,P719,disease,true
+P72,Các rối loạn nội tiết tạm thời khác của trẻ sơ sinh,P70-P74,3,,P72,type,false
+P72.0,P72.0,P72,4,,P720,disease,true
+P72.1,P72.1,P72,4,,P721,disease,true
+P72.2,P72.2,P72,4,,P722,disease,true
+P72.8,P72.8,P72,4,,P728,disease,true
+P72.9,P72.9,P72,4,,P729,disease,true
+P74,Các rối loạn chuyển hoá và điện giải tạm thời khác của trẻ sơ sinh,P70-P74,3,,P74,type,false
+P74.0,P74.0,P74,4,,P740,disease,true
+P74.1,P74.1,P74,4,,P741,disease,true
+P74.2,P74.2,P74,4,,P742,disease,true
+P74.3,P74.3,P74,4,,P743,disease,true
+P74.4,P74.4,P74,4,,P744,disease,true
+P74.5,P74.5,P74,4,,P745,disease,true
+P74.8,P74.8,P74,4,,P748,disease,true
+P74.9,P74.9,P74,4,,P749,disease,true
+E16,Rối loạn khác của tuyến tuỵ nội tiết,E00-E07,3,,E16,type,false
+E16.0,E16.0,E16,4,,E160,disease,true
+E16.1,E16.1,E16,4,,E161,disease,true
+E16.2,E16.2,E16,4,,E162,disease,true
+E16.3,E16.3,E16,4,,E163,disease,true
+E16.4,E16.4,E16,4,,E164,disease,true
+E16.8,E16.8,E16,4,,E168,disease,true
+E16.9,E16.9,E16,4,,E169,disease,true
+E31,Rối loạn chức năng đa tuyến,E00-E07,3,,E31,type,false
+E31.0,E31.0,E31,4,,E310,disease,true
+E31.1,E31.1,E31,4,,E311,disease,true
+E31.8,E31.8,E31,4,,E318,disease,true
+E31.9,E31.9,E31,4,,E319,disease,true
+E34,Rối loạn nội tiết khác,E00-E07,3,,E34,type,false
+E34.0,E34.0,E34,4,,E340,disease,true
+E34.1,E34.1,E34,4,,E341,disease,true
+E34.2,E34.2,E34,4,,E342,disease,true
+E34.3,E34.3,E34,4,,E343,disease,true
+E34.4,E34.4,E34,4,,E344,disease,true
+E34.5,E34.5,E34,4,,E345,disease,true
+E34.8,E34.8,E34,4,,E348,disease,true
+E34.9,E34.9,E34,4,,E349,disease,true
+E00,Hội chứng thiếu iod bẩm sinh,E00-E07,3,,E00,type,false
+E00.0,E00.0,E00,4,,E000,disease,true
+E00.1,E00.1,E00,4,,E001,disease,true
+E00.2,E00.2,E00,4,,E002,disease,true
+E00.9,E00.9,E00,4,,E009,disease,true
+E01,Rối loạn tuyến giáp liên quan đến thiếu iod và bệnh phối hợp,E00-E07,3,,E01,type,false
+E01.0,E01.0,E01,4,,E010,disease,true
+E01.1,E01.1,E01,4,,E011,disease,true
+E01.2,E01.2,E01,4,,E012,disease,true
+E01.8,E01.8,E01,4,,E018,disease,true
+E02,Suy giáp cận lâm sàng do thiếu iod,E00-E07,3,,E02,type,true
+E03,Suy giáp khác,E00-E07,3,,E03,type,false
+E03.0,E03.0,E03,4,,E030,disease,true
+E03.1,E03.1,E03,4,,E031,disease,true
+E03.2,E03.2,E03,4,,E032,disease,true
+E03.3,E03.3,E03,4,,E033,disease,true
+E03.4,E03.4,E03,4,,E034,disease,true
+E03.5,E03.5,E03,4,,E035,disease,true
+E03.8,E03.8,E03,4,,E038,disease,true
+E03.9,E03.9,E03,4,,E039,disease,true
+E04,Bướu giáp không độc khác,E00-E07,3,,E04,type,false
+E04.0,E04.0,E04,4,,E040,disease,true
+E04.1,E04.1,E04,4,,E041,disease,true
+E04.2,E04.2,E04,4,,E042,disease,true
+E04.8,E04.8,E04,4,,E048,disease,true
+E04.9,E04.9,E04,4,,E049,disease,true
+E05,Nhiễm độc giáp (cường giáp),E00-E07,3,,E05,type,false
+E05.0,E05.0,E05,4,,E050,disease,true
+E05.1,E05.1,E05,4,,E051,disease,true
+E05.2,E05.2,E05,4,,E052,disease,true
+E05.3,E05.3,E05,4,,E053,disease,true
+E05.4,E05.4,E05,4,,E054,disease,true
+E05.5,E05.5,E05,4,,E055,disease,true
+E05.8,E05.8,E05,4,,E058,disease,true
+E05.9,E05.9,E05,4,,E059,disease,true
+E06,Viêm giáp,E00-E07,3,,E06,type,false
+E06.0,E06.0,E06,4,,E060,disease,true
+E06.1,E06.1,E06,4,,E061,disease,true
+E06.2,E06.2,E06,4,,E062,disease,true
+E06.3,E06.3,E06,4,,E063,disease,true
+E06.4,E06.4,E06,4,,E064,disease,true
+E06.5,E06.5,E06,4,,E065,disease,true
+E06.9,E06.9,E06,4,,E069,disease,true
+E07,Các rối loạn khác của tuyến giáp,E00-E07,3,,E07,type,false
+E07.0,E07.0,E07,4,,E070,disease,true
+E07.1,E07.1,E07,4,,E071,disease,true
+E07.8,E07.8,E07,4,,E078,disease,true
+E07.9,E07.9,E07,4,,E079,disease,true
+E10,Bệnh đái tháo đường type 1,E10-E14,3,,E10,type,false
+E10.0,E10.0,E10,4,,E100,disease,true
+E10.1,E10.1,E10,4,,E101,disease,true
+E10.2†,E10.2†,E10,4,,E102,disease,true
+E10.3†,E10.3†,E10,4,,E103,disease,true
+E10.4†,E10.4†,E10,4,,E104,disease,true
+E10.5,E10.5,E10,4,,E105,disease,true
+E10.6,E10.6,E10,4,,E106,disease,true
+E10.7,E10.7,E10,4,,E107,disease,true
+E10.8,E10.8,E10,4,,E108,disease,true
+E10.9,E10.9,E10,4,,E109,disease,true
+E11,Bệnh đái tháo đường type 2,E10-E14,3,,E11,type,false
+E11.0,E11.0,E11,4,,E110,disease,true
+E11.1,E11.1,E11,4,,E111,disease,true
+E11.2†,E11.2†,E11,4,,E112,disease,true
+E11.3†,E11.3†,E11,4,,E113,disease,true
+E11.4†,E11.4†,E11,4,,E114,disease,true
+E11.5,E11.5,E11,4,,E115,disease,true
+E11.6,E11.6,E11,4,,E116,disease,true
+E11.7,E11.7,E11,4,,E117,disease,true
+E11.8,E11.8,E11,4,,E118,disease,true
+E11.9,E11.9,E11,4,,E119,disease,true
+E12,Bệnh đái tháo đường liên quan đến suy dinh dưỡng,E10-E14,3,,E12,type,false
+E12.0,E12.0,E12,4,,E120,disease,true
+E12.1,E12.1,E12,4,,E121,disease,true
+E12.2†,E12.2†,E12,4,,E122,disease,true
+E12.3†,E12.3†,E12,4,,E123,disease,true
+E12.4†,E12.4†,E12,4,,E124,disease,true
+E12.5,E12.5,E12,4,,E125,disease,true
+E12.6,E12.6,E12,4,,E126,disease,true
+E12.7,E12.7,E12,4,,E127,disease,true
+E12.8,E12.8,E12,4,,E128,disease,true
+E12.9,E12.9,E12,4,,E129,disease,true
+E13,Bệnh đái tháo đường xác định khác,E10-E14,3,,E13,type,false
+E13.0,E13.0,E13,4,,E130,disease,true
+E13.1,E13.1,E13,4,,E131,disease,true
+E13.2†,E13.2†,E13,4,,E132,disease,true
+E13.3†,E13.3†,E13,4,,E133,disease,true
+E13.4†,E13.4†,E13,4,,E134,disease,true
+E13.5,E13.5,E13,4,,E135,disease,true
+E13.6,E13.6,E13,4,,E136,disease,true
+E13.7,E13.7,E13,4,,E137,disease,true
+E13.8,E13.8,E13,4,,E138,disease,true
+E13.9,E13.9,E13,4,,E139,disease,true
+E14,Các thể loại đái tháo đường không xác định,E10-E14,3,,E14,type,false
+E14.0,E14.0,E14,4,,E140,disease,true
+E14.1,E14.1,E14,4,,E141,disease,true
+E14.2†,E14.2†,E14,4,,E142,disease,true
+E14.3†,E14.3†,E14,4,,E143,disease,true
+E14.4†,E14.4†,E14,4,,E144,disease,true
+E14.5,E14.5,E14,4,,E145,disease,true
+E14.6,E14.6,E14,4,,E146,disease,true
+E14.7,E14.7,E14,4,,E147,disease,true
+E14.8,E14.8,E14,4,,E148,disease,true
+E14.9,E14.9,E14,4,,E149,disease,true
+E15,Hôn mê hạ đường huyết không do đái tháo đường,E15-E16,3,,E15,type,true
+N62,Phì đại vú,E20-E35,3,,N62,type,true
+E20,Suy tuyến cận giáp,E20-E35,3,,E20,type,false
+E20.0,E20.0,E20,4,,E200,disease,true
+E20.1,E20.1,E20,4,,E201,disease,true
+E20.8,E20.8,E20,4,,E208,disease,true
+E20.9,E20.9,E20,4,,E209,disease,true
+E21,Cường cận giáp và các rối loạn khác của tuyến cận giáp,E20-E35,3,,E21,type,false
+E21.0,E21.0,E21,4,,E210,disease,true
+E21.1,E21.1,E21,4,,E211,disease,true
+E21.2,E21.2,E21,4,,E212,disease,true
+E21.3,E21.3,E21,4,,E213,disease,true
+E21.4,E21.4,E21,4,,E214,disease,true
+E21.5,E21.5,E21,4,,E215,disease,true
+E22,Cường tuyến yên,E20-E35,3,,E22,type,false
+E22.0,E22.0,E22,4,,E220,disease,true
+E22.1,E22.1,E22,4,,E221,disease,true
+E22.2,E22.2,E22,4,,E222,disease,true
+E22.8,E22.8,E22,4,,E228,disease,true
+E22.9,E22.9,E22,4,,E229,disease,true
+E23,Suy chức năng và rối loạn khác của tuyến yên,E20-E35,3,,E23,type,false
+E23.0,E23.0,E23,4,,E230,disease,true
+E23.1,E23.1,E23,4,,E231,disease,true
+E23.2,E23.2,E23,4,,E232,disease,true
+E23.3,E23.3,E23,4,,E233,disease,true
+E23.6,E23.6,E23,4,,E236,disease,true
+E23.7,E23.7,E23,4,,E237,disease,true
+E24,Hội chứng Cushing,E20-E35,3,,E24,type,false
+E24.0,E24.0,E24,4,,E240,disease,true
+E24.1,E24.1,E24,4,,E241,disease,true
+E24.2,E24.2,E24,4,,E242,disease,true
+E24.3,E24.3,E24,4,,E243,disease,true
+E24.4,E24.4,E24,4,,E244,disease,true
+E24.8,E24.8,E24,4,,E248,disease,true
+E24.9,E24.9,E24,4,,E249,disease,true
+E25,Rối loạn thượng thận sinh dục,E20-E35,3,,E25,type,false
+E25.0,E25.0,E25,4,,E250,disease,true
+E25.8,E25.8,E25,4,,E258,disease,true
+E25.9,E25.9,E25,4,,E259,disease,true
+E26,Cường aldosterone,E20-E35,3,,E26,type,false
+E26.0,E26.0,E26,4,,E260,disease,true
+E26.1,E26.1,E26,4,,E261,disease,true
+E26.8,E26.8,E26,4,,E268,disease,true
+E26.9,E26.9,E26,4,,E269,disease,true
+E27,Các rối loạn khác của tuyến thượng thận,E20-E35,3,,E27,type,false
+E27.0,E27.0,E27,4,,E270,disease,true
+E27.1,E27.1,E27,4,,E271,disease,true
+E27.2,E27.2,E27,4,,E272,disease,true
+E27.3,E27.3,E27,4,,E273,disease,true
+E27.4,E27.4,E27,4,,E274,disease,true
+E27.5,E27.5,E27,4,,E275,disease,true
+E27.8,E27.8,E27,4,,E278,disease,true
+E27.9,E27.9,E27,4,,E279,disease,true
+E28,Rối loạn chức năng buồng trứng,E20-E35,3,,E28,type,false
+E28.0,E28.0,E28,4,,E280,disease,true
+E28.1,E28.1,E28,4,,E281,disease,true
+E28.2,E28.2,E28,4,,E282,disease,true
+E28.3,E28.3,E28,4,,E283,disease,true
+E28.8,E28.8,E28,4,,E288,disease,true
+E28.9,E28.9,E28,4,,E289,disease,true
+E29,Rối loạn chức năng tinh hoàn,E20-E35,3,,E29,type,false
+E29.0,E29.0,E29,4,,E290,disease,true
+E29.1,E29.1,E29,4,,E291,disease,true
+E29.8,E29.8,E29,4,,E298,disease,true
+E29.9,E29.9,E29,4,,E299,disease,true
+E30,"Rối loạn lúc dậy thì, không phân loại nơi khác",E20-E35,3,,E30,type,false
+E30.0,E30.0,E30,4,,E300,disease,true
+E30.1,E30.1,E30,4,,E301,disease,true
+E30.8,E30.8,E30,4,,E308,disease,true
+E30.9,E30.9,E30,4,,E309,disease,true
+E32,Bệnh tuyến ức,E20-E35,3,,E32,type,false
+E32.0,E32.0,E32,4,,E320,disease,true
+E32.1,E32.1,E32,4,,E321,disease,true
+E32.8,E32.8,E32,4,,E328,disease,true
+E32.9,E32.9,E32,4,,E329,disease,true
+E35*,Rối loạn tuyến nội tiết trong các bệnh phân loại nơi khác,E20-E35,3,,E35*,type,false
+E35.0*,E35.0*,E35*,4,,E350,disease,true
+E35.1*,E35.1*,E35*,4,,E351,disease,true
+E35.8*,E35.8*,E35*,4,,E358,disease,true
+K90,Ruột kém hấp thu,E40-E46,3,,K90,type,false
+K90.0,K90.0,K90,4,,K900,disease,true
+K90.1,K90.1,K90,4,,K901,disease,true
+K90.2,K90.2,K90,4,,K902,disease,true
+K90.3,K90.3,K90,4,,K903,disease,true
+K90.4,K90.4,K90,4,,K904,disease,true
+K90.8,K90.8,K90,4,,K908,disease,true
+K90.9,K90.9,K90,4,,K909,disease,true
+E40,Kwashiorkor,E40-E46,3,,E40,type,true
+E41,Suy dinh dưỡng thể marasmus,E40-E46,3,,E41,type,true
+E42,Thể hỗn hợp Kwashiorkor- marasmus,E40-E46,3,,E42,type,true
+E43,"Suy dinh dưỡng nặng do thiếu protein- năng lượng, không đặc hiệu",E40-E46,3,,E43,type,true
+E44,Suy dinh dưỡng vừa và nhẹ do thiếu protein- năng lượng,E40-E46,3,,E44,type,false
+E44.0,E44.0,E44,4,,E440,disease,true
+E44.1,E44.1,E44,4,,E441,disease,true
+E45,Chậm phát triển sau suy dinh dưỡng do thiếu protein năng lượng,E40-E46,3,,E45,type,true
+E46,Suy dinh dưỡng do thiếu protein năng lượng không xác định,E40-E46,3,,E46,type,true
+E50,Thiếu vitamin A,E50-E64,3,,E50,type,false
+E50.0,E50.0,E50,4,,E500,disease,true
+E50.1,E50.1,E50,4,,E501,disease,true
+E50.2,E50.2,E50,4,,E502,disease,true
+E50.3,E50.3,E50,4,,E503,disease,true
+E50.4,E50.4,E50,4,,E504,disease,true
+E50.5,E50.5,E50,4,,E505,disease,true
+E50.6,E50.6,E50,4,,E506,disease,true
+E50.7,E50.7,E50,4,,E507,disease,true
+E50.8,E50.8,E50,4,,E508,disease,true
+E50.9,E50.9,E50,4,,E509,disease,true
+E51,Thiếu thiamine,E50-E64,3,,E51,type,false
+E51.1,E51.1,E51,4,,E511,disease,true
+E51.2,E51.2,E51,4,,E512,disease,true
+E51.8,E51.8,E51,4,,E518,disease,true
+E51.9,E51.9,E51,4,,E519,disease,true
+E52,Thiếu niacin,E50-E64,3,,E52,type,true
+E53,Thiếu các vitamin nhóm B khác,E50-E64,3,,E53,type,false
+E53.0,E53.0,E53,4,,E530,disease,true
+E53.1,E53.1,E53,4,,E531,disease,true
+E53.8,E53.8,E53,4,,E538,disease,true
+E53.9,E53.9,E53,4,,E539,disease,true
+E54,Thiếu acid ascorbic,E50-E64,3,,E54,type,true
+E55,Thiếu vitamin D,E50-E64,3,,E55,type,false
+E55.0,E55.0,E55,4,,E550,disease,true
+E55.9,E55.9,E55,4,,E559,disease,true
+E56,Thiếu Vitamin khác,E50-E64,3,,E56,type,false
+E56.0,E56.0,E56,4,,E560,disease,true
+E56.1,E56.1,E56,4,,E561,disease,true
+E56.8,E56.8,E56,4,,E568,disease,true
+E56.9,E56.9,E56,4,,E569,disease,true
+E58,Thiếu Calci do chế độ ăn,E50-E64,3,,E58,type,true
+E59,Thiếu Selen do chế độ ăn,E50-E64,3,,E59,type,true
+E60,Thiếu kẽm do chế độ ăn,E50-E64,3,,E60,type,true
+E61,Thiếu các yếu tố dinh dưỡng khác,E50-E64,3,,E61,type,false
+E61.0,E61.0,E61,4,,E610,disease,true
+E61.1,E61.1,E61,4,,E611,disease,true
+E61.2,E61.2,E61,4,,E612,disease,true
+E61.3,E61.3,E61,4,,E613,disease,true
+E61.4,E61.4,E61,4,,E614,disease,true
+E61.5,E61.5,E61,4,,E615,disease,true
+E61.6,E61.6,E61,4,,E616,disease,true
+E61.7,E61.7,E61,4,,E617,disease,true
+E61.8,E61.8,E61,4,,E618,disease,true
+E61.9,E61.9,E61,4,,E619,disease,true
+E63,Thiếu dinh dưỡng khác,E50-E64,3,,E63,type,false
+E63.0,E63.0,E63,4,,E630,disease,true
+E63.1,E63.1,E63,4,,E631,disease,true
+E63.8,E63.8,E63,4,,E638,disease,true
+E63.9,E63.9,E63,4,,E639,disease,true
+E64,Di chứng của suy dinh dưỡng và bệnh thiếu dinh dưỡng khác,E50-E64,3,,E64,type,false
+E64.0,E64.0,E64,4,,E640,disease,true
+E64.1,E64.1,E64,4,,E641,disease,true
+E64.2,E64.2,E64,4,,E642,disease,true
+E64.3,E64.3,E64,4,,E643,disease,true
+E64.8,E64.8,E64,4,,E648,disease,true
+E64.9,E64.9,E64,4,,E649,disease,true
+E65,Béo phì khu trú,E65-E68,3,,E65,type,true
+E66,Bệnh thừa cân béo phì,E65-E68,3,,E66,type,false
+E66.0,E66.0,E66,4,,E660,disease,true
+E66.1,E66.1,E66,4,,E661,disease,true
+E66.2,E66.2,E66,4,,E662,disease,true
+E66.8,E66.8,E66,4,,E668,disease,true
+E66.9,E66.9,E66,4,,E669,disease,true
+E67,Tình trạng thừa dinh dưỡng khác,E65-E68,3,,E67,type,false
+E67.0,E67.0,E67,4,,E670,disease,true
+E67.1,E67.1,E67,4,,E671,disease,true
+E67.2,E67.2,E67,4,,E672,disease,true
+E67.3,E67.3,E67,4,,E673,disease,true
+E67.8,E67.8,E67,4,,E678,disease,true
+E68,Di chứng của thừa dinh dưỡng,E65-E68,3,,E68,type,true
+E70,Rối loạn chuyển hoá acid amin thơm,E70-E90,3,,E70,type,false
+E70.0,E70.0,E70,4,,E700,disease,true
+E70.1,E70.1,E70,4,,E701,disease,true
+E70.2,E70.2,E70,4,,E702,disease,true
+E70.3,E70.3,E70,4,,E703,disease,true
+E70.8,E70.8,E70,4,,E708,disease,true
+E70.9,E70.9,E70,4,,E709,disease,true
+E71,Rối loạn chuyển hoá acid amin chuỗi nhánh và rối loạn chuyển hoá acid béo,E70-E90,3,,E71,type,false
+E71.0,E71.0,E71,4,,E710,disease,true
+E71.1,E71.1,E71,4,,E711,disease,true
+E71.2,E71.2,E71,4,,E712,disease,true
+E71.3,E71.3,E71,4,,E713,disease,true
+E72,Các rối loạn khác của chuyển hoá acid amin,E70-E90,3,,E72,type,false
+E72.0,E72.0,E72,4,,E720,disease,true
+E72.1,E72.1,E72,4,,E721,disease,true
+E72.2,E72.2,E72,4,,E722,disease,true
+E72.3,E72.3,E72,4,,E723,disease,true
+E72.4,E72.4,E72,4,,E724,disease,true
+E72.5,E72.5,E72,4,,E725,disease,true
+E72.8,E72.8,E72,4,,E728,disease,true
+E72.9,E72.9,E72,4,,E729,disease,true
+E73,Không dung nạp lactose,E70-E90,3,,E73,type,false
+E73.0,E73.0,E73,4,,E730,disease,true
+E73.1,E73.1,E73,4,,E731,disease,true
+E73.8,E73.8,E73,4,,E738,disease,true
+E73.9,E73.9,E73,4,,E739,disease,true
+E74,Rối loạn khác của chuyển hoá carbohydrat,E70-E90,3,,E74,type,false
+E74.0,E74.0,E74,4,,E740,disease,true
+E74.1,E74.1,E74,4,,E741,disease,true
+E74.2,E74.2,E74,4,,E742,disease,true
+E74.3,E74.3,E74,4,,E743,disease,true
+E74.4,E74.4,E74,4,,E744,disease,true
+E74.8,E74.8,E74,4,,E748,disease,true
+E74.9,E74.9,E74,4,,E749,disease,true
+E75,Rối loạn chuyển hoá sphingolipid và rối loạn tích luỹ lipid,E70-E90,3,,E75,type,false
+E75.0,E75.0,E75,4,,E750,disease,true
+E75.1,E75.1,E75,4,,E751,disease,true
+E75.2,E75.2,E75,4,,E752,disease,true
+E75.3,E75.3,E75,4,,E753,disease,true
+E75.4,E75.4,E75,4,,E754,disease,true
+E75.5,E75.5,E75,4,,E755,disease,true
+E75.6,E75.6,E75,4,,E756,disease,true
+E76,Rối loạn chuyển hoá glycosaminoglycan,E70-E90,3,,E76,type,false
+E76.0,E76.0,E76,4,,E760,disease,true
+E76.1,E76.1,E76,4,,E761,disease,true
+E76.2,E76.2,E76,4,,E762,disease,true
+E76.3,E76.3,E76,4,,E763,disease,true
+E76.8,E76.8,E76,4,,E768,disease,true
+E76.9,E76.9,E76,4,,E769,disease,true
+E77,Rối loạn chuyển hoá glycoprotein,E70-E90,3,,E77,type,false
+E77.0,E77.0,E77,4,,E770,disease,true
+E77.1,E77.1,E77,4,,E771,disease,true
+E77.8,E77.8,E77,4,,E778,disease,true
+E77.9,E77.9,E77,4,,E779,disease,true
+E78,Rối loạn chuyển hoá lipoprotein và tình trạng tăng lipid máu khác,E70-E90,3,,E78,type,false
+E78.0,E78.0,E78,4,,E780,disease,true
+E78.1,E78.1,E78,4,,E781,disease,true
+E78.2,E78.2,E78,4,,E782,disease,true
+E78.3,E78.3,E78,4,,E783,disease,true
+E78.4,E78.4,E78,4,,E784,disease,true
+E78.5,E78.5,E78,4,,E785,disease,true
+E78.6,E78.6,E78,4,,E786,disease,true
+E78.8,E78.8,E78,4,,E788,disease,true
+E78.9,E78.9,E78,4,,E789,disease,true
+E79,Rối loạn chuyển hoá purine và pyrimidine,E70-E90,3,,E79,type,false
+E79.0,E79.0,E79,4,,E790,disease,true
+E79.1,E79.1,E79,4,,E791,disease,true
+E79.8,E79.8,E79,4,,E798,disease,true
+E79.9,E79.9,E79,4,,E799,disease,true
+E80,Rối loạn chuyển hoá porphyrin và bilirubin,E70-E90,3,,E80,type,false
+E80.0,E80.0,E80,4,,E800,disease,true
+E80.1,E80.1,E80,4,,E801,disease,true
+E80.2,E80.2,E80,4,,E802,disease,true
+E80.3,E80.3,E80,4,,E803,disease,true
+E80.4,E80.4,E80,4,,E804,disease,true
+E80.5,E80.5,E80,4,,E805,disease,true
+E80.6,E80.6,E80,4,,E806,disease,true
+E80.7,E80.7,E80,4,,E807,disease,true
+E83,Rối loạn chuyển hoá chất khoáng,E70-E90,3,,E83,type,false
+E83.0,E83.0,E83,4,,E830,disease,true
+E83.1,E83.1,E83,4,,E831,disease,true
+E83.2,E83.2,E83,4,,E832,disease,true
+E83.3,E83.3,E83,4,,E833,disease,true
+E83.4,E83.4,E83,4,,E834,disease,true
+E83.5,E83.5,E83,4,,E835,disease,true
+E83.8,E83.8,E83,4,,E838,disease,true
+E83.9,E83.9,E83,4,,E839,disease,true
+E84,Xơ nang,E70-E90,3,,E84,type,false
+E84.0,E84.0,E84,4,,E840,disease,true
+E84.1,E84.1,E84,4,,E841,disease,true
+E84.8,E84.8,E84,4,,E848,disease,true
+E84.9,E84.9,E84,4,,E849,disease,true
+E85,Thoái hoá dạng bột,E70-E90,3,,E85,type,false
+E85.0,E85.0,E85,4,,E850,disease,true
+E85.1,E85.1,E85,4,,E851,disease,true
+E85.2,E85.2,E85,4,,E852,disease,true
+E85.3,E85.3,E85,4,,E853,disease,true
+E85.4,E85.4,E85,4,,E854,disease,true
+E85.8,E85.8,E85,4,,E858,disease,true
+E85.9,E85.9,E85,4,,E859,disease,true
+E86,Giảm thể tích,E70-E90,3,,E86,type,true
+E87,"Rối loạn cân bằng nước, điện giải và thăng bằng kiềm toan",E70-E90,3,,E87,type,false
+E87.0,E87.0,E87,4,,E870,disease,true
+E87.1,E87.1,E87,4,,E871,disease,true
+E87.2,E87.2,E87,4,,E872,disease,true
+E87.3,E87.3,E87,4,,E873,disease,true
+E87.4,E87.4,E87,4,,E874,disease,true
+E87.5,E87.5,E87,4,,E875,disease,true
+E87.6,E87.6,E87,4,,E876,disease,true
+E87.7,E87.7,E87,4,,E877,disease,true
+E87.8,E87.8,E87,4,,E878,disease,true
+E88,Rối loạn chuyển hoá khác,E70-E90,3,,E88,type,false
+E88.0,E88.0,E88,4,,E880,disease,true
+E88.1,E88.1,E88,4,,E881,disease,true
+E88.2,E88.2,E88,4,,E882,disease,true
+E88.3,E88.3,E88,4,,E883,disease,true
+E88.8,E88.8,E88,4,,E888,disease,true
+E88.9,E88.9,E88,4,,E889,disease,true
+E89,"Rối loạn nội tiết và chuyển hoá sau điều trị, không phân loại nơi khác",E70-E90,3,,E89,type,false
+E89.0,E89.0,E89,4,,E890,disease,true
+E89.1,E89.1,E89,4,,E891,disease,true
+E89.2,E89.2,E89,4,,E892,disease,true
+E89.3,E89.3,E89,4,,E893,disease,true
+E89.4,E89.4,E89,4,,E894,disease,true
+E89.5,E89.5,E89,4,,E895,disease,true
+E89.6,E89.6,E89,4,,E896,disease,true
+E89.8,E89.8,E89,4,,E898,disease,true
+E89.9,E89.9,E89,4,,E899,disease,true
+E90*,Rối loạn chuyển hoá và dinh dưỡng trong các bệnh phân loại nơi khác,E70-E90,3,,E90*,type,true
+F03,Sa sút trí tuệ không biệt định,F00-F09,3,,F03,type,true
+F00*,Sa sút trí tuệ trong bệnh Alzheimer (G30.-†),F00-F09,3,,F00*,type,false
+F00.0*,F00.0*,F00*,4,,F000,disease,true
+F00.1*,F00.1*,F00*,4,,F001,disease,true
+F00.2*,F00.2*,F00*,4,,F002,disease,true
+F00.9*,F00.9*,F00*,4,,F009,disease,true
+F01,Sa sút trí tuệ do nguyên nhân mạch,F00-F09,3,,F01,type,false
+F01.0,F01.0,F01,4,,F010,disease,true
+F01.1,F01.1,F01,4,,F011,disease,true
+F01.2,F01.2,F01,4,,F012,disease,true
+F01.3,F01.3,F01,4,,F013,disease,true
+F01.8,F01.8,F01,4,,F018,disease,true
+F01.9,F01.9,F01,4,,F019,disease,true
+F02*,Sa sút trí tuệ trong các bệnh phân loại nơi khác,F00-F09,3,,F02*,type,false
+F02.0*,F02.0*,F02*,4,,F020,disease,true
+F02.1*,F02.1*,F02*,4,,F021,disease,true
+F02.2*,F02.2*,F02*,4,,F022,disease,true
+F02.3*,F02.3*,F02*,4,,F023,disease,true
+F02.4*,F02.4*,F02*,4,,F024,disease,true
+F02.8*,F02.8*,F02*,4,,F028,disease,true
+F04,Hội chứng quên thực tổn không do rượu và chất tác động tâm thần khác,F00-F09,3,,F04,type,true
+F05,Sảng không do rượu và chất tác động tâm thần khác,F00-F09,3,,F05,type,false
+F05.0,F05.0,F05,4,,F050,disease,true
+F05.1,F05.1,F05,4,,F051,disease,true
+F05.8,F05.8,F05,4,,F058,disease,true
+F05.9,F05.9,F05,4,,F059,disease,true
+F06,Rối loạn tâm thần khác do tổn thương và rối loạn chức năng não và do bệnh cơ thể,F00-F09,3,,F06,type,false
+F06.0,F06.0,F06,4,,F060,disease,true
+F06.1,F06.1,F06,4,,F061,disease,true
+F06.2,F06.2,F06,4,,F062,disease,true
+F06.3,F06.3,F06,4,,F063,disease,true
+F06.4,F06.4,F06,4,,F064,disease,true
+F06.5,F06.5,F06,4,,F065,disease,true
+F06.6,F06.6,F06,4,,F066,disease,true
+F06.7,F06.7,F06,4,,F067,disease,true
+F06.8,F06.8,F06,4,,F068,disease,true
+F06.9,F06.9,F06,4,,F069,disease,true
+F07,"Các rối loạn nhân cách và hành vi do bệnh lý não, tổn thương não và rối loạn chức năng não",F00-F09,3,,F07,type,false
+F07.0,F07.0,F07,4,,F070,disease,true
+F07.1,F07.1,F07,4,,F071,disease,true
+F07.2,F07.2,F07,4,,F072,disease,true
+F07.8,F07.8,F07,4,,F078,disease,true
+F07.9,F07.9,F07,4,,F079,disease,true
+F09,Rối loạn tâm thần thực tổn hoặc triệu chứng không biệt định,F00-F09,3,,F09,type,true
+F55,Lạm dụng các chất không gây nghiện,F10-F19,3,,F55,type,true
+F19,Rối loạn tâm thần và hành vi do sử dụng nhiều loại ma tuý và chất tác động tâm thần khác,F10-F19,3,,F19,type,false
+F19.0,F19.0,F19,4,,F190,disease,true
+F19.1,F19.1,F19,4,,F191,disease,true
+F19.2,F19.2,F19,4,,F192,disease,true
+F19.3,F19.3,F19,4,,F193,disease,true
+F19.4,F19.4,F19,4,,F194,disease,true
+F19.5,F19.5,F19,4,,F195,disease,true
+F19.6,F19.6,F19,4,,F196,disease,true
+F19.7,F19.7,F19,4,,F197,disease,true
+F19.8,F19.8,F19,4,,F198,disease,true
+F19.9,F19.9,F19,4,,F199,disease,true
+F10,Rối loạn tâm thần và hành vi do sử dụng rượu,F10-F19,3,,F10,type,false
+F10.0,F10.0,F10,4,,F100,disease,true
+F10.1,F10.1,F10,4,,F101,disease,true
+F10.2,F10.2,F10,4,,F102,disease,true
+F10.3,F10.3,F10,4,,F103,disease,true
+F10.4,F10.4,F10,4,,F104,disease,true
+F10.5,F10.5,F10,4,,F105,disease,true
+F10.6,F10.6,F10,4,,F106,disease,true
+F10.7,F10.7,F10,4,,F107,disease,true
+F10.8,F10.8,F10,4,,F108,disease,true
+F10.9,F10.9,F10,4,,F109,disease,true
+F11,Rối loạn tâm thần và hành vi do sử dụng các dạng thuốc phiện,F10-F19,3,,F11,type,false
+F11.0,F11.0,F11,4,,F110,disease,true
+F11.1,F11.1,F11,4,,F111,disease,true
+F11.2,F11.2,F11,4,,F112,disease,true
+F11.3,F11.3,F11,4,,F113,disease,true
+F11.4,F11.4,F11,4,,F114,disease,true
+F11.5,F11.5,F11,4,,F115,disease,true
+F11.6,F11.6,F11,4,,F116,disease,true
+F11.7,F11.7,F11,4,,F117,disease,true
+F11.8,F11.8,F11,4,,F118,disease,true
+F11.9,F11.9,F11,4,,F119,disease,true
+F12,Rối loạn tâm thần và hành vi do sử dụng cần sa,F10-F19,3,,F12,type,false
+F12.0,F12.0,F12,4,,F120,disease,true
+F12.1,F12.1,F12,4,,F121,disease,true
+F12.2,F12.2,F12,4,,F122,disease,true
+F12.3,F12.3,F12,4,,F123,disease,true
+F12.4,F12.4,F12,4,,F124,disease,true
+F12.5,F12.5,F12,4,,F125,disease,true
+F12.6,F12.6,F12,4,,F126,disease,true
+F12.7,F12.7,F12,4,,F127,disease,true
+F12.8,F12.8,F12,4,,F128,disease,true
+F12.9,F12.9,F12,4,,F129,disease,true
+F13,Rối loạn tâm thần và hành vi do sử dụng các chất an dịu hoặc các thuốc ngủ,F10-F19,3,,F13,type,false
+F13.0,F13.0,F13,4,,F130,disease,true
+F13.1,F13.1,F13,4,,F131,disease,true
+F13.2,F13.2,F13,4,,F132,disease,true
+F13.3,F13.3,F13,4,,F133,disease,true
+F13.4,F13.4,F13,4,,F134,disease,true
+F13.5,F13.5,F13,4,,F135,disease,true
+F13.6,F13.6,F13,4,,F136,disease,true
+F13.7,F13.7,F13,4,,F137,disease,true
+F13.8,F13.8,F13,4,,F138,disease,true
+F13.9,F13.9,F13,4,,F139,disease,true
+F14,Rối loạn tâm thần và hành vi do sử dụng cocain,F10-F19,3,,F14,type,false
+F14.0,F14.0,F14,4,,F140,disease,true
+F14.1,F14.1,F14,4,,F141,disease,true
+F14.2,F14.2,F14,4,,F142,disease,true
+F14.3,F14.3,F14,4,,F143,disease,true
+F14.4,F14.4,F14,4,,F144,disease,true
+F14.5,F14.5,F14,4,,F145,disease,true
+F14.6,F14.6,F14,4,,F146,disease,true
+F14.7,F14.7,F14,4,,F147,disease,true
+F14.8,F14.8,F14,4,,F148,disease,true
+F14.9,F14.9,F14,4,,F149,disease,true
+F15,"Rối loạn tâm thần và hành vi do sử dụng chất kích thích khác, bao gồm cả caffein",F10-F19,3,,F15,type,false
+F15.0,F15.0,F15,4,,F150,disease,true
+F15.1,F15.1,F15,4,,F151,disease,true
+F15.2,F15.2,F15,4,,F152,disease,true
+F15.3,F15.3,F15,4,,F153,disease,true
+F15.4,F15.4,F15,4,,F154,disease,true
+F15.5,F15.5,F15,4,,F155,disease,true
+F15.6,F15.6,F15,4,,F156,disease,true
+F15.7,F15.7,F15,4,,F157,disease,true
+F15.8,F15.8,F15,4,,F158,disease,true
+F15.9,F15.9,F15,4,,F159,disease,true
+F16,Rối loạn tâm thần và hành vi do sử dụng các chất gây ảo giác,F10-F19,3,,F16,type,false
+F16.0,F16.0,F16,4,,F160,disease,true
+F16.1,F16.1,F16,4,,F161,disease,true
+F16.2,F16.2,F16,4,,F162,disease,true
+F16.3,F16.3,F16,4,,F163,disease,true
+F16.4,F16.4,F16,4,,F164,disease,true
+F16.5,F16.5,F16,4,,F165,disease,true
+F16.6,F16.6,F16,4,,F166,disease,true
+F16.7,F16.7,F16,4,,F167,disease,true
+F16.8,F16.8,F16,4,,F168,disease,true
+F16.9,F16.9,F16,4,,F169,disease,true
+F17,Rối loạn tâm thần và hành vi do sử dụng thuốc lá,F10-F19,3,,F17,type,false
+F17.0,F17.0,F17,4,,F170,disease,true
+F17.1,F17.1,F17,4,,F171,disease,true
+F17.2,F17.2,F17,4,,F172,disease,true
+F17.3,F17.3,F17,4,,F173,disease,true
+F17.4,F17.4,F17,4,,F174,disease,true
+F17.5,F17.5,F17,4,,F175,disease,true
+F17.6,F17.6,F17,4,,F176,disease,true
+F17.7,F17.7,F17,4,,F177,disease,true
+F17.8,F17.8,F17,4,,F178,disease,true
+F17.9,F17.9,F17,4,,F179,disease,true
+F18,Rối loạn tâm thần và hành vi do sử dụng dung môi dễ bay hơi,F10-F19,3,,F18,type,false
+F18.0,F18.0,F18,4,,F180,disease,true
+F18.1,F18.1,F18,4,,F181,disease,true
+F18.2,F18.2,F18,4,,F182,disease,true
+F18.3,F18.3,F18,4,,F183,disease,true
+F18.4,F18.4,F18,4,,F184,disease,true
+F18.5,F18.5,F18,4,,F185,disease,true
+F18.6,F18.6,F18,4,,F186,disease,true
+F18.7,F18.7,F18,4,,F187,disease,true
+F18.8,F18.8,F18,4,,F188,disease,true
+F18.9,F18.9,F18,4,,F189,disease,true
+F20,Tâm thần phân liệt,F20-F29,3,,F20,type,false
+F20.0,F20.0,F20,4,,F200,disease,true
+F20.1,F20.1,F20,4,,F201,disease,true
+F20.2,F20.2,F20,4,,F202,disease,true
+F20.3,F20.3,F20,4,,F203,disease,true
+F20.4,F20.4,F20,4,,F204,disease,true
+F20.5,F20.5,F20,4,,F205,disease,true
+F20.6,F20.6,F20,4,,F206,disease,true
+F20.8,F20.8,F20,4,,F208,disease,true
+F20.9,F20.9,F20,4,,F209,disease,true
+F21,Rối loạn loại phân liệt,F20-F29,3,,F21,type,true
+F22,Rối loạn hoang tưởng dai dẳng,F20-F29,3,,F22,type,false
+F22.0,F22.0,F22,4,,F220,disease,true
+F22.8,F22.8,F22,4,,F228,disease,true
+F22.9,F22.9,F22,4,,F229,disease,true
+F23,Rối loạn loạn thần cấp và nhất thời,F20-F29,3,,F23,type,false
+F23.0,F23.0,F23,4,,F230,disease,true
+F23.1,F23.1,F23,4,,F231,disease,true
+F23.2,F23.2,F23,4,,F232,disease,true
+F23.3,F23.3,F23,4,,F233,disease,true
+F23.8,F23.8,F23,4,,F238,disease,true
+F23.9,F23.9,F23,4,,F239,disease,true
+F24,Rối loạn hoang tưởng cảm ứng,F20-F29,3,,F24,type,true
+F25,Rối loạn phân liệt cảm xúc,F20-F29,3,,F25,type,false
+F25.0,F25.0,F25,4,,F250,disease,true
+F25.1,F25.1,F25,4,,F251,disease,true
+F25.2,F25.2,F25,4,,F252,disease,true
+F25.8,F25.8,F25,4,,F258,disease,true
+F25.9,F25.9,F25,4,,F259,disease,true
+F28,Rối loạn loạn thần không thực tổn khác,F20-F29,3,,F28,type,true
+F29,Loạn thần không thực tổn không biệt định,F20-F29,3,,F29,type,true
+F30,Giai đoạn hưng cảm,F30-F39,3,,F30,type,false
+F30.0,F30.0,F30,4,,F300,disease,true
+F30.1,F30.1,F30,4,,F301,disease,true
+F30.2,F30.2,F30,4,,F302,disease,true
+F30.8,F30.8,F30,4,,F308,disease,true
+F30.9,F30.9,F30,4,,F309,disease,true
+F31,Rối loạn cảm xúc lưỡng cực,F30-F39,3,,F31,type,false
+F31.0,F31.0,F31,4,,F310,disease,true
+F31.1,F31.1,F31,4,,F311,disease,true
+F31.2,F31.2,F31,4,,F312,disease,true
+F31.3,F31.3,F31,4,,F313,disease,true
+F31.4,F31.4,F31,4,,F314,disease,true
+F31.5,F31.5,F31,4,,F315,disease,true
+F31.6,F31.6,F31,4,,F316,disease,true
+F31.7,F31.7,F31,4,,F317,disease,true
+F31.8,F31.8,F31,4,,F318,disease,true
+F31.9,F31.9,F31,4,,F319,disease,true
+F32,Giai đoạn trầm cảm,F30-F39,3,,F32,type,false
+F32.0,F32.0,F32,4,,F320,disease,true
+F32.1,F32.1,F32,4,,F321,disease,true
+F32.2,F32.2,F32,4,,F322,disease,true
+F32.3,F32.3,F32,4,,F323,disease,true
+F32.8,F32.8,F32,4,,F328,disease,true
+F32.9,F32.9,F32,4,,F329,disease,true
+F33,Rối loạn trầm cảm tái diễn,F30-F39,3,,F33,type,false
+F33.0,F33.0,F33,4,,F330,disease,true
+F33.1,F33.1,F33,4,,F331,disease,true
+F33.2,F33.2,F33,4,,F332,disease,true
+F33.3,F33.3,F33,4,,F333,disease,true
+F33.4,F33.4,F33,4,,F334,disease,true
+F33.8,F33.8,F33,4,,F338,disease,true
+F33.9,F33.9,F33,4,,F339,disease,true
+F34,Rối loạn khí sắc [cảm xúc] dai dẳng,F30-F39,3,,F34,type,false
+F34.0,F34.0,F34,4,,F340,disease,true
+F34.1,F34.1,F34,4,,F341,disease,true
+F34.8,F34.8,F34,4,,F348,disease,true
+F34.9,F34.9,F34,4,,F349,disease,true
+F38,Rối loạn khí sắc [cảm xúc] khác,F30-F39,3,,F38,type,false
+F38.0,F38.0,F38,4,,F380,disease,true
+F38.1,F38.1,F38,4,,F381,disease,true
+F38.8,F38.8,F38,4,,F388,disease,true
+F39,Rối loạn khí sắc (cảm xúc) biệt định,F30-F39,3,,F39,type,true
+F91,Rối loạn hành vi,F40-F48,3,,F91,type,false
+F91.0,F91.0,F91,4,,F910,disease,true
+F91.1,F91.1,F91,4,,F911,disease,true
+F91.2,F91.2,F91,4,,F912,disease,true
+F91.3,F91.3,F91,4,,F913,disease,true
+F91.8,F91.8,F91,4,,F918,disease,true
+F91.9,F91.9,F91,4,,F919,disease,true
+F40,Rối loạn lo âu ám ảnh sợ hãi,F40-F48,3,,F40,type,false
+F40.0,F40.0,F40,4,,F400,disease,true
+F40.1,F40.1,F40,4,,F401,disease,true
+F40.2,F40.2,F40,4,,F402,disease,true
+F40.8,F40.8,F40,4,,F408,disease,true
+F40.9,F40.9,F40,4,,F409,disease,true
+F41,Các rối loạn lo âu khác,F40-F48,3,,F41,type,false
+F41.0,F41.0,F41,4,,F410,disease,true
+F41.1,F41.1,F41,4,,F411,disease,true
+F41.2,F41.2,F41,4,,F412,disease,true
+F41.3,F41.3,F41,4,,F413,disease,true
+F41.8,F41.8,F41,4,,F418,disease,true
+F41.9,F41.9,F41,4,,F419,disease,true
+F42,Rối loạn ám ảnh nghi thức,F40-F48,3,,F42,type,false
+F42.0,F42.0,F42,4,,F420,disease,true
+F42.1,F42.1,F42,4,,F421,disease,true
+F42.2,F42.2,F42,4,,F422,disease,true
+F42.8,F42.8,F42,4,,F428,disease,true
+F42.9,F42.9,F42,4,,F429,disease,true
+F43,Phản ứng với stress trầm trọng và rối loạn sự thích ứng,F40-F48,3,,F43,type,false
+F43.0,F43.0,F43,4,,F430,disease,true
+F43.1,F43.1,F43,4,,F431,disease,true
+F43.2,F43.2,F43,4,,F432,disease,true
+F43.8,F43.8,F43,4,,F438,disease,true
+F43.9,F43.9,F43,4,,F439,disease,true
+F44,Các rối loạn phân ly [chuyển di],F40-F48,3,,F44,type,false
+F44.0,F44.0,F44,4,,F440,disease,true
+F44.1,F44.1,F44,4,,F441,disease,true
+F44.2,F44.2,F44,4,,F442,disease,true
+F44.3,F44.3,F44,4,,F443,disease,true
+F44.4,F44.4,F44,4,,F444,disease,true
+F44.5,F44.5,F44,4,,F445,disease,true
+F44.6,F44.6,F44,4,,F446,disease,true
+F44.7,F44.7,F44,4,,F447,disease,true
+F44.8,F44.8,F44,4,,F448,disease,true
+F44.9,F44.9,F44,4,,F449,disease,true
+F45,Rối loạn dạng cơ thể,F40-F48,3,,F45,type,false
+F45.0,F45.0,F45,4,,F450,disease,true
+F45.1,F45.1,F45,4,,F451,disease,true
+F45.2,F45.2,F45,4,,F452,disease,true
+F45.3,F45.3,F45,4,,F453,disease,true
+F45.4,F45.4,F45,4,,F454,disease,true
+F45.8,F45.8,F45,4,,F458,disease,true
+F45.9,F45.9,F45,4,,F459,disease,true
+F48,Các rối loạn tâm căn khác,F40-F48,3,,F48,type,false
+F48.0,F48.0,F48,4,,F480,disease,true
+F48.1,F48.1,F48,4,,F481,disease,true
+F48.8,F48.8,F48,4,,F488,disease,true
+F48.9,F48.9,F48,4,,F489,disease,true
+F50,Các rối loạn ăn uống,F50-F59,3,,F50,type,false
+F50.0,F50.0,F50,4,,F500,disease,true
+F50.1,F50.1,F50,4,,F501,disease,true
+F50.2,F50.2,F50,4,,F502,disease,true
+F50.3,F50.3,F50,4,,F503,disease,true
+F50.4,F50.4,F50,4,,F504,disease,true
+F50.5,F50.5,F50,4,,F505,disease,true
+F50.8,F50.8,F50,4,,F508,disease,true
+F50.9,F50.9,F50,4,,F509,disease,true
+F51,Rối loạn giấc ngủ không thực tổn,F50-F59,3,,F51,type,false
+F51.0,F51.0,F51,4,,F510,disease,true
+F51.1,F51.1,F51,4,,F511,disease,true
+F51.2,F51.2,F51,4,,F512,disease,true
+F51.3,F51.3,F51,4,,F513,disease,true
+F51.4,F51.4,F51,4,,F514,disease,true
+F51.5,F51.5,F51,4,,F515,disease,true
+F51.8,F51.8,F51,4,,F518,disease,true
+F51.9,F51.9,F51,4,,F519,disease,true
+F52,"Loạn chức năng tình dục, không do rối loạn hoặc bệnh thực tổn",F50-F59,3,,F52,type,false
+F52.0,F52.0,F52,4,,F520,disease,true
+F52.1,F52.1,F52,4,,F521,disease,true
+F52.2,F52.2,F52,4,,F522,disease,true
+F52.3,F52.3,F52,4,,F523,disease,true
+F52.4,F52.4,F52,4,,F524,disease,true
+F52.5,F52.5,F52,4,,F525,disease,true
+F52.6,F52.6,F52,4,,F526,disease,true
+F52.7,F52.7,F52,4,,F527,disease,true
+F52.8,F52.8,F52,4,,F528,disease,true
+F52.9,F52.9,F52,4,,F529,disease,true
+F53,"Rối loạn hành vi và tâm thần kết hợp với thời kì sinh đẻ, không phân loại nơi khác",F50-F59,3,,F53,type,false
+F53.0,F53.0,F53,4,,F530,disease,true
+F53.1,F53.1,F53,4,,F531,disease,true
+F53.8,F53.8,F53,4,,F538,disease,true
+F53.9,F53.9,F53,4,,F539,disease,true
+F54,Các nhân tố tâm lý và hành vi kết hợp với rối loạn hoặc các bệnh phân loại nơi khác,F50-F59,3,,F54,type,true
+F59,Các hội chứng hành vi ứng xử không biệt định kết hợp với rối loạn sinh lý và yếu tố thể chất,F50-F59,3,,F59,type,true
+F60,Rối loạn nhân cách đặc hiệu,F60-F69,3,,F60,type,false
+F60.0,F60.0,F60,4,,F600,disease,true
+F60.1,F60.1,F60,4,,F601,disease,true
+F60.2,F60.2,F60,4,,F602,disease,true
+F60.3,F60.3,F60,4,,F603,disease,true
+F60.4,F60.4,F60,4,,F604,disease,true
+F60.5,F60.5,F60,4,,F605,disease,true
+F60.6,F60.6,F60,4,,F606,disease,true
+F60.7,F60.7,F60,4,,F607,disease,true
+F60.8,F60.8,F60,4,,F608,disease,true
+F60.9,F60.9,F60,4,,F609,disease,true
+F61,Rối loạn nhân cách khác và hỗn hợp,F60-F69,3,,F61,type,true
+F62,"Biến đổi nhân cách kéo dài, không thể quy cho một tổn thương hay bệnh não",F60-F69,3,,F62,type,false
+F62.0,F62.0,F62,4,,F620,disease,true
+F62.1,F62.1,F62,4,,F621,disease,true
+F62.8,F62.8,F62,4,,F628,disease,true
+F62.9,F62.9,F62,4,,F629,disease,true
+F63,Rối loạn thói quen và xung động,F60-F69,3,,F63,type,false
+F63.0,F63.0,F63,4,,F630,disease,true
+F63.1,F63.1,F63,4,,F631,disease,true
+F63.2,F63.2,F63,4,,F632,disease,true
+F63.3,F63.3,F63,4,,F633,disease,true
+F63.8,F63.8,F63,4,,F638,disease,true
+F63.9,F63.9,F63,4,,F639,disease,true
+F64,Các rối loạn phân định giới tính,F60-F69,3,,F64,type,false
+F64.0,F64.0,F64,4,,F640,disease,true
+F64.1,F64.1,F64,4,,F641,disease,true
+F64.2,F64.2,F64,4,,F642,disease,true
+F64.8,F64.8,F64,4,,F648,disease,true
+F64.9,F64.9,F64,4,,F649,disease,true
+F65,Rối loạn trong ưa chuộng tình dục,F60-F69,3,,F65,type,false
+F65.0,F65.0,F65,4,,F650,disease,true
+F65.1,F65.1,F65,4,,F651,disease,true
+F65.2,F65.2,F65,4,,F652,disease,true
+F65.3,F65.3,F65,4,,F653,disease,true
+F65.4,F65.4,F65,4,,F654,disease,true
+F65.5,F65.5,F65,4,,F655,disease,true
+F65.6,F65.6,F65,4,,F656,disease,true
+F65.8,F65.8,F65,4,,F658,disease,true
+F65.9,F65.9,F65,4,,F659,disease,true
+F66,Những rối loạn tâm lý và hành vi kết hợp với sự phát triển và định hướng tình dục,F60-F69,3,,F66,type,false
+F66.0,F66.0,F66,4,,F660,disease,true
+F66.1,F66.1,F66,4,,F661,disease,true
+F66.2,F66.2,F66,4,,F662,disease,true
+F66.8,F66.8,F66,4,,F668,disease,true
+F66.9,F66.9,F66,4,,F669,disease,true
+F68,Rối loạn khác về hành vi và nhân cách ở người trưởng thành,F60-F69,3,,F68,type,false
+F68.0,F68.0,F68,4,,F680,disease,true
+F68.1,F68.1,F68,4,,F681,disease,true
+F68.8,F68.8,F68,4,,F688,disease,true
+F69,Rối loạn không biệt định về nhân cách và hành vi ở người trưởng thành,F60-F69,3,,F69,type,true
+F70,Chậm phát triển trí tuệ nhẹ,F70-F79,3,,F70,type,false
+F70.0,F70.0,F70,4,,F700,disease,true
+F70.1,F70.1,F70,4,,F701,disease,true
+F70.8,F70.8,F70,4,,F708,disease,true
+F70.9,F70.9,F70,4,,F709,disease,true
+F71,Chậm phát triển trí tuệ trung bình,F70-F79,3,,F71,type,false
+F71.0,F71.0,F71,4,,F710,disease,true
+F71.1,F71.1,F71,4,,F711,disease,true
+F71.8,F71.8,F71,4,,F718,disease,true
+F71.9,F71.9,F71,4,,F719,disease,true
+F72,Chậm phát triển trí tuệ nặng,F70-F79,3,,F72,type,false
+F72.0,F72.0,F72,4,,F720,disease,true
+F72.1,F72.1,F72,4,,F721,disease,true
+F72.8,F72.8,F72,4,,F728,disease,true
+F72.9,F72.9,F72,4,,F729,disease,true
+F73,Chậm phát triển trí tuệ nghiêm trọng,F70-F79,3,,F73,type,false
+F73.0,F73.0,F73,4,,F730,disease,true
+F73.1,F73.1,F73,4,,F731,disease,true
+F73.8,F73.8,F73,4,,F738,disease,true
+F73.9,F73.9,F73,4,,F739,disease,true
+F78,Chậm phát triển trí tuệ khác,F70-F79,3,,F78,type,false
+F78.0,F78.0,F78,4,,F780,disease,true
+F78.1,F78.1,F78,4,,F781,disease,true
+F78.8,F78.8,F78,4,,F788,disease,true
+F78.9,F78.9,F78,4,,F789,disease,true
+F79,Chậm phát triển trí tuệ không biệt định,F70-F79,3,,F79,type,false
+F79.0,F79.0,F79,4,,F790,disease,true
+F79.1,F79.1,F79,4,,F791,disease,true
+F79.8,F79.8,F79,4,,F798,disease,true
+F79.9,F79.9,F79,4,,F799,disease,true
+F80,Các rối loạn đặc hiệu về phát triển lời nói và ngôn ngữ,F80-F89,3,,F80,type,false
+F80.0,F80.0,F80,4,,F800,disease,true
+F80.1,F80.1,F80,4,,F801,disease,true
+F80.2,F80.2,F80,4,,F802,disease,true
+F80.3,F80.3,F80,4,,F803,disease,true
+F80.8,F80.8,F80,4,,F808,disease,true
+F80.9,F80.9,F80,4,,F809,disease,true
+F81,Rối loạn đặc hiệu về phát triển các kỹ năng ở trường,F80-F89,3,,F81,type,false
+F81.0,F81.0,F81,4,,F810,disease,true
+F81.1,F81.1,F81,4,,F811,disease,true
+F81.2,F81.2,F81,4,,F812,disease,true
+F81.3,F81.3,F81,4,,F813,disease,true
+F81.8,F81.8,F81,4,,F818,disease,true
+F81.9,F81.9,F81,4,,F819,disease,true
+F82,Rối loạn đặc hiệu sự phát triển chức năng vận động,F80-F89,3,,F82,type,true
+F83,Các rối loạn đặc hiệu hỗn hợp của sự phát triển,F80-F89,3,"Các rối loạn đặc hiệu hỗn hợp của
+sự phát triển",F83,type,true
+F84,Rối loạn lan toả sự phát triển,F80-F89,3,,F84,type,false
+F84.0,F84.0,F84,4,,F840,disease,true
+F84.1,F84.1,F84,4,,F841,disease,true
+F84.2,F84.2,F84,4,,F842,disease,true
+F84.3,F84.3,F84,4,,F843,disease,true
+F84.4,F84.4,F84,4,,F844,disease,true
+F84.5,F84.5,F84,4,,F845,disease,true
+F84.8,F84.8,F84,4,,F848,disease,true
+F84.9,F84.9,F84,4,,F849,disease,true
+F88,Các rối loạn khác của phát triển tâm lý,F80-F89,3,,F88,type,true
+F89,Rối loạn không biệt định của phát triển tâm lý,F80-F89,3,,F89,type,true
+F90,Các rối loạn tăng động,F90-F98,3,,F90,type,false
+F90.0,F90.0,F90,4,,F900,disease,true
+F90.1,F90.1,F90,4,,F901,disease,true
+F90.8,F90.8,F90,4,,F908,disease,true
+F90.9,F90.9,F90,4,,F909,disease,true
+F92,Các rối loạn hỗn hợp về hành vi và cảm xúc,F90-F98,3,,F92,type,false
+F92.0,F92.0,F92,4,,F920,disease,true
+F92.8,F92.8,F92,4,,F928,disease,true
+F92.9,F92.9,F92,4,,F929,disease,true
+F93,Rối loạn cảm xúc với sự khởi phát đặc biệt ở trẻ em,F90-F98,3,,F93,type,false
+F93.0,F93.0,F93,4,,F930,disease,true
+F93.1,F93.1,F93,4,,F931,disease,true
+F93.2,F93.2,F93,4,,F932,disease,true
+F93.3,F93.3,F93,4,,F933,disease,true
+F93.8,F93.8,F93,4,,F938,disease,true
+F93.9,F93.9,F93,4,,F939,disease,true
+F94,Các rối loạn hoạt động xã hội khởi phát đặc biệt ở tuổi trẻ em và thanh thiếu niên,F90-F98,3,,F94,type,false
+F94.0,F94.0,F94,4,,F940,disease,true
+F94.1,F94.1,F94,4,,F941,disease,true
+F94.2,F94.2,F94,4,,F942,disease,true
+F94.8,F94.8,F94,4,,F948,disease,true
+F94.9,F94.9,F94,4,,F949,disease,true
+F95,Các rối loạn Tic,F90-F98,3,,F95,type,false
+F95.0,F95.0,F95,4,,F950,disease,true
+F95.1,F95.1,F95,4,,F951,disease,true
+F95.2,F95.2,F95,4,,F952,disease,true
+F95.8,F95.8,F95,4,,F958,disease,true
+F95.9,F95.9,F95,4,,F959,disease,true
+F98,Các rối loạn tác phong và cảm xúc khác thường khởi phát ở lứa tuổi trẻ em và thanh thiếu niên,F90-F98,3,,F98,type,false
+F98.0,F98.0,F98,4,,F980,disease,true
+F98.1,F98.1,F98,4,,F981,disease,true
+F98.2,F98.2,F98,4,,F982,disease,true
+F98.3,F98.3,F98,4,,F983,disease,true
+F98.4,F98.4,F98,4,,F984,disease,true
+F98.5,F98.5,F98,4,,F985,disease,true
+F98.6,F98.6,F98,4,,F986,disease,true
+F98.8,F98.8,F98,4,,F988,disease,true
+F98.9,F98.9,F98,4,,F989,disease,true
+F99,Rối loạn tâm thần không biệt định khác,F99-F99,3,,F99,type,true
+G00,"Bệnh viêm màng não vi khuẩn, không phân loại nơi khác",G00-G09,3,,G00,type,false
+G00.0,G00.0,G00,4,,G000,disease,true
+G00.1,G00.1,G00,4,,G001,disease,true
+G00.2,G00.2,G00,4,,G002,disease,true
+G00.3,G00.3,G00,4,,G003,disease,true
+G00.8,G00.8,G00,4,,G008,disease,true
+G00.9,G00.9,G00,4,,G009,disease,true
+G01*,Bệnh viêm màng não trong bệnh nhiễm khuẩn phân loại nơi khác,G00-G09,3,,G01*,type,true
+G02*,Viêm màng não trong bệnh nhiễm trùng và ký sinh trùng phân loại nơi khác,G00-G09,3,,G02*,type,false
+G02.0*,G02.0*,G02*,4,,G020,disease,true
+G02.1*,G02.1*,G02*,4,,G021,disease,true
+G02.8*,G02.8*,G02*,4,,G028,disease,true
+G03,Viêm màng não do nguyên nhân khác và không xác định,G00-G09,3,,G03,type,false
+G03.0,G03.0,G03,4,,G030,disease,true
+G03.1,G03.1,G03,4,,G031,disease,true
+G03.2,G03.2,G03,4,,G032,disease,true
+G03.8,G03.8,G03,4,,G038,disease,true
+G03.9,G03.9,G03,4,,G039,disease,true
+G04,"Viêm não, viêm tuỷ và viêm não- tuỷ",G00-G09,3,,G04,type,false
+G04.0,G04.0,G04,4,,G040,disease,true
+G04.1,G04.1,G04,4,,G041,disease,true
+G04.2,G04.2,G04,4,,G042,disease,true
+G04.8,G04.8,G04,4,,G048,disease,true
+G04.9,G04.9,G04,4,,G049,disease,true
+G05*,"Viêm não, viêm tuỷ và viêm não- tuỷ trong bệnh phân loại nơi khác",G00-G09,3,,G05*,type,false
+G05.0*,G05.0*,G05*,4,,G050,disease,true
+G05.1*,G05.1*,G05*,4,,G051,disease,true
+G05.2*,G05.2*,G05*,4,,G052,disease,true
+G05.8*,G05.8*,G05*,4,,G058,disease,true
+G06,"Áp xe nội sọ và u hạt nội sọ, áp xe nội tuỷ và u hạt nội tuỷ",G00-G09,3,,G06,type,false
+G06.0,G06.0,G06,4,,G060,disease,true
+G06.1,G06.1,G06,4,,G061,disease,true
+G06.2,G06.2,G06,4,,G062,disease,true
+G07*,"Áp xe nội sọ và u hạt nội sọ, áp xe nội tuỷ và u hạt nội tuỷ trong bệnh phân loại nơi khác",G00-G09,3,,G07*,type,true
+G08,Viêm tĩnh mạch và viêm tắc tĩnh mạch nội sọ và nội tuỷ,G00-G09,3,,G08,type,true
+G09,Di chứng của bệnh viêm hệ thần kinh trung ương,G00-G09,3,,G09,type,true
+G10,Bệnh Hungtington,G10-G14,3,,G10,type,true
+G11,Thất điều di truyền,G10-G14,3,,G11,type,false
+G11.0,G11.0,G11,4,,G110,disease,true
+G11.1,G11.1,G11,4,,G111,disease,true
+G11.2,G11.2,G11,4,,G112,disease,true
+G11.3,G11.3,G11,4,,G113,disease,true
+G11.4,G11.4,G11,4,,G114,disease,true
+G11.8,G11.8,G11,4,,G118,disease,true
+G11.9,G11.9,G11,4,,G119,disease,true
+G12,Teo cơ do tổn thương tuỷ sống và hội chứng liên quan,G10-G14,3,,G12,type,false
+G12.0,G12.0,G12,4,,G120,disease,true
+G12.1,G12.1,G12,4,,G121,disease,true
+G12.2,G12.2,G12,4,,G122,disease,true
+G12.8,G12.8,G12,4,,G128,disease,true
+G12.9,G12.9,G12,4,,G129,disease,true
+G13*,Bệnh teo hệ thống ảnh hưởng chủ yếu tới hệ thần kinh trung ương trong bệnh phân loại nơi khác,G10-G14,3,,G13*,type,false
+G13.0*,G13.0*,G13*,4,,G130,disease,true
+G13.1*,G13.1*,G13*,4,,G131,disease,true
+G13.2*,G13.2*,G13*,4,,G132,disease,true
+G13.8*,G13.8*,G13*,4,,G138,disease,true
+G14,Hội chứng sau bại liệt,G10-G14,3,,G14,type,true
+G20,Bệnh Parkinson,G20-G26,3,,G20,type,true
+G21,Hội chứng Parkinson thứ phát,G20-G26,3,,G21,type,false
+G21.0,G21.0,G21,4,,G210,disease,true
+G21.1,G21.1,G21,4,,G211,disease,true
+G21.2,G21.2,G21,4,,G212,disease,true
+G21.3,G21.3,G21,4,,G213,disease,true
+G21.4,G21.4,G21,4,,G214,disease,true
+G21.8,G21.8,G21,4,,G218,disease,true
+G21.9,G21.9,G21,4,,G219,disease,true
+G22*,Hội chứng Parkinson trong bệnh phân loại nơi khác,G20-G26,3,,G22*,type,true
+G23,Bệnh thoái hoá khác của hạch nền não,G20-G26,3,,G23,type,false
+G23.0,G23.0,G23,4,,G230,disease,true
+G23.1,G23.1,G23,4,,G231,disease,true
+G23.2,G23.2,G23,4,,G232,disease,true
+G23.3,G23.3,G23,4,,G233,disease,true
+G23.8,G23.8,G23,4,,G238,disease,true
+G23.9,G23.9,G23,4,,G239,disease,true
+G24,Loạn trương lực cơ,G20-G26,3,,G24,type,false
+G24.0,G24.0,G24,4,,G240,disease,true
+G24.1,G24.1,G24,4,,G241,disease,true
+G24.2,G24.2,G24,4,,G242,disease,true
+G24.3,G24.3,G24,4,,G243,disease,true
+G24.4,G24.4,G24,4,,G244,disease,true
+G24.5,G24.5,G24,4,,G245,disease,true
+G24.8,G24.8,G24,4,,G248,disease,true
+G24.9,G24.9,G24,4,,G249,disease,true
+G25,Hội chứng ngoại tháp và rối loạn vận động khác,G20-G26,3,,G25,type,false
+G25.0,G25.0,G25,4,,G250,disease,true
+G25.1,G25.1,G25,4,,G251,disease,true
+G25.2,G25.2,G25,4,,G252,disease,true
+G25.3,G25.3,G25,4,,G253,disease,true
+G25.4,G25.4,G25,4,,G254,disease,true
+G25.5,G25.5,G25,4,,G255,disease,true
+G25.6,G25.6,G25,4,,G256,disease,true
+G25.8,G25.8,G25,4,,G258,disease,true
+G25.9,G25.9,G25,4,,G259,disease,true
+G26*,Hội chứng ngoại tháp và rối loạn vận động trong bệnh phân loại nơi khác,G20-G26,3,,G26*,type,true
+G30,Bệnh Alzheimer,G30-G32,3,,G30,type,false
+G30.0,G30.0,G30,4,,G300,disease,true
+G30.1,G30.1,G30,4,,G301,disease,true
+G30.8,G30.8,G30,4,,G308,disease,true
+G30.9,G30.9,G30,4,,G309,disease,true
+G31,"Bệnh thoái hoá khác của hệ thần kinh, không phân loại nơi khác",G30-G32,3,,G31,type,false
+G31.0,G31.0,G31,4,,G310,disease,true
+G31.1,G31.1,G31,4,,G311,disease,true
+G31.2,G31.2,G31,4,,G312,disease,true
+G31.8,G31.8,G31,4,,G318,disease,true
+G31.9,G31.9,G31,4,,G319,disease,true
+G32*,"Bệnh thoái hoá khác của hệ thần kinh, trong bệnh phân loại nơi khác",G30-G32,3,,G32*,type,false
+G32.0*,G32.0*,G32*,4,,G320,disease,true
+G32.8*,G32.8*,G32*,4,,G328,disease,true
+G35,"Đa xơ cứng, xơ cứng rải rác",G35-G37,3,,G35,type,true
+G36,Thoái hoá myelin rải rác cấp tính khác,G35-G37,3,,G36,type,false
+G36.0,G36.0,G36,4,,G360,disease,true
+G36.1,G36.1,G36,4,,G361,disease,true
+G36.8,G36.8,G36,4,,G368,disease,true
+G36.9,G36.9,G36,4,,G369,disease,true
+G37,Bệnh Thoái hoá myelin khác của hệ thần kinh trung ương,G35-G37,3,,G37,type,false
+G37.0,G37.0,G37,4,,G370,disease,true
+G37.1,G37.1,G37,4,,G371,disease,true
+G37.2,G37.2,G37,4,,G372,disease,true
+G37.3,G37.3,G37,4,,G373,disease,true
+G37.4,G37.4,G37,4,,G374,disease,true
+G37.5,G37.5,G37,4,,G375,disease,true
+G37.8,G37.8,G37,4,,G378,disease,true
+G37.9,G37.9,G37,4,,G379,disease,true
+G40,Động kinh,G40-G47,3,,G40,type,false
+G40.0,G40.0,G40,4,,G400,disease,true
+G40.1,G40.1,G40,4,,G401,disease,true
+G40.2,G40.2,G40,4,,G402,disease,true
+G40.3,G40.3,G40,4,,G403,disease,true
+G40.4,G40.4,G40,4,,G404,disease,true
+G40.5,G40.5,G40,4,,G405,disease,true
+G40.6,G40.6,G40,4,,G406,disease,true
+G40.7,G40.7,G40,4,,G407,disease,true
+G40.8,G40.8,G40,4,,G408,disease,true
+G40.9,G40.9,G40,4,,G409,disease,true
+G41,Trạng thái động kinh,G40-G47,3,,G41,type,false
+G41.0,G41.0,G41,4,,G410,disease,true
+G41.1,G41.1,G41,4,,G411,disease,true
+G41.2,G41.2,G41,4,,G412,disease,true
+G41.8,G41.8,G41,4,,G418,disease,true
+G41.9,G41.9,G41,4,,G419,disease,true
+G43,Migraine,G40-G47,3,,G43,type,false
+G43.0,G43.0,G43,4,,G430,disease,true
+G43.1,G43.1,G43,4,,G431,disease,true
+G43.2,G43.2,G43,4,,G432,disease,true
+G43.3,G43.3,G43,4,,G433,disease,true
+G43.8,G43.8,G43,4,,G438,disease,true
+G43.9,G43.9,G43,4,,G439,disease,true
+G44,Hội chứng đau đầu khác,G40-G47,3,,G44,type,false
+G44.0,G44.0,G44,4,,G440,disease,true
+G44.1,G44.1,G44,4,,G441,disease,true
+G44.2,G44.2,G44,4,,G442,disease,true
+G44.3,G44.3,G44,4,,G443,disease,true
+G44.4,G44.4,G44,4,,G444,disease,true
+G44.8,G44.8,G44,4,,G448,disease,true
+G45,Cơn thiếu máu não thoáng qua và hội chứng liên quan,G40-G47,3,,G45,type,false
+G45.0,G45.0,G45,4,,G450,disease,true
+G45.1,G45.1,G45,4,,G451,disease,true
+G45.2,G45.2,G45,4,,G452,disease,true
+G45.3,G45.3,G45,4,,G453,disease,true
+G45.4,G45.4,G45,4,,G454,disease,true
+G45.8,G45.8,G45,4,,G458,disease,true
+G45.9,G45.9,G45,4,,G459,disease,true
+G46*,Hội chứng mạch máu não trong bệnh mạch não (I60- I67†),G40-G47,3,,G46*,type,false
+G46.0*,G46.0*,G46*,4,,G460,disease,true
+G46.1*,G46.1*,G46*,4,,G461,disease,true
+G46.2*,G46.2*,G46*,4,,G462,disease,true
+G46.3*,G46.3*,G46*,4,,G463,disease,true
+G46.4*,G46.4*,G46*,4,,G464,disease,true
+G46.5*,G46.5*,G46*,4,,G465,disease,true
+G46.6*,G46.6*,G46*,4,,G466,disease,true
+G46.7*,G46.7*,G46*,4,,G467,disease,true
+G46.8*,G46.8*,G46*,4,,G468,disease,true
+G47,Rối loạn giấc ngủ,G40-G47,3,,G47,type,false
+G47.0,G47.0,G47,4,,G470,disease,true
+G47.1,G47.1,G47,4,,G471,disease,true
+G47.2,G47.2,G47,4,,G472,disease,true
+G47.3,G47.3,G47,4,,G473,disease,true
+G47.4,G47.4,G47,4,,G474,disease,true
+G47.8,G47.8,G47,4,,G478,disease,true
+G47.9,G47.9,G47,4,,G479,disease,true
+G50,Bệnh thần kinh tam thoa,G50-G59,3,,G50,type,false
+G50.0,G50.0,G50,4,,G500,disease,true
+G50.1,G50.1,G50,4,,G501,disease,true
+G50.8,G50.8,G50,4,,G508,disease,true
+G50.9,G50.9,G50,4,,G509,disease,true
+G51,Bệnh thần kinh mặt,G50-G59,3,,G51,type,false
+G51.0,G51.0,G51,4,,G510,disease,true
+G51.1,G51.1,G51,4,,G511,disease,true
+G51.2,G51.2,G51,4,,G512,disease,true
+G51.3,G51.3,G51,4,,G513,disease,true
+G51.4,G51.4,G51,4,,G514,disease,true
+G51.8,G51.8,G51,4,,G518,disease,true
+G51.9,G51.9,G51,4,,G519,disease,true
+G52,Bệnh các dây thần kinh sọ khác,G50-G59,3,,G52,type,false
+G52.0,G52.0,G52,4,,G520,disease,true
+G52.1,G52.1,G52,4,,G521,disease,true
+G52.2,G52.2,G52,4,,G522,disease,true
+G52.3,G52.3,G52,4,,G523,disease,true
+G52.7,G52.7,G52,4,,G527,disease,true
+G52.8,G52.8,G52,4,,G528,disease,true
+G52.9,G52.9,G52,4,,G529,disease,true
+G53*,Bệnh thần kinh sọ trong bệnh phân loại nơi khác,G50-G59,3,,G53*,type,false
+G53.0*,G53.0*,G53*,4,,G530,disease,true
+G53.1*,G53.1*,G53*,4,,G531,disease,true
+G53.2*,G53.2*,G53*,4,,G532,disease,true
+G53.3*,G53.3*,G53*,4,,G533,disease,true
+G53.8*,G53.8*,G53*,4,,G538,disease,true
+G54,Bệnh rễ và đám rối thần kinh,G50-G59,3,,G54,type,false
+G54.0,G54.0,G54,4,,G540,disease,true
+G54.1,G54.1,G54,4,,G541,disease,true
+G54.2,G54.2,G54,4,,G542,disease,true
+G54.3,G54.3,G54,4,,G543,disease,true
+G54.4,G54.4,G54,4,,G544,disease,true
+G54.5,G54.5,G54,4,,G545,disease,true
+G54.6,G54.6,G54,4,,G546,disease,true
+G54.7,G54.7,G54,4,,G547,disease,true
+G54.8,G54.8,G54,4,,G548,disease,true
+G54.9,G54.9,G54,4,,G549,disease,true
+G55*,Chèn ép rễ thần kinh và đám rối trong bệnh phân loại nơi khác,G50-G59,3,,G55*,type,false
+G55.0*,G55.0*,G55*,4,,G550,disease,true
+G55.1*,G55.1*,G55*,4,,G551,disease,true
+G55.2*,G55.2*,G55*,4,,G552,disease,true
+G55.3*,G55.3*,G55*,4,,G553,disease,true
+G55.8*,G55.8*,G55*,4,,G558,disease,true
+G56,Bệnh đơn dây thần kinh chi trên,G50-G59,3,,G56,type,false
+G56.0,G56.0,G56,4,,G560,disease,true
+G56.1,G56.1,G56,4,,G561,disease,true
+G56.2,G56.2,G56,4,,G562,disease,true
+G56.3,G56.3,G56,4,,G563,disease,true
+G56.8,G56.8,G56,4,,G568,disease,true
+G56.9,G56.9,G56,4,,G569,disease,true
+G57,Bệnh đơn dây thần kinh chi dưới,G50-G59,3,,G57,type,false
+G57.0,G57.0,G57,4,,G570,disease,true
+G57.1,G57.1,G57,4,,G571,disease,true
+G57.2,G57.2,G57,4,,G572,disease,true
+G57.3,G57.3,G57,4,,G573,disease,true
+G57.4,G57.4,G57,4,,G574,disease,true
+G57.5,G57.5,G57,4,,G575,disease,true
+G57.6,G57.6,G57,4,,G576,disease,true
+G57.8,G57.8,G57,4,,G578,disease,true
+G57.9,G57.9,G57,4,,G579,disease,true
+G58,Bệnh đơn dây thần kinh khác,G50-G59,3,,G58,type,false
+G58.0,G58.0,G58,4,,G580,disease,true
+G58.7,G58.7,G58,4,,G587,disease,true
+G58.8,G58.8,G58,4,,G588,disease,true
+G58.9,G58.9,G58,4,,G589,disease,true
+G59*,Bệnh đơn dây thần kinh phân loại nơi khác,G50-G59,3,,G59*,type,false
+G59.0*,G59.0*,G59*,4,,G590,disease,true
+G59.8*,G59.8*,G59*,4,,G598,disease,true
+G60,Bệnh dây thần kinh di truyền và nguyên phát,G60-G64,3,,G60,type,false
+G60.0,G60.0,G60,4,,G600,disease,true
+G60.1,G60.1,G60,4,,G601,disease,true
+G60.2,G60.2,G60,4,,G602,disease,true
+G60.3,G60.3,G60,4,,G603,disease,true
+G60.8,G60.8,G60,4,,G608,disease,true
+G60.9,G60.9,G60,4,,G609,disease,true
+G61,Viêm đa dây thần kinh,G60-G64,3,,G61,type,false
+G61.0,G61.0,G61,4,,G610,disease,true
+G61.1,G61.1,G61,4,,G611,disease,true
+G61.8,G61.8,G61,4,,G618,disease,true
+G61.9,G61.9,G61,4,,G619,disease,true
+G62,Bệnh đa dây thần kinh khác,G60-G64,3,,G62,type,false
+G62.0,G62.0,G62,4,,G620,disease,true
+G62.1,G62.1,G62,4,,G621,disease,true
+G62.2,G62.2,G62,4,,G622,disease,true
+G62.8,G62.8,G62,4,,G628,disease,true
+G62.9,G62.9,G62,4,,G629,disease,true
+G63*,Bệnh đa dây thần kinh trong các bệnh phân loại nơi khác,G60-G64,3,,G63*,type,false
+G63.0*,G63.0*,G63*,4,,G630,disease,true
+G63.1*,G63.1*,G63*,4,,G631,disease,true
+G63.2*,G63.2*,G63*,4,,G632,disease,true
+G63.3*,G63.3*,G63*,4,,G633,disease,true
+G63.4*,G63.4*,G63*,4,,G634,disease,true
+G63.5*,G63.5*,G63*,4,,G635,disease,true
+G63.6*,G63.6*,G63*,4,,G636,disease,true
+G63.8*,G63.8*,G63*,4,,G638,disease,true
+G64,Bệnh khác của hệ thần kinh ngoại vi,G60-G64,3,,G64,type,true
+G70,Nhược cơ và bệnh thần kinh- cơ khác,G70-G73,3,,G70,type,false
+G70.0,G70.0,G70,4,,G700,disease,true
+G70.1,G70.1,G70,4,,G701,disease,true
+G70.2,G70.2,G70,4,,G702,disease,true
+G70.8,G70.8,G70,4,,G708,disease,true
+G70.9,G70.9,G70,4,,G709,disease,true
+G71,Bệnh cơ tiên phát,G70-G73,3,,G71,type,false
+G71.0,G71.0,G71,4,,G710,disease,true
+G71.1,G71.1,G71,4,,G711,disease,true
+G71.2,G71.2,G71,4,,G712,disease,true
+G71.3,G71.3,G71,4,,G713,disease,true
+G71.8,G71.8,G71,4,,G718,disease,true
+G71.9,G71.9,G71,4,,G719,disease,true
+G72,Bệnh cơ khác,G70-G73,3,,G72,type,false
+G72.0,G72.0,G72,4,,G720,disease,true
+G72.1,G72.1,G72,4,,G721,disease,true
+G72.2,G72.2,G72,4,,G722,disease,true
+G72.3,G72.3,G72,4,,G723,disease,true
+G72.4,G72.4,G72,4,,G724,disease,true
+G72.8,G72.8,G72,4,,G728,disease,true
+G72.9,G72.9,G72,4,,G729,disease,true
+G73*,Bệnh khớp thần kinh- cơ và cơ trong các bệnh phân loại nơi khác,G70-G73,3,,G73*,type,false
+G73.0*,G73.0*,G73*,4,,G730,disease,true
+G73.1*,G73.1*,G73*,4,,G731,disease,true
+G73.2*,G73.2*,G73*,4,,G732,disease,true
+G73.3*,G73.3*,G73*,4,,G733,disease,true
+G73.4*,G73.4*,G73*,4,,G734,disease,true
+G73.5*,G73.5*,G73*,4,,G735,disease,true
+G73.6*,G73.6*,G73*,4,,G736,disease,true
+G73.7*,G73.7*,G73*,4,,G737,disease,true
+G80,Bại não,G80-G83,3,,G80,type,false
+G80.0,G80.0,G80,4,,G800,disease,true
+G80.1,G80.1,G80,4,,G801,disease,true
+G80.2,G80.2,G80,4,,G802,disease,true
+G80.3,G80.3,G80,4,,G803,disease,true
+G80.4,G80.4,G80,4,,G804,disease,true
+G80.8,G80.8,G80,4,,G808,disease,true
+G80.9,G80.9,G80,4,,G809,disease,true
+G81,Liệt nửa người,G80-G83,3,,G81,type,false
+G81.0,G81.0,G81,4,,G810,disease,true
+G81.1,G81.1,G81,4,,G811,disease,true
+G81.9,G81.9,G81,4,,G819,disease,true
+G82,Liệt hai chân và liệt tứ chi,G80-G83,3,,G82,type,false
+G82.0,G82.0,G82,4,,G820,disease,true
+G82.1,G82.1,G82,4,,G821,disease,true
+G82.2,G82.2,G82,4,,G822,disease,true
+G82.3,G82.3,G82,4,,G823,disease,true
+G82.4,G82.4,G82,4,,G824,disease,true
+G82.5,G82.5,G82,4,,G825,disease,true
+G83,Hội chứng liệt khác,G80-G83,3,,G83,type,false
+G83.0,G83.0,G83,4,,G830,disease,true
+G83.1,G83.1,G83,4,,G831,disease,true
+G83.2,G83.2,G83,4,,G832,disease,true
+G83.3,G83.3,G83,4,,G833,disease,true
+G83.4,G83.4,G83,4,,G834,disease,true
+G83.5,G83.5,G83,4,,G835,disease,true
+G83.6,G83.6,G83,4,,G836,disease,true
+G83.8,G83.8,G83,4,,G838,disease,true
+G83.9,G83.9,G83,4,,G839,disease,true
+G90,Bệnh hệ thần kinh tự chủ,G90-G99,3,,G90,type,false
+G90.0,G90.0,G90,4,,G900,disease,true
+G90.1,G90.1,G90,4,,G901,disease,true
+G90.2,G90.2,G90,4,,G902,disease,true
+G90.4,G90.4,G90,4,,G904,disease,true
+G90.5,G90.5,G90,4,,G905,disease,true
+G90.6,G90.6,G90,4,,G906,disease,true
+G90.7,G90.7,G90,4,,G907,disease,true
+G90.8,G90.8,G90,4,,G908,disease,true
+G90.9,G90.9,G90,4,,G909,disease,true
+G91,Não úng thuỷ,G90-G99,3,,G91,type,false
+G91.0,G91.0,G91,4,,G910,disease,true
+G91.1,G91.1,G91,4,,G911,disease,true
+G91.2,G91.2,G91,4,,G912,disease,true
+G91.3,G91.3,G91,4,,G913,disease,true
+G91.8,G91.8,G91,4,,G918,disease,true
+G91.9,G91.9,G91,4,,G919,disease,true
+G92,Bệnh não nhiễm độc,G90-G99,3,,G92,type,true
+G93,Bệnh khác của não,G90-G99,3,,G93,type,false
+G93.0,G93.0,G93,4,,G930,disease,true
+G93.1,G93.1,G93,4,,G931,disease,true
+G93.2,G93.2,G93,4,,G932,disease,true
+G93.3,G93.3,G93,4,,G933,disease,true
+G93.4,G93.4,G93,4,,G934,disease,true
+G93.5,G93.5,G93,4,,G935,disease,true
+G93.6,G93.6,G93,4,,G936,disease,true
+G93.7,G93.7,G93,4,,G937,disease,true
+G93.8,G93.8,G93,4,,G938,disease,true
+G93.9,G93.9,G93,4,,G939,disease,true
+G94*,Bệnh khác của não trong bệnh phân loại nơi khác,G90-G99,3,,G94*,type,false
+G94.0*,G94.0*,G94*,4,,G940,disease,true
+G94.1*,G94.1*,G94*,4,,G941,disease,true
+G94.2*,G94.2*,G94*,4,,G942,disease,true
+G94.3*,G94.3*,G94*,4,,G943,disease,true
+G94.8*,G94.8*,G94*,4,,G948,disease,true
+G95,Bệnh khác của tuỷ sống,G90-G99,3,,G95,type,false
+G95.0,G95.0,G95,4,,G950,disease,true
+G95.1,G95.1,G95,4,,G951,disease,true
+G95.2,G95.2,G95,4,,G952,disease,true
+G95.8,G95.8,G95,4,,G958,disease,true
+G95.9,G95.9,G95,4,,G959,disease,true
+G96,Bệnh khác của hệ thần kinh trung ương,G90-G99,3,,G96,type,false
+G96.0,G96.0,G96,4,,G960,disease,true
+G96.1,G96.1,G96,4,,G961,disease,true
+G96.8,G96.8,G96,4,,G968,disease,true
+G96.9,G96.9,G96,4,,G969,disease,true
+G97,"Các rối loạn của hệ thần kinh sau phẫu thuật, thủ thuật, không phân loại nơi khác",G90-G99,3,,G97,type,false
+G97.0,G97.0,G97,4,,G970,disease,true
+G97.1,G97.1,G97,4,,G971,disease,true
+G97.2,G97.2,G97,4,,G972,disease,true
+G97.8,G97.8,G97,4,,G978,disease,true
+G97.9,G97.9,G97,4,,G979,disease,true
+G98,Bệnh khác của hệ thần kinh không phân loại nơi khác,G90-G99,3,,G98,type,true
+G99*,Bệnh khác của hệ thần kinh trong bệnh phân loại nơi khác,G90-G99,3,,G99*,type,false
+G99.0*,G99.0*,G99*,4,,G990,disease,true
+G99.1*,G99.1*,G99*,4,,G991,disease,true
+G99.2*,G99.2*,G99*,4,,G992,disease,true
+G99.8*,G99.8*,G99*,4,,G998,disease,true
+H00,Lẹo và chắp,H00-H06,3,,H00,type,false
+H00.0,H00.0,H00,4,,H000,disease,true
+H00.1,H00.1,H00,4,,H001,disease,true
+H01,Viêm khác của mí mắt,H00-H06,3,,H01,type,false
+H01.0,H01.0,H01,4,,H010,disease,true
+H01.1,H01.1,H01,4,,H011,disease,true
+H01.8,H01.8,H01,4,,H018,disease,true
+H01.9,H01.9,H01,4,,H019,disease,true
+H02,Bệnh khác của mí mắt,H00-H06,3,,H02,type,false
+H02.0,H02.0,H02,4,,H020,disease,true
+H02.1,H02.1,H02,4,,H021,disease,true
+H02.2,H02.2,H02,4,,H022,disease,true
+H02.3,H02.3,H02,4,,H023,disease,true
+H02.4,H02.4,H02,4,,H024,disease,true
+H02.5,H02.5,H02,4,,H025,disease,true
+H02.6,H02.6,H02,4,,H026,disease,true
+H02.7,H02.7,H02,4,,H027,disease,true
+H02.8,H02.8,H02,4,,H028,disease,true
+H02.9,H02.9,H02,4,,H029,disease,true
+H03*,Bệnh mí mắt trong các bệnh phân loại nơi khác,H00-H06,3,,H03*,type,false
+H03.0*,H03.0*,H03*,4,,H030,disease,true
+H03.1*,H03.1*,H03*,4,,H031,disease,true
+H03.8*,H03.8*,H03*,4,,H038,disease,true
+H04,Bệnh của lệ bộ,H00-H06,3,,H04,type,false
+H04.0,H04.0,H04,4,,H040,disease,true
+H04.1,H04.1,H04,4,,H041,disease,true
+H04.2,H04.2,H04,4,,H042,disease,true
+H04.3,H04.3,H04,4,,H043,disease,true
+H04.4,H04.4,H04,4,,H044,disease,true
+H04.5,H04.5,H04,4,,H045,disease,true
+H04.6,H04.6,H04,4,,H046,disease,true
+H04.8,H04.8,H04,4,,H048,disease,true
+H04.9,H04.9,H04,4,,H049,disease,true
+H05,Bệnh của hốc mắt,H00-H06,3,,H05,type,false
+H05.0,H05.0,H05,4,,H050,disease,true
+H05.1,H05.1,H05,4,,H051,disease,true
+H05.2,H05.2,H05,4,,H052,disease,true
+H05.3,H05.3,H05,4,,H053,disease,true
+H05.4,H05.4,H05,4,,H054,disease,true
+H05.5,H05.5,H05,4,,H055,disease,true
+H05.8,H05.8,H05,4,,H058,disease,true
+H05.9,H05.9,H05,4,,H059,disease,true
+H06*,Bệnh của lệ bộ và hốc mắt trong các bệnh phân loại nơi khác,H00-H06,3,,H06*,type,false
+H06.0*,H06.0*,H06*,4,,H060,disease,true
+H06.1*,H06.1*,H06*,4,,H061,disease,true
+H06.2*,H06.2*,H06*,4,,H062,disease,true
+H06.3*,H06.3*,H06*,4,,H063,disease,true
+H10,Viêm kết mạc,H10-H13,3,,H10,type,false
+H10.0,H10.0,H10,4,,H100,disease,true
+H10.1,H10.1,H10,4,,H101,disease,true
+H10.2,H10.2,H10,4,,H102,disease,true
+H10.3,H10.3,H10,4,,H103,disease,true
+H10.4,H10.4,H10,4,,H104,disease,true
+H10.5,H10.5,H10,4,,H105,disease,true
+H10.8,H10.8,H10,4,,H108,disease,true
+H10.9,H10.9,H10,4,,H109,disease,true
+H11,Bệnh khác của kết mạc,H10-H13,3,,H11,type,false
+H11.0,H11.0,H11,4,,H110,disease,true
+H11.1,H11.1,H11,4,,H111,disease,true
+H11.2,H11.2,H11,4,,H112,disease,true
+H11.3,H11.3,H11,4,,H113,disease,true
+H11.4,H11.4,H11,4,,H114,disease,true
+H11.8,H11.8,H11,4,,H118,disease,true
+H11.9,H11.9,H11,4,,H119,disease,true
+H13*,Bệnh của kết mạc trong các bệnh phân loại nơi khác,H10-H13,3,,H13*,type,false
+H13.0*,H13.0*,H13*,4,,H130,disease,true
+H13.1*,H13.1*,H13*,4,,H131,disease,true
+H13.2*,H13.2*,H13*,4,,H132,disease,true
+H13.3*,H13.3*,H13*,4,,H133,disease,true
+H13.8*,H13.8*,H13*,4,,H138,disease,true
+H15,Bệnh của củng mạc,H15-H22,3,,H15,type,false
+H15.0,H15.0,H15,4,,H150,disease,true
+H15.1,H15.1,H15,4,,H151,disease,true
+H15.8,H15.8,H15,4,,H158,disease,true
+H15.9,H15.9,H15,4,,H159,disease,true
+H16,Viêm giác mạc,H15-H22,3,,H16,type,false
+H16.0,H16.0,H16,4,,H160,disease,true
+H16.1,H16.1,H16,4,,H161,disease,true
+H16.2,H16.2,H16,4,,H162,disease,true
+H16.3,H16.3,H16,4,,H163,disease,true
+H16.4,H16.4,H16,4,,H164,disease,true
+H16.8,H16.8,H16,4,,H168,disease,true
+H16.9,H16.9,H16,4,,H169,disease,true
+H17,Sẹo và đục giác mạc,H15-H22,3,,H17,type,false
+H17.0,H17.0,H17,4,,H170,disease,true
+H17.1,H17.1,H17,4,,H171,disease,true
+H17.8,H17.8,H17,4,,H178,disease,true
+H17.9,H17.9,H17,4,,H179,disease,true
+H18,Bệnh khác của giác mạc,H15-H22,3,,H18,type,false
+H18.0,H18.0,H18,4,,H180,disease,true
+H18.1,H18.1,H18,4,,H181,disease,true
+H18.2,H18.2,H18,4,,H182,disease,true
+H18.3,H18.3,H18,4,,H183,disease,true
+H18.4,H18.4,H18,4,,H184,disease,true
+H18.5,H18.5,H18,4,,H185,disease,true
+H18.6,H18.6,H18,4,,H186,disease,true
+H18.7,H18.7,H18,4,,H187,disease,true
+H18.8,H18.8,H18,4,,H188,disease,true
+H18.9,H18.9,H18,4,,H189,disease,true
+H19*,Bệnh củng mạc và giác mạc trong các bệnh phân loại nơi khác,H15-H22,3,,H19*,type,false
+H19.0*,H19.0*,H19*,4,,H190,disease,true
+H19.1*,H19.1*,H19*,4,,H191,disease,true
+H19.2*,H19.2*,H19*,4,,H192,disease,true
+H19.3*,H19.3*,H19*,4,,H193,disease,true
+H19.8*,H19.8*,H19*,4,,H198,disease,true
+H20,Viêm mống mắt thể mi,H15-H22,3,,H20,type,false
+H20.0,H20.0,H20,4,,H200,disease,true
+H20.1,H20.1,H20,4,,H201,disease,true
+H20.2,H20.2,H20,4,,H202,disease,true
+H20.8,H20.8,H20,4,,H208,disease,true
+H20.9,H20.9,H20,4,,H209,disease,true
+H21,Bệnh khác của mống mắt và thể mi,H15-H22,3,,H21,type,false
+H21.0,H21.0,H21,4,,H210,disease,true
+H21.1,H21.1,H21,4,,H211,disease,true
+H21.2,H21.2,H21,4,,H212,disease,true
+H21.3,H21.3,H21,4,,H213,disease,true
+H21.4,H21.4,H21,4,,H214,disease,true
+H21.5,H21.5,H21,4,,H215,disease,true
+H21.8,H21.8,H21,4,,H218,disease,true
+H21.9,H21.9,H21,4,,H219,disease,true
+H22*,Bệnh của mống mắt và thể mi trong bệnh phân loại nơi khác,H15-H22,3,,H22*,type,false
+H22.0*,H22.0*,H22*,4,,H220,disease,true
+H22.1*,H22.1*,H22*,4,,H221,disease,true
+H22.8*,H22.8*,H22*,4,,H228,disease,true
+H25,Đục thể thuỷ tinh người già,H25-H28,3,,H25,type,false
+H25.0,H25.0,H25,4,,H250,disease,true
+H25.1,H25.1,H25,4,,H251,disease,true
+H25.2,H25.2,H25,4,,H252,disease,true
+H25.8,H25.8,H25,4,,H258,disease,true
+H25.9,H25.9,H25,4,,H259,disease,true
+H26,Đục thể thuỷ tinh khác,H25-H28,3,,H26,type,false
+H26.0,H26.0,H26,4,,H260,disease,true
+H26.1,H26.1,H26,4,,H261,disease,true
+H26.2,H26.2,H26,4,,H262,disease,true
+H26.3,H26.3,H26,4,,H263,disease,true
+H26.4,H26.4,H26,4,,H264,disease,true
+H26.8,H26.8,H26,4,,H268,disease,true
+H26.9,H26.9,H26,4,,H269,disease,true
+H27,Các bệnh khác của thể thuỷ tinh,H25-H28,3,,H27,type,false
+H27.0,H27.0,H27,4,,H270,disease,true
+H27.1,H27.1,H27,4,,H271,disease,true
+H27.8,H27.8,H27,4,,H278,disease,true
+H27.9,H27.9,H27,4,,H279,disease,true
+H28*,Đục thể thuỷ tinh và bệnh của thể thuỷ tinh khác trong các bệnh phân loại nơi khác,H25-H28,3,,H28*,type,false
+H28.0*,H28.0*,H28*,4,,H280,disease,true
+H28.1*,H28.1*,H28*,4,,H281,disease,true
+H28.2*,H28.2*,H28*,4,,H282,disease,true
+H28.8*,H28.8*,H28*,4,,H288,disease,true
+H30,Viêm hắc võng mạc,H30-H36,3,,H30,type,false
+H30.0,H30.0,H30,4,,H300,disease,true
+H30.1,H30.1,H30,4,,H301,disease,true
+H30.2,H30.2,H30,4,,H302,disease,true
+H30.8,H30.8,H30,4,,H308,disease,true
+H30.9,H30.9,H30,4,,H309,disease,true
+H31,Bệnh khác của hắc mạc,H30-H36,3,,H31,type,false
+H31.0,H31.0,H31,4,,H310,disease,true
+H31.1,H31.1,H31,4,,H311,disease,true
+H31.2,H31.2,H31,4,,H312,disease,true
+H31.3,H31.3,H31,4,,H313,disease,true
+H31.4,H31.4,H31,4,,H314,disease,true
+H31.8,H31.8,H31,4,,H318,disease,true
+H31.9,H31.9,H31,4,,H319,disease,true
+H32*,Bệnh hắc võng mạc trong các bệnh phân loại nơi khác,H30-H36,3,,H32*,type,false
+H32.0*,H32.0*,H32*,4,,H320,disease,true
+H32.8*,H32.8*,H32*,4,,H328,disease,true
+H33,Bong và rách võng mạc,H30-H36,3,,H33,type,false
+H33.0,H33.0,H33,4,,H330,disease,true
+H33.1,H33.1,H33,4,,H331,disease,true
+H33.2,H33.2,H33,4,,H332,disease,true
+H33.3,H33.3,H33,4,,H333,disease,true
+H33.4,H33.4,H33,4,,H334,disease,true
+H33.5,H33.5,H33,4,,H335,disease,true
+H34,Các bệnh lý tắc mạch máu võng mạc,H30-H36,3,,H34,type,false
+H34.0,H34.0,H34,4,,H340,disease,true
+H34.1,H34.1,H34,4,,H341,disease,true
+H34.2,H34.2,H34,4,,H342,disease,true
+H34.8,H34.8,H34,4,,H348,disease,true
+H34.9,H34.9,H34,4,,H349,disease,true
+H35,Các bệnh lý võng mạc khác,H30-H36,3,,H35,type,false
+H35.0,H35.0,H35,4,,H350,disease,true
+H35.1,H35.1,H35,4,,H351,disease,true
+H35.2,H35.2,H35,4,,H352,disease,true
+H35.3,H35.3,H35,4,,H353,disease,true
+H35.4,H35.4,H35,4,,H354,disease,true
+H35.5,H35.5,H35,4,,H355,disease,true
+H35.6,H35.6,H35,4,,H356,disease,true
+H35.7,H35.7,H35,4,,H357,disease,true
+H35.8,H35.8,H35,4,,H358,disease,true
+H35.9,H35.9,H35,4,,H359,disease,true
+H36*,Bệnh lý võng mạc trong các bệnh phân loại nơi khác,H30-H36,3,,H36*,type,false
+H36.0*,H36.0*,H36*,4,,H360,disease,true
+H36.8*,H36.8*,H36*,4,,H368,disease,true
+H40,Glocom,H40-H42,3,,H40,type,false
+H40.0,H40.0,H40,4,,H400,disease,true
+H40.1,H40.1,H40,4,,H401,disease,true
+H40.2,H40.2,H40,4,,H402,disease,true
+H40.3,H40.3,H40,4,,H403,disease,true
+H40.4,H40.4,H40,4,,H404,disease,true
+H40.5,H40.5,H40,4,,H405,disease,true
+H40.6,H40.6,H40,4,,H406,disease,true
+H40.8,H40.8,H40,4,,H408,disease,true
+H40.9,H40.9,H40,4,,H409,disease,true
+H42*,Glocom trong các bệnh phân loại nơi khác,H40-H42,3,,H42*,type,false
+H42.0*,H42.0*,H42*,4,,H420,disease,true
+H42.8*,H42.8*,H42*,4,,H428,disease,true
+H43,Bệnh của dịch kính,H43-H45,3,,H43,type,false
+H43.0,H43.0,H43,4,,H430,disease,true
+H43.1,H43.1,H43,4,,H431,disease,true
+H43.2,H43.2,H43,4,,H432,disease,true
+H43.3,H43.3,H43,4,,H433,disease,true
+H43.8,H43.8,H43,4,,H438,disease,true
+H43.9,H43.9,H43,4,,H439,disease,true
+H44,Bệnh của nhãn cầu,H43-H45,3,,H44,type,false
+H44.0,H44.0,H44,4,,H440,disease,true
+H44.1,H44.1,H44,4,,H441,disease,true
+H44.2,H44.2,H44,4,,H442,disease,true
+H44.3,H44.3,H44,4,,H443,disease,true
+H44.4,H44.4,H44,4,,H444,disease,true
+H44.5,H44.5,H44,4,,H445,disease,true
+H44.6,H44.6,H44,4,,H446,disease,true
+H44.7,H44.7,H44,4,,H447,disease,true
+H44.8,H44.8,H44,4,,H448,disease,true
+H44.9,H44.9,H44,4,,H449,disease,true
+H45*,Bệnh của dịch kính và nhãn cầu trong các bệnh phân loại nơi khác,H43-H45,3,,H45*,type,false
+H45.0*,H45.0*,H45*,4,,H450,disease,true
+H45.1*,H45.1*,H45*,4,,H451,disease,true
+H45.8*,H45.8*,H45*,4,,H458,disease,true
+H46,Viêm thị thần kinh,H46-H48,3,,H46,type,true
+H47,Các bệnh khác của thần kinh thị (dây thần kinh số II) và đường thị giác,H46-H48,3,,H47,type,false
+H47.0,H47.0,H47,4,,H470,disease,true
+H47.1,H47.1,H47,4,,H471,disease,true
+H47.2,H47.2,H47,4,,H472,disease,true
+H47.3,H47.3,H47,4,,H473,disease,true
+H47.4,H47.4,H47,4,,H474,disease,true
+H47.5,H47.5,H47,4,,H475,disease,true
+H47.6,H47.6,H47,4,,H476,disease,true
+H47.7,H47.7,H47,4,,H477,disease,true
+H48*,Bệnh thần kinh thị và đường dẫn thị giác trong các bệnh phân loại nơi khác,H46-H48,3,,H48*,type,false
+H48.0*,H48.0*,H48*,4,,H480,disease,true
+H48.1*,H48.1*,H48*,4,,H481,disease,true
+H48.8*,H48.8*,H48*,4,,H488,disease,true
+H55,Rung giật nhãn cầu và rối loạn vận nhãn khác,H49-H52,3,,H55,type,true
+H49,Lác liệt,H49-H52,3,,H49,type,false
+H49.0,H49.0,H49,4,,H490,disease,true
+H49.1,H49.1,H49,4,,H491,disease,true
+H49.2,H49.2,H49,4,,H492,disease,true
+H49.3,H49.3,H49,4,,H493,disease,true
+H49.4,H49.4,H49,4,,H494,disease,true
+H49.8,H49.8,H49,4,,H498,disease,true
+H49.9,H49.9,H49,4,,H499,disease,true
+H50,Lác khác,H49-H52,3,,H50,type,false
+H50.0,H50.0,H50,4,,H500,disease,true
+H50.1,H50.1,H50,4,,H501,disease,true
+H50.2,H50.2,H50,4,,H502,disease,true
+H50.3,H50.3,H50,4,,H503,disease,true
+H50.4,H50.4,H50,4,,H504,disease,true
+H50.5,H50.5,H50,4,,H505,disease,true
+H50.6,H50.6,H50,4,,H506,disease,true
+H50.8,H50.8,H50,4,,H508,disease,true
+H50.9,H50.9,H50,4,,H509,disease,true
+H51,Các rối loạn vận nhãn hai mắt khác,H49-H52,3,,H51,type,false
+H51.0,H51.0,H51,4,,H510,disease,true
+H51.1,H51.1,H51,4,,H511,disease,true
+H51.2,H51.2,H51,4,,H512,disease,true
+H51.8,H51.8,H51,4,,H518,disease,true
+H51.9,H51.9,H51,4,,H519,disease,true
+H52,Bệnh khúc xạ và điều tiết,H49-H52,3,,H52,type,false
+H52.0,H52.0,H52,4,,H520,disease,true
+H52.1,H52.1,H52,4,,H521,disease,true
+H52.2,H52.2,H52,4,,H522,disease,true
+H52.3,H52.3,H52,4,,H523,disease,true
+H52.4,H52.4,H52,4,,H524,disease,true
+H52.5,H52.5,H52,4,,H525,disease,true
+H52.6,H52.6,H52,4,,H526,disease,true
+H52.7,H52.7,H52,4,,H527,disease,true
+H53,Rối loạn thị giác,H53-H54,3,,H53,type,false
+H53.0,H53.0,H53,4,,H530,disease,true
+H53.1,H53.1,H53,4,,H531,disease,true
+H53.2,H53.2,H53,4,,H532,disease,true
+H53.3,H53.3,H53,4,,H533,disease,true
+H53.4,H53.4,H53,4,,H534,disease,true
+H53.5,H53.5,H53,4,,H535,disease,true
+H53.6,H53.6,H53,4,,H536,disease,true
+H53.8,H53.8,H53,4,,H538,disease,true
+H53.9,H53.9,H53,4,,H539,disease,true
+H54,Mù và khiếm thị (hai mắt hoặc một mắt),H53-H54,3,,H54,type,false
+H54.0,H54.0,H54,4,,H540,disease,true
+H54.1,H54.1,H54,4,,H541,disease,true
+H54.2,H54.2,H54,4,,H542,disease,true
+H54.3,H54.3,H54,4,,H543,disease,true
+H54.4,H54.4,H54,4,,H544,disease,true
+H54.5,H54.5,H54,4,,H545,disease,true
+H54.6,H54.6,H54,4,,H546,disease,true
+H54.9,H54.9,H54,4,,H549,disease,true
+H57,Các bệnh khác của mắt và phần phụ,H55-H59,3,,H57,type,false
+H57.0,H57.0,H57,4,,H570,disease,true
+H57.1,H57.1,H57,4,,H571,disease,true
+H57.8,H57.8,H57,4,,H578,disease,true
+H57.9,H57.9,H57,4,,H579,disease,true
+H58*,Bệnh khác của mắt và phần phụ trong các bệnh phân loại nơi khác,H55-H59,3,,H58*,type,false
+H58.0*,H58.0*,H58*,4,,H580,disease,true
+H58.1*,H58.1*,H58*,4,,H581,disease,true
+H58.8*,H58.8*,H58*,4,,H588,disease,true
+H59,"Bệnh mắt và phần phụ sau phẫu thuật, không phân loại nơi khác",H55-H59,3,,H59,type,false
+H59.0,H59.0,H59,4,,H590,disease,true
+H59.8,H59.8,H59,4,,H598,disease,true
+H59.9,H59.9,H59,4,,H599,disease,true
+H60,Viêm tai ngoài,H60-H62,3,,H60,type,false
+H60.0,H60.0,H60,4,,H600,disease,true
+H60.1,H60.1,H60,4,,H601,disease,true
+H60.2,H60.2,H60,4,,H602,disease,true
+H60.3,H60.3,H60,4,,H603,disease,true
+H60.4,H60.4,H60,4,,H604,disease,true
+H60.5,H60.5,H60,4,,H605,disease,true
+H60.8,H60.8,H60,4,,H608,disease,true
+H60.9,H60.9,H60,4,,H609,disease,true
+H61,Bệnh khác của tai ngoài,H60-H62,3,,H61,type,false
+H61.0,H61.0,H61,4,,H610,disease,true
+H61.1,H61.1,H61,4,,H611,disease,true
+H61.2,H61.2,H61,4,,H612,disease,true
+H61.3,H61.3,H61,4,,H613,disease,true
+H61.8,H61.8,H61,4,,H618,disease,true
+H61.9,H61.9,H61,4,,H619,disease,true
+H62*,Bệnh tai ngoài trong bệnh phân loại nơi khác,H60-H62,3,,H62*,type,false
+H62.0*,H62.0*,H62*,4,,H620,disease,true
+H62.1*,H62.1*,H62*,4,,H621,disease,true
+H62.2*,H62.2*,H62*,4,,H622,disease,true
+H62.3*,H62.3*,H62*,4,,H623,disease,true
+H62.4*,H62.4*,H62*,4,,H624,disease,true
+H62.8*,H62.8*,H62*,4,,H628,disease,true
+H65,Viêm tai giữa không mủ,H65-H75,3,,H65,type,false
+H65.0,H65.0,H65,4,,H650,disease,true
+H65.1,H65.1,H65,4,,H651,disease,true
+H65.2,H65.2,H65,4,,H652,disease,true
+H65.3,H65.3,H65,4,,H653,disease,true
+H65.4,H65.4,H65,4,,H654,disease,true
+H65.9,H65.9,H65,4,,H659,disease,true
+H66,Viêm tai giữa mủ và không đặc hiệu,H65-H75,3,,H66,type,false
+H66.0,H66.0,H66,4,,H660,disease,true
+H66.1,H66.1,H66,4,,H661,disease,true
+H66.2,H66.2,H66,4,,H662,disease,true
+H66.3,H66.3,H66,4,,H663,disease,true
+H66.4,H66.4,H66,4,,H664,disease,true
+H66.9,H66.9,H66,4,,H669,disease,true
+H67*,Viêm tai giữa trong bệnh phân loại nơi khác,H65-H75,3,,H67*,type,false
+H67.0*,H67.0*,H67*,4,,H670,disease,true
+H67.1*,H67.1*,H67*,4,,H671,disease,true
+H67.8*,H67.8*,H67*,4,,H678,disease,true
+H68,Viêm và tắc vòi Eustache,H65-H75,3,,H68,type,false
+H68.0,H68.0,H68,4,,H680,disease,true
+H68.1,H68.1,H68,4,,H681,disease,true
+H69,Bệnh khác của vòi Eustache,H65-H75,3,,H69,type,false
+H69.0,H69.0,H69,4,,H690,disease,true
+H69.8,H69.8,H69,4,,H698,disease,true
+H69.9,H69.9,H69,4,,H699,disease,true
+H70,Viêm xương chũm và tình trạng liên quan,H65-H75,3,,H70,type,false
+H70.0,H70.0,H70,4,,H700,disease,true
+H70.1,H70.1,H70,4,,H701,disease,true
+H70.2,H70.2,H70,4,,H702,disease,true
+H70.8,H70.8,H70,4,,H708,disease,true
+H70.9,H70.9,H70,4,,H709,disease,true
+H71,Cholesteatoma của tai giữa,H65-H75,3,,H71,type,true
+H72,Thủng màng nhĩ,H65-H75,3,,H72,type,false
+H72.0,H72.0,H72,4,,H720,disease,true
+H72.1,H72.1,H72,4,,H721,disease,true
+H72.2,H72.2,H72,4,,H722,disease,true
+H72.8,H72.8,H72,4,,H728,disease,true
+H72.9,H72.9,H72,4,,H729,disease,true
+H73,Bệnh khác của màng nhĩ,H65-H75,3,,H73,type,false
+H73.0,H73.0,H73,4,,H730,disease,true
+H73.1,H73.1,H73,4,,H731,disease,true
+H73.8,H73.8,H73,4,,H738,disease,true
+H73.9,H73.9,H73,4,,H739,disease,true
+H74,Bệnh khác của tai giữa và xương chũm,H65-H75,3,,H74,type,false
+H74.0,H74.0,H74,4,,H740,disease,true
+H74.1,H74.1,H74,4,,H741,disease,true
+H74.2,H74.2,H74,4,,H742,disease,true
+H74.3,H74.3,H74,4,,H743,disease,true
+H74.4,H74.4,H74,4,,H744,disease,true
+H74.8,H74.8,H74,4,,H748,disease,true
+H74.9,H74.9,H74,4,,H749,disease,true
+H75*,Rối loạn tai giữa và xương chũm trong các bệnh phân loại nơi khác,H65-H75,3,,H75*,type,false
+H75.0*,H75.0*,H75*,4,,H750,disease,true
+H75.8*,H75.8*,H75*,4,,H758,disease,true
+H80,Xốp xơ tai,H80-H83,3,,H80,type,false
+H80.0,H80.0,H80,4,,H800,disease,true
+H80.1,H80.1,H80,4,,H801,disease,true
+H80.2,H80.2,H80,4,,H802,disease,true
+H80.8,H80.8,H80,4,,H808,disease,true
+H80.9,H80.9,H80,4,,H809,disease,true
+H81,Rối loạn chức năng tiền đình,H80-H83,3,,H81,type,false
+H81.0,H81.0,H81,4,,H810,disease,true
+H81.1,H81.1,H81,4,,H811,disease,true
+H81.2,H81.2,H81,4,,H812,disease,true
+H81.3,H81.3,H81,4,,H813,disease,true
+H81.4,H81.4,H81,4,,H814,disease,true
+H81.8,H81.8,H81,4,,H818,disease,true
+H81.9,H81.9,H81,4,,H819,disease,true
+H82*,Hội chứng chóng mặt tiền đình trong các bệnh phân loại nơi khác,H80-H83,3,,H82*,type,true
+H83,Bệnh khác của tai trong,H80-H83,3,,H83,type,false
+H83.0,H83.0,H83,4,,H830,disease,true
+H83.1,H83.1,H83,4,,H831,disease,true
+H83.2,H83.2,H83,4,,H832,disease,true
+H83.3,H83.3,H83,4,,H833,disease,true
+H83.8,H83.8,H83,4,,H838,disease,true
+H83.9,H83.9,H83,4,,H839,disease,true

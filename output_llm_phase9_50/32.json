@@ -1,0 +1,152 @@
+[
+  {
+    "text": "Rối loạn chuyển hóa tinh bột",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      29,
+      57
+    ]
+  },
+  {
+    "text": "amyloidosis",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "E85",
+      "E85.3",
+      "E85.8"
+    ],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      59,
+      70
+    ]
+  },
+  {
+    "text": "thoái hóa tinh bột",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      313,
+      331
+    ]
+  },
+  {
+    "text": "protein",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      381,
+      388
+    ]
+  },
+  {
+    "text": "protein bất thường",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      442,
+      460
+    ]
+  },
+  {
+    "text": "protein amyloid",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      521,
+      536
+    ]
+  },
+  {
+    "text": "cấu trúc",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      573,
+      581
+    ]
+  },
+  {
+    "text": "chức năng sinh lý",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      597,
+      614
+    ]
+  },
+  {
+    "text": "suy các cơ quan",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      713,
+      728
+    ]
+  },
+  {
+    "text": "tăng lipid máu",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "E75.6"
+    ],
+    "assertions": [],
+    "position": [
+      841,
+      855
+    ]
+  },
+  {
+    "text": "suy kiệt",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1195,
+      1203
+    ]
+  },
+  {
+    "text": "amyloidosis",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "E85",
+      "E85.3",
+      "E85.8"
+    ],
+    "assertions": [],
+    "position": [
+      1891,
+      1902
+    ]
+  },
+  {
+    "text": "gan",
+    "type": "THUỐC",
+    "candidates": [
+      "1007251",
+      "1007316",
+      "1008905"
+    ],
+    "assertions": [],
+    "position": [
+      2120,
+      2123
+    ]
+  }
+]

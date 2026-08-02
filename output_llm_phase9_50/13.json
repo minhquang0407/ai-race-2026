@@ -1,0 +1,94 @@
+[
+  {
+    "text": "bệnh dại",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      310,
+      318
+    ]
+  },
+  {
+    "text": "nước dãi",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      198,
+      206
+    ]
+  },
+  {
+    "text": "con chó",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      140,
+      147
+    ]
+  },
+  {
+    "text": "bệnh dại",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      603,
+      611
+    ]
+  },
+  {
+    "text": "bệnh dại",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1436,
+      1444
+    ]
+  },
+  {
+    "text": "chó",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      1713,
+      1716
+    ]
+  },
+  {
+    "text": "dại",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [],
+    "assertions": [
+      "isHistorical"
+    ],
+    "position": [
+      1999,
+      2002
+    ]
+  },
+  {
+    "text": "vết thương",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2416,
+      2426
+    ]
+  },
+  {
+    "text": "vi rút",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2575,
+      2581
+    ]
+  }
+]

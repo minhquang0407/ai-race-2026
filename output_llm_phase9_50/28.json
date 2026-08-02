@@ -1,0 +1,122 @@
+[
+  {
+    "text": "dấu mề đay",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      81,
+      91
+    ]
+  },
+  {
+    "text": "di truyền",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [
+      "isFamily"
+    ],
+    "position": [
+      318,
+      327
+    ]
+  },
+  {
+    "text": "dị ứng",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [
+      "isNegated"
+    ],
+    "position": [
+      357,
+      363
+    ]
+  },
+  {
+    "text": "thời tiết",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [
+      "isNegated"
+    ],
+    "position": [
+      367,
+      376
+    ]
+  },
+  {
+    "text": "thức ăn",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [
+      "isNegated"
+    ],
+    "position": [
+      381,
+      388
+    ]
+  },
+  {
+    "text": "dấu mề đay",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      157,
+      167
+    ]
+  },
+  {
+    "text": "mày đay vô căn",
+    "type": "CHẨN_ĐOÁN",
+    "candidates": [
+      "N97.9"
+    ],
+    "assertions": [],
+    "position": [
+      1396,
+      1410
+    ]
+  },
+  {
+    "text": "2,5 – 5mg",
+    "type": "KẾT_QUẢ_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2039,
+      2048
+    ]
+  },
+  {
+    "text": "chụp cộng hưởng từ",
+    "type": "TÊN_XÉT_NGHIỆM",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2235,
+      2253
+    ]
+  },
+  {
+    "text": "cột sống cổ",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2260,
+      2271
+    ]
+  },
+  {
+    "text": "lỗ liên hợp",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      2318,
+      2329
+    ]
+  }
+]

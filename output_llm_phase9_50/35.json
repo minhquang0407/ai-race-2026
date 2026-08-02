@@ -1,0 +1,60 @@
+[
+  {
+    "text": "không rõ",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [
+      "isNegated"
+    ],
+    "position": [
+      144,
+      152
+    ]
+  },
+  {
+    "text": "khó thở",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [
+      "isNegated"
+    ],
+    "position": [
+      236,
+      243
+    ]
+  },
+  {
+    "text": "chóng mặt",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      224,
+      233
+    ]
+  },
+  {
+    "text": "viêm",
+    "type": "TRIỆU_CHỨNG",
+    "candidates": [],
+    "assertions": [],
+    "position": [
+      810,
+      814
+    ]
+  },
+  {
+    "text": "bia",
+    "type": "THUỐC",
+    "candidates": [
+      "1038799",
+      "1039012",
+      "1039026"
+    ],
+    "assertions": [],
+    "position": [
+      1876,
+      1879
+    ]
+  }
+]
